@@ -1,0 +1,420 @@
+<!DOCTYPE html>
+<html lang="es-AR">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Terminos y Condiciones — HAMPI</title>
+  <meta name="description" content="Terminos y condiciones del servicio HAMPI. Fee transaccional, limites de mensajes, politica de cancelacion.">
+  <link rel="icon" type="image/png" sizes="32x32" href="logoxx.png">
+  <link rel="apple-touch-icon" sizes="180x180" href="logoxx.png">
+  <link rel="manifest" href="manifest.json">
+  <link rel="preconnect" href="https://fonts.googleapis.com">
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+  <link href="https://fonts.googleapis.com/css2?family=Inter:wght@400;500;600;700;800;900&display=swap" rel="stylesheet">
+  <script src="https://cdn.tailwindcss.com"></script>
+  <script>
+    tailwind.config = {
+      theme: {
+        extend: {
+          fontFamily: { sans: ['Inter', 'system-ui', 'sans-serif'] },
+          colors: {
+            brand: {
+              50: '#eef2ff', 100: '#e0e7ff', 200: '#c7d2fe', 300: '#a5b4fc',
+              400: '#818cf8', 500: '#6366f1', 600: '#4f46e5', 700: '#4338ca',
+              800: '#3730a3', 900: '#312e81', 950: '#1e1b4b'
+            }
+          }
+        }
+      }
+    }
+  </script>
+  <style>
+    html{scroll-behavior:smooth}
+    .reveal{opacity:0;transform:translateY(30px);transition:opacity .7s ease,transform .7s ease}
+    .reveal.visible{opacity:1;transform:translateY(0)}
+    .whatsapp-float{position:fixed;bottom:24px;right:24px;z-index:50;background:#25d366;color:#fff;border-radius:9999px;width:76px;height:76px;display:flex;align-items:center;justify-content:center;box-shadow:0 4px 20px rgba(37,211,102,.4);transition:transform .3s ease}
+    .whatsapp-float:hover{transform:scale(1.1)}
+    @keyframes pulse-ring{0%{box-shadow:0 0 0 0 rgba(37,211,102,.4)}70%{box-shadow:0 0 0 15px rgba(37,211,102,0)}100%{box-shadow:0 0 0 0 rgba(37,211,102,0)}}
+    .whatsapp-float{animation:pulse-ring 2s infinite}
+  </style>
+</head>
+
+<body class="font-sans text-gray-800 bg-white antialiased">
+
+  <!-- ===== NAV (identico a index.html) ===== -->
+  <nav id="main-nav" class="fixed top-0 w-full bg-white z-40 border-b border-gray-200/60 transition-shadow duration-300" style="box-shadow:none">
+    <div class="max-w-6xl mx-auto px-4 sm:px-6 flex items-center justify-between h-16">
+      <a href="index.html" class="flex items-center gap-2">
+        <img src="hampilogo.png" alt="HAMPI" class="h-8 sm:h-9 w-auto object-contain" style="image-rendering:-webkit-optimize-contrast;transform:translateZ(0)">
+      </a>
+      <div class="hidden md:flex items-center gap-8 text-xs font-bold text-gray-700 uppercase" style="letter-spacing:.06em">
+        <a href="index.html#sistema" class="hover:text-brand-600 transition-colors">El sistema</a>
+        <a href="index.html#calculadora" class="hover:text-brand-600 transition-colors">Calculadora</a>
+        <a href="index.html#planes" class="hover:text-brand-600 transition-colors">Planes</a>
+        <a href="index.html#faq" class="hover:text-brand-600 transition-colors">FAQ</a>
+        <a href="historia.html" class="hover:text-brand-600 transition-colors">Historia</a>
+      </div>
+      <div class="flex items-center gap-3">
+        <a href="index.html#calculadora" id="nav-calc-cta" class="hidden sm:inline-flex items-center gap-2 bg-brand-600 hover:bg-brand-700 text-white text-xs font-bold uppercase px-3.5 py-1.5 rounded-lg transition-colors" style="letter-spacing:.06em;line-height:1.5">
+          CALCULAR MI PERDIDA
+          <svg class="w-3.5 h-3.5" fill="none" stroke="currentColor" viewBox="0 0 24 24"><path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M9 7h6m0 10v-3m-3 3h.01M9 17h.01M9 14h.01M12 14h.01M15 11h.01M12 11h.01M9 11h.01M7 21h10a2 2 0 002-2V5a2 2 0 00-2-2H7a2 2 0 00-2 2v14a2 2 0 002 2z"/></svg>
+        </a>
+      </div>
+      <button id="menu-toggle" class="md:hidden ml-2 p-2 text-gray-600 hover:text-brand-600" aria-label="Menu">
+        <svg class="w-6 h-6" fill="none" stroke="currentColor" viewBox="0 0 24 24"><path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M4 6h16M4 12h16M4 18h16"/></svg>
+      </button>
+    </div>
+    <div id="mobile-menu" class="hidden md:hidden border-t border-gray-100 bg-white">
+      <div class="px-4 py-3 space-y-2">
+        <a href="index.html#sistema" class="block py-2 text-xs font-bold text-gray-700 uppercase" style="letter-spacing:.06em">El sistema</a>
+        <a href="index.html#calculadora" class="block py-2 text-xs font-bold text-gray-700 uppercase" style="letter-spacing:.06em">Calculadora</a>
+        <a href="index.html#planes" class="block py-2 text-xs font-bold text-gray-700 uppercase" style="letter-spacing:.06em">Planes</a>
+        <a href="index.html#faq" class="block py-2 text-xs font-bold text-gray-700 uppercase" style="letter-spacing:.06em">FAQ</a>
+        <a href="historia.html" class="block py-2 text-xs font-bold text-gray-700 uppercase" style="letter-spacing:.06em">Historia</a>
+      </div>
+    </div>
+  </nav>
+
+  <!-- ===== HERO T&C ===== -->
+  <section class="pt-28 pb-12 sm:pt-32 sm:pb-16" style="background:linear-gradient(135deg,#312e81 0%,#3730a3 25%,#4f46e5 60%,#6366f1 100%)">
+    <div class="max-w-4xl mx-auto px-4 sm:px-6 text-center">
+      <h1 class="text-3xl sm:text-4xl font-black text-white mb-3">Terminos y Condiciones</h1>
+      <p class="text-brand-200 text-sm">Ultima actualizacion: febrero 2026</p>
+    </div>
+  </section>
+
+  <!-- ===== CONTENIDO T&C ===== -->
+  <main class="max-w-4xl mx-auto px-4 sm:px-6 py-12 sm:py-16" style="text-align:justify">
+
+    <!-- 1. Partes y objeto -->
+    <section class="mb-10 reveal">
+      <h2 class="text-xl font-bold text-gray-900 mb-3">1. Partes y objeto del contrato</h2>
+      <p class="text-gray-600 mb-2">Los presentes Terminos y Condiciones (en adelante, "T&C") regulan la relacion entre <strong>[RAZON SOCIAL]</strong>, con domicilio en la ciudad de Cordoba, provincia de Cordoba, Republica Argentina (en adelante, "HAMPI" o "el Prestador"), y toda persona fisica o juridica que contrate el servicio (en adelante, "el Cliente").</p>
+      <p class="text-gray-600 mb-2">HAMPI es una plataforma de automatizacion de atencion al cliente, recordatorios de pago y fidelizacion a traves de WhatsApp Business API, inteligencia artificial e integracion con MercadoPago, orientada a PyMEs argentinas.</p>
+      <p class="text-gray-600">La contratacion de cualquier plan implica la aceptacion integra de estos T&C.</p>
+    </section>
+
+    <!-- 2. Modalidad de contratacion -->
+    <section class="mb-10 reveal">
+      <h2 class="text-xl font-bold text-gray-900 mb-3">2. Modalidad de contratacion</h2>
+      <p class="text-gray-600 mb-3">El servicio se compone de tres elementos:</p>
+      <ul class="list-disc pl-6 text-gray-600 space-y-2">
+        <li><strong>Fee de implementacion (setup):</strong> pago unico al momento de la activacion. Cubre configuracion de canales (WhatsApp Business API, MercadoPago), carga de base de contactos, personalizacion de flujos y pruebas previas a produccion. No es reembolsable una vez iniciado el proceso.</li>
+        <li><strong>Licencia mensual (MRR):</strong> pago recurrente segun el plan contratado. Incluye acceso a la plataforma, soporte tecnico, mantenimiento, actualizaciones y un volumen de mensajes incluidos.</li>
+        <li><strong>Componente variable:</strong> fee transaccional sobre pagos procesados (seccion 4) y cargos por mensajes excedentes (seccion 5).</li>
+      </ul>
+    </section>
+
+    <!-- 3. Planes y precios -->
+    <section class="mb-10 reveal">
+      <h2 class="text-xl font-bold text-gray-900 mb-3">3. Planes y precios</h2>
+      <div class="overflow-x-auto">
+        <table class="w-full text-sm border border-gray-200 rounded-lg overflow-hidden">
+          <thead class="bg-brand-50 text-brand-900">
+            <tr>
+              <th class="text-left px-4 py-3 font-semibold">Concepto</th>
+              <th class="text-center px-4 py-3 font-semibold">Starter</th>
+              <th class="text-center px-4 py-3 font-semibold">Pro</th>
+              <th class="text-center px-4 py-3 font-semibold">Enterprise</th>
+            </tr>
+          </thead>
+          <tbody class="divide-y divide-gray-100">
+            <tr>
+              <td class="px-4 py-2 font-medium">Licencia mensual</td>
+              <td class="px-4 py-2 text-center">$75.000</td>
+              <td class="px-4 py-2 text-center">$135.000</td>
+              <td class="px-4 py-2 text-center">$270.000</td>
+            </tr>
+            <tr class="bg-gray-50">
+              <td class="px-4 py-2 font-medium">Fee de implementacion (unico)</td>
+              <td class="px-4 py-2 text-center">$100.000</td>
+              <td class="px-4 py-2 text-center">$125.000</td>
+              <td class="px-4 py-2 text-center">$150.000</td>
+            </tr>
+            <tr>
+              <td class="px-4 py-2 font-medium">Mensajes incluidos/mes</td>
+              <td class="px-4 py-2 text-center">3.000</td>
+              <td class="px-4 py-2 text-center">8.000</td>
+              <td class="px-4 py-2 text-center">14.000</td>
+            </tr>
+            <tr class="bg-gray-50">
+              <td class="px-4 py-2 font-medium">Mensaje excedente</td>
+              <td class="px-4 py-2 text-center">$30/msg</td>
+              <td class="px-4 py-2 text-center">$25/msg</td>
+              <td class="px-4 py-2 text-center">$20/msg</td>
+            </tr>
+            <tr>
+              <td class="px-4 py-2 font-medium">Fee transaccional</td>
+              <td class="px-4 py-2 text-center" colspan="3">0,5% sobre pagos cobrados via HAMPI</td>
+            </tr>
+            <tr class="bg-gray-50">
+              <td class="px-4 py-2 font-medium">Licencia anual (paga 10, lleva 12)</td>
+              <td class="px-4 py-2 text-center">$62.500/mes</td>
+              <td class="px-4 py-2 text-center">$112.500/mes</td>
+              <td class="px-4 py-2 text-center">$225.000/mes</td>
+            </tr>
+          </tbody>
+        </table>
+      </div>
+      <p class="text-xs text-gray-500 mt-3">Todos los precios estan expresados en pesos argentinos (ARS). Cuando el Cliente revista la condicion de Responsable Inscripto, se adicionara el IVA correspondiente. Los precios pueden ajustarse trimestralmente segun lo indicado en la seccion 7.</p>
+    </section>
+
+    <!-- 4. Fee transaccional -->
+    <section class="mb-10 reveal">
+      <h2 class="text-xl font-bold text-gray-900 mb-3">4. Fee transaccional</h2>
+      <p class="text-gray-600 mb-3">HAMPI cobra un fee del <strong>0,5% (cero coma cinco por ciento)</strong> sobre el monto bruto de cada pago efectivamente acreditado a traves de la integracion con MercadoPago provista por la plataforma.</p>
+      <ul class="list-disc pl-6 text-gray-600 space-y-1">
+        <li>El fee se liquida mensualmente junto con la licencia, en base al reporte de transacciones del periodo.</li>
+        <li>Es independiente y adicional a las comisiones propias de MercadoPago.</li>
+        <li>No aplica a pagos realizados por canales externos a la plataforma HAMPI.</li>
+        <li>El reporte detallado de transacciones procesadas estara disponible en el panel de administracion del Cliente.</li>
+      </ul>
+    </section>
+
+    <!-- 5. Limites de mensajes y excedentes -->
+    <section class="mb-10 reveal">
+      <h2 class="text-xl font-bold text-gray-900 mb-3">5. Limites de mensajes y excedentes</h2>
+      <p class="text-gray-600 mb-3">Cada plan incluye un volumen mensual de mensajes de WhatsApp Business API. Al superar dicho volumen:</p>
+      <ul class="list-disc pl-6 text-gray-600 space-y-1">
+        <li>El servicio <strong>no se interrumpe</strong>. Los mensajes adicionales se facturan segun la tarifa de excedente del plan contratado.</li>
+        <li>El consumo excedente se liquida al cierre de cada periodo mensual.</li>
+        <li>El Cliente recibe notificaciones automaticas al alcanzar el 80% y el 100% del limite incluido.</li>
+        <li>Se entiende por "mensaje" cada interaccion dentro de una ventana de sesion de WhatsApp Business API (24 horas). Cada plantilla (template) enviada fuera de sesion cuenta como 1 mensaje.</li>
+        <li>El volumen no consumido en un mes <strong>no es acumulable</strong> para periodos siguientes.</li>
+      </ul>
+    </section>
+
+    <!-- 6. Plan anual -->
+    <section class="mb-10 reveal">
+      <h2 class="text-xl font-bold text-gray-900 mb-3">6. Contratacion anual</h2>
+      <p class="text-gray-600 mb-3">La contratacion anual ofrece un descuento equivalente a <strong>2 meses bonificados</strong> (el Cliente abona 10 meses y accede a 12 meses de servicio).</p>
+      <ul class="list-disc pl-6 text-gray-600 space-y-1">
+        <li>El pago se realiza en un unico pago al inicio del periodo contratado.</li>
+        <li>El fee de implementacion se cobra por separado al momento de la activacion.</li>
+        <li>La cancelacion anticipada no genera derecho a reembolso. El servicio permanece activo hasta el vencimiento del periodo contratado.</li>
+        <li>Al vencimiento, el plan se renueva automaticamente en modalidad mensual al precio vigente, salvo que el Cliente solicite renovacion anual con 15 dias de anticipacion.</li>
+      </ul>
+    </section>
+
+    <!-- 7. Ajuste de precios -->
+    <section class="mb-10 reveal">
+      <h2 class="text-xl font-bold text-gray-900 mb-3">7. Ajuste trimestral de precios</h2>
+      <p class="text-gray-600 mb-3">Dado que los costos de infraestructura del servicio (WhatsApp Business API, servidores, modelos de IA) se cotizan en dolares estadounidenses, HAMPI se reserva el derecho de ajustar los precios trimestralmente.</p>
+      <ul class="list-disc pl-6 text-gray-600 space-y-1">
+        <li>Se toma como referencia el tipo de cambio MEP promedio de los ultimos 30 dias previos al ajuste.</li>
+        <li>El ajuste se comunica con un minimo de <strong>15 dias corridos</strong> de anticipacion por email y/o WhatsApp.</li>
+        <li>Los Clientes con plan anual vigente mantienen su precio hasta la fecha de renovacion.</li>
+        <li>Si el ajuste supera el 25% respecto del precio anterior, el Cliente podra rescindir el contrato sin penalidad dentro de los 10 dias habiles posteriores a la notificacion.</li>
+      </ul>
+    </section>
+
+    <!-- 8. Implementacion y puesta en marcha -->
+    <section class="mb-10 reveal">
+      <h2 class="text-xl font-bold text-gray-900 mb-3">8. Implementacion y puesta en marcha</h2>
+      <p class="text-gray-600 mb-3">El proceso de implementacion incluye:</p>
+      <ul class="list-disc pl-6 text-gray-600 space-y-1">
+        <li>Configuracion de canales (WhatsApp Business API, email, MercadoPago).</li>
+        <li>Carga y validacion de la base de contactos proporcionada por el Cliente.</li>
+        <li>Personalizacion de flujos de automatizacion, mensajes y reglas de negocio.</li>
+        <li>Periodo de prueba recomendado de <strong>7 dias habiles</strong> previo a la puesta en produccion.</li>
+        <li>Capacitacion basica sobre el uso del panel de administracion.</li>
+      </ul>
+      <p class="text-gray-600 mt-2">El plazo estimado de implementacion es de <strong>2 a 5 dias habiles</strong> desde la recepcion del pago de setup y la documentacion requerida. HAMPI no sera responsable por demoras atribuibles al Cliente en la entrega de informacion o accesos necesarios.</p>
+    </section>
+
+    <!-- 9. Obligaciones del cliente -->
+    <section class="mb-10 reveal">
+      <h2 class="text-xl font-bold text-gray-900 mb-3">9. Obligaciones del Cliente</h2>
+      <ul class="list-disc pl-6 text-gray-600 space-y-1">
+        <li>Proveer informacion veraz y actualizada para la configuracion del servicio.</li>
+        <li>Garantizar que cuenta con el consentimiento de sus clientes finales para el envio de comunicaciones por WhatsApp, conforme a las politicas de Meta y la normativa vigente.</li>
+        <li>No utilizar la plataforma para envio de spam, contenido inapropiado, amenazas o cualquier practica que viole las <a href="https://www.whatsapp.com/legal/business-policy/" target="_blank" rel="noopener" class="text-brand-600 hover:underline">politicas de WhatsApp Business</a>.</li>
+        <li>Abonar las facturas en los plazos establecidos. La mora superior a 10 dias habiles habilita la suspension del servicio.</li>
+        <li>No intentar realizar ingenieria inversa, copiar ni redistribuir los componentes del sistema.</li>
+      </ul>
+    </section>
+
+    <!-- 10. Uso aceptable -->
+    <section class="mb-10 reveal">
+      <h2 class="text-xl font-bold text-gray-900 mb-3">10. Politica de uso aceptable</h2>
+      <p class="text-gray-600 mb-3">El Cliente se compromete a utilizar HAMPI unicamente para:</p>
+      <ul class="list-disc pl-6 text-gray-600 space-y-1">
+        <li>Recordatorios de pago y notificaciones de pagos pendientes.</li>
+        <li>Atencion al cliente y soporte automatizado.</li>
+        <li>Fidelizacion y comunicacion con clientes existentes que hayan dado su consentimiento.</li>
+      </ul>
+      <p class="text-gray-600 mt-3">HAMPI se reserva el derecho de suspender o dar de baja el servicio — sin derecho a reembolso — en caso de detectar uso indebido, incluyendo pero no limitado a: envio masivo no solicitado (spam), contenido que incite a la violencia o discriminacion, suplantacion de identidad, o cualquier actividad que ponga en riesgo la reputacion del numero de WhatsApp Business o la cuenta de la plataforma ante Meta.</p>
+    </section>
+
+    <!-- 11. Cancelacion y baja -->
+    <section class="mb-10 reveal">
+      <h2 class="text-xl font-bold text-gray-900 mb-3">11. Cancelacion y baja</h2>
+      <ul class="list-disc pl-6 text-gray-600 space-y-2">
+        <li><strong>Plan mensual:</strong> puede cancelarse en cualquier momento. El servicio permanece activo hasta el fin del periodo abonado.</li>
+        <li><strong>Plan anual:</strong> la cancelacion anticipada no genera derecho a reembolso. El servicio permanece activo hasta el vencimiento del periodo contratado.</li>
+        <li><strong>Fee de implementacion:</strong> no es reembolsable una vez iniciado el proceso de configuracion.</li>
+        <li>Al cancelar, los datos del Cliente se conservan por <strong>30 dias corridos</strong>. Transcurrido ese plazo, se eliminan de forma permanente e irrecuperable.</li>
+        <li>La solicitud de baja debe realizarse por escrito a <strong>admin@hampi.tech</strong> o a traves del panel de administracion.</li>
+        <li>HAMPI se reserva el derecho de dar de baja unilateralmente al Cliente en caso de incumplimiento de estos T&C, con notificacion previa de 5 dias habiles.</li>
+      </ul>
+    </section>
+
+    <!-- 12. Privacidad y proteccion de datos -->
+    <section class="mb-10 reveal">
+      <h2 class="text-xl font-bold text-gray-900 mb-3">12. Privacidad y proteccion de datos</h2>
+      <ul class="list-disc pl-6 text-gray-600 space-y-1">
+        <li>HAMPI actua como <strong>encargado del tratamiento</strong> de los datos personales de los clientes finales del contratante, en los terminos de la Ley 25.326 de Proteccion de Datos Personales y su decreto reglamentario 1558/2001.</li>
+        <li>Los datos se almacenan en servidores con encriptacion en transito (TLS 1.2+) y en reposo.</li>
+        <li>HAMPI no comparte, vende ni cede datos personales a terceros, salvo requerimiento de autoridad judicial competente.</li>
+        <li>El Cliente es responsable de obtener el consentimiento de sus clientes finales para el tratamiento de sus datos a traves de la plataforma.</li>
+        <li>El Cliente puede solicitar la eliminacion de todos sus datos y los de sus clientes finales en cualquier momento por escrito a admin@hampi.tech.</li>
+      </ul>
+    </section>
+
+    <!-- 13. Propiedad intelectual -->
+    <section class="mb-10 reveal">
+      <h2 class="text-xl font-bold text-gray-900 mb-3">13. Propiedad intelectual</h2>
+      <p class="text-gray-600">La plataforma HAMPI, incluyendo su codigo fuente, algoritmos, diseno, marca, logotipo y documentacion, es propiedad exclusiva de <strong>[RAZON SOCIAL]</strong>. La contratacion del servicio no otorga al Cliente ningun derecho de propiedad sobre los mismos, limitandose a una licencia de uso no exclusiva, intransferible y revocable durante la vigencia del contrato.</p>
+    </section>
+
+    <!-- 14. Limitacion de responsabilidad -->
+    <section class="mb-10 reveal">
+      <h2 class="text-xl font-bold text-gray-900 mb-3">14. Limitacion de responsabilidad</h2>
+      <ul class="list-disc pl-6 text-gray-600 space-y-1">
+        <li>HAMPI no garantiza resultados especificos de recupero, retencion o conversion, ya que estos dependen de multiples factores ajenos a la plataforma.</li>
+        <li>HAMPI no sera responsable por danos indirectos, lucro cesante, perdida de datos o interrupciones causadas por terceros (Meta, MercadoPago, proveedores de infraestructura).</li>
+        <li>La responsabilidad maxima de HAMPI frente al Cliente se limita al equivalente de las ultimas 3 mensualidades efectivamente abonadas.</li>
+        <li>HAMPI no es responsable por el contenido de los mensajes configurados por el Cliente ni por el uso que este haga de la plataforma.</li>
+      </ul>
+    </section>
+
+    <!-- 15. Disponibilidad del servicio (SLA) -->
+    <section class="mb-10 reveal">
+      <h2 class="text-xl font-bold text-gray-900 mb-3">15. Disponibilidad del servicio (SLA)</h2>
+      <p class="text-gray-600 mb-3">HAMPI se compromete a mantener una disponibilidad del <strong>99,5% mensual</strong>, excluyendo ventanas de mantenimiento programado (comunicadas con 24 horas de anticipacion).</p>
+      <p class="text-gray-600">En caso de interrupciones no programadas superiores a 4 horas consecutivas, el Cliente tendra derecho a un credito proporcional al tiempo de inactividad, aplicable a la siguiente factura. Dicho credito no podra exceder el 30% de la mensualidad vigente.</p>
+    </section>
+
+    <!-- 16. Soporte tecnico -->
+    <section class="mb-10 reveal">
+      <h2 class="text-xl font-bold text-gray-900 mb-3">16. Soporte tecnico</h2>
+      <ul class="list-disc pl-6 text-gray-600 space-y-1">
+        <li><strong>Canales:</strong> WhatsApp y email (admin@hampi.tech).</li>
+        <li><strong>Horario:</strong> lunes a viernes de 9:00 a 18:00 (hora de Argentina, GMT-3).</li>
+        <li><strong>Tiempo de respuesta:</strong> hasta 4 horas habiles para incidencias criticas; hasta 24 horas habiles para consultas generales.</li>
+        <li>Incidencias fuera de horario que afecten la operacion del servicio seran atendidas con prioridad al inicio del siguiente dia habil.</li>
+      </ul>
+    </section>
+
+    <!-- 17. Confidencialidad -->
+    <section class="mb-10 reveal">
+      <h2 class="text-xl font-bold text-gray-900 mb-3">17. Confidencialidad</h2>
+      <p class="text-gray-600">Ambas partes se comprometen a mantener la confidencialidad de toda informacion tecnica, comercial y operativa intercambiada durante la vigencia del contrato y por un plazo de 2 anos posteriores a su finalizacion, salvo consentimiento expreso de la otra parte o requerimiento legal.</p>
+    </section>
+
+    <!-- 18. Modificaciones -->
+    <section class="mb-10 reveal">
+      <h2 class="text-xl font-bold text-gray-900 mb-3">18. Modificaciones a los T&C</h2>
+      <p class="text-gray-600">HAMPI podra modificar estos T&C en cualquier momento. Las modificaciones se comunicaran con un minimo de 15 dias corridos de anticipacion por email. El uso continuado del servicio luego de dicho plazo implica la aceptacion de los nuevos terminos. Si el Cliente no acepta las modificaciones, podra rescindir el contrato sin penalidad.</p>
+    </section>
+
+    <!-- 19. Jurisdiccion y ley aplicable -->
+    <section class="mb-10 reveal">
+      <h2 class="text-xl font-bold text-gray-900 mb-3">19. Jurisdiccion y ley aplicable</h2>
+      <p class="text-gray-600">Los presentes T&C se rigen por las leyes de la Republica Argentina. Para cualquier controversia derivada de la interpretacion o ejecucion de estos terminos, las partes se someten a la jurisdiccion de los <strong>Tribunales Ordinarios de la ciudad de Cordoba, Provincia de Cordoba</strong>, renunciando a cualquier otro fuero o jurisdiccion que pudiera corresponderles.</p>
+    </section>
+
+    <!-- 20. Contacto -->
+    <section class="mb-6 reveal">
+      <h2 class="text-xl font-bold text-gray-900 mb-3">20. Contacto</h2>
+      <p class="text-gray-600 mb-1"><strong>Prestador:</strong> [RAZON SOCIAL]</p>
+      <p class="text-gray-600 mb-1"><strong>Domicilio:</strong> Cordoba, Provincia de Cordoba, Republica Argentina</p>
+      <p class="text-gray-600 mb-1"><strong>Email:</strong> <a href="mailto:admin@hampi.tech" class="text-brand-600 hover:underline">admin@hampi.tech</a></p>
+      <p class="text-gray-600"><strong>Web:</strong> <a href="https://hampi.tech" class="text-brand-600 hover:underline">hampi.tech</a></p>
+    </section>
+
+  </main>
+
+  <!-- ===== FOOTER (identico a index.html) ===== -->
+  <footer class="bg-white text-gray-500 py-6 border-t border-gray-200">
+    <div class="max-w-6xl mx-auto px-4 sm:px-6">
+      <div class="grid sm:grid-cols-2 lg:grid-cols-4 gap-5 mb-5">
+        <div>
+          <div class="mb-2"><img src="logoabajo.png" alt="HAMPI" class="h-8 w-auto object-contain"></div>
+          <p class="text-[10px] font-semibold text-gray-700 mb-1">HAMPI-SAAS</p>
+          <p class="text-[10px] leading-relaxed text-gray-500">Atencion, recordatorios de pago, fidelizacion y agentes con IA para PyMEs y profesionales argentinos.</p>
+        </div>
+        <div>
+          <h4 class="text-gray-900 font-semibold mb-2 text-sm">Producto</h4>
+          <ul class="space-y-1 text-xs">
+            <li><a href="index.html#sistema" class="hover:text-gray-900 transition-colors">El sistema</a></li>
+            <li><a href="index.html#calculadora" class="hover:text-gray-900 transition-colors">Calculadora</a></li>
+            <li><a href="index.html#planes" class="hover:text-gray-900 transition-colors">Planes</a></li>
+            <li><a href="index.html#faq" class="hover:text-gray-900 transition-colors">FAQ</a></li>
+            <li><a href="historia.html" class="hover:text-gray-900 transition-colors">Historia</a></li>
+            <li><a href="https://api.hampi.tech/dash/login" target="_blank" rel="noopener" class="hover:text-gray-900 transition-colors">Acceso clientes</a></li>
+          </ul>
+        </div>
+        <div>
+          <h4 class="text-gray-900 font-semibold mb-2 text-sm">Contacto</h4>
+          <ul class="space-y-1 text-xs">
+            <li><a href="https://wa.me/5493515555555" target="_blank" rel="noopener" class="hover:text-gray-900 transition-colors">WhatsApp</a></li>
+            <li><a href="mailto:admin@hampi.tech" class="hover:text-gray-900 transition-colors">admin@hampi.tech</a></li>
+            <li>Cordoba, Argentina</li>
+          </ul>
+        </div>
+        <div>
+          <h4 class="text-gray-900 font-semibold mb-2 text-sm">Legal</h4>
+          <ul class="space-y-1 text-xs">
+            <li><a href="terminos.html" class="hover:text-gray-900 transition-colors text-brand-600 font-medium">Terminos y condiciones</a></li>
+            <li><a href="privacidad.html" class="hover:text-gray-900 transition-colors">Politica de privacidad</a></li>
+          </ul>
+        </div>
+      </div>
+      <div class="border-t border-gray-200 pt-4 text-center">
+        <p class="text-xs text-gray-400">&copy; 2026 HAMPI. Todos los derechos reservados.</p>
+      </div>
+    </div>
+  </footer>
+
+  <!-- WhatsApp Float -->
+  <a href="https://wa.me/5493515555555?text=Hola%2C%20quiero%20info%20sobre%20HAMPI" target="_blank" rel="noopener" class="whatsapp-float" aria-label="Contactar por WhatsApp">
+    <svg class="w-9 h-9" fill="currentColor" viewBox="0 0 24 24"><path d="M17.472 14.382c-.297-.149-1.758-.867-2.03-.967-.273-.099-.471-.148-.67.15-.197.297-.767.966-.94 1.164-.173.199-.347.223-.644.075-.297-.15-1.255-.463-2.39-1.475-.883-.788-1.48-1.761-1.653-2.059-.173-.297-.018-.458.13-.606.134-.133.298-.347.446-.52.149-.174.198-.298.298-.497.099-.198.05-.371-.025-.52-.075-.149-.669-1.612-.916-2.207-.242-.579-.487-.5-.669-.51-.173-.008-.371-.01-.57-.01-.198 0-.52.074-.792.372-.272.297-1.04 1.016-1.04 2.479 0 1.462 1.065 2.875 1.213 3.074.149.198 2.096 3.2 5.077 4.487.709.306 1.262.489 1.694.625.712.227 1.36.195 1.871.118.571-.085 1.758-.719 2.006-1.413.248-.694.248-1.289.173-1.413-.074-.124-.272-.198-.57-.347z"/><path d="M12 0C5.373 0 0 5.373 0 12c0 2.625.846 5.059 2.284 7.034L.789 23.492a.75.75 0 00.913.913l4.458-1.495A11.952 11.952 0 0012 24c6.627 0 12-5.373 12-12S18.627 0 12 0zm0 22c-2.347 0-4.518-.804-6.236-2.152l-.436-.35-3.027 1.015 1.015-3.027-.35-.436A9.956 9.956 0 012 12C2 6.486 6.486 2 12 2s10 4.486 10 10-4.486 10-10 10z"/></svg>
+  </a>
+
+  <script>
+    // === Mobile menu ===
+    document.getElementById('menu-toggle').addEventListener('click', () => document.getElementById('mobile-menu').classList.toggle('hidden'));
+    document.querySelectorAll('#mobile-menu a').forEach(a => a.addEventListener('click', () => document.getElementById('mobile-menu').classList.add('hidden')));
+
+    // === Nav scroll shadow ===
+    (function(){
+      const nav = document.getElementById('main-nav');
+      if(!nav) return;
+      let ticking = false;
+      window.addEventListener('scroll', function(){
+        if(!ticking){
+          requestAnimationFrame(function(){
+            if(window.scrollY > 10){
+              nav.style.boxShadow = '0 10px 30px rgba(30,58,138,.08)';
+              nav.style.borderBottomColor = 'transparent';
+            } else {
+              nav.style.boxShadow = 'none';
+              nav.style.borderBottomColor = '';
+            }
+            ticking = false;
+          });
+          ticking = true;
+        }
+      });
+    })();
+
+    // === Scroll Reveal ===
+    const obs = new IntersectionObserver((entries) => {
+      entries.forEach(e => { if (e.isIntersecting) { e.target.classList.add('visible'); obs.unobserve(e.target); } });
+    }, { threshold: 0.1, rootMargin: '0px 0px -50px 0px' });
+    document.querySelectorAll('.reveal').forEach(el => obs.observe(el));
+  </script>
+
+</body>
+</html>

@@ -1,0 +1,338 @@
+<!DOCTYPE html>
+<html lang="es-AR">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Politica de Privacidad — HAMPI</title>
+  <meta name="description" content="Politica de privacidad de HAMPI. Como tratamos, protegemos y almacenamos los datos personales de nuestros clientes.">
+  <link rel="icon" type="image/png" sizes="32x32" href="logoxx.png">
+  <link rel="apple-touch-icon" sizes="180x180" href="logoxx.png">
+  <link rel="manifest" href="manifest.json">
+  <link rel="preconnect" href="https://fonts.googleapis.com">
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+  <link href="https://fonts.googleapis.com/css2?family=Inter:wght@400;500;600;700;800;900&display=swap" rel="stylesheet">
+  <script src="https://cdn.tailwindcss.com"></script>
+  <script>
+    tailwind.config = {
+      theme: {
+        extend: {
+          fontFamily: { sans: ['Inter', 'system-ui', 'sans-serif'] },
+          colors: {
+            brand: {
+              50: '#eef2ff', 100: '#e0e7ff', 200: '#c7d2fe', 300: '#a5b4fc',
+              400: '#818cf8', 500: '#6366f1', 600: '#4f46e5', 700: '#4338ca',
+              800: '#3730a3', 900: '#312e81', 950: '#1e1b4b'
+            }
+          }
+        }
+      }
+    }
+  </script>
+  <style>
+    html{scroll-behavior:smooth}
+    .reveal{opacity:0;transform:translateY(30px);transition:opacity .7s ease,transform .7s ease}
+    .reveal.visible{opacity:1;transform:translateY(0)}
+    .whatsapp-float{position:fixed;bottom:24px;right:24px;z-index:50;background:#25d366;color:#fff;border-radius:9999px;width:76px;height:76px;display:flex;align-items:center;justify-content:center;box-shadow:0 4px 20px rgba(37,211,102,.4);transition:transform .3s ease}
+    .whatsapp-float:hover{transform:scale(1.1)}
+    @keyframes pulse-ring{0%{box-shadow:0 0 0 0 rgba(37,211,102,.4)}70%{box-shadow:0 0 0 15px rgba(37,211,102,0)}100%{box-shadow:0 0 0 0 rgba(37,211,102,0)}}
+    .whatsapp-float{animation:pulse-ring 2s infinite}
+  </style>
+</head>
+
+<body class="font-sans text-gray-800 bg-white antialiased">
+
+  <!-- ===== NAV (identico a index.html) ===== -->
+  <nav id="main-nav" class="fixed top-0 w-full bg-white z-40 border-b border-gray-200/60 transition-shadow duration-300" style="box-shadow:none">
+    <div class="max-w-6xl mx-auto px-4 sm:px-6 flex items-center justify-between h-16">
+      <a href="index.html" class="flex items-center gap-2">
+        <img src="hampilogo.png" alt="HAMPI" class="h-8 sm:h-9 w-auto object-contain" style="image-rendering:-webkit-optimize-contrast;transform:translateZ(0)">
+      </a>
+      <div class="hidden md:flex items-center gap-8 text-xs font-bold text-gray-700 uppercase" style="letter-spacing:.06em">
+        <a href="index.html#sistema" class="hover:text-brand-600 transition-colors">El sistema</a>
+        <a href="index.html#calculadora" class="hover:text-brand-600 transition-colors">Calculadora</a>
+        <a href="index.html#planes" class="hover:text-brand-600 transition-colors">Planes</a>
+        <a href="index.html#faq" class="hover:text-brand-600 transition-colors">FAQ</a>
+        <a href="historia.html" class="hover:text-brand-600 transition-colors">Historia</a>
+      </div>
+      <div class="flex items-center gap-3">
+        <a href="index.html#calculadora" id="nav-calc-cta" class="hidden sm:inline-flex items-center gap-2 bg-brand-600 hover:bg-brand-700 text-white text-xs font-bold uppercase px-3.5 py-1.5 rounded-lg transition-colors" style="letter-spacing:.06em;line-height:1.5">
+          CALCULAR MI PERDIDA
+          <svg class="w-3.5 h-3.5" fill="none" stroke="currentColor" viewBox="0 0 24 24"><path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M9 7h6m0 10v-3m-3 3h.01M9 17h.01M9 14h.01M12 14h.01M15 11h.01M12 11h.01M9 11h.01M7 21h10a2 2 0 002-2V5a2 2 0 00-2-2H7a2 2 0 00-2 2v14a2 2 0 002 2z"/></svg>
+        </a>
+      </div>
+      <button id="menu-toggle" class="md:hidden ml-2 p-2 text-gray-600 hover:text-brand-600" aria-label="Menu">
+        <svg class="w-6 h-6" fill="none" stroke="currentColor" viewBox="0 0 24 24"><path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M4 6h16M4 12h16M4 18h16"/></svg>
+      </button>
+    </div>
+    <div id="mobile-menu" class="hidden md:hidden border-t border-gray-100 bg-white">
+      <div class="px-4 py-3 space-y-2">
+        <a href="index.html#sistema" class="block py-2 text-xs font-bold text-gray-700 uppercase" style="letter-spacing:.06em">El sistema</a>
+        <a href="index.html#calculadora" class="block py-2 text-xs font-bold text-gray-700 uppercase" style="letter-spacing:.06em">Calculadora</a>
+        <a href="index.html#planes" class="block py-2 text-xs font-bold text-gray-700 uppercase" style="letter-spacing:.06em">Planes</a>
+        <a href="index.html#faq" class="block py-2 text-xs font-bold text-gray-700 uppercase" style="letter-spacing:.06em">FAQ</a>
+        <a href="historia.html" class="block py-2 text-xs font-bold text-gray-700 uppercase" style="letter-spacing:.06em">Historia</a>
+      </div>
+    </div>
+  </nav>
+
+  <!-- ===== HERO ===== -->
+  <section class="pt-28 pb-12 sm:pt-32 sm:pb-16" style="background:linear-gradient(135deg,#312e81 0%,#3730a3 25%,#4f46e5 60%,#6366f1 100%)">
+    <div class="max-w-4xl mx-auto px-4 sm:px-6 text-center">
+      <h1 class="text-3xl sm:text-4xl font-black text-white mb-3">Politica de Privacidad</h1>
+      <p class="text-brand-200 text-sm">Ultima actualizacion: febrero 2026</p>
+    </div>
+  </section>
+
+  <!-- ===== CONTENIDO ===== -->
+  <main class="max-w-4xl mx-auto px-4 sm:px-6 py-12 sm:py-16" style="text-align:justify">
+
+    <!-- 1. Informacion general -->
+    <section class="mb-10 reveal">
+      <h2 class="text-xl font-bold text-gray-900 mb-3">1. Informacion general</h2>
+      <p class="text-gray-600 mb-3"><strong>Responsable del tratamiento:</strong> [RAZON SOCIAL], con domicilio en la ciudad de Cordoba, Provincia de Cordoba, Republica Argentina (en adelante, "HAMPI", "nosotros" o "nuestro").</p>
+      <p class="text-gray-600 mb-3"><strong>Contacto:</strong> <a href="mailto:admin@hampi.tech" class="text-brand-600 hover:underline">admin@hampi.tech</a></p>
+      <p class="text-gray-600 mb-3">La presente Politica de Privacidad regula el tratamiento de datos personales de los usuarios y clientes (en adelante, "Usuarios") en relacion con el acceso y uso de la plataforma de automatizacion de atencion al cliente, recordatorios de pago y fidelizacion de HAMPI (en adelante, "la Plataforma").</p>
+      <p class="text-gray-600 mb-3">Al utilizar nuestros servicios, el Usuario acepta los terminos aqui establecidos.</p>
+      <p class="text-gray-600">En HAMPI estamos comprometidos con la proteccion de la privacidad y los datos personales. Durante la interaccion con nuestros servicios, podemos recolectar o recibir datos personales tales como: nombre, apellido, informacion de contacto y referencias de pago, entre otros. Estos datos pueden ser almacenados en registros de conversaciones y otros formatos digitales, tanto de forma estructurada como no estructurada.</p>
+    </section>
+
+    <!-- 2. Datos que recolectamos -->
+    <section class="mb-10 reveal">
+      <h2 class="text-xl font-bold text-gray-900 mb-3">2. Datos que recolectamos</h2>
+      <p class="text-gray-600 mb-3">Podemos recolectar los siguientes tipos de datos:</p>
+      <ul class="list-disc pl-6 text-gray-600 space-y-1">
+        <li><strong>Datos de identificacion:</strong> nombre, apellido, DNI/CUIT.</li>
+        <li><strong>Datos de contacto:</strong> correo electronico, numero de telefono, domicilio.</li>
+        <li><strong>Informacion financiera:</strong> referencias de pagos pendientes, estado de pagos, historial de transacciones procesadas a traves de MercadoPago.</li>
+        <li><strong>Informacion comercial:</strong> empresa, cargo, relacion contractual.</li>
+        <li><strong>Datos tecnicos:</strong> direccion IP, navegador, dispositivo, cookies.</li>
+        <li><strong>Datos de interaccion:</strong> registros de conversaciones de WhatsApp gestionadas a traves de la Plataforma.</li>
+      </ul>
+    </section>
+
+    <!-- 3. Datos de empleados y clientes finales -->
+    <section class="mb-10 reveal">
+      <h2 class="text-xl font-bold text-gray-900 mb-3">3. Datos de los empleados y clientes finales de su empresa</h2>
+      <p class="text-gray-600 mb-3"><strong>Empleados:</strong> al contratar nuestros servicios, el Cliente autoriza a HAMPI a almacenar los datos personales de contacto que nos proporcione, asi como los de los empleados de su empresa, con fines de soporte tecnico, atencion y comunicaciones relacionadas exclusivamente con el servicio.</p>
+      <p class="text-gray-600">El Cliente garantiza que ha obtenido previamente el consentimiento de dichos empleados para la comunicacion y tratamiento de sus datos personales conforme a la normativa vigente.</p>
+      <p class="text-gray-600 mt-3"><strong>Clientes finales:</strong> respecto de los datos personales de los clientes de su empresa, el Cliente reconoce y acepta que sera el unico responsable de haber recabado el consentimiento expreso e informado de dichos clientes finales para el tratamiento y cesion de sus datos a HAMPI, previo a cualquier interaccion con la Plataforma.</p>
+    </section>
+
+    <!-- 4. Finalidad del tratamiento -->
+    <section class="mb-10 reveal">
+      <h2 class="text-xl font-bold text-gray-900 mb-3">4. Finalidad del tratamiento</h2>
+      <p class="text-gray-600 mb-3">Tratamos los datos personales para:</p>
+      <ul class="list-disc pl-6 text-gray-600 space-y-1">
+        <li>Brindar, administrar y mejorar los servicios de atencion al cliente, recordatorios de pago y fidelizacion.</li>
+        <li>Gestionar comunicaciones automatizadas con los clientes finales del contratante a traves de WhatsApp Business API, email y SMS.</li>
+        <li>Procesar pagos a traves de la integracion con MercadoPago.</li>
+        <li>Cumplir con obligaciones legales y regulatorias aplicables.</li>
+        <li>Desarrollar analisis estadisticos, de performance y mejora continua del servicio.</li>
+        <li>Personalizar la experiencia de usuario en el panel de administracion.</li>
+        <li>Prevenir fraudes y garantizar la seguridad de la Plataforma.</li>
+      </ul>
+      <p class="text-gray-600 mt-3">HAMPI aplica tecnicas de decisiones automatizadas con inteligencia artificial para optimizar la gestion de recordatorios de pago, segmentar contactos y personalizar las comunicaciones. El Cliente es responsable de informar a sus clientes finales sobre el uso de estas herramientas automatizadas.</p>
+    </section>
+
+    <!-- 5. Bases legales -->
+    <section class="mb-10 reveal">
+      <h2 class="text-xl font-bold text-gray-900 mb-3">5. Bases legales del tratamiento</h2>
+      <p class="text-gray-600 mb-3">El tratamiento de datos personales se fundamenta en:</p>
+      <ul class="list-disc pl-6 text-gray-600 space-y-1">
+        <li>La ejecucion de las obligaciones contractuales entre HAMPI y el Cliente.</li>
+        <li>El interes legitimo de HAMPI en ofrecer, mantener y mejorar sus servicios.</li>
+        <li>El cumplimiento de obligaciones legales aplicables, incluyendo la Ley 25.326 de Proteccion de Datos Personales y su decreto reglamentario 1558/2001.</li>
+        <li>El consentimiento del titular de los datos, cuando corresponda.</li>
+      </ul>
+      <p class="text-gray-600 mt-3">Respecto de datos de terceros (empleados o clientes finales), el Cliente reconoce que es responsable de obtener el consentimiento previo, expreso e informado de los titulares, conforme a la normativa vigente.</p>
+    </section>
+
+    <!-- 6. Destinatarios de los datos -->
+    <section class="mb-10 reveal">
+      <h2 class="text-xl font-bold text-gray-900 mb-3">6. Destinatarios de los datos</h2>
+      <p class="text-gray-600 mb-3">Podremos compartir datos unicamente con:</p>
+      <ul class="list-disc pl-6 text-gray-600 space-y-1">
+        <li><strong>Proveedores de servicios tecnologicos:</strong> servicios de alojamiento (hosting), WhatsApp Business API (via Twilio), procesamiento de pagos (MercadoPago), herramientas de analitica, que son necesarios para el funcionamiento de la Plataforma.</li>
+        <li><strong>Autoridades judiciales o administrativas:</strong> cuando sea requerido por ley o resolucion judicial.</li>
+      </ul>
+      <p class="text-gray-600 mt-3"><strong>HAMPI no vende, cede ni comercializa datos personales a terceros.</strong></p>
+      <p class="text-gray-600 mt-2">Todos los proveedores de servicios actuan bajo acuerdos de confidencialidad y conforme a nuestras instrucciones, garantizando medidas de proteccion adecuadas.</p>
+    </section>
+
+    <!-- 7. Almacenamiento y conservacion -->
+    <section class="mb-10 reveal">
+      <h2 class="text-xl font-bold text-gray-900 mb-3">7. Almacenamiento y conservacion de los datos</h2>
+      <p class="text-gray-600 mb-3">Los datos personales se conservaran:</p>
+      <ul class="list-disc pl-6 text-gray-600 space-y-1">
+        <li>Mientras dure la relacion contractual con el Cliente.</li>
+        <li>Luego de la finalizacion del contrato, por un plazo de <strong>30 dias corridos</strong>, transcurrido el cual se eliminan de forma permanente e irrecuperable.</li>
+        <li>Si existiera una obligacion legal que requiera un plazo mayor de conservacion, se mantendran exclusivamente por el tiempo que dicha obligacion establezca.</li>
+      </ul>
+    </section>
+
+    <!-- 8. Derechos del titular -->
+    <section class="mb-10 reveal">
+      <h2 class="text-xl font-bold text-gray-900 mb-3">8. Derechos del titular de los datos</h2>
+      <p class="text-gray-600 mb-3">De acuerdo con la Ley 25.326 y normativa complementaria, cualquier persona cuyos datos sean tratados por HAMPI tiene derecho a:</p>
+      <ul class="list-disc pl-6 text-gray-600 space-y-1">
+        <li><strong>Acceso:</strong> obtener confirmacion sobre si estamos tratando sus datos personales y acceder a ellos.</li>
+        <li><strong>Rectificacion:</strong> solicitar la correccion o actualizacion de datos inexactos o incompletos.</li>
+        <li><strong>Supresion:</strong> solicitar la eliminacion de sus datos personales cuando ya no sean necesarios para los fines para los que fueron recogidos.</li>
+        <li><strong>Oposicion:</strong> oponerse al tratamiento de sus datos personales por motivos relacionados con su situacion particular.</li>
+        <li><strong>Informacion:</strong> conocer la finalidad del tratamiento y los destinatarios de sus datos.</li>
+      </ul>
+      <p class="text-gray-600 mt-3">Para ejercer cualquiera de estos derechos, el titular puede enviar una solicitud por escrito a: <a href="mailto:admin@hampi.tech" class="text-brand-600 hover:underline">admin@hampi.tech</a>. HAMPI atendera todas las solicitudes dentro de los 10 dias habiles previstos por la normativa vigente.</p>
+      <p class="text-gray-600 mt-2">La DIRECCION NACIONAL DE PROTECCION DE DATOS PERSONALES, organo de control de la Ley 25.326, tiene la atribucion de atender las denuncias y reclamos que se interpongan con relacion al incumplimiento de las normas sobre proteccion de datos personales.</p>
+    </section>
+
+    <!-- 9. Medidas de seguridad -->
+    <section class="mb-10 reveal">
+      <h2 class="text-xl font-bold text-gray-900 mb-3">9. Medidas de seguridad</h2>
+      <p class="text-gray-600 mb-3">Implementamos medidas tecnicas y organizativas para proteger los datos personales, incluyendo:</p>
+      <ul class="list-disc pl-6 text-gray-600 space-y-1">
+        <li>Cifrado de datos en transito (TLS 1.2+) y en reposo.</li>
+        <li>Politicas de control de acceso basadas en roles.</li>
+        <li>Autenticacion mediante tokens JWT con expiracion.</li>
+        <li>Protocolos de backup y recuperacion periodicos.</li>
+        <li>Monitoreo de accesos y registros de auditoria.</li>
+        <li>Headers de seguridad HTTP (CSP, HSTS, X-Frame-Options).</li>
+      </ul>
+      <p class="text-gray-600 mt-3">No obstante, reconocemos que ningun sistema conectado a Internet es 100% infalible, por lo que no podemos garantizar la seguridad absoluta de los datos.</p>
+    </section>
+
+    <!-- 10. Cookies y datos tecnicos -->
+    <section class="mb-10 reveal">
+      <h2 class="text-xl font-bold text-gray-900 mb-3">10. Cookies y datos tecnicos</h2>
+      <p class="text-gray-600 mb-3">La Plataforma puede utilizar cookies y tecnologias similares para:</p>
+      <ul class="list-disc pl-6 text-gray-600 space-y-1">
+        <li>Mantener la sesion del usuario autenticado.</li>
+        <li>Recordar preferencias de configuracion.</li>
+        <li>Analizar el uso de la plataforma con fines de mejora.</li>
+      </ul>
+      <p class="text-gray-600 mt-3">El Usuario puede configurar su navegador para rechazar cookies, aunque esto podria afectar el funcionamiento de ciertas funcionalidades del servicio.</p>
+    </section>
+
+    <!-- 11. Menores de edad -->
+    <section class="mb-10 reveal">
+      <h2 class="text-xl font-bold text-gray-900 mb-3">11. Menores de edad</h2>
+      <p class="text-gray-600">Nuestros servicios no estan destinados a menores de 18 anos. No recopilamos intencionalmente datos personales de menores. Si tomamos conocimiento de que hemos recolectado datos de un menor, procederemos a su eliminacion inmediata.</p>
+    </section>
+
+    <!-- 12. Disponibilidad y limitacion de responsabilidad -->
+    <section class="mb-10 reveal">
+      <h2 class="text-xl font-bold text-gray-900 mb-3">12. Disponibilidad de la plataforma y limitacion de responsabilidad</h2>
+      <ul class="list-disc pl-6 text-gray-600 space-y-2">
+        <li>El Cliente reconoce que los servicios de HAMPI pueden verse temporalmente afectados o interrumpidos debido a tareas de mantenimiento programado, incidencias tecnicas u otros eventos fuera del control razonable de HAMPI.</li>
+        <li>HAMPI no sera responsable por danos derivados del uso incorrecto o inadecuado de la Plataforma, incluyendo: datos erroneos proporcionados por el Cliente, flujos no validados o casos de uso no testeados.</li>
+        <li>HAMPI podra suspender temporalmente el acceso al servicio, con notificacion previa al Cliente, cuando lo considere necesario por motivos de seguridad, mantenimiento o fuerza mayor.</li>
+        <li>En caso de interrupciones graves o reiteradas, el Cliente podra rescindir el contrato conforme a lo establecido en los <a href="terminos.html" class="text-brand-600 hover:underline">Terminos y Condiciones</a>.</li>
+      </ul>
+    </section>
+
+    <!-- 13. Modificaciones -->
+    <section class="mb-10 reveal">
+      <h2 class="text-xl font-bold text-gray-900 mb-3">13. Modificaciones a esta politica</h2>
+      <p class="text-gray-600">HAMPI podra modificar la presente Politica de Privacidad para adaptarla a cambios legislativos, regulatorios o de nuestros servicios. La nueva version se publicara en <a href="https://hampi.tech" class="text-brand-600 hover:underline">hampi.tech</a> y sera comunicada a los Clientes activos por email con un minimo de 15 dias corridos de anticipacion. El uso continuado del servicio luego de dicho plazo implica la aceptacion de la nueva politica.</p>
+    </section>
+
+    <!-- 14. Jurisdiccion -->
+    <section class="mb-10 reveal">
+      <h2 class="text-xl font-bold text-gray-900 mb-3">14. Jurisdiccion y ley aplicable</h2>
+      <p class="text-gray-600">La presente Politica de Privacidad se rige por las leyes de la Republica Argentina, en particular la Ley 25.326 de Proteccion de Datos Personales y su decreto reglamentario 1558/2001. Para cualquier controversia, las partes se someten a la jurisdiccion de los <strong>Tribunales Ordinarios de la ciudad de Cordoba, Provincia de Cordoba</strong>, renunciando a cualquier otro fuero o jurisdiccion que pudiera corresponderles.</p>
+    </section>
+
+    <!-- 15. Contacto -->
+    <section class="mb-6 reveal">
+      <h2 class="text-xl font-bold text-gray-900 mb-3">15. Contacto</h2>
+      <p class="text-gray-600 mb-1">Para cualquier consulta relacionada con la privacidad de sus datos personales o el ejercicio de sus derechos:</p>
+      <p class="text-gray-600 mb-1"><strong>Responsable:</strong> [RAZON SOCIAL]</p>
+      <p class="text-gray-600 mb-1"><strong>Domicilio:</strong> Cordoba, Provincia de Cordoba, Republica Argentina</p>
+      <p class="text-gray-600 mb-1"><strong>Email:</strong> <a href="mailto:admin@hampi.tech" class="text-brand-600 hover:underline">admin@hampi.tech</a></p>
+      <p class="text-gray-600"><strong>Web:</strong> <a href="https://hampi.tech" class="text-brand-600 hover:underline">hampi.tech</a></p>
+    </section>
+
+  </main>
+
+  <!-- ===== FOOTER (identico a index.html) ===== -->
+  <footer class="bg-white text-gray-500 py-6 border-t border-gray-200">
+    <div class="max-w-6xl mx-auto px-4 sm:px-6">
+      <div class="grid sm:grid-cols-2 lg:grid-cols-4 gap-5 mb-5">
+        <div>
+          <div class="mb-2"><img src="logoabajo.png" alt="HAMPI" class="h-8 w-auto object-contain"></div>
+          <p class="text-[10px] font-semibold text-gray-700 mb-1">HAMPI-SAAS</p>
+          <p class="text-[10px] leading-relaxed text-gray-500">Atencion, recordatorios de pago, fidelizacion y agentes con IA para PyMEs y profesionales argentinos.</p>
+        </div>
+        <div>
+          <h4 class="text-gray-900 font-semibold mb-2 text-sm">Producto</h4>
+          <ul class="space-y-1 text-xs">
+            <li><a href="index.html#sistema" class="hover:text-gray-900 transition-colors">El sistema</a></li>
+            <li><a href="index.html#calculadora" class="hover:text-gray-900 transition-colors">Calculadora</a></li>
+            <li><a href="index.html#planes" class="hover:text-gray-900 transition-colors">Planes</a></li>
+            <li><a href="index.html#faq" class="hover:text-gray-900 transition-colors">FAQ</a></li>
+            <li><a href="historia.html" class="hover:text-gray-900 transition-colors">Historia</a></li>
+            <li><a href="https://api.hampi.tech/dash/login" target="_blank" rel="noopener" class="hover:text-gray-900 transition-colors">Acceso clientes</a></li>
+          </ul>
+        </div>
+        <div>
+          <h4 class="text-gray-900 font-semibold mb-2 text-sm">Contacto</h4>
+          <ul class="space-y-1 text-xs">
+            <li><a href="https://wa.me/5493515555555" target="_blank" rel="noopener" class="hover:text-gray-900 transition-colors">WhatsApp</a></li>
+            <li><a href="mailto:admin@hampi.tech" class="hover:text-gray-900 transition-colors">admin@hampi.tech</a></li>
+            <li>Cordoba, Argentina</li>
+          </ul>
+        </div>
+        <div>
+          <h4 class="text-gray-900 font-semibold mb-2 text-sm">Legal</h4>
+          <ul class="space-y-1 text-xs">
+            <li><a href="terminos.html" class="hover:text-gray-900 transition-colors">Terminos y condiciones</a></li>
+            <li><a href="privacidad.html" class="hover:text-gray-900 transition-colors text-brand-600 font-medium">Politica de privacidad</a></li>
+          </ul>
+        </div>
+      </div>
+      <div class="border-t border-gray-200 pt-4 text-center">
+        <p class="text-xs text-gray-400">&copy; 2026 HAMPI. Todos los derechos reservados.</p>
+      </div>
+    </div>
+  </footer>
+
+  <!-- WhatsApp Float -->
+  <a href="https://wa.me/5493515555555?text=Hola%2C%20quiero%20info%20sobre%20HAMPI" target="_blank" rel="noopener" class="whatsapp-float" aria-label="Contactar por WhatsApp">
+    <svg class="w-9 h-9" fill="currentColor" viewBox="0 0 24 24"><path d="M17.472 14.382c-.297-.149-1.758-.867-2.03-.967-.273-.099-.471-.148-.67.15-.197.297-.767.966-.94 1.164-.173.199-.347.223-.644.075-.297-.15-1.255-.463-2.39-1.475-.883-.788-1.48-1.761-1.653-2.059-.173-.297-.018-.458.13-.606.134-.133.298-.347.446-.52.149-.174.198-.298.298-.497.099-.198.05-.371-.025-.52-.075-.149-.669-1.612-.916-2.207-.242-.579-.487-.5-.669-.51-.173-.008-.371-.01-.57-.01-.198 0-.52.074-.792.372-.272.297-1.04 1.016-1.04 2.479 0 1.462 1.065 2.875 1.213 3.074.149.198 2.096 3.2 5.077 4.487.709.306 1.262.489 1.694.625.712.227 1.36.195 1.871.118.571-.085 1.758-.719 2.006-1.413.248-.694.248-1.289.173-1.413-.074-.124-.272-.198-.57-.347z"/><path d="M12 0C5.373 0 0 5.373 0 12c0 2.625.846 5.059 2.284 7.034L.789 23.492a.75.75 0 00.913.913l4.458-1.495A11.952 11.952 0 0012 24c6.627 0 12-5.373 12-12S18.627 0 12 0zm0 22c-2.347 0-4.518-.804-6.236-2.152l-.436-.35-3.027 1.015 1.015-3.027-.35-.436A9.956 9.956 0 012 12C2 6.486 6.486 2 12 2s10 4.486 10 10-4.486 10-10 10z"/></svg>
+  </a>
+
+  <script>
+    // === Mobile menu ===
+    document.getElementById('menu-toggle').addEventListener('click', () => document.getElementById('mobile-menu').classList.toggle('hidden'));
+    document.querySelectorAll('#mobile-menu a').forEach(a => a.addEventListener('click', () => document.getElementById('mobile-menu').classList.add('hidden')));
+
+    // === Nav scroll shadow ===
+    (function(){
+      const nav = document.getElementById('main-nav');
+      if(!nav) return;
+      let ticking = false;
+      window.addEventListener('scroll', function(){
+        if(!ticking){
+          requestAnimationFrame(function(){
+            if(window.scrollY > 10){
+              nav.style.boxShadow = '0 10px 30px rgba(30,58,138,.08)';
+              nav.style.borderBottomColor = 'transparent';
+            } else {
+              nav.style.boxShadow = 'none';
+              nav.style.borderBottomColor = '';
+            }
+            ticking = false;
+          });
+          ticking = true;
+        }
+      });
+    })();
+
+    // === Scroll Reveal ===
+    const obs = new IntersectionObserver((entries) => {
+      entries.forEach(e => { if (e.isIntersecting) { e.target.classList.add('visible'); obs.unobserve(e.target); } });
+    }, { threshold: 0.1, rootMargin: '0px 0px -50px 0px' });
+    document.querySelectorAll('.reveal').forEach(el => obs.observe(el));
+  </script>
+
+</body>
+</html>
