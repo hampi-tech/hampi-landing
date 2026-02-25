@@ -858,10 +858,16 @@
                   <svg class="w-3.5 h-3.5" fill="currentColor" viewBox="0 0 24 24"><path d="M17.472 14.382c-.297-.149-1.758-.867-2.03-.967-.273-.099-.471-.148-.67.15-.197.297-.767.966-.94 1.164-.173.199-.347.223-.644.075-.297-.15-1.255-.463-2.39-1.475-.883-.788-1.48-1.761-1.653-2.059-.173-.297-.018-.458.13-.606.134-.133.298-.347.446-.52.149-.174.198-.298.298-.497.099-.198.05-.371-.025-.52-.075-.149-.669-1.612-.916-2.207-.242-.579-.487-.5-.669-.51-.173-.008-.371-.01-.57-.01-.198 0-.52.074-.792.372-.272.297-1.04 1.016-1.04 2.479 0 1.462 1.065 2.875 1.213 3.074.149.198 2.096 3.2 5.077 4.487.709.306 1.262.489 1.694.625.712.227 1.36.195 1.871.118.571-.085 1.758-.719 2.006-1.413.248-.694.248-1.289.173-1.413-.074-.124-.272-.198-.57-.347z"/><path d="M12 0C5.373 0 0 5.373 0 12c0 2.625.846 5.059 2.284 7.034L.789 23.492a.75.75 0 00.913.913l4.458-1.495A11.952 11.952 0 0012 24c6.627 0 12-5.373 12-12S18.627 0 12 0zm0 22c-2.347 0-4.518-.804-6.236-2.152l-.436-.35-3.027 1.015 1.015-3.027-.35-.436A9.956 9.956 0 012 12C2 6.486 6.486 2 12 2s10 4.486 10 10-4.486 10-10 10z"/></svg>
                   Quiero recuperar esa plata
                 </a>
-                <button id="calc-email-btn" class="inline-flex items-center justify-center gap-2 text-gray-400 hover:text-white font-semibold px-4 py-2 rounded-lg border border-gray-700 hover:border-gray-500 transition-colors text-xs">
-                  <svg class="w-3.5 h-3.5" fill="none" stroke="currentColor" viewBox="0 0 24 24"><path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M3 8l7.89 5.26a2 2 0 002.22 0L21 8M5 19h14a2 2 0 002-2V7a2 2 0 00-2-2H5a2 2 0 00-2 2v10a2 2 0 002 2z"/></svg>
-                  Enviar por email
-                </button>
+                <div id="calc-email-form" class="flex flex-col sm:flex-row gap-2 items-stretch sm:items-center">
+                  <input id="calc-email-input" type="email" placeholder="tu@email.com"
+                    class="flex-1 bg-gray-900 border border-gray-700 text-white text-xs rounded-lg px-3 py-2 focus:border-brand-500 focus:outline-none placeholder-gray-500 min-w-0">
+                  <button id="calc-email-btn" type="button"
+                    class="inline-flex items-center justify-center gap-2 text-gray-400 hover:text-white font-semibold px-4 py-2 rounded-lg border border-gray-700 hover:border-gray-500 transition-colors text-xs whitespace-nowrap">
+                    <svg class="w-3.5 h-3.5" fill="none" stroke="currentColor" viewBox="0 0 24 24"><path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M3 8l7.89 5.26a2 2 0 002.22 0L21 8M5 19h14a2 2 0 002-2V7a2 2 0 00-2-2H5a2 2 0 00-2 2v10a2 2 0 002 2z"/></svg>
+                    Enviar por email
+                  </button>
+                </div>
+                <p id="calc-email-msg" class="text-center text-[10px] mt-1.5 hidden"></p>
               </div>
               <p class="text-center text-gray-600 text-[10px] mt-2">* Estimacion basada en promedios. No constituye garantia.</p>
             </div>
@@ -1006,7 +1012,7 @@
           <h4 class="text-gray-900 font-semibold mb-2 text-sm">Contacto</h4>
           <ul class="space-y-1 text-xs">
             <li><a href="https://wa.me/5493515555555" target="_blank" rel="noopener" class="hover:text-gray-900 transition-colors">WhatsApp</a></li>
-            <li><a href="mailto:admin@hampi.tech" class="hover:text-gray-900 transition-colors">admin@hampi.tech</a></li>
+            <li><a href="mailto:contacto@hampi.tech" class="hover:text-gray-900 transition-colors">contacto@hampi.tech</a></li>
             <li>Cordoba, Argentina</li>
           </ul>
         </div>
@@ -1268,28 +1274,56 @@
     document.querySelectorAll('#calc-clientes, #calc-ticket, #calc-mora, #calc-churn').forEach(i => i.addEventListener('input', updateCalc));
     updateCalc();
 
-    // === Email result ===
-    document.getElementById('calc-email-btn').addEventListener('click', () => {
-      const perdida = document.getElementById('calc-perdida').textContent;
-      const clientes = document.getElementById('calc-clientes').value;
-      const mora = document.getElementById('calc-mora').value;
-      const churn = document.getElementById('calc-churn').value;
+    // === Email result via API ===
+    const CALC_API = location.hostname === 'localhost' || location.hostname === '127.0.0.1'
+      ? 'http://localhost:8000/public/calculator-lead'
+      : 'https://api.hampi.tech/public/calculator-lead';
 
-      const subject = encodeURIComponent('Mi resultado de la Calculadora HAMPI');
-      const body = encodeURIComponent(
-        'RESUMEN - Calculadora HAMPI\n' +
-        '================================\n\n' +
-        'Datos ingresados:\n' +
-        '- Clientes activos: ' + clientes + '\n' +
-        '- Morosidad: ' + mora + '%\n' +
-        '- Churn mensual: ' + churn + '%\n\n' +
-        'Resultados:\n' +
-        '- Estimativo de perdida mensual: ' + perdida + '\n\n' +
-        '---\n' +
-        'Quiero mas info sobre como HAMPI puede ayudarme.\n' +
-        'https://hampi.tech'
-      );
-      window.location.href = 'mailto:admin@hampi.tech?subject=' + subject + '&body=' + body;
+    document.getElementById('calc-email-btn').addEventListener('click', async () => {
+      const emailInput = document.getElementById('calc-email-input');
+      const msgEl = document.getElementById('calc-email-msg');
+      const btn = document.getElementById('calc-email-btn');
+      const email = emailInput.value.trim();
+
+      if (!email || !/^[^\s@]+@[^\s@]+\.[^\s@]+$/.test(email)) {
+        msgEl.textContent = 'Ingresa un email valido';
+        msgEl.className = 'text-center text-[10px] mt-1.5 text-red-400';
+        msgEl.classList.remove('hidden');
+        return;
+      }
+
+      btn.disabled = true;
+      btn.textContent = 'Enviando...';
+      msgEl.classList.add('hidden');
+
+      try {
+        const res = await fetch(CALC_API, {
+          method: 'POST',
+          headers: { 'Content-Type': 'application/json' },
+          body: JSON.stringify({
+            email: email,
+            clientes: +document.getElementById('calc-clientes').value,
+            ticket: +document.getElementById('calc-ticket').value,
+            mora: +document.getElementById('calc-mora').value,
+            churn: +document.getElementById('calc-churn').value,
+            perdida_total: +(document.getElementById('calc-perdida').textContent.replace(/[^0-9]/g, ''))
+          })
+        });
+        const data = await res.json();
+        if (data.ok) {
+          msgEl.textContent = 'Email enviado! Revisa tu casilla.';
+          msgEl.className = 'text-center text-[10px] mt-1.5 text-green-400';
+        } else {
+          msgEl.textContent = 'No se pudo enviar. Intenta de nuevo.';
+          msgEl.className = 'text-center text-[10px] mt-1.5 text-red-400';
+        }
+      } catch (e) {
+        msgEl.textContent = 'Error de conexion. Intenta de nuevo.';
+        msgEl.className = 'text-center text-[10px] mt-1.5 text-red-400';
+      }
+      msgEl.classList.remove('hidden');
+      btn.disabled = false;
+      btn.innerHTML = '<svg class="w-3.5 h-3.5" fill="none" stroke="currentColor" viewBox="0 0 24 24"><path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M3 8l7.89 5.26a2 2 0 002.22 0L21 8M5 19h14a2 2 0 002-2V7a2 2 0 00-2-2H5a2 2 0 00-2 2v10a2 2 0 002 2z"/></svg> Enviar por email';
     });
 
     // === Toggle Mensual / Anual ===
