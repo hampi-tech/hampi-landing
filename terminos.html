@@ -4,7 +4,10 @@
   <meta charset="UTF-8">
   <meta name="viewport" content="width=device-width, initial-scale=1.0">
   <title>Terminos y Condiciones — HAMPI</title>
-  <meta name="description" content="Terminos y condiciones del servicio HAMPI. Fee transaccional, limites de mensajes, politica de cancelacion.">
+  <meta name="description" content="Terminos y condiciones de uso de la plataforma HAMPI. Informacion legal sobre el servicio.">
+  <link rel="canonical" href="https://hampi.tech/terminos.html">
+  <meta property="og:image" content="https://hampi.tech/hampilogo.png">
+  <meta name="theme-color" content="#4f46e5">
   <link rel="icon" type="image/png" sizes="32x32" href="logoxx.png">
   <link rel="apple-touch-icon" sizes="180x180" href="logoxx.png">
   <link rel="manifest" href="manifest.json">
@@ -37,6 +40,13 @@
     @keyframes pulse-ring{0%{box-shadow:0 0 0 0 rgba(37,211,102,.4)}70%{box-shadow:0 0 0 15px rgba(37,211,102,0)}100%{box-shadow:0 0 0 0 rgba(37,211,102,0)}}
     .whatsapp-float{animation:pulse-ring 2s infinite}
   </style>
+  <script async src="https://www.googletagmanager.com/gtag/js?id=G-XXXXXXXXXX"></script>
+  <script>
+    window.dataLayer = window.dataLayer || [];
+    function gtag(){dataLayer.push(arguments);}
+    gtag('js', new Date());
+    gtag('config', 'G-XXXXXXXXXX', { send_page_view: true });
+  </script>
 </head>
 
 <body class="font-sans text-gray-800 bg-white antialiased">
@@ -45,19 +55,20 @@
   <nav id="main-nav" class="fixed top-0 w-full bg-white z-40 border-b border-gray-200/60 transition-shadow duration-300" style="box-shadow:none">
     <div class="max-w-6xl mx-auto px-4 sm:px-6 flex items-center justify-between h-16">
       <a href="index.html" class="flex items-center gap-2">
-        <img src="hampilogo.png" alt="HAMPI" class="h-8 sm:h-9 w-auto object-contain" style="image-rendering:-webkit-optimize-contrast;transform:translateZ(0)">
+        <picture>
+          <source srcset="hampilogo.webp" type="image/webp">
+          <img src="hampilogo.png" alt="HAMPI" class="h-8 sm:h-9 w-auto object-contain" width="200" height="61" loading="lazy" style="image-rendering:-webkit-optimize-contrast;transform:translateZ(0)">
+        </picture>
       </a>
       <div class="hidden md:flex items-center gap-8 text-xs font-bold text-gray-700 uppercase" style="letter-spacing:.06em">
         <a href="index.html#sistema" class="hover:text-brand-600 transition-colors">El sistema</a>
         <a href="index.html#calculadora" class="hover:text-brand-600 transition-colors">Calculadora</a>
         <a href="index.html#planes" class="hover:text-brand-600 transition-colors">Planes</a>
-        <a href="index.html#faq" class="hover:text-brand-600 transition-colors">FAQ</a>
         <a href="historia.html" class="hover:text-brand-600 transition-colors">Historia</a>
       </div>
       <div class="flex items-center gap-3">
-        <a href="index.html#calculadora" id="nav-calc-cta" class="hidden sm:inline-flex items-center gap-2 bg-brand-600 hover:bg-brand-700 text-white text-xs font-bold uppercase px-3.5 py-1.5 rounded-lg transition-colors" style="letter-spacing:.06em;line-height:1.5">
-          CALCULAR MI PERDIDA
-          <svg class="w-3.5 h-3.5" fill="none" stroke="currentColor" viewBox="0 0 24 24"><path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M9 7h6m0 10v-3m-3 3h.01M9 17h.01M9 14h.01M12 14h.01M15 11h.01M12 11h.01M9 11h.01M7 21h10a2 2 0 002-2V5a2 2 0 00-2-2H7a2 2 0 00-2 2v14a2 2 0 002 2z"/></svg>
+        <a href="https://wa.me/5493515555555?text=Hola%2C%20quiero%20info%20sobre%20HAMPI" target="_blank" rel="noopener" id="nav-calc-cta" class="hidden sm:inline-flex items-center bg-brand-600 hover:bg-brand-700 text-white text-xs font-bold uppercase px-3.5 py-1.5 rounded-lg transition-colors" style="letter-spacing:.06em;line-height:1.5">
+          CONTACTANOS
         </a>
       </div>
       <button id="menu-toggle" class="md:hidden ml-2 p-2 text-gray-600 hover:text-brand-600" aria-label="Menu">
@@ -69,7 +80,6 @@
         <a href="index.html#sistema" class="block py-2 text-xs font-bold text-gray-700 uppercase" style="letter-spacing:.06em">El sistema</a>
         <a href="index.html#calculadora" class="block py-2 text-xs font-bold text-gray-700 uppercase" style="letter-spacing:.06em">Calculadora</a>
         <a href="index.html#planes" class="block py-2 text-xs font-bold text-gray-700 uppercase" style="letter-spacing:.06em">Planes</a>
-        <a href="index.html#faq" class="block py-2 text-xs font-bold text-gray-700 uppercase" style="letter-spacing:.06em">FAQ</a>
         <a href="historia.html" class="block py-2 text-xs font-bold text-gray-700 uppercase" style="letter-spacing:.06em">Historia</a>
       </div>
     </div>
@@ -89,7 +99,7 @@
     <!-- 1. Partes y objeto -->
     <section class="mb-10 reveal">
       <h2 class="text-xl font-bold text-gray-900 mb-3">1. Partes y objeto del contrato</h2>
-      <p class="text-gray-600 mb-2">Los presentes Terminos y Condiciones (en adelante, "T&C") regulan la relacion entre <strong>[RAZON SOCIAL]</strong>, con domicilio en la ciudad de Cordoba, provincia de Cordoba, Republica Argentina (en adelante, "HAMPI" o "el Prestador"), y toda persona fisica o juridica que contrate el servicio (en adelante, "el Cliente").</p>
+      <p class="text-gray-600 mb-2">Los presentes Terminos y Condiciones (en adelante, "T&C") regulan la relacion entre <strong>VILLAGRA AGUSTIN (CUIT 20-39002520-4)</strong>, con domicilio en Felix Frias 24, Piso 2, Dpto B, Barrio General Paz, Cordoba, provincia de Cordoba, Republica Argentina (en adelante, "HAMPI" o "el Prestador"), y toda persona fisica o juridica que contrate el servicio (en adelante, "el Cliente").</p>
       <p class="text-gray-600 mb-2">HAMPI es una plataforma de automatizacion de atencion al cliente, recordatorios de pago y fidelizacion a traves de WhatsApp Business API, inteligencia artificial e integracion con MercadoPago, orientada a PyMEs argentinas.</p>
       <p class="text-gray-600">La contratacion de cualquier plan implica la aceptacion integra de estos T&C.</p>
     </section>
@@ -122,8 +132,8 @@
             <tr>
               <td class="px-4 py-2 font-medium">Licencia mensual</td>
               <td class="px-4 py-2 text-center">$75.000</td>
-              <td class="px-4 py-2 text-center">$135.000</td>
-              <td class="px-4 py-2 text-center">$270.000</td>
+              <td class="px-4 py-2 text-center">$180.000</td>
+              <td class="px-4 py-2 text-center">$360.000</td>
             </tr>
             <tr class="bg-gray-50">
               <td class="px-4 py-2 font-medium">Fee de implementacion (unico)</td>
@@ -150,8 +160,8 @@
             <tr class="bg-gray-50">
               <td class="px-4 py-2 font-medium">Licencia anual (paga 10, lleva 12)</td>
               <td class="px-4 py-2 text-center">$62.500/mes</td>
-              <td class="px-4 py-2 text-center">$112.500/mes</td>
-              <td class="px-4 py-2 text-center">$225.000/mes</td>
+              <td class="px-4 py-2 text-center">$150.000/mes</td>
+              <td class="px-4 py-2 text-center">$300.000/mes</td>
             </tr>
           </tbody>
         </table>
@@ -274,7 +284,7 @@
     <!-- 13. Propiedad intelectual -->
     <section class="mb-10 reveal">
       <h2 class="text-xl font-bold text-gray-900 mb-3">13. Propiedad intelectual</h2>
-      <p class="text-gray-600">La plataforma HAMPI, incluyendo su codigo fuente, algoritmos, diseno, marca, logotipo y documentacion, es propiedad exclusiva de <strong>[RAZON SOCIAL]</strong>. La contratacion del servicio no otorga al Cliente ningun derecho de propiedad sobre los mismos, limitandose a una licencia de uso no exclusiva, intransferible y revocable durante la vigencia del contrato.</p>
+      <p class="text-gray-600">La plataforma HAMPI, incluyendo su codigo fuente, algoritmos, diseno, marca, logotipo y documentacion, es propiedad exclusiva de <strong>VILLAGRA AGUSTIN (CUIT 20-39002520-4)</strong>. La contratacion del servicio no otorga al Cliente ningun derecho de propiedad sobre los mismos, limitandose a una licencia de uso no exclusiva, intransferible y revocable durante la vigencia del contrato.</p>
     </section>
 
     <!-- 14. Limitacion de responsabilidad -->
@@ -327,8 +337,8 @@
     <!-- 20. Contacto -->
     <section class="mb-6 reveal">
       <h2 class="text-xl font-bold text-gray-900 mb-3">20. Contacto</h2>
-      <p class="text-gray-600 mb-1"><strong>Prestador:</strong> [RAZON SOCIAL]</p>
-      <p class="text-gray-600 mb-1"><strong>Domicilio:</strong> Cordoba, Provincia de Cordoba, Republica Argentina</p>
+      <p class="text-gray-600 mb-1"><strong>Prestador:</strong> VILLAGRA AGUSTIN — CUIT 20-39002520-4</p>
+      <p class="text-gray-600 mb-1"><strong>Domicilio:</strong> Felix Frias 24, Piso 2, Dpto B, Barrio General Paz, Cordoba, Provincia de Cordoba, Republica Argentina</p>
       <p class="text-gray-600 mb-1"><strong>Email:</strong> <a href="mailto:admin@hampi.tech" class="text-brand-600 hover:underline">admin@hampi.tech</a></p>
       <p class="text-gray-600"><strong>Web:</strong> <a href="https://hampi.tech" class="text-brand-600 hover:underline">hampi.tech</a></p>
     </section>
@@ -340,9 +350,15 @@
     <div class="max-w-6xl mx-auto px-4 sm:px-6">
       <div class="grid sm:grid-cols-2 lg:grid-cols-4 gap-5 mb-5">
         <div>
-          <div class="mb-2"><img src="logoabajo.png" alt="HAMPI" class="h-8 w-auto object-contain"></div>
-          <p class="text-[10px] font-semibold text-gray-700 mb-1">HAMPI-SAAS</p>
-          <p class="text-[10px] leading-relaxed text-gray-500">Atencion, recordatorios de pago, fidelizacion y agentes con IA para PyMEs y profesionales argentinos.</p>
+          <div class="mb-2">
+            <picture>
+              <source srcset="logoabajo.webp" type="image/webp">
+              <img src="logoabajo.png" alt="HAMPI - Logo pie de pagina" class="h-8 w-auto object-contain" width="200" height="61" loading="lazy">
+            </picture>
+          </div>
+          <p class="text-[10px] font-semibold text-gray-700 mb-1">HAMPI — VILLAGRA AGUSTIN</p>
+          <p class="text-[10px] leading-relaxed text-gray-500">CUIT 20-39002520-4 · Felix Frias 24, Piso 2, Dpto B, B° Gral. Paz, Cordoba, Argentina</p>
+          <p class="text-[10px] leading-relaxed text-gray-500 mt-1">Atencion, recordatorios de pago, fidelizacion y agentes con IA para PyMEs y profesionales argentinos. <a href="faq.html" class="text-brand-600 hover:underline">FAQ</a></p>
         </div>
         <div>
           <h4 class="text-gray-900 font-semibold mb-2 text-sm">Producto</h4>
@@ -350,7 +366,6 @@
             <li><a href="index.html#sistema" class="hover:text-gray-900 transition-colors">El sistema</a></li>
             <li><a href="index.html#calculadora" class="hover:text-gray-900 transition-colors">Calculadora</a></li>
             <li><a href="index.html#planes" class="hover:text-gray-900 transition-colors">Planes</a></li>
-            <li><a href="index.html#faq" class="hover:text-gray-900 transition-colors">FAQ</a></li>
             <li><a href="historia.html" class="hover:text-gray-900 transition-colors">Historia</a></li>
             <li><a href="https://api.hampi.tech/dash/login" target="_blank" rel="noopener" class="hover:text-gray-900 transition-colors">Acceso clientes</a></li>
           </ul>

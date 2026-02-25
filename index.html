@@ -3,18 +3,42 @@
 <head>
   <meta charset="UTF-8">
   <meta name="viewport" content="width=device-width, initial-scale=1.0">
-  <title>Hampi</title>
-  <meta name="description" content="Automatiza atencion al cliente, recordatorios de pago y fidelizacion con IA. Calculadora gratuita de perdidas. Para PyMEs argentinas. Setup en dias.">
-  <meta property="og:title" content="HAMPI — Atencion, recordatorios de pago y fidelizacion con IA">
-  <meta property="og:description" content="Calcula cuanto pierde tu negocio por mes y descubri como recuperarlo con automatizacion inteligente.">
+  <title>HAMPI — Automatiza atencion, recordatorios de pago y fidelizacion con IA</title>
+  <meta name="description" content="Sistema inteligente para PyMEs argentinas: atencion 24/7 por WhatsApp, recordatorios de pago automaticos con MercadoPago y fidelizacion con IA. Setup en dias. Calculadora gratuita.">
+  <meta name="keywords" content="recordatorios de pago, atencion al cliente WhatsApp, automatizacion PyMEs, MercadoPago, fidelizacion clientes, IA Argentina">
+  <meta name="author" content="HAMPI">
+  <meta name="robots" content="index, follow">
+  <link rel="canonical" href="https://hampi.tech/">
+
+  <!-- Open Graph -->
+  <meta property="og:title" content="HAMPI — Automatiza atencion, recordatorios de pago y fidelizacion con IA">
+  <meta property="og:description" content="Calcula cuanto pierde tu negocio por mes y descubri como recuperarlo. +8.000 cuentas gestionadas. Setup en dias.">
   <meta property="og:type" content="website">
   <meta property="og:url" content="https://hampi.tech">
+  <meta property="og:image" content="https://hampi.tech/hampilogo.png">
+  <meta property="og:image:width" content="200">
+  <meta property="og:image:height" content="61">
+  <meta property="og:locale" content="es_AR">
+  <meta property="og:site_name" content="HAMPI">
+
+  <!-- Twitter Card -->
+  <meta name="twitter:card" content="summary">
+  <meta name="twitter:title" content="HAMPI — Atencion, recordatorios y fidelizacion con IA">
+  <meta name="twitter:description" content="Sistema inteligente para PyMEs argentinas. +8.000 cuentas gestionadas.">
+  <meta name="twitter:image" content="https://hampi.tech/hampilogo.png">
+
+  <!-- Favicons -->
   <link rel="icon" type="image/png" sizes="32x32" href="logoxx.png">
   <link rel="apple-touch-icon" sizes="180x180" href="logoxx.png">
   <link rel="manifest" href="manifest.json">
+  <meta name="theme-color" content="#4f46e5">
+
+  <!-- Fonts (preconnect + display swap) -->
   <link rel="preconnect" href="https://fonts.googleapis.com">
   <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
   <link href="https://fonts.googleapis.com/css2?family=Inter:wght@400;500;600;700;800;900&display=swap" rel="stylesheet">
+
+  <!-- Tailwind -->
   <script src="https://cdn.tailwindcss.com"></script>
   <script>
     tailwind.config = {
@@ -82,13 +106,43 @@
     .count-animated{animation:countFade .6s ease forwards}
     .hero-line{display:block;white-space:nowrap;font-size:clamp(1.35rem,4.2vw,3.5rem);letter-spacing:-.02em}
     @media(max-width:479px){.hero-line{white-space:normal;font-size:clamp(1.2rem,6vw,1.75rem);line-height:1.2}}
+    /* === Premium micro-interactions === */
+    @media(prefers-reduced-motion:no-preference){
+      .reveal{opacity:0;transform:translateY(24px);transition:opacity .6s cubic-bezier(.16,1,.3,1),transform .6s cubic-bezier(.16,1,.3,1)}
+      .reveal:nth-child(2){transition-delay:.08s}
+      .reveal:nth-child(3){transition-delay:.16s}
+    }
+    /* Pricing card hover glow */
+    .plan-card{transition:transform .25s cubic-bezier(.16,1,.3,1),box-shadow .25s ease}
+    .plan-card:hover{transform:translateY(-6px);box-shadow:0 20px 60px rgba(99,102,241,.12),0 4px 16px rgba(0,0,0,.06)}
+    /* CTA button shimmer */
+    @keyframes shimmer{0%{background-position:200% 0}100%{background-position:-200% 0}}
+    .cta-shimmer{background:linear-gradient(90deg,transparent 0%,rgba(255,255,255,.15) 50%,transparent 100%) no-repeat;background-size:200% 100%;animation:shimmer 3s ease-in-out infinite}
+    /* Number counter pop */
+    @keyframes numberPop{0%{transform:scale(1)}50%{transform:scale(1.05)}100%{transform:scale(1)}}
+    .number-pop{animation:numberPop .3s ease}
+    /* Stats badge subtle float */
+    @keyframes subtleFloat{0%,100%{transform:translateY(0)}50%{transform:translateY(-3px)}}
+    .stat-badge:hover{animation:subtleFloat 2s ease-in-out infinite}
   </style>
 
   <script type="application/ld+json">
-  {"@context":"https://schema.org","@type":"SoftwareApplication","name":"HAMPI","applicationCategory":"BusinessApplication","operatingSystem":"Web","description":"Sistema inteligente de atencion, recordatorios de pago y fidelizacion automatizada para PyMEs argentinas"}
+  {"@context":"https://schema.org","@type":"SoftwareApplication","name":"HAMPI","applicationCategory":"BusinessApplication","operatingSystem":"Web","description":"Sistema inteligente de atencion, recordatorios de pago y fidelizacion automatizada para PyMEs argentinas","url":"https://hampi.tech","applicationSubCategory":"CRM","offers":{"@type":"AggregateOffer","lowPrice":"75000","highPrice":"270000","priceCurrency":"ARS","offerCount":"4"},"aggregateRating":{"@type":"AggregateRating","ratingValue":"4.8","ratingCount":"12","bestRating":"5"}}
+  </script>
+  <script type="application/ld+json">
+  {"@context":"https://schema.org","@type":"Organization","name":"HAMPI","url":"https://hampi.tech","logo":"https://hampi.tech/hampilogo.png","contactPoint":{"@type":"ContactPoint","contactType":"sales","url":"https://wa.me/5493515555555","availableLanguage":"Spanish"},"address":{"@type":"PostalAddress","addressLocality":"Cordoba","addressCountry":"AR"},"sameAs":[]}
   </script>
   <script type="application/ld+json">
   {"@context":"https://schema.org","@type":"FAQPage","mainEntity":[{"@type":"Question","name":"Que es HAMPI exactamente?","acceptedAnswer":{"@type":"Answer","text":"HAMPI es un sistema inteligente que automatiza atencion al cliente, recordatorios de pago y fidelizacion para PyMEs argentinas. Conecta WhatsApp, email y SMS en un solo flujo con IA."}},{"@type":"Question","name":"Como funciona WhatsApp sin que me bloqueen?","acceptedAnswer":{"@type":"Answer","text":"Usamos la API oficial de WhatsApp Business con templates pre-aprobados por Meta. Incluye opt-out automatico y cumplimiento de todas las politicas de Meta. Sin spam, sin riesgo."}},{"@type":"Question","name":"Se integra con MercadoPago?","acceptedAnswer":{"@type":"Answer","text":"Si. Genera links de pago de MercadoPago y los envia automaticamente por WhatsApp o email. Confirma pagos en tiempo real."}},{"@type":"Question","name":"Cuanto tarda el setup?","acceptedAnswer":{"@type":"Answer","text":"Entre 2 y 5 dias habiles. Incluye canales, carga de base, personalizacion y pruebas antes de salir en vivo."}}]}
+  </script>
+
+  <!-- Google Analytics 4 (reemplazar G-XXXXXXXXXX con tu ID real) -->
+  <script async src="https://www.googletagmanager.com/gtag/js?id=G-XXXXXXXXXX"></script>
+  <script>
+    window.dataLayer = window.dataLayer || [];
+    function gtag(){dataLayer.push(arguments);}
+    gtag('js', new Date());
+    gtag('config', 'G-XXXXXXXXXX', { send_page_view: true });
   </script>
 </head>
 
@@ -98,19 +152,20 @@
   <nav id="main-nav" class="fixed top-0 w-full bg-white z-40 border-b border-gray-200/60 transition-shadow duration-300" style="box-shadow:none">
     <div class="max-w-6xl mx-auto px-4 sm:px-6 flex items-center justify-between h-16">
       <a href="#" class="flex items-center gap-2">
-        <img src="hampilogo.png" alt="HAMPI" class="h-8 sm:h-9 w-auto object-contain" style="image-rendering:-webkit-optimize-contrast;transform:translateZ(0)">
+        <picture>
+          <source srcset="hampilogo.webp" type="image/webp">
+          <img src="hampilogo.png" alt="HAMPI — Sistema de atencion y recordatorios de pago" class="h-8 sm:h-9 w-auto object-contain" width="200" height="61" style="image-rendering:-webkit-optimize-contrast;transform:translateZ(0)">
+        </picture>
       </a>
       <div class="hidden md:flex items-center gap-8 text-xs font-bold text-gray-700 uppercase" style="letter-spacing:.06em">
         <a href="#sistema" class="hover:text-brand-600 transition-colors">El sistema</a>
         <a href="#calculadora" class="hover:text-brand-600 transition-colors">Calculadora</a>
         <a href="#planes" class="hover:text-brand-600 transition-colors">Planes</a>
-        <a href="#faq" class="hover:text-brand-600 transition-colors">FAQ</a>
         <a href="historia.html" class="hover:text-brand-600 transition-colors">Historia</a>
       </div>
       <div class="flex items-center gap-3">
-        <a href="#calculadora" id="nav-calc-cta" class="hidden sm:inline-flex items-center gap-2 bg-brand-600 hover:bg-brand-700 text-white text-xs font-bold uppercase px-3.5 py-1.5 rounded-lg transition-colors" style="letter-spacing:.06em;line-height:1.5">
-          CALCULAR MI PERDIDA
-          <svg class="w-3.5 h-3.5" fill="none" stroke="currentColor" viewBox="0 0 24 24"><path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M9 7h6m0 10v-3m-3 3h.01M9 17h.01M9 14h.01M12 14h.01M15 11h.01M12 11h.01M9 11h.01M7 21h10a2 2 0 002-2V5a2 2 0 00-2-2H7a2 2 0 00-2 2v14a2 2 0 002 2z"/></svg>
+        <a href="https://wa.me/5493515555555?text=Hola%2C%20quiero%20info%20sobre%20HAMPI" target="_blank" rel="noopener" id="nav-calc-cta" class="hidden sm:inline-flex items-center bg-brand-600 hover:bg-brand-700 text-white text-xs font-bold uppercase px-3.5 py-1.5 rounded-lg transition-colors" style="letter-spacing:.06em;line-height:1.5">
+          CONTACTANOS
         </a>
       </div>
       <button id="menu-toggle" class="md:hidden ml-2 p-2 text-gray-600 hover:text-brand-600" aria-label="Menu">
@@ -122,7 +177,6 @@
         <a href="#sistema" class="block py-2 text-xs font-bold text-gray-700 uppercase" style="letter-spacing:.06em">El sistema</a>
         <a href="#calculadora" class="block py-2 text-xs font-bold text-gray-700 uppercase" style="letter-spacing:.06em">Calculadora</a>
         <a href="#planes" class="block py-2 text-xs font-bold text-gray-700 uppercase" style="letter-spacing:.06em">Planes</a>
-        <a href="#faq" class="block py-2 text-xs font-bold text-gray-700 uppercase" style="letter-spacing:.06em">FAQ</a>
         <a href="historia.html" class="block py-2 text-xs font-bold text-gray-700 uppercase" style="letter-spacing:.06em">Historia</a>
       </div>
     </div>
@@ -130,48 +184,47 @@
 
   <!-- ===== 1. HERO ===== -->
   <section id="hero" class="gradient-hero pt-28 pb-20 sm:pt-36 sm:pb-28">
-    <div class="max-w-5xl mx-auto px-4 sm:px-6 relative z-10 text-center lg:text-left lg:pl-8">
+    <div class="max-w-5xl mx-auto px-4 sm:px-6 relative z-10 text-center">
 
-      <div class="flex flex-col sm:flex-row items-center lg:items-start justify-center lg:justify-start gap-3 mb-8">
-        <div class="inline-flex items-center gap-2 bg-white/10 backdrop-blur-sm text-xs font-semibold px-4 py-2 rounded-full h-8" style="color:#e0e7ff">
-          <span class="w-2 h-2 bg-green-400 rounded-full pulse-live"></span>
-          Onboarding remoto en Argentina
-        </div>
+      <div class="flex justify-end mb-4 max-w-4xl mx-auto">
         <div class="inline-flex items-center gap-2 backdrop-blur-sm text-xs font-semibold px-4 py-2 rounded-full h-8" style="background:rgba(251,191,36,.15);color:#fcd34d">
           <svg class="w-3.5 h-3.5" fill="none" stroke="currentColor" viewBox="0 0 24 24"><path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M12 8v4l3 3m6-3a9 9 0 11-18 0 9 9 0 0118 0z"/></svg>
           Cupos limitados este mes
         </div>
       </div>
 
-      <h1 class="font-black leading-tight max-w-4xl mx-auto lg:mx-0" style="text-shadow:0 2px 20px rgba(0,0,0,.3)">
+      <h1 class="font-black leading-tight max-w-4xl mx-auto" style="text-shadow:0 2px 20px rgba(0,0,0,.3)">
         <span class="hero-line" style="color:#ffffff">Recupera ingresos de tus clientes.</span>
-        <span class="hero-line mt-1" style="color:#c7d2fe">Atencion de calidad continua.</span>
-        <span class="hero-line mt-1" style="color:#c7d2fe">Fideliza de forma simple.</span>
+        <span class="hero-line mt-1" style="color:#c7d2fe">Atencion continua de calidad.</span>
+        <span class="hero-line mt-1" style="color:#c7d2fe">Fidelizacion de forma inteligente.</span>
       </h1>
 
-      <p class="mt-5 text-base sm:text-lg font-medium mx-auto lg:mx-0 leading-relaxed" style="color:#e0e7ff;max-width:44rem;text-wrap:balance">
+      <p class="mt-5 text-base sm:text-lg font-medium mx-auto leading-relaxed" style="color:#e0e7ff;max-width:44rem;text-wrap:balance">
         Atencion, recordatorios de pago, fidelizacion y agentes con IA para PyMEs y profesionales argentinos.
       </p>
 
-      <p class="mt-4 text-base sm:text-lg mx-auto lg:mx-0 leading-relaxed" style="color:#cbd5ff;max-width:40rem;text-wrap:balance">
+      <p class="mt-4 text-base sm:text-lg mx-auto leading-relaxed" style="color:#cbd5ff;max-width:40rem;text-wrap:balance">
         Una PyME promedio con 200 clientes pierde entre
         <span id="hero-countup" class="font-black" style="color:#fca5a5">$0</span>
         y <span id="hero-countup2" class="font-black" style="color:#fca5a5">$0</span> por mes.
       </p>
 
-      <div class="mt-10 flex flex-col sm:flex-row items-center justify-center lg:justify-start gap-4 sm:gap-6">
-        <div class="bg-white/10 backdrop-blur-sm rounded-2xl px-6 py-4 border border-white/15">
-          <p class="text-xs uppercase tracking-wider mb-1" style="color:#a5b4fc">PyMEs con pagos pendientes &gt;30d</p>
-          <p class="text-3xl font-black" style="color:#ffffff">7 de 10</p>
+      <div class="mt-10 flex flex-wrap items-center justify-center gap-3">
+        <div class="stat-badge bg-white/10 backdrop-blur-sm rounded-xl px-4 py-2.5 border border-white/15 inline-flex items-center gap-2 cursor-default">
+          <span class="text-[10px] uppercase tracking-wider font-medium" style="color:#a5b4fc">Cuentas gestionadas/mes:</span>
+          <span class="text-sm font-black" style="color:#ffffff">+8.000</span>
         </div>
-        <div class="bg-white/10 backdrop-blur-sm rounded-2xl px-6 py-4 border border-white/15">
-          <p class="text-xs uppercase tracking-wider mb-1" style="color:#a5b4fc">Ingreso no cobrado promedio</p>
-          <p class="text-3xl font-black" style="color:#fca5a5">$184.000<span class="text-lg" style="color:#a5b4fc">/mes</span></p>
+        <div class="stat-badge bg-white/10 backdrop-blur-sm rounded-xl px-4 py-2.5 border border-white/15 inline-flex items-center gap-2 cursor-default">
+          <span class="text-[10px] uppercase tracking-wider font-medium" style="color:#a5b4fc">Eficiencia operativa:</span>
+          <span class="text-sm font-black" style="color:#86efac">+80%</span>
         </div>
-        <div class="bg-white/10 backdrop-blur-sm rounded-2xl px-6 py-4 border border-white/15">
-          <p class="text-xs uppercase tracking-wider mb-1" style="color:#a5b4fc">Perdidos por mala atencion</p>
-          <p class="text-3xl font-black" style="color:#fcd34d">23%</p>
+        <div class="stat-badge bg-white/10 backdrop-blur-sm rounded-xl px-4 py-2.5 border border-white/15 inline-flex items-center gap-2 cursor-default">
+          <span class="text-[10px] uppercase tracking-wider font-medium" style="color:#a5b4fc">Clientes retenidos:</span>
+          <span class="text-sm font-black" style="color:#86efac">+40%</span>
         </div>
+        <a href="https://wa.me/5493515555555?text=Hola%2C%20quiero%20saber%20mas%20sobre%20HAMPI" target="_blank" rel="noopener" class="cta-shimmer bg-white text-brand-700 font-bold text-sm px-5 py-2.5 rounded-xl hover:bg-brand-50 transition-colors shadow-lg" data-cta="hero-quiero-saber">
+          Quiero saber mas
+        </a>
       </div>
 
     </div>
@@ -182,33 +235,248 @@
     <div class="max-w-6xl mx-auto px-4 sm:px-6">
       <div class="mb-14 reveal">
         <p class="text-brand-600 font-semibold text-sm uppercase tracking-wider mb-4 text-center">¿Que es HAMPI?</p>
-        <p class="text-gray-600 text-base sm:text-lg leading-relaxed text-justify">HAMPI no es un chatbot aislado ni una herramienta mas: es un sistema integral que conecta atencion al cliente, recordatorios de pago y fidelizacion en un unico flujo inteligente, pensado para PyMEs argentinas que necesitan orden operativo sin sumar personal. Opera a traves de WhatsApp con API oficial y plantillas aprobadas por Meta, email y SMS, adaptando el canal y el momento al perfil de cada cliente. Cuando un pago esta pendiente, envia recordatorios automaticos con link directo de MercadoPago y confirma el cobro en tiempo real — sin que vos ni tu equipo tengan que intervenir. Si la situacion requiere atencion humana, el sistema escala la conversacion con todo el contexto previo para que no se pierda nada. En paralelo, analiza patrones de comportamiento para detectar clientes en riesgo de baja y activar acciones de retencion antes de que sea tarde. Todo queda registrado en un dashboard con metricas: tasa de respuesta, pagos recuperados y clientes retenidos.</p>
+        <p class="text-gray-500 text-sm sm:text-base leading-relaxed text-justify">HAMPI no es un chatbot aislado ni una herramienta mas: es un sistema integral que conecta atencion al cliente, recordatorios de pago y fidelizacion en un unico flujo inteligente, pensado para PyMEs argentinas que necesitan orden operativo sin sumar personal. Opera a traves de WhatsApp con API oficial y plantillas aprobadas por Meta, email y SMS, adaptando el canal y el momento al perfil de cada cliente. Cuando un pago esta pendiente, envia recordatorios automaticos con link directo de MercadoPago y confirma el cobro en tiempo real — sin que vos ni tu equipo tengan que intervenir. Si la situacion requiere atencion humana, el sistema escala la conversacion con todo el contexto previo para que no se pierda nada. En paralelo, analiza patrones de comportamiento para detectar clientes en riesgo de baja y activar acciones de retencion antes de que sea tarde. Todo queda registrado en un dashboard con metricas: tasa de respuesta, pagos recuperados y clientes retenidos.</p>
       </div>
 
-      <!-- 3 pilares -->
-      <div class="grid md:grid-cols-3 gap-8 mb-16 reveal">
-        <div class="bg-gray-50 rounded-2xl p-8 text-center border border-gray-100">
-          <div class="w-14 h-14 bg-blue-100 rounded-2xl flex items-center justify-center mx-auto mb-5">
-            <svg class="w-7 h-7 text-blue-600" fill="none" stroke="currentColor" viewBox="0 0 24 24"><path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M8 12h.01M12 12h.01M16 12h.01M21 12c0 4.418-4.03 8-9 8a9.863 9.863 0 01-4.255-.949L3 20l1.395-3.72C3.512 15.042 3 13.574 3 12c0-4.418 4.03-8 9-8s9 3.582 9 8z"/></svg>
+      <!-- ===== ORQUESTACION VISUAL ===== -->
+      <style>
+        @keyframes orch-glow{0%,100%{box-shadow:0 0 0 0 rgba(99,102,241,.3)}50%{box-shadow:0 0 25px 10px rgba(99,102,241,.12)}}
+        @keyframes orch-dot{0%{top:-4px;opacity:0}15%{opacity:1}85%{opacity:1}100%{top:calc(100% - 4px);opacity:0}}
+        @keyframes orch-scan{0%{left:-30%}100%{left:100%}}
+        .orch-brain{animation:orch-glow 3s ease-in-out infinite}
+        .orch-line{position:relative;overflow:hidden}
+        .orch-line::after{content:'';position:absolute;width:8px;height:8px;background:linear-gradient(135deg,#818cf8,#6366f1);border-radius:50%;left:50%;transform:translateX(-50%);animation:orch-dot 2s ease-in-out infinite}
+        .orch-agent{transition:all .5s cubic-bezier(.4,0,.2,1);border:2px solid transparent}
+        .orch-agent.active{transform:translateY(-4px)}
+        .orch-scan{position:absolute;top:0;left:-30%;width:30%;height:100%;background:linear-gradient(90deg,transparent,rgba(255,255,255,.4),transparent);animation:orch-scan 2s ease-in-out infinite}
+        .orch-trigger-text{transition:opacity .4s,transform .4s}
+        .orch-trigger-text.fade-out{opacity:0;transform:translateY(-8px)}
+        .orch-result-text{transition:opacity .4s,transform .4s}
+        .orch-result-text.fade-out{opacity:0;transform:translateY(8px)}
+        .orch-agent{position:relative}
+        #orch-info{transition:opacity .3s,transform .3s}
+        #orch-info.visible #orch-info-title{color:#4f46e5}
+        #orch-info.visible{box-shadow:0 4px 20px rgba(99,102,241,.15);border-color:#a5b4fc}
+      </style>
+
+      <div class="relative mb-16 reveal" id="orch-root">
+
+        <!-- PASO 1: Mensaje entrante + Panel info -->
+        <div class="relative flex justify-center mb-2.5">
+          <!-- Panel info agente (absoluto a la izquierda) -->
+          <div id="orch-info" class="hidden lg:block absolute left-0 top-0 bg-white border border-indigo-100 rounded-xl px-4 py-3 shadow-md shadow-indigo-100/30 w-[230px] opacity-0" style="transition:opacity .3s">
+            <p class="text-[10px] text-indigo-500 font-bold uppercase tracking-widest mb-1" id="orch-info-title"></p>
+            <p class="text-[11px] text-gray-600 leading-relaxed" id="orch-info-desc"></p>
           </div>
-          <h3 class="text-lg font-bold text-gray-900 mb-2">Atencion inteligente</h3>
-          <p class="text-sm text-gray-600 leading-relaxed">Responde consultas, agenda turnos y escala a humanos solo cuando es necesario.</p>
-        </div>
-        <div class="bg-gray-50 rounded-2xl p-8 text-center border border-gray-100">
-          <div class="w-14 h-14 bg-green-100 rounded-2xl flex items-center justify-center mx-auto mb-5">
-            <svg class="w-7 h-7 text-green-600" fill="none" stroke="currentColor" viewBox="0 0 24 24"><path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M12 8c-1.657 0-3 .895-3 2s1.343 2 3 2 3 .895 3 2-1.343 2-3 2m0-8c1.11 0 2.08.402 2.599 1M12 8V7m0 1v8m0 0v1m0-1c-1.11 0-2.08-.402-2.599-1M21 12a9 9 0 11-18 0 9 9 0 0118 0z"/></svg>
+          <!-- Trigger WhatsApp -->
+          <div class="bg-white border border-green-200 rounded-xl px-3.5 py-2 flex items-center gap-2.5 shadow-md shadow-green-100/40 max-w-[280px] sm:max-w-xs w-full">
+            <div class="w-8 h-8 bg-green-500 rounded-full flex items-center justify-center shrink-0">
+              <svg class="w-4 h-4 text-white" fill="currentColor" viewBox="0 0 448 512"><path d="M380.9 97.1C339 55.1 283.2 32 223.9 32c-122.4 0-222 99.6-222 222 0 39.1 10.2 77.3 29.6 111L0 480l117.7-30.9c32.4 17.7 68.9 27 106.1 27h.1c122.3 0 224.1-99.6 224.1-222 0-59.3-25.2-115-67.1-157zm-157 341.6c-33.2 0-65.7-8.9-94-25.7l-6.7-4-69.8 18.3L72 359.2l-4.4-7c-18.5-29.4-28.2-63.3-28.2-98.2 0-101.7 82.8-184.5 184.6-184.5 49.3 0 95.6 19.2 130.4 54.1 34.8 34.9 56.2 81.2 56.1 130.5 0 101.8-84.9 184.6-186.6 184.6zm101.2-138.2c-5.5-2.8-32.8-16.2-37.9-18-5.1-1.9-8.8-2.8-12.5 2.8-3.7 5.6-14.3 18-17.6 21.8-3.2 3.7-6.5 4.2-12 1.4-32.6-16.3-54-29.1-75.5-66-5.7-9.8 5.7-9.1 16.3-30.3 1.8-3.7.9-6.9-.5-9.7-1.4-2.8-12.5-30.1-17.1-41.2-4.5-10.8-9.1-9.3-12.5-9.5-3.2-.2-6.9-.2-10.6-.2-3.7 0-9.7 1.4-14.8 6.9-5.1 5.6-19.4 19-19.4 46.3 0 27.3 19.9 53.7 22.6 57.4 2.8 3.7 39.1 59.7 94.8 83.8 35.2 15.2 49 16.5 66.6 13.9 10.7-1.6 32.8-13.4 37.4-26.4 4.6-13 4.6-24.1 3.2-26.4-1.3-2.5-5-3.9-10.5-6.6z"/></svg>
+            </div>
+            <div class="min-w-0 flex-1">
+              <p class="text-[9px] text-green-600 font-semibold uppercase tracking-widest" id="orch-label">Mensaje entrante</p>
+              <p class="text-xs text-gray-800 font-bold leading-snug orch-trigger-text" id="orch-trigger">"Hola, quiero saber los precios"</p>
+            </div>
+            <div class="w-1.5 h-1.5 bg-green-400 rounded-full animate-pulse shrink-0"></div>
           </div>
-          <h3 class="text-lg font-bold text-gray-900 mb-2">Recordatorios de pago</h3>
-          <p class="text-sm text-gray-600 leading-relaxed">Mensajes automaticos por WhatsApp con link de pago. Recupera ingresos sin esfuerzo.</p>
         </div>
-        <div class="bg-gray-50 rounded-2xl p-8 text-center border border-gray-100">
-          <div class="w-14 h-14 bg-purple-100 rounded-2xl flex items-center justify-center mx-auto mb-5">
-            <svg class="w-7 h-7 text-purple-600" fill="none" stroke="currentColor" viewBox="0 0 24 24"><path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M4.318 6.318a4.5 4.5 0 000 6.364L12 20.364l7.682-7.682a4.5 4.5 0 00-6.364-6.364L12 7.636l-1.318-1.318a4.5 4.5 0 00-6.364 0z"/></svg>
+
+        <!-- Conector animado -->
+        <div class="flex justify-center mb-2.5"><div class="orch-line w-0.5 h-7 bg-gradient-to-b from-green-300 via-indigo-300 to-indigo-400 rounded-full"></div></div>
+
+        <!-- PASO 2: Cerebro HAMPI IA -->
+        <div class="flex justify-center mb-2.5">
+          <div class="orch-brain relative bg-gradient-to-r from-indigo-700 via-indigo-600 to-indigo-700 rounded-xl px-5 sm:px-10 py-3.5 text-center max-w-lg w-full overflow-hidden">
+            <div class="orch-scan"></div>
+            <div class="relative z-10">
+              <div class="flex items-center justify-center gap-2 mb-1.5">
+                <div class="w-6 h-6 bg-white/15 rounded-lg flex items-center justify-center">
+                  <svg class="w-3.5 h-3.5 text-white" fill="currentColor" viewBox="0 0 24 24"><rect x="3" y="4" width="18" height="12" rx="2" ry="2" fill="none" stroke="currentColor" stroke-width="1.5"/><circle cx="9" cy="10" r="1.5"/><circle cx="15" cy="10" r="1.5"/><path d="M8.5 14h7" stroke="currentColor" stroke-width="1.5" stroke-linecap="round"/><path d="M6 16v3M18 16v3M9 4V2M15 4V2" stroke="currentColor" stroke-width="1.5" stroke-linecap="round"/></svg>
+                </div>
+                <h3 class="text-white font-extrabold text-xs sm:text-sm tracking-tight">HAMPI <span class="font-bold text-indigo-200">(INTEGRADO CON INTELIGENCIA ARTIFICIAL)</span></h3>
+              </div>
+              <!-- Barra de procesamiento -->
+              <div class="mt-2 h-1 bg-indigo-900/40 rounded-full overflow-hidden">
+                <div class="h-full bg-gradient-to-r from-indigo-300 to-white/60 rounded-full" id="orch-bar" style="width:0;transition:width 1s ease"></div>
+              </div>
+            </div>
           </div>
-          <h3 class="text-lg font-bold text-gray-900 mb-2">Fidelizacion</h3>
-          <p class="text-sm text-gray-600 leading-relaxed">Detecta clientes en riesgo de baja y lanza campanas de retencion automaticas.</p>
         </div>
+
+        <!-- Distribucion: linea horizontal con 5 nodos (desktop) -->
+        <div class="hidden lg:flex justify-center mb-2">
+          <div class="flex items-center max-w-2xl w-full">
+            <div class="flex-1 h-px bg-gradient-to-r from-transparent to-indigo-200"></div>
+            <div class="w-2 h-2 bg-indigo-400 rounded-full"></div>
+            <div class="flex-1 h-px bg-indigo-200"></div>
+            <div class="w-2 h-2 bg-indigo-400 rounded-full"></div>
+            <div class="flex-1 h-px bg-indigo-200"></div>
+            <div class="w-2 h-2 bg-indigo-400 rounded-full"></div>
+            <div class="flex-1 h-px bg-indigo-200"></div>
+            <div class="w-2 h-2 bg-indigo-400 rounded-full"></div>
+            <div class="flex-1 h-px bg-indigo-200"></div>
+            <div class="w-2 h-2 bg-indigo-400 rounded-full"></div>
+            <div class="flex-1 h-px bg-gradient-to-r from-indigo-200 to-transparent"></div>
+          </div>
+        </div>
+        <!-- Conector simple (mobile) -->
+        <div class="lg:hidden flex justify-center mb-2"><div class="orch-line w-0.5 h-6 bg-gradient-to-b from-indigo-400 to-gray-300 rounded-full"></div></div>
+
+        <!-- PASO 3: 5 Agentes -->
+        <div class="grid grid-cols-2 sm:grid-cols-3 lg:grid-cols-5 gap-2 sm:gap-2.5 mb-2.5" id="orch-agents">
+          <!-- Atencion -->
+          <div class="orch-agent bg-white rounded-lg p-2.5 shadow-sm text-center cursor-default">
+
+            <div class="h-0.5 rounded-full mb-2" style="background:#2563eb"></div>
+            <div class="w-7 h-7 rounded-lg flex items-center justify-center mx-auto mb-1.5" style="background:#dbeafe">
+              <svg class="w-3.5 h-3.5" style="color:#2563eb" fill="none" stroke="currentColor" viewBox="0 0 24 24"><path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M8 12h.01M12 12h.01M16 12h.01M21 12c0 4.418-4.03 8-9 8a9.863 9.863 0 01-4.255-.949L3 20l1.395-3.72C3.512 15.042 3 13.574 3 12c0-4.418 4.03-8 9-8s9 3.582 9 8z"/></svg>
+            </div>
+            <p class="text-[10px] font-bold text-gray-800 uppercase tracking-wider">Atencion y ventas</p>
+          </div>
+          <!-- Recordatorios -->
+          <div class="orch-agent bg-white rounded-lg p-2.5 shadow-sm text-center cursor-default">
+
+            <div class="h-0.5 rounded-full mb-2" style="background:#16a34a"></div>
+            <div class="w-7 h-7 rounded-lg flex items-center justify-center mx-auto mb-1.5" style="background:#dcfce7">
+              <svg class="w-3.5 h-3.5" style="color:#16a34a" fill="none" stroke="currentColor" viewBox="0 0 24 24"><path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M12 8c-1.657 0-3 .895-3 2s1.343 2 3 2 3 .895 3 2-1.343 2-3 2m0-8c1.11 0 2.08.402 2.599 1M12 8V7m0 1v8m0 0v1m0-1c-1.11 0-2.08-.402-2.599-1M21 12a9 9 0 11-18 0 9 9 0 0118 0z"/></svg>
+            </div>
+            <p class="text-[10px] font-bold text-gray-800 uppercase tracking-wider">Recordatorios</p>
+          </div>
+          <!-- Post-venta -->
+          <div class="orch-agent bg-white rounded-lg p-2.5 shadow-sm text-center cursor-default">
+
+            <div class="h-0.5 rounded-full mb-2" style="background:#d97706"></div>
+            <div class="w-7 h-7 rounded-lg flex items-center justify-center mx-auto mb-1.5" style="background:#fef3c7">
+              <svg class="w-3.5 h-3.5" style="color:#d97706" fill="none" stroke="currentColor" viewBox="0 0 24 24"><path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M5 13l4 4L19 7"/></svg>
+            </div>
+            <p class="text-[10px] font-bold text-gray-800 uppercase tracking-wider">Post-venta</p>
+          </div>
+          <!-- Reviews -->
+          <div class="orch-agent bg-white rounded-lg p-2.5 shadow-sm text-center cursor-default">
+
+            <div class="h-0.5 rounded-full mb-2" style="background:#ca8a04"></div>
+            <div class="w-7 h-7 rounded-lg flex items-center justify-center mx-auto mb-1.5" style="background:#fef9c3">
+              <svg class="w-3.5 h-3.5" style="color:#ca8a04" fill="none" stroke="currentColor" viewBox="0 0 24 24"><path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M11.049 2.927c.3-.921 1.603-.921 1.902 0l1.519 4.674a1 1 0 00.95.69h4.915c.969 0 1.371 1.24.588 1.81l-3.976 2.888a1 1 0 00-.363 1.118l1.518 4.674c.3.922-.755 1.688-1.538 1.118l-3.976-2.888a1 1 0 00-1.176 0l-3.976 2.888c-.783.57-1.838-.197-1.538-1.118l1.518-4.674a1 1 0 00-.363-1.118l-3.976-2.888c-.784-.57-.38-1.81.588-1.81h4.914a1 1 0 00.951-.69l1.519-4.674z"/></svg>
+            </div>
+            <p class="text-[10px] font-bold text-gray-800 uppercase tracking-wider">Reseñas</p>
+          </div>
+          <!-- Fidelizacion -->
+          <div class="orch-agent bg-white rounded-lg p-2.5 shadow-sm text-center cursor-default col-span-2 sm:col-span-1">
+
+            <div class="h-0.5 rounded-full mb-2" style="background:#9333ea"></div>
+            <div class="w-7 h-7 rounded-lg flex items-center justify-center mx-auto mb-1.5" style="background:#f3e8ff">
+              <svg class="w-3.5 h-3.5" style="color:#9333ea" fill="none" stroke="currentColor" viewBox="0 0 24 24"><path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M4.318 6.318a4.5 4.5 0 000 6.364L12 20.364l7.682-7.682a4.5 4.5 0 00-6.364-6.364L12 7.636l-1.318-1.318a4.5 4.5 0 00-6.364 0z"/></svg>
+            </div>
+            <p class="text-[10px] font-bold text-gray-800 uppercase tracking-wider">Fidelizacion</p>
+          </div>
+        </div>
+
+        <!-- Conector al resultado -->
+        <div class="flex justify-center mb-2.5"><div class="orch-line w-0.5 h-6 bg-gradient-to-b from-gray-300 to-emerald-400 rounded-full"></div></div>
+
+        <!-- PASO 4: Resultado -->
+        <div class="flex justify-center">
+          <div class="bg-gray-900 rounded-xl px-3.5 py-2 flex items-center gap-2.5 max-w-[280px] sm:max-w-xs w-full shadow-lg shadow-gray-900/15">
+            <div class="w-8 h-8 rounded-full flex items-center justify-center shrink-0" id="orch-result-icon" style="background:#10b981">
+              <svg class="w-4 h-4 text-white" fill="none" stroke="currentColor" viewBox="0 0 24 24"><path stroke-linecap="round" stroke-linejoin="round" stroke-width="2.5" d="M5 13l4 4L19 7"/></svg>
+            </div>
+            <div class="min-w-0 flex-1">
+              <p class="text-white text-xs font-semibold leading-snug orch-result-text" id="orch-result">Responde con catalogo y agenda turno</p>
+              <p class="text-gray-400 text-[9px] mt-0.5">En segundos, sin que vos hagas nada</p>
+            </div>
+          </div>
+        </div>
+
       </div>
+
+      <!-- Orquestador: animacion ciclica de escenarios -->
+      <script>
+      (function(){
+        var CHECK='<svg class="w-4 h-4 text-white" fill="none" stroke="currentColor" viewBox="0 0 24 24"><path stroke-linecap="round" stroke-linejoin="round" stroke-width="2.5" d="M5 13l4 4L19 7"/></svg>';
+        var MP='<svg class="w-4 h-4 text-white" fill="none" stroke="currentColor" viewBox="0 0 24 24"><path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M3 10h18M7 15h1m4 0h1m-7 4h12a3 3 0 003-3V8a3 3 0 00-3-3H6a3 3 0 00-3 3v8a3 3 0 003 3z"/></svg>';
+        var GMAP='<svg class="w-4 h-4" viewBox="0 0 24 24" fill="none"><path d="M12 2C8.13 2 5 5.13 5 9c0 5.25 7 13 7 13s7-7.75 7-13c0-3.87-3.13-7-7-7z" fill="#ea4335"/><circle cx="12" cy="9" r="2.5" fill="white"/></svg>';
+        var THUMB='<svg class="w-4 h-4 text-white" fill="none" stroke="currentColor" viewBox="0 0 24 24"><path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M14 9V5a3 3 0 00-3-3l-4 9v11h11.28a2 2 0 002-1.7l1.38-9a2 2 0 00-2-2.3H14zM7 22H4a2 2 0 01-2-2v-7a2 2 0 012-2h3"/></svg>';
+        var GIFT='<svg class="w-4 h-4 text-white" fill="none" stroke="currentColor" viewBox="0 0 24 24"><path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M12 8v13m0-13V6a4 4 0 00-4-4 4 4 0 000 8h4zm0 0h4a4 4 0 000-8 4 4 0 00-4 4v4zM5 8h14a1 1 0 011 1v3H4V9a1 1 0 011-1zm0 4h14v7a2 2 0 01-2 2H7a2 2 0 01-2-2v-7z"/></svg>';
+        var S=[
+          {t:'"Hola, quiero saber los precios"',a:0,r:'Responde y cierra venta',c:'#2563eb',ic:CHECK,bg:'#10b981',lb:'Mensaje entrante'},
+          {t:'Cuota de cliente vencida hace 3 dias',a:1,r:'Envia recordatorio + link de MercadoPago',c:'#16a34a',ic:MP,bg:'#0891b2',lb:'Mensaje saliente'},
+          {t:'Pago confirmado: $5.000 de cliente',a:2,r:'Agradece al cliente y le pide feedback',c:'#d97706',ic:THUMB,bg:'#d97706',lb:'Mensaje entrante'},
+          {t:'Cliente responde: "Todo genial, 5/5"',a:3,r:'Le envia link para dejar reseña en Google',c:'#ca8a04',ic:GMAP,bg:'#4285f4',lb:'Mensaje entrante'},
+          {t:'Cliente: 30 dias sin actividad',a:4,r:'Le ofrece al cliente volver con beneficio',c:'#9333ea',ic:GIFT,bg:'#9333ea',lb:'Mensaje saliente'}
+        ];
+        var i=0,agents=document.querySelectorAll('#orch-agents .orch-agent'),
+            tEl=document.getElementById('orch-trigger'),
+            rEl=document.getElementById('orch-result'),
+            bar=document.getElementById('orch-bar'),
+            rIc=document.getElementById('orch-result-icon'),
+            lbEl=document.getElementById('orch-label');
+        function run(){
+          var s=S[i];
+          tEl.classList.add('fade-out');
+          rEl.classList.add('fade-out');
+          setTimeout(function(){
+            tEl.textContent=s.t;
+            tEl.classList.remove('fade-out');
+            lbEl.textContent=s.lb;
+          },400);
+          bar.style.width='0';
+          setTimeout(function(){bar.style.width='100%'},100);
+          agents.forEach(function(a,j){
+            if(j===s.a){
+              a.classList.add('active');
+              a.style.borderColor=s.c;
+              a.style.boxShadow='0 8px 25px '+s.c+'30';
+            }else{
+              a.classList.remove('active');
+              a.style.borderColor='transparent';
+              a.style.boxShadow='0 1px 2px rgba(0,0,0,.05)';
+            }
+          });
+          setTimeout(function(){
+            rEl.textContent=s.r;
+            rEl.classList.remove('fade-out');
+            rIc.style.background=s.bg;
+            rIc.innerHTML=s.ic;
+          },1100);
+          i=(i+1)%S.length;
+        }
+        run();
+        var iv=setInterval(run,4500);
+        var root=document.getElementById('orch-root');
+        if('IntersectionObserver' in window){
+          var obs=new IntersectionObserver(function(entries){
+            entries.forEach(function(e){
+              if(!e.isIntersecting){clearInterval(iv);iv=null}
+              else if(!iv){iv=setInterval(run,4500);run()}
+            });
+          },{threshold:0.2});
+          obs.observe(root);
+        }
+        // Info panel hover
+        var infoEl=document.getElementById('orch-info'),
+            infoTitle=document.getElementById('orch-info-title'),
+            infoDesc=document.getElementById('orch-info-desc');
+        var INFO=[
+          {t:'Atencion y ventas',d:'Responde consultas de clientes al instante por WhatsApp. Envia catalogos, precios y agenda turnos automaticamente. Cierra ventas sin intervencion manual.'},
+          {t:'Recordatorios',d:'Detecta pagos pendientes y envia recordatorios amigables con link de pago de MercadoPago. Automatiza el seguimiento sin incomodar al cliente.'},
+          {t:'Post-venta',d:'Cuando un cliente paga, HAMPI agradece automaticamente, confirma el pago y solicita feedback sobre el servicio. Mejora la experiencia sin esfuerzo.'},
+          {t:'Reseñas Google',d:'Detecta clientes satisfechos y les envia el link directo para dejar una reseña en Google Maps. Aumenta tu reputacion online en piloto automatico.'},
+          {t:'Fidelizacion',d:'Identifica clientes inactivos y les envia ofertas personalizadas para que vuelvan. Recupera clientes perdidos con mensajes automaticos y beneficios exclusivos.'}
+        ];
+        if(infoEl){
+          agents.forEach(function(a,j){
+            a.addEventListener('mouseenter',function(){
+              infoTitle.textContent=INFO[j].t;
+              infoDesc.textContent=INFO[j].d;
+              infoEl.style.opacity='1';
+            });
+            a.addEventListener('mouseleave',function(){
+              infoEl.style.opacity='0';
+            });
+          });
+        }
+      })();
+      </script>
 
       <!-- 5 pasos -->
       <div class="grid sm:grid-cols-2 lg:grid-cols-5 gap-6 reveal">
@@ -253,245 +521,286 @@
     </div>
   </section>
 
-  <!-- ===== 2. EL SISTEMA — 3 FASES ===== -->
+  <!-- ===== 2. EL SISTEMA — CARRUSEL 5 ETAPAS ===== -->
   <section id="sistema" class="py-20 bg-gray-50">
     <div class="max-w-6xl mx-auto px-4 sm:px-6">
-      <div class="text-center mb-16 reveal">
-        <p class="text-brand-600 font-semibold text-sm uppercase tracking-wider">El sistema</p>
+      <div class="text-center mb-8 reveal">
+        <p class="text-brand-600 font-semibold text-xs uppercase tracking-wider">El sistema</p>
       </div>
 
-      <!-- FASE 1: ATENDER -->
-      <div class="grid md:grid-cols-2 gap-12 items-center mb-20 reveal">
-        <div>
-          <div class="inline-flex items-center gap-2 bg-blue-50 text-blue-700 text-sm font-bold px-4 py-1.5 rounded-full mb-4 tracking-wide">FASE 1 · ATENDER</div>
-          <p class="text-gray-600 leading-relaxed mb-6">IA que entiende contexto, responde consultas frecuentes, agenda turnos y escala a un humano solo cuando es necesario.</p>
-          <ul class="space-y-3">
-            <li class="flex items-start gap-3 text-sm text-gray-700"><svg class="w-5 h-5 text-blue-500 shrink-0 mt-0.5" fill="none" stroke="currentColor" viewBox="0 0 24 24"><path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M5 13l4 4L19 7"/></svg>Respuestas inteligentes — WhatsApp, email o SMS con contexto del cliente</li>
-            <li class="flex items-start gap-3 text-sm text-gray-700"><svg class="w-5 h-5 text-blue-500 shrink-0 mt-0.5" fill="none" stroke="currentColor" viewBox="0 0 24 24"><path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M5 13l4 4L19 7"/></svg>Escalado a humano — cuando la IA no resuelve o detecta enojo</li>
-            <li class="flex items-start gap-3 text-sm text-gray-700"><svg class="w-5 h-5 text-blue-500 shrink-0 mt-0.5" fill="none" stroke="currentColor" viewBox="0 0 24 24"><path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M5 13l4 4L19 7"/></svg>Turnos y recordatorios — agenda, confirma y reduce ausencias</li>
-            <li class="flex items-start gap-3 text-sm text-gray-700"><svg class="w-5 h-5 text-blue-500 shrink-0 mt-0.5" fill="none" stroke="currentColor" viewBox="0 0 24 24"><path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M5 13l4 4L19 7"/></svg>Resumen de conversacion — para que el humano retome sin repetir</li>
-            <li class="flex items-start gap-3 text-sm text-gray-700"><svg class="w-5 h-5 text-blue-500 shrink-0 mt-0.5" fill="none" stroke="currentColor" viewBox="0 0 24 24"><path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M5 13l4 4L19 7"/></svg>Derivacion inteligente — enruta consultas por intencion y prioridad</li>
-            <li class="flex items-start gap-3 text-sm text-gray-700"><svg class="w-5 h-5 text-blue-500 shrink-0 mt-0.5" fill="none" stroke="currentColor" viewBox="0 0 24 24"><path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M5 13l4 4L19 7"/></svg>Historial y contexto — el humano retoma con todo el resumen listo</li>
-          </ul>
-        </div>
-        <div class="bg-white rounded-2xl shadow-xl p-6 border border-gray-100 chat-live" data-chat="1">
-          <!-- Header -->
-          <div class="flex items-center gap-3 mb-4 pb-4 border-b border-gray-100">
-            <div class="w-10 h-10 rounded-full bg-white shrink-0 flex items-center justify-center border border-gray-200 shadow-sm"><img src="logox.png" alt="HAMPI" class="w-6 h-6 object-contain"></div>
+
+      <!-- Slides container -->
+      <div class="relative overflow-hidden" id="sistema-carousel">
+
+        <!-- Slide 0: ATENCION Y VENTAS CON IA -->
+        <div class="sistema-slide transition-all duration-500" data-slide="0">
+          <div class="grid md:grid-cols-2 gap-8 items-center">
             <div>
-              <p class="font-semibold text-gray-900 text-sm">Atencion automatica</p>
-              <div class="chat-status flex items-center gap-1.5">
-                <span class="w-2 h-2 bg-green-400 rounded-full animate-pulse"></span>
-                <span class="text-xs text-green-500 font-medium">En linea</span>
-              </div>
+              <div class="inline-flex items-center gap-2 bg-blue-50 text-blue-700 text-xs font-bold px-3 py-1 rounded-full mb-3 tracking-wide">ATENCION Y VENTAS CON IA</div>
+              <p class="text-gray-600 text-sm leading-relaxed mb-4">IA que entiende contexto, responde consultas, vende desde tu catalogo, agenda turnos y escala a un humano solo cuando es necesario.</p>
+              <ul class="space-y-2">
+                <li class="flex items-start gap-2.5 text-xs text-gray-700"><svg class="w-4 h-4 text-blue-500 shrink-0 mt-0.5" fill="none" stroke="currentColor" viewBox="0 0 24 24"><path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M5 13l4 4L19 7"/></svg>Respuestas inteligentes — WhatsApp, email o SMS con contexto del cliente</li>
+                <li class="flex items-start gap-2.5 text-xs text-gray-700"><svg class="w-4 h-4 text-blue-500 shrink-0 mt-0.5" fill="none" stroke="currentColor" viewBox="0 0 24 24"><path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M5 13l4 4L19 7"/></svg>Catalogo + precios — la IA responde con tu oferta real y genera leads</li>
+                <li class="flex items-start gap-2.5 text-xs text-gray-700"><svg class="w-4 h-4 text-blue-500 shrink-0 mt-0.5" fill="none" stroke="currentColor" viewBox="0 0 24 24"><path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M5 13l4 4L19 7"/></svg>Turnos y reservas — agenda, confirma y reduce ausencias</li>
+                <li class="flex items-start gap-2.5 text-xs text-gray-700"><svg class="w-4 h-4 text-blue-500 shrink-0 mt-0.5" fill="none" stroke="currentColor" viewBox="0 0 24 24"><path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M5 13l4 4L19 7"/></svg>Escalado a humano — cuando la IA no resuelve o detecta enojo</li>
+                <li class="flex items-start gap-2.5 text-xs text-gray-700"><svg class="w-4 h-4 text-blue-500 shrink-0 mt-0.5" fill="none" stroke="currentColor" viewBox="0 0 24 24"><path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M5 13l4 4L19 7"/></svg>WABA propio — opera desde el numero WhatsApp de tu negocio</li>
+              </ul>
             </div>
-            <div class="ml-auto text-xs text-gray-300 chat-time"></div>
-          </div>
-          <!-- Messages container -->
-          <div class="space-y-3 chat-messages min-h-[180px]">
-            <div class="chat-bubble opacity-0" data-sender="user" data-delay="600">
-              <div class="flex items-start gap-2 justify-end"><div class="bg-gray-100 rounded-2xl rounded-tr-sm px-4 py-2.5"><p class="text-sm text-gray-700">Hola, quiero saber los horarios</p></div></div>
-            </div>
-            <div class="chat-bubble opacity-0" data-sender="bot" data-delay="2200">
-              <div class="flex items-start gap-2"><div class="bg-blue-50 rounded-2xl rounded-tl-sm px-4 py-2.5 max-w-[80%]"><p class="text-sm text-gray-700">Hola! 😊 Lunes a viernes de 8 a 20hs, sabados de 9 a 14hs. ¿Queres agendar un turno?</p></div></div>
-            </div>
-            <div class="chat-bubble opacity-0" data-sender="user" data-delay="4000">
-              <div class="flex items-start gap-2 justify-end"><div class="bg-gray-100 rounded-2xl rounded-tr-sm px-4 py-2.5"><p class="text-sm text-gray-700">Si, para el martes a la mañana</p></div></div>
-            </div>
-            <div class="chat-bubble opacity-0" data-sender="bot" data-delay="5800">
-              <div class="flex items-start gap-2"><div class="bg-blue-50 rounded-2xl rounded-tl-sm px-4 py-2.5"><p class="text-sm text-gray-700">Perfecto! Martes 18/02 a las 9:00. Te envio recordatorio el lunes 📅</p></div></div>
-            </div>
-          </div>
-          <!-- Typing indicator (hidden initially) -->
-          <div class="chat-typing hidden flex items-center gap-1.5 mt-3 ml-1">
-            <span class="typing-dot w-2 h-2 bg-gray-300 rounded-full"></span>
-            <span class="typing-dot w-2 h-2 bg-gray-300 rounded-full"></span>
-            <span class="typing-dot w-2 h-2 bg-gray-300 rounded-full"></span>
-          </div>
-          <!-- Badge (hidden initially) -->
-          <div class="mt-4 text-center chat-badge opacity-0"><span class="inline-flex items-center gap-1 text-xs text-blue-600 font-medium bg-blue-50 px-3 py-1 rounded-full">⚡ Respuesta en 8 seg · IA contextual</span></div>
-        </div>
-      </div>
-
-      <!-- FASE 2: RECORDATORIOS DE PAGO -->
-      <div class="grid md:grid-cols-2 gap-12 items-center mb-20 reveal">
-        <div class="order-2 md:order-1">
-          <div class="bg-white rounded-2xl shadow-xl p-6 border border-gray-100 chat-live" data-chat="2">
-            <!-- Header -->
-            <div class="flex items-center gap-3 mb-4 pb-4 border-b border-gray-100">
-              <div class="w-10 h-10 rounded-full bg-white shrink-0 flex items-center justify-center border border-gray-200 shadow-sm"><img src="logox.png" alt="HAMPI" class="w-6 h-6 object-contain"></div>
-              <div>
-                <p class="font-semibold text-gray-900 text-sm">HAMPI Bot</p>
-                <div class="chat-status flex items-center gap-1.5">
-                  <span class="w-2 h-2 bg-green-400 rounded-full animate-pulse"></span>
-                  <span class="text-xs text-green-500 font-medium">En linea</span>
+            <div class="bg-white rounded-xl shadow-lg p-5 border border-gray-100 h-[380px] flex flex-col chat-live" data-chat="1">
+              <div class="flex items-center gap-3 mb-3 pb-3 border-b border-gray-100">
+                <div class="w-9 h-9 rounded-full bg-white shrink-0 flex items-center justify-center border border-gray-200 shadow-sm"><img src="logox.png" alt="HAMPI Bot" class="w-5 h-5 object-contain" width="40" height="32" loading="lazy"></div>
+                <div>
+                  <p class="font-semibold text-gray-900 text-sm">Atencion automatica</p>
+                  <div class="chat-status flex items-center gap-1.5"><span class="w-2 h-2 bg-green-400 rounded-full animate-pulse"></span><span class="text-xs text-green-500 font-medium">En linea</span></div>
                 </div>
               </div>
-              <div class="ml-auto text-xs text-gray-300 chat-time"></div>
-            </div>
-            <!-- Messages container -->
-            <div class="space-y-3 chat-messages min-h-[180px]">
-              <div class="chat-bubble opacity-0" data-sender="bot" data-delay="800">
-                <div class="flex items-start gap-2"><div class="bg-brand-50 rounded-2xl rounded-tl-sm px-4 py-2.5 max-w-[80%]"><p class="text-sm text-gray-700">Hola Juan 👋 Tu cuota de febrero esta pendiente ($18.500). Te dejo el link para pagar rapido:</p><span class="text-sm text-brand-600 font-semibold mt-1 block">💳 Pagar con MercadoPago →</span></div></div>
+              <div class="space-y-3 chat-messages flex-1 overflow-hidden">
+                <div class="chat-bubble opacity-0" data-sender="user" data-delay="600"><div class="flex items-start gap-2 justify-end"><div class="bg-gray-100 rounded-2xl rounded-tr-sm px-4 py-2.5"><p class="text-sm text-gray-700">Hola, quiero saber los horarios</p></div></div></div>
+                <div class="chat-bubble opacity-0" data-sender="bot" data-delay="2200"><div class="flex items-start gap-2"><div class="bg-blue-50 rounded-2xl rounded-tl-sm px-4 py-2.5 max-w-[80%]"><p class="text-sm text-gray-700">Hola! Lunes a viernes de 8 a 20hs, sabados de 9 a 14hs. Queres agendar un turno?</p></div></div></div>
+                <div class="chat-bubble opacity-0" data-sender="user" data-delay="4000"><div class="flex items-start gap-2 justify-end"><div class="bg-gray-100 rounded-2xl rounded-tr-sm px-4 py-2.5"><p class="text-sm text-gray-700">Si, para el martes a la mañana</p></div></div></div>
+                <div class="chat-bubble opacity-0" data-sender="bot" data-delay="5800"><div class="flex items-start gap-2"><div class="bg-blue-50 rounded-2xl rounded-tl-sm px-4 py-2.5"><p class="text-sm text-gray-700">Perfecto! Martes 18/02 a las 9:00. Te envio recordatorio el lunes</p></div></div></div>
               </div>
-              <div class="chat-bubble opacity-0" data-sender="user" data-delay="3400">
-                <div class="flex items-start gap-2 justify-end"><div class="bg-green-50 rounded-2xl rounded-tr-sm px-4 py-2.5"><p class="text-sm text-gray-700">Listo, ya pague! 🙌</p></div></div>
-              </div>
-              <div class="chat-bubble opacity-0" data-sender="bot" data-delay="5200">
-                <div class="flex items-start gap-2"><div class="bg-brand-50 rounded-2xl rounded-tl-sm px-4 py-2.5"><p class="text-sm text-gray-700">Confirmado ✅ Pago de $18.500 registrado. Gracias Juan!</p></div></div>
-              </div>
+                            <div class="mt-4 text-center chat-badge opacity-0"><span class="inline-flex items-center gap-1 text-xs text-blue-600 font-medium bg-blue-50 px-3 py-1 rounded-full">Respuesta en 8 seg · IA contextual</span></div>
             </div>
-            <!-- Typing indicator -->
-            <div class="chat-typing hidden flex items-center gap-1.5 mt-3 ml-1">
-              <span class="typing-dot w-2 h-2 bg-gray-300 rounded-full"></span>
-              <span class="typing-dot w-2 h-2 bg-gray-300 rounded-full"></span>
-              <span class="typing-dot w-2 h-2 bg-gray-300 rounded-full"></span>
-            </div>
-            <!-- Badge -->
-            <div class="mt-4 text-center chat-badge opacity-0"><span class="inline-flex items-center gap-1 text-xs text-green-600 font-medium bg-green-50 px-3 py-1 rounded-full">✓ Cobrado en 4 min · Sin intervencion humana</span></div>
           </div>
         </div>
-        <div class="order-1 md:order-2">
-          <div class="inline-flex items-center gap-2 bg-green-50 text-green-700 text-sm font-bold px-4 py-1.5 rounded-full mb-4 tracking-wide">FASE 2 · RECORDATORIOS DE PAGO</div>
-          <p class="text-gray-600 leading-relaxed mb-6">HAMPI detecta pagos pendientes, envia recordatorios por WhatsApp o email en el momento justo, genera links de pago de MercadoPago y hace seguimiento hasta que se cobra.</p>
-          <ul class="space-y-3">
-            <li class="flex items-start gap-3 text-sm text-gray-700"><svg class="w-5 h-5 text-green-500 shrink-0 mt-0.5" fill="none" stroke="currentColor" viewBox="0 0 24 24"><path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M5 13l4 4L19 7"/></svg>Recordatorios escalonados — 3 tonos (amigable → firme → urgente) segun dias</li>
-            <li class="flex items-start gap-3 text-sm text-gray-700"><svg class="w-5 h-5 text-green-500 shrink-0 mt-0.5" fill="none" stroke="currentColor" viewBox="0 0 24 24"><path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M5 13l4 4L19 7"/></svg>Links de pago MercadoPago — pago 1 click + confirmacion automatica</li>
-            <li class="flex items-start gap-3 text-sm text-gray-700"><svg class="w-5 h-5 text-green-500 shrink-0 mt-0.5" fill="none" stroke="currentColor" viewBox="0 0 24 24"><path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M5 13l4 4L19 7"/></svg>Promesas de pago detectadas — seguimiento automatico si no se cumple</li>
-            <li class="flex items-start gap-3 text-sm text-gray-700"><svg class="w-5 h-5 text-green-500 shrink-0 mt-0.5" fill="none" stroke="currentColor" viewBox="0 0 24 24"><path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M5 13l4 4L19 7"/></svg>Priorizacion inteligente — segmenta por monto, antiguedad y respuesta</li>
-            <li class="flex items-start gap-3 text-sm text-gray-700"><svg class="w-5 h-5 text-green-500 shrink-0 mt-0.5" fill="none" stroke="currentColor" viewBox="0 0 24 24"><path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M5 13l4 4L19 7"/></svg>Reintentos automaticos — si no responde, vuelve a intentar con timing optimo</li>
-            <li class="flex items-start gap-3 text-sm text-gray-700"><svg class="w-5 h-5 text-green-500 shrink-0 mt-0.5" fill="none" stroke="currentColor" viewBox="0 0 24 24"><path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M5 13l4 4L19 7"/></svg>Reporte de recuperacion — resultados por periodo, cliente y canal</li>
-          </ul>
+
+        <!-- Slide 1: RECORDATORIOS DE PAGO AUTOMATICOS -->
+        <div class="sistema-slide transition-all duration-500 hidden" data-slide="1">
+          <div class="grid md:grid-cols-2 gap-8 items-center">
+            <div class="order-2 md:order-1">
+              <div class="bg-white rounded-xl shadow-lg p-5 border border-gray-100 h-[380px] flex flex-col chat-live" data-chat="2">
+                <div class="flex items-center gap-3 mb-3 pb-3 border-b border-gray-100">
+                  <div class="w-9 h-9 rounded-full bg-white shrink-0 flex items-center justify-center border border-gray-200 shadow-sm"><img src="logox.png" alt="HAMPI Bot" class="w-5 h-5 object-contain" width="40" height="32" loading="lazy"></div>
+                  <div>
+                    <p class="font-semibold text-gray-900 text-sm">HAMPI Bot</p>
+                    <div class="chat-status flex items-center gap-1.5"><span class="w-2 h-2 bg-green-400 rounded-full animate-pulse"></span><span class="text-xs text-green-500 font-medium">En linea</span></div>
+                  </div>
+                </div>
+                <div class="space-y-3 chat-messages flex-1 overflow-hidden">
+                  <div class="chat-bubble opacity-0" data-sender="bot" data-delay="800"><div class="flex items-start gap-2"><div class="bg-brand-50 rounded-2xl rounded-tl-sm px-4 py-2.5 max-w-[80%]"><p class="text-sm text-gray-700">Hola Juan! Tu cuota de febrero esta pendiente ($18.500). Te dejo el link para pagar rapido:</p><span class="text-sm text-brand-600 font-semibold mt-1 block">Pagar con MercadoPago →</span></div></div></div>
+                  <div class="chat-bubble opacity-0" data-sender="user" data-delay="3400"><div class="flex items-start gap-2 justify-end"><div class="bg-green-50 rounded-2xl rounded-tr-sm px-4 py-2.5"><p class="text-sm text-gray-700">Listo, ya pague!</p></div></div></div>
+                  <div class="chat-bubble opacity-0" data-sender="bot" data-delay="5200"><div class="flex items-start gap-2"><div class="bg-brand-50 rounded-2xl rounded-tl-sm px-4 py-2.5"><p class="text-sm text-gray-700">Confirmado! Pago de $18.500 registrado. Gracias Juan!</p></div></div></div>
+                </div>
+                                <div class="mt-4 text-center chat-badge opacity-0"><span class="inline-flex items-center gap-1 text-xs text-green-600 font-medium bg-green-50 px-3 py-1 rounded-full">Cobrado en 4 min · Sin intervencion humana</span></div>
+              </div>
+            </div>
+            <div class="order-1 md:order-2">
+              <div class="inline-flex items-center gap-2 bg-green-50 text-green-700 text-xs font-bold px-3 py-1 rounded-full mb-3 tracking-wide">RECORDATORIOS DE PAGO AUTOMATICOS</div>
+              <p class="text-gray-600 text-sm leading-relaxed mb-4">HAMPI detecta pagos pendientes, envia recordatorios por WhatsApp o email en el momento justo, genera links de pago de MercadoPago y hace seguimiento hasta que se cobra.</p>
+              <ul class="space-y-2">
+                <li class="flex items-start gap-2.5 text-xs text-gray-700"><svg class="w-4 h-4 text-green-500 shrink-0 mt-0.5" fill="none" stroke="currentColor" viewBox="0 0 24 24"><path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M5 13l4 4L19 7"/></svg>Recordatorios escalonados — 3 tonos (amigable → firme → urgente) segun dias</li>
+                <li class="flex items-start gap-2.5 text-xs text-gray-700"><svg class="w-4 h-4 text-green-500 shrink-0 mt-0.5" fill="none" stroke="currentColor" viewBox="0 0 24 24"><path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M5 13l4 4L19 7"/></svg>Links de pago MercadoPago — pago 1 click + confirmacion automatica</li>
+                <li class="flex items-start gap-2.5 text-xs text-gray-700"><svg class="w-4 h-4 text-green-500 shrink-0 mt-0.5" fill="none" stroke="currentColor" viewBox="0 0 24 24"><path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M5 13l4 4L19 7"/></svg>Promesas de pago — seguimiento automatico si no se cumple</li>
+                <li class="flex items-start gap-2.5 text-xs text-gray-700"><svg class="w-4 h-4 text-green-500 shrink-0 mt-0.5" fill="none" stroke="currentColor" viewBox="0 0 24 24"><path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M5 13l4 4L19 7"/></svg>Priorizacion inteligente — segmenta por monto, antiguedad y respuesta</li>
+                <li class="flex items-start gap-2.5 text-xs text-gray-700"><svg class="w-4 h-4 text-green-500 shrink-0 mt-0.5" fill="none" stroke="currentColor" viewBox="0 0 24 24"><path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M5 13l4 4L19 7"/></svg>Reporte de recuperacion — resultados por periodo, cliente y canal</li>
+              </ul>
+            </div>
+          </div>
         </div>
+
+        <!-- Slide 2: SEGUIMIENTO POST-VENTA -->
+        <div class="sistema-slide transition-all duration-500 hidden" data-slide="2">
+          <div class="grid md:grid-cols-2 gap-8 items-center">
+            <div>
+              <div class="inline-flex items-center gap-2 bg-amber-50 text-amber-700 text-xs font-bold px-3 py-1 rounded-full mb-3 tracking-wide">SEGUIMIENTO POST-VENTA</div>
+              <p class="text-gray-600 text-sm leading-relaxed mb-4">Despues de cada pago, HAMPI activa un flujo automatico: agradece, pide feedback y mide la satisfaccion de tu cliente.</p>
+              <ul class="space-y-2">
+                <li class="flex items-start gap-2.5 text-xs text-gray-700"><svg class="w-4 h-4 text-amber-500 shrink-0 mt-0.5" fill="none" stroke="currentColor" viewBox="0 0 24 24"><path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M5 13l4 4L19 7"/></svg>Agradecimiento automatico — mensaje personalizado al confirmar pago</li>
+                <li class="flex items-start gap-2.5 text-xs text-gray-700"><svg class="w-4 h-4 text-amber-500 shrink-0 mt-0.5" fill="none" stroke="currentColor" viewBox="0 0 24 24"><path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M5 13l4 4L19 7"/></svg>Encuesta de satisfaccion — puntaje del 1 al 5 por WhatsApp o email</li>
+                <li class="flex items-start gap-2.5 text-xs text-gray-700"><svg class="w-4 h-4 text-amber-500 shrink-0 mt-0.5" fill="none" stroke="currentColor" viewBox="0 0 24 24"><path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M5 13l4 4L19 7"/></svg>Alertas por puntaje bajo — se notifica al dueño si hay insatisfaccion</li>
+                <li class="flex items-start gap-2.5 text-xs text-gray-700"><svg class="w-4 h-4 text-amber-500 shrink-0 mt-0.5" fill="none" stroke="currentColor" viewBox="0 0 24 24"><path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M5 13l4 4L19 7"/></svg>Resumen diario — metricas de pagos, mensajes y feedback del dia</li>
+                <li class="flex items-start gap-2.5 text-xs text-gray-700"><svg class="w-4 h-4 text-amber-500 shrink-0 mt-0.5" fill="none" stroke="currentColor" viewBox="0 0 24 24"><path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M5 13l4 4L19 7"/></svg>Timing configurable — vos elegis cuando se envia cada paso</li>
+              </ul>
+            </div>
+            <div class="bg-white rounded-xl shadow-lg p-5 border border-gray-100 h-[380px] flex flex-col chat-live" data-chat="3">
+              <div class="flex items-center gap-3 mb-3 pb-3 border-b border-gray-100">
+                <div class="w-9 h-9 rounded-full bg-white shrink-0 flex items-center justify-center border border-gray-200 shadow-sm"><img src="logox.png" alt="HAMPI Bot" class="w-5 h-5 object-contain" width="40" height="32" loading="lazy"></div>
+                <div><p class="font-semibold text-gray-900 text-sm">Post-venta</p><div class="chat-status flex items-center gap-1.5"><span class="w-2 h-2 bg-amber-400 rounded-full animate-pulse"></span><span class="text-xs text-amber-500 font-medium">Automatico</span></div></div>
+                <div class="ml-auto text-xs text-gray-300 chat-time"></div>
+              </div>
+              <div class="space-y-3 chat-messages flex-1 overflow-hidden">
+                <div class="chat-bubble opacity-0" data-sender="bot" data-delay="600"><div class="flex items-start gap-2"><div class="bg-amber-50 rounded-2xl rounded-tl-sm px-4 py-2.5 max-w-[80%]"><p class="text-sm text-gray-700">Gracias por tu pago, Maria! Nos alegra tenerte como clienta.</p></div></div></div>
+                <div class="chat-bubble opacity-0" data-sender="bot" data-delay="2400"><div class="flex items-start gap-2"><div class="bg-amber-50 rounded-2xl rounded-tl-sm px-4 py-2.5 max-w-[80%]"><p class="text-sm text-gray-700">Como fue tu experiencia? Respondenos del 1 al 5</p></div></div></div>
+                <div class="chat-bubble opacity-0" data-sender="user" data-delay="4200"><div class="flex items-start gap-2 justify-end"><div class="bg-gray-100 rounded-2xl rounded-tr-sm px-4 py-2.5"><p class="text-sm text-gray-700">5</p></div></div></div>
+                <div class="chat-bubble opacity-0" data-sender="bot" data-delay="5800"><div class="flex items-start gap-2"><div class="bg-amber-50 rounded-2xl rounded-tl-sm px-4 py-2.5"><p class="text-sm text-gray-700">Nos alegra mucho! Gracias por tu feedback</p></div></div></div>
+              </div>
+                            <div class="mt-4 text-center chat-badge opacity-0"><span class="inline-flex items-center gap-1 text-xs text-amber-600 font-medium bg-amber-50 px-3 py-1 rounded-full">Feedback 5/5 · Automatico</span></div>
+            </div>
+          </div>
+        </div>
+
+        <!-- Slide 3: GOOGLE REVIEWS -->
+        <div class="sistema-slide transition-all duration-500 hidden" data-slide="3">
+          <div class="grid md:grid-cols-2 gap-8 items-center">
+            <div class="order-2 md:order-1">
+              <div class="bg-white rounded-xl shadow-lg p-5 border border-gray-100 h-[380px] flex flex-col chat-live" data-chat="4">
+                <div class="flex items-center gap-3 mb-3 pb-3 border-b border-gray-100">
+                  <div class="w-9 h-9 rounded-full bg-white shrink-0 flex items-center justify-center border border-gray-200 shadow-sm"><img src="logox.png" alt="HAMPI Bot" class="w-5 h-5 object-contain" width="40" height="32" loading="lazy"></div>
+                  <div><p class="font-semibold text-gray-900 text-sm">Google Reviews</p><div class="chat-status flex items-center gap-1.5"><span class="w-2 h-2 bg-yellow-400 rounded-full animate-pulse"></span><span class="text-xs text-yellow-600 font-medium">Automatico</span></div></div>
+                  <div class="ml-auto text-xs text-gray-300 chat-time"></div>
+                </div>
+                <div class="space-y-3 chat-messages flex-1 overflow-hidden">
+                  <div class="chat-bubble opacity-0" data-sender="bot" data-delay="600"><div class="flex items-start gap-2"><div class="bg-yellow-50 rounded-2xl rounded-tl-sm px-4 py-2.5 max-w-[80%]"><p class="text-sm text-gray-700">Maria, nos ayudarias dejando una reseña en Google? Tu opinion nos ayuda mucho:</p><span class="text-sm text-yellow-700 font-semibold mt-1 block">Dejar reseña en Google →</span></div></div></div>
+                  <div class="chat-bubble opacity-0" data-sender="user" data-delay="3200"><div class="flex items-start gap-2 justify-end"><div class="bg-gray-100 rounded-2xl rounded-tr-sm px-4 py-2.5"><p class="text-sm text-gray-700">Listo, ya la deje!</p></div></div></div>
+                  <div class="chat-bubble opacity-0" data-sender="bot" data-delay="5000"><div class="flex items-start gap-2"><div class="bg-yellow-50 rounded-2xl rounded-tl-sm px-4 py-2.5"><p class="text-sm text-gray-700">Muchas gracias Maria! Tu reseña nos ayuda a crecer</p></div></div></div>
+                </div>
+                                <div class="mt-4 text-center chat-badge opacity-0"><span class="inline-flex items-center gap-1 text-xs text-yellow-700 font-medium bg-yellow-50 px-3 py-1 rounded-full">Solo clientes con score 4+ · Automatico</span></div>
+              </div>
+            </div>
+            <div class="order-1 md:order-2">
+              <div class="inline-flex items-center gap-2 bg-yellow-50 text-yellow-700 text-xs font-bold px-3 py-1 rounded-full mb-3 tracking-wide">GOOGLE REVIEWS</div>
+              <p class="text-gray-600 text-sm leading-relaxed mb-4">HAMPI invita automaticamente a tus clientes satisfechos a dejar una reseña en Google. Solo a los que dieron buen puntaje.</p>
+              <ul class="space-y-2">
+                <li class="flex items-start gap-2.5 text-xs text-gray-700"><svg class="w-4 h-4 text-yellow-500 shrink-0 mt-0.5" fill="none" stroke="currentColor" viewBox="0 0 24 24"><path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M5 13l4 4L19 7"/></svg>Solo clientes satisfechos — score 4 o 5 en feedback</li>
+                <li class="flex items-start gap-2.5 text-xs text-gray-700"><svg class="w-4 h-4 text-yellow-500 shrink-0 mt-0.5" fill="none" stroke="currentColor" viewBox="0 0 24 24"><path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M5 13l4 4L19 7"/></svg>Link directo a tu ficha de Google — 1 click para reseñar</li>
+                <li class="flex items-start gap-2.5 text-xs text-gray-700"><svg class="w-4 h-4 text-yellow-500 shrink-0 mt-0.5" fill="none" stroke="currentColor" viewBox="0 0 24 24"><path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M5 13l4 4L19 7"/></svg>Timing inteligente — se envia dias despues del feedback positivo</li>
+                <li class="flex items-start gap-2.5 text-xs text-gray-700"><svg class="w-4 h-4 text-yellow-500 shrink-0 mt-0.5" fill="none" stroke="currentColor" viewBox="0 0 24 24"><path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M5 13l4 4L19 7"/></svg>Mas reseñas = mas visibilidad — mejora tu posicionamiento local</li>
+                <li class="flex items-start gap-2.5 text-xs text-gray-700"><svg class="w-4 h-4 text-yellow-500 shrink-0 mt-0.5" fill="none" stroke="currentColor" viewBox="0 0 24 24"><path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M5 13l4 4L19 7"/></svg>Sin riesgo de reseñas negativas — filtra automaticamente</li>
+              </ul>
+            </div>
+          </div>
+        </div>
+
+        <!-- Slide 4: FIDELIZACION INTELIGENTE -->
+        <div class="sistema-slide transition-all duration-500 hidden" data-slide="4">
+          <div class="grid md:grid-cols-2 gap-8 items-center">
+            <div>
+              <div class="inline-flex items-center gap-2 bg-purple-50 text-purple-700 text-xs font-bold px-3 py-1 rounded-full mb-3 tracking-wide">FIDELIZACION INTELIGENTE</div>
+              <p class="text-gray-600 text-sm leading-relaxed mb-4">Analiza señales de riesgo (inactividad, quejas, impagos acumulados) y activa flujos de retencion personalizados.</p>
+              <ul class="space-y-2">
+                <li class="flex items-start gap-2.5 text-xs text-gray-700"><svg class="w-4 h-4 text-purple-500 shrink-0 mt-0.5" fill="none" stroke="currentColor" viewBox="0 0 24 24"><path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M5 13l4 4L19 7"/></svg>Señales de riesgo — inactividad, quejas o impagos disparan alertas</li>
+                <li class="flex items-start gap-2.5 text-xs text-gray-700"><svg class="w-4 h-4 text-purple-500 shrink-0 mt-0.5" fill="none" stroke="currentColor" viewBox="0 0 24 24"><path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M5 13l4 4L19 7"/></svg>Flujos automaticos — mensajes y ofertas personalizadas segun segmento</li>
+                <li class="flex items-start gap-2.5 text-xs text-gray-700"><svg class="w-4 h-4 text-purple-500 shrink-0 mt-0.5" fill="none" stroke="currentColor" viewBox="0 0 24 24"><path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M5 13l4 4L19 7"/></svg>Encuestas NPS — alertas cuando la satisfaccion cae</li>
+                <li class="flex items-start gap-2.5 text-xs text-gray-700"><svg class="w-4 h-4 text-purple-500 shrink-0 mt-0.5" fill="none" stroke="currentColor" viewBox="0 0 24 24"><path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M5 13l4 4L19 7"/></svg>Campañas de reactivacion — win-back automatico para clientes dormidos</li>
+                <li class="flex items-start gap-2.5 text-xs text-gray-700"><svg class="w-4 h-4 text-purple-500 shrink-0 mt-0.5" fill="none" stroke="currentColor" viewBox="0 0 24 24"><path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M5 13l4 4L19 7"/></svg>Ofertas controladas — reglas de descuento para no perder margen</li>
+              </ul>
+            </div>
+            <div class="bg-white rounded-xl shadow-lg p-5 border border-gray-100 h-[380px] flex flex-col panel-live" data-panel="retention">
+              <div class="flex items-center justify-between mb-4 pb-3 border-b border-gray-100">
+                <div class="flex items-center gap-2"><p class="font-semibold text-gray-900 text-sm">Panel de retencion</p><span class="w-2 h-2 bg-purple-400 rounded-full animate-pulse"></span></div>
+                <span class="panel-counter text-xs text-purple-600 font-medium bg-purple-50 px-2.5 py-1 rounded-full opacity-0">6 alertas</span>
+              </div>
+              <div class="space-y-2.5 panel-rows flex-1 overflow-hidden">
+                <div class="panel-row opacity-0 flex items-center gap-3 p-3 bg-red-50 rounded-xl border border-red-100" data-delay="500">
+                  <div class="w-8 h-8 bg-red-100 rounded-lg flex items-center justify-center shrink-0"><span class="text-red-500 text-xs font-bold">!</span></div>
+                  <div class="flex-1 min-w-0"><p class="text-sm font-semibold text-gray-900 truncate">Maria Lopez</p><p class="text-xs text-gray-500">3 cuotas impagas · Sin actividad 45d</p></div>
+                  <div class="text-right shrink-0"><span class="text-xs bg-red-500 text-white px-2 py-0.5 rounded-full">92%</span><p class="text-[10px] text-red-400 mt-0.5">ALTO</p></div>
+                </div>
+                <div class="panel-row opacity-0 flex items-center gap-3 p-3 bg-amber-50 rounded-xl border border-amber-100" data-delay="1200">
+                  <div class="w-8 h-8 bg-amber-100 rounded-lg flex items-center justify-center shrink-0"><span class="text-amber-500 text-xs font-bold">!</span></div>
+                  <div class="flex-1 min-w-0"><p class="text-sm font-semibold text-gray-900 truncate">Carlos Ruiz</p><p class="text-xs text-gray-500">Consulto cancelacion ayer</p></div>
+                  <div class="text-right shrink-0"><span class="text-xs bg-amber-500 text-white px-2 py-0.5 rounded-full">64%</span><p class="text-[10px] text-amber-500 mt-0.5">MEDIO</p></div>
+                </div>
+                <div class="panel-row opacity-0 flex items-center gap-3 p-3 bg-green-50 rounded-xl border border-green-100" data-delay="1900">
+                  <div class="w-8 h-8 bg-green-100 rounded-lg flex items-center justify-center shrink-0"><span class="text-green-500 text-xs font-bold">✓</span></div>
+                  <div class="flex-1 min-w-0"><p class="text-sm font-semibold text-gray-900 truncate">Ana Torres</p><p class="text-xs text-gray-500">Acepto descuento 15% · Retenida</p></div>
+                  <div class="text-right shrink-0"><span class="text-xs bg-green-500 text-white px-2 py-0.5 rounded-full">OK</span><p class="text-[10px] text-green-500 mt-0.5">RETENIDA</p></div>
+                </div>
+              </div>
+              <div class="mt-4 flex items-center justify-between panel-summary opacity-0">
+                <span class="inline-flex items-center gap-1 text-xs text-purple-600 font-medium bg-purple-50 px-3 py-1.5 rounded-full">3 de 4 clientes retenidos este mes</span>
+                <span class="text-xs text-gray-400">Actualizado recien</span>
+              </div>
+            </div>
+          </div>
+        </div>
+
+      </div><!-- /carousel -->
+
+      <!-- Controles -->
+      <div class="flex items-center justify-center gap-4 mt-8">
+        <button onclick="prevSlide()" class="w-8 h-8 rounded-full border border-gray-200 bg-white hover:bg-gray-50 flex items-center justify-center transition-colors" aria-label="Anterior">
+          <svg class="w-4 h-4 text-gray-400" fill="none" stroke="currentColor" viewBox="0 0 24 24"><path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M15 19l-7-7 7-7"/></svg>
+        </button>
+        <div class="flex gap-1.5" id="sistema-dots">
+          <span class="sistema-dot w-2 h-2 rounded-full bg-brand-600 transition-all cursor-pointer" onclick="goSlide(0)"></span>
+          <span class="sistema-dot w-2 h-2 rounded-full bg-gray-300 transition-all cursor-pointer" onclick="goSlide(1)"></span>
+          <span class="sistema-dot w-2 h-2 rounded-full bg-gray-300 transition-all cursor-pointer" onclick="goSlide(2)"></span>
+          <span class="sistema-dot w-2 h-2 rounded-full bg-gray-300 transition-all cursor-pointer" onclick="goSlide(3)"></span>
+          <span class="sistema-dot w-2 h-2 rounded-full bg-gray-300 transition-all cursor-pointer" onclick="goSlide(4)"></span>
+        </div>
+        <button onclick="nextSlide()" class="w-8 h-8 rounded-full border border-gray-200 bg-white hover:bg-gray-50 flex items-center justify-center transition-colors" aria-label="Siguiente">
+          <svg class="w-4 h-4 text-gray-400" fill="none" stroke="currentColor" viewBox="0 0 24 24"><path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M9 5l7 7-7 7"/></svg>
+        </button>
       </div>
 
-      <!-- FASE 3: FIDELIZAR -->
-      <div class="grid md:grid-cols-2 gap-12 items-center reveal">
-        <div>
-          <div class="inline-flex items-center gap-2 bg-purple-50 text-purple-700 text-sm font-bold px-4 py-1.5 rounded-full mb-4 tracking-wide">FASE 3 · FIDELIZAR</div>
-          <p class="text-gray-600 leading-relaxed mb-6">Analiza señales de riesgo (inactividad, quejas, impagos acumulados) y activa flujos de retencion personalizados.</p>
-          <ul class="space-y-3">
-            <li class="flex items-start gap-3 text-sm text-gray-700"><svg class="w-5 h-5 text-purple-500 shrink-0 mt-0.5" fill="none" stroke="currentColor" viewBox="0 0 24 24"><path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M5 13l4 4L19 7"/></svg>Señales de riesgo — inactividad, quejas o impagos acumulados disparan alertas</li>
-            <li class="flex items-start gap-3 text-sm text-gray-700"><svg class="w-5 h-5 text-purple-500 shrink-0 mt-0.5" fill="none" stroke="currentColor" viewBox="0 0 24 24"><path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M5 13l4 4L19 7"/></svg>Flujos automaticos — mensajes y ofertas personalizadas segun segmento</li>
-            <li class="flex items-start gap-3 text-sm text-gray-700"><svg class="w-5 h-5 text-purple-500 shrink-0 mt-0.5" fill="none" stroke="currentColor" viewBox="0 0 24 24"><path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M5 13l4 4L19 7"/></svg>Encuestas NPS — y alertas cuando la satisfaccion cae</li>
-            <li class="flex items-start gap-3 text-sm text-gray-700"><svg class="w-5 h-5 text-purple-500 shrink-0 mt-0.5" fill="none" stroke="currentColor" viewBox="0 0 24 24"><path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M5 13l4 4L19 7"/></svg>Registro y metricas — historial completo por cliente con score de riesgo</li>
-            <li class="flex items-start gap-3 text-sm text-gray-700"><svg class="w-5 h-5 text-purple-500 shrink-0 mt-0.5" fill="none" stroke="currentColor" viewBox="0 0 24 24"><path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M5 13l4 4L19 7"/></svg>Campañas de reactivacion — win-back automatico para clientes dormidos</li>
-            <li class="flex items-start gap-3 text-sm text-gray-700"><svg class="w-5 h-5 text-purple-500 shrink-0 mt-0.5" fill="none" stroke="currentColor" viewBox="0 0 24 24"><path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M5 13l4 4L19 7"/></svg>Ofertas controladas — reglas de descuento y aprobacion para no perder margen</li>
-          </ul>
-        </div>
-        <div class="bg-white rounded-2xl shadow-xl p-6 border border-gray-100 panel-live" data-panel="retention">
-          <!-- Header -->
-          <div class="flex items-center justify-between mb-5 pb-4 border-b border-gray-100">
-            <div class="flex items-center gap-2">
-              <p class="font-semibold text-gray-900 text-sm">Panel de retencion</p>
-              <span class="w-2 h-2 bg-purple-400 rounded-full animate-pulse"></span>
-            </div>
-            <span class="panel-counter text-xs text-purple-600 font-medium bg-purple-50 px-2.5 py-1 rounded-full opacity-0">6 alertas</span>
-          </div>
-          <!-- Client rows -->
-          <div class="space-y-2.5 panel-rows">
-            <div class="panel-row opacity-0 flex items-center gap-3 p-3 bg-red-50 rounded-xl border border-red-100" data-delay="500">
-              <div class="w-8 h-8 bg-red-100 rounded-lg flex items-center justify-center shrink-0"><span class="text-red-500 text-xs font-bold">!</span></div>
-              <div class="flex-1 min-w-0"><p class="text-sm font-semibold text-gray-900 truncate">Maria Lopez</p><p class="text-xs text-gray-500">3 cuotas impagas · Sin actividad 45d</p></div>
-              <div class="text-right shrink-0"><span class="text-xs bg-red-500 text-white px-2 py-0.5 rounded-full">92%</span><p class="text-[10px] text-red-400 mt-0.5">ALTO</p></div>
-            </div>
-            <div class="panel-row opacity-0 flex items-center gap-3 p-3 bg-red-50 rounded-xl border border-red-100" data-delay="1200">
-              <div class="w-8 h-8 bg-red-100 rounded-lg flex items-center justify-center shrink-0"><span class="text-red-500 text-xs font-bold">!</span></div>
-              <div class="flex-1 min-w-0"><p class="text-sm font-semibold text-gray-900 truncate">Jorge Medina</p><p class="text-xs text-gray-500">Reclamo abierto · 2 pagos vencidos</p></div>
-              <div class="text-right shrink-0"><span class="text-xs bg-red-500 text-white px-2 py-0.5 rounded-full">87%</span><p class="text-[10px] text-red-400 mt-0.5">ALTO</p></div>
-            </div>
-            <div class="panel-row opacity-0 flex items-center gap-3 p-3 bg-amber-50 rounded-xl border border-amber-100" data-delay="1900">
-              <div class="w-8 h-8 bg-amber-100 rounded-lg flex items-center justify-center shrink-0"><span class="text-amber-500 text-xs font-bold">⚠</span></div>
-              <div class="flex-1 min-w-0"><p class="text-sm font-semibold text-gray-900 truncate">Carlos Ruiz</p><p class="text-xs text-gray-500">Consulto cancelacion ayer</p></div>
-              <div class="text-right shrink-0"><span class="text-xs bg-amber-500 text-white px-2 py-0.5 rounded-full">64%</span><p class="text-[10px] text-amber-500 mt-0.5">MEDIO</p></div>
-            </div>
-            <div class="panel-row opacity-0 flex items-center gap-3 p-3 bg-amber-50 rounded-xl border border-amber-100" data-delay="2600">
-              <div class="w-8 h-8 bg-amber-100 rounded-lg flex items-center justify-center shrink-0"><span class="text-amber-500 text-xs font-bold">⚠</span></div>
-              <div class="flex-1 min-w-0"><p class="text-sm font-semibold text-gray-900 truncate">Laura Fernandez</p><p class="text-xs text-gray-500">NPS bajo (4/10) · Ticket sin cerrar</p></div>
-              <div class="text-right shrink-0"><span class="text-xs bg-amber-500 text-white px-2 py-0.5 rounded-full">58%</span><p class="text-[10px] text-amber-500 mt-0.5">MEDIO</p></div>
-            </div>
-            <div class="panel-row opacity-0 flex items-center gap-3 p-3 bg-green-50 rounded-xl border border-green-100" data-delay="3400" data-resolved="1">
-              <div class="w-8 h-8 bg-green-100 rounded-lg flex items-center justify-center shrink-0"><span class="text-green-500 text-xs font-bold">✓</span></div>
-              <div class="flex-1 min-w-0"><p class="text-sm font-semibold text-gray-900 truncate">Ana Torres</p><p class="text-xs text-gray-500">Acepto descuento 15% · Retenida</p></div>
-              <div class="text-right shrink-0"><span class="text-xs bg-green-500 text-white px-2 py-0.5 rounded-full">OK</span><p class="text-[10px] text-green-500 mt-0.5">RETENIDA</p></div>
-            </div>
-            <div class="panel-row opacity-0 flex items-center gap-3 p-3 bg-green-50 rounded-xl border border-green-100" data-delay="4100" data-resolved="1">
-              <div class="w-8 h-8 bg-green-100 rounded-lg flex items-center justify-center shrink-0"><span class="text-green-500 text-xs font-bold">✓</span></div>
-              <div class="flex-1 min-w-0"><p class="text-sm font-semibold text-gray-900 truncate">Pedro Gimenez</p><p class="text-xs text-gray-500">Reactivado con campaña win-back</p></div>
-              <div class="text-right shrink-0"><span class="text-xs bg-green-500 text-white px-2 py-0.5 rounded-full">OK</span><p class="text-[10px] text-green-500 mt-0.5">RETENIDO</p></div>
-            </div>
-          </div>
-          <!-- Summary badge -->
-          <div class="mt-4 flex items-center justify-between panel-summary opacity-0">
-            <span class="inline-flex items-center gap-1 text-xs text-purple-600 font-medium bg-purple-50 px-3 py-1.5 rounded-full">🛡️ 4 de 6 clientes retenidos este mes</span>
-            <span class="text-xs text-gray-400">Actualizado recien</span>
-          </div>
-        </div>
-      </div>
     </div>
   </section>
 
   <!-- ===== 3. CALCULADORA (2 columnas, compacta) ===== -->
-  <section id="calculadora" class="py-14 bg-gray-950 text-white">
+  <section id="calculadora" class="py-10 bg-gray-950 text-white">
     <div class="max-w-6xl mx-auto px-4 sm:px-6">
-      <div class="text-center mb-8 reveal">
-        <p class="text-brand-400 font-semibold text-sm uppercase tracking-wider">Calculadora interactiva</p>
+      <div class="text-center mb-6 reveal">
+        <p class="text-brand-400 font-semibold text-xs uppercase tracking-wider">Calculadora interactiva</p>
       </div>
 
-      <div class="grid lg:grid-cols-12 gap-6 items-stretch reveal">
+      <div class="grid lg:grid-cols-12 gap-5 items-stretch reveal">
         <!-- Columna izquierda: diagnostico (misma altura) -->
         <div class="lg:col-span-4">
-          <div class="bg-gray-900 rounded-2xl border border-gray-800 p-5 sm:p-6 h-full flex flex-col">
-            <h3 class="text-lg font-bold text-white mb-1">Lo que HAMPI hace por tu negocio</h3>
-            <p class="text-xs text-gray-400 mb-5">Automatiza pagos, atencion y retencion sin friccion.</p>
-            <ul class="space-y-2.5 flex-1">
-              <li class="flex items-start gap-2.5">
-                <svg class="w-4 h-4 text-green-400 shrink-0 mt-0.5" fill="none" stroke="currentColor" viewBox="0 0 24 24"><path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M5 13l4 4L19 7"/></svg>
-                <span class="text-sm text-gray-300">Recuperas ingresos con recordatorios automaticos</span>
+          <div class="bg-gray-900 rounded-xl border border-gray-800 p-4 sm:p-5 h-full flex flex-col">
+            <h3 class="text-sm font-bold text-white mb-1">Lo que HAMPI hace por tu negocio</h3>
+            <p class="text-[10px] text-gray-400 mb-3">Automatiza pagos, atencion y retencion sin friccion.</p>
+            <ul class="space-y-1.5 flex-1">
+              <li class="flex items-start gap-2">
+                <svg class="w-3.5 h-3.5 text-green-400 shrink-0 mt-0.5" fill="none" stroke="currentColor" viewBox="0 0 24 24"><path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M5 13l4 4L19 7"/></svg>
+                <span class="text-xs text-gray-300">Recuperas ingresos con recordatorios automaticos</span>
               </li>
-              <li class="flex items-start gap-2.5">
-                <svg class="w-4 h-4 text-green-400 shrink-0 mt-0.5" fill="none" stroke="currentColor" viewBox="0 0 24 24"><path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M5 13l4 4L19 7"/></svg>
-                <span class="text-sm text-gray-300">Atendes 24/7 sin sumar personal</span>
+              <li class="flex items-start gap-2">
+                <svg class="w-3.5 h-3.5 text-green-400 shrink-0 mt-0.5" fill="none" stroke="currentColor" viewBox="0 0 24 24"><path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M5 13l4 4L19 7"/></svg>
+                <span class="text-xs text-gray-300">Atendes 24/7 sin sumar personal</span>
               </li>
-              <li class="flex items-start gap-2.5">
-                <svg class="w-4 h-4 text-green-400 shrink-0 mt-0.5" fill="none" stroke="currentColor" viewBox="0 0 24 24"><path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M5 13l4 4L19 7"/></svg>
-                <span class="text-sm text-gray-300">Reducis bajas detectando señales de riesgo</span>
+              <li class="flex items-start gap-2">
+                <svg class="w-3.5 h-3.5 text-green-400 shrink-0 mt-0.5" fill="none" stroke="currentColor" viewBox="0 0 24 24"><path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M5 13l4 4L19 7"/></svg>
+                <span class="text-xs text-gray-300">Reducis bajas detectando señales de riesgo</span>
               </li>
-              <li class="flex items-start gap-2.5">
-                <svg class="w-4 h-4 text-green-400 shrink-0 mt-0.5" fill="none" stroke="currentColor" viewBox="0 0 24 24"><path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M5 13l4 4L19 7"/></svg>
-                <span class="text-sm text-gray-300">Links MercadoPago + confirmacion automatica</span>
+              <li class="flex items-start gap-2">
+                <svg class="w-3.5 h-3.5 text-green-400 shrink-0 mt-0.5" fill="none" stroke="currentColor" viewBox="0 0 24 24"><path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M5 13l4 4L19 7"/></svg>
+                <span class="text-xs text-gray-300">Links MercadoPago + confirmacion automatica</span>
               </li>
-              <li class="flex items-start gap-2.5">
-                <svg class="w-4 h-4 text-green-400 shrink-0 mt-0.5" fill="none" stroke="currentColor" viewBox="0 0 24 24"><path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M5 13l4 4L19 7"/></svg>
-                <span class="text-sm text-gray-300">Escalas a humano cuando hace falta</span>
+              <li class="flex items-start gap-2">
+                <svg class="w-3.5 h-3.5 text-green-400 shrink-0 mt-0.5" fill="none" stroke="currentColor" viewBox="0 0 24 24"><path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M5 13l4 4L19 7"/></svg>
+                <span class="text-xs text-gray-300">Escalas a humano cuando hace falta</span>
               </li>
-              <li class="flex items-start gap-2.5">
-                <svg class="w-4 h-4 text-green-400 shrink-0 mt-0.5" fill="none" stroke="currentColor" viewBox="0 0 24 24"><path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M5 13l4 4L19 7"/></svg>
-                <span class="text-sm text-gray-300">Metricas y trazabilidad por cliente</span>
+              <li class="flex items-start gap-2">
+                <svg class="w-3.5 h-3.5 text-green-400 shrink-0 mt-0.5" fill="none" stroke="currentColor" viewBox="0 0 24 24"><path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M5 13l4 4L19 7"/></svg>
+                <span class="text-xs text-gray-300">Metricas y trazabilidad por cliente</span>
               </li>
-              <li class="flex items-start gap-2.5">
-                <svg class="w-4 h-4 text-green-400 shrink-0 mt-0.5" fill="none" stroke="currentColor" viewBox="0 0 24 24"><path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M5 13l4 4L19 7"/></svg>
-                <span class="text-sm text-gray-300">Mensajes por WhatsApp con templates aprobados</span>
+              <li class="flex items-start gap-2">
+                <svg class="w-3.5 h-3.5 text-green-400 shrink-0 mt-0.5" fill="none" stroke="currentColor" viewBox="0 0 24 24"><path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M5 13l4 4L19 7"/></svg>
+                <span class="text-xs text-gray-300">WhatsApp con templates aprobados</span>
               </li>
-              <li class="flex items-start gap-2.5">
-                <svg class="w-4 h-4 text-green-400 shrink-0 mt-0.5" fill="none" stroke="currentColor" viewBox="0 0 24 24"><path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M5 13l4 4L19 7"/></svg>
-                <span class="text-sm text-gray-300">Seguimiento de promesas de pago</span>
+              <li class="flex items-start gap-2">
+                <svg class="w-3.5 h-3.5 text-green-400 shrink-0 mt-0.5" fill="none" stroke="currentColor" viewBox="0 0 24 24"><path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M5 13l4 4L19 7"/></svg>
+                <span class="text-xs text-gray-300">Seguimiento de promesas de pago</span>
               </li>
-              <li class="flex items-start gap-2.5">
-                <svg class="w-4 h-4 text-green-400 shrink-0 mt-0.5" fill="none" stroke="currentColor" viewBox="0 0 24 24"><path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M5 13l4 4L19 7"/></svg>
-                <span class="text-sm text-gray-300">Automatizacion sin friccion</span>
+              <li class="flex items-start gap-2">
+                <svg class="w-3.5 h-3.5 text-green-400 shrink-0 mt-0.5" fill="none" stroke="currentColor" viewBox="0 0 24 24"><path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M5 13l4 4L19 7"/></svg>
+                <span class="text-xs text-gray-300">Integracion con tu sistema actual</span>
               </li>
-              <li class="flex items-start gap-2.5">
-                <svg class="w-4 h-4 text-green-400 shrink-0 mt-0.5" fill="none" stroke="currentColor" viewBox="0 0 24 24"><path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M5 13l4 4L19 7"/></svg>
-                <span class="text-sm text-gray-300">Historial por cliente</span>
+              <li class="flex items-start gap-2">
+                <svg class="w-3.5 h-3.5 text-green-400 shrink-0 mt-0.5" fill="none" stroke="currentColor" viewBox="0 0 24 24"><path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M5 13l4 4L19 7"/></svg>
+                <span class="text-xs text-gray-300">Menos carga operativa para tu equipo</span>
               </li>
-              <li class="flex items-start gap-2.5">
-                <svg class="w-4 h-4 text-green-400 shrink-0 mt-0.5" fill="none" stroke="currentColor" viewBox="0 0 24 24"><path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M5 13l4 4L19 7"/></svg>
-                <span class="text-sm text-gray-300">Integracion con tu sistema actual</span>
+              <li class="flex items-start gap-2">
+                <svg class="w-3.5 h-3.5 text-green-400 shrink-0 mt-0.5" fill="none" stroke="currentColor" viewBox="0 0 24 24"><path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M5 13l4 4L19 7"/></svg>
+                <span class="text-xs text-gray-300">Email automatico con branding de tu empresa</span>
               </li>
-              <li class="flex items-start gap-2.5">
-                <svg class="w-4 h-4 text-green-400 shrink-0 mt-0.5" fill="none" stroke="currentColor" viewBox="0 0 24 24"><path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M5 13l4 4L19 7"/></svg>
-                <span class="text-sm text-gray-300">Menos carga operativa para tu equipo</span>
+              <li class="flex items-start gap-2">
+                <svg class="w-3.5 h-3.5 text-green-400 shrink-0 mt-0.5" fill="none" stroke="currentColor" viewBox="0 0 24 24"><path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M5 13l4 4L19 7"/></svg>
+                <span class="text-xs text-gray-300">Dashboard con resultados en tiempo real</span>
+              </li>
+              <li class="flex items-start gap-2">
+                <svg class="w-3.5 h-3.5 text-green-400 shrink-0 mt-0.5" fill="none" stroke="currentColor" viewBox="0 0 24 24"><path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M5 13l4 4L19 7"/></svg>
+                <span class="text-xs text-gray-300">Horarios y frecuencia controlados por vos</span>
+              </li>
+              <li class="flex items-start gap-2">
+                <svg class="w-3.5 h-3.5 text-green-400 shrink-0 mt-0.5" fill="none" stroke="currentColor" viewBox="0 0 24 24"><path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M5 13l4 4L19 7"/></svg>
+                <span class="text-xs text-gray-300">Opt-out automatico y compliance incluido</span>
+              </li>
+              <li class="flex items-start gap-2">
+                <svg class="w-3.5 h-3.5 text-green-400 shrink-0 mt-0.5" fill="none" stroke="currentColor" viewBox="0 0 24 24"><path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M5 13l4 4L19 7"/></svg>
+                <span class="text-xs text-gray-300">Onboarding y soporte personalizado</span>
               </li>
             </ul>
           </div>
@@ -499,8 +808,8 @@
 
         <!-- Columna derecha: calculadora compacta -->
         <div class="lg:col-span-8">
-          <div class="bg-gray-900 rounded-2xl p-5 sm:p-6 calc-glow border border-gray-800 h-full flex flex-col">
-            <div class="space-y-4 mb-6 flex-1">
+          <div class="bg-gray-900 rounded-xl p-4 sm:p-5 calc-glow border border-gray-800 h-full flex flex-col">
+            <div class="space-y-3 mb-4 flex-1">
               <div>
                 <div class="flex justify-between items-center mb-1.5">
                   <label class="text-xs font-medium text-gray-400">Clientes activos</label>
@@ -535,26 +844,26 @@
               </div>
             </div>
 
-            <div class="border-t border-gray-800 pt-5">
-              <div class="mb-4">
-                <div class="bg-red-500/10 rounded-xl p-6 border border-red-500/20 text-center">
-                  <p class="text-gray-400 text-xs mb-2 uppercase tracking-wider">Estimativo de perdida mensual</p>
-                  <p id="calc-perdida" class="text-4xl sm:text-5xl font-black text-red-400">$750.000</p>
+            <div class="border-t border-gray-800 pt-4">
+              <div class="mb-3">
+                <div class="bg-red-500/10 rounded-lg p-4 border border-red-500/20 text-center">
+                  <p class="text-gray-400 text-[10px] mb-1 uppercase tracking-wider">Estimativo de perdida mensual</p>
+                  <p id="calc-perdida" class="text-3xl sm:text-4xl font-black text-red-400">$750.000</p>
                 </div>
               </div>
 
-              <div class="flex flex-col sm:flex-row gap-3 justify-center">
+              <div class="flex flex-col sm:flex-row gap-2.5 justify-center">
                 <a id="calc-wa-btn" href="#" target="_blank" rel="noopener"
-                   class="inline-flex items-center justify-center gap-2 bg-brand-600 hover:bg-brand-700 text-white font-bold px-5 py-2.5 rounded-xl transition-colors text-sm">
-                  <svg class="w-4 h-4" fill="currentColor" viewBox="0 0 24 24"><path d="M17.472 14.382c-.297-.149-1.758-.867-2.03-.967-.273-.099-.471-.148-.67.15-.197.297-.767.966-.94 1.164-.173.199-.347.223-.644.075-.297-.15-1.255-.463-2.39-1.475-.883-.788-1.48-1.761-1.653-2.059-.173-.297-.018-.458.13-.606.134-.133.298-.347.446-.52.149-.174.198-.298.298-.497.099-.198.05-.371-.025-.52-.075-.149-.669-1.612-.916-2.207-.242-.579-.487-.5-.669-.51-.173-.008-.371-.01-.57-.01-.198 0-.52.074-.792.372-.272.297-1.04 1.016-1.04 2.479 0 1.462 1.065 2.875 1.213 3.074.149.198 2.096 3.2 5.077 4.487.709.306 1.262.489 1.694.625.712.227 1.36.195 1.871.118.571-.085 1.758-.719 2.006-1.413.248-.694.248-1.289.173-1.413-.074-.124-.272-.198-.57-.347z"/><path d="M12 0C5.373 0 0 5.373 0 12c0 2.625.846 5.059 2.284 7.034L.789 23.492a.75.75 0 00.913.913l4.458-1.495A11.952 11.952 0 0012 24c6.627 0 12-5.373 12-12S18.627 0 12 0zm0 22c-2.347 0-4.518-.804-6.236-2.152l-.436-.35-3.027 1.015 1.015-3.027-.35-.436A9.956 9.956 0 012 12C2 6.486 6.486 2 12 2s10 4.486 10 10-4.486 10-10 10z"/></svg>
+                   class="inline-flex items-center justify-center gap-2 bg-brand-600 hover:bg-brand-700 text-white font-bold px-4 py-2 rounded-lg transition-colors text-xs">
+                  <svg class="w-3.5 h-3.5" fill="currentColor" viewBox="0 0 24 24"><path d="M17.472 14.382c-.297-.149-1.758-.867-2.03-.967-.273-.099-.471-.148-.67.15-.197.297-.767.966-.94 1.164-.173.199-.347.223-.644.075-.297-.15-1.255-.463-2.39-1.475-.883-.788-1.48-1.761-1.653-2.059-.173-.297-.018-.458.13-.606.134-.133.298-.347.446-.52.149-.174.198-.298.298-.497.099-.198.05-.371-.025-.52-.075-.149-.669-1.612-.916-2.207-.242-.579-.487-.5-.669-.51-.173-.008-.371-.01-.57-.01-.198 0-.52.074-.792.372-.272.297-1.04 1.016-1.04 2.479 0 1.462 1.065 2.875 1.213 3.074.149.198 2.096 3.2 5.077 4.487.709.306 1.262.489 1.694.625.712.227 1.36.195 1.871.118.571-.085 1.758-.719 2.006-1.413.248-.694.248-1.289.173-1.413-.074-.124-.272-.198-.57-.347z"/><path d="M12 0C5.373 0 0 5.373 0 12c0 2.625.846 5.059 2.284 7.034L.789 23.492a.75.75 0 00.913.913l4.458-1.495A11.952 11.952 0 0012 24c6.627 0 12-5.373 12-12S18.627 0 12 0zm0 22c-2.347 0-4.518-.804-6.236-2.152l-.436-.35-3.027 1.015 1.015-3.027-.35-.436A9.956 9.956 0 012 12C2 6.486 6.486 2 12 2s10 4.486 10 10-4.486 10-10 10z"/></svg>
                   Quiero recuperar esa plata
                 </a>
-                <button id="calc-email-btn" class="inline-flex items-center justify-center gap-2 text-gray-400 hover:text-white font-semibold px-5 py-2.5 rounded-xl border border-gray-700 hover:border-gray-500 transition-colors text-sm">
-                  <svg class="w-4 h-4" fill="none" stroke="currentColor" viewBox="0 0 24 24"><path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M3 8l7.89 5.26a2 2 0 002.22 0L21 8M5 19h14a2 2 0 002-2V7a2 2 0 00-2-2H5a2 2 0 00-2 2v10a2 2 0 002 2z"/></svg>
+                <button id="calc-email-btn" class="inline-flex items-center justify-center gap-2 text-gray-400 hover:text-white font-semibold px-4 py-2 rounded-lg border border-gray-700 hover:border-gray-500 transition-colors text-xs">
+                  <svg class="w-3.5 h-3.5" fill="none" stroke="currentColor" viewBox="0 0 24 24"><path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M3 8l7.89 5.26a2 2 0 002.22 0L21 8M5 19h14a2 2 0 002-2V7a2 2 0 00-2-2H5a2 2 0 00-2 2v10a2 2 0 002 2z"/></svg>
                   Enviar por email
                 </button>
               </div>
-              <p class="text-center text-gray-600 text-xs mt-3">* Estimacion basada en promedios. No constituye garantia.</p>
+              <p class="text-center text-gray-600 text-[10px] mt-2">* Estimacion basada en promedios. No constituye garantia.</p>
             </div>
           </div>
         </div>
@@ -582,9 +891,9 @@
 
       <!-- Planes -->
       <div class="reveal">
-        <div class="grid sm:grid-cols-2 lg:grid-cols-4 gap-5">
+        <div class="grid sm:grid-cols-2 lg:grid-cols-3 gap-5">
           <!-- Starter -->
-          <div class="bg-white p-6 rounded-2xl shadow-sm border border-gray-200 flex flex-col">
+          <div class="bg-white p-6 rounded-2xl shadow-sm border border-gray-200 flex flex-col plan-card">
             <div class="mb-4">
               <h3 class="text-lg font-bold text-gray-900">Starter</h3>
               <p class="text-xs text-brand-600 font-medium mt-1">Ideal para empezar a automatizar</p>
@@ -599,164 +908,90 @@
             </div>
             <ul class="space-y-1.5 mb-4 flex-1">
               <li class="flex items-start gap-1.5 text-xs text-gray-600"><svg class="w-3.5 h-3.5 text-brand-500 shrink-0 mt-0.5" fill="none" stroke="currentColor" viewBox="0 0 24 24"><path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M5 13l4 4L19 7"/></svg>Hasta <strong>500 contactos</strong></li>
-              <li class="flex items-start gap-1.5 text-xs text-gray-600"><svg class="w-3.5 h-3.5 text-brand-500 shrink-0 mt-0.5" fill="none" stroke="currentColor" viewBox="0 0 24 24"><path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M5 13l4 4L19 7"/></svg>Hasta <strong>500 msgs</strong>/mes incluidos</li>
+              <li class="flex items-start gap-1.5 text-xs text-gray-600"><svg class="w-3.5 h-3.5 text-brand-500 shrink-0 mt-0.5" fill="none" stroke="currentColor" viewBox="0 0 24 24"><path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M5 13l4 4L19 7"/></svg>Hasta <strong>500 msgs</strong></li>
               <li class="flex items-start gap-1.5 text-xs text-gray-600"><svg class="w-3.5 h-3.5 text-brand-500 shrink-0 mt-0.5" fill="none" stroke="currentColor" viewBox="0 0 24 24"><path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M5 13l4 4L19 7"/></svg><strong>1 modulo</strong> a eleccion</li>
               <li class="flex items-start gap-1.5 text-xs text-gray-600"><svg class="w-3.5 h-3.5 text-brand-500 shrink-0 mt-0.5" fill="none" stroke="currentColor" viewBox="0 0 24 24"><path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M5 13l4 4L19 7"/></svg>WhatsApp + Email</li>
               <li class="flex items-start gap-1.5 text-xs text-gray-600"><svg class="w-3.5 h-3.5 text-brand-500 shrink-0 mt-0.5" fill="none" stroke="currentColor" viewBox="0 0 24 24"><path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M5 13l4 4L19 7"/></svg>Dashboard basico · 1 usuario</li>
             </ul>
-            <p class="text-xs text-gray-400 mb-3 border-t border-gray-100 pt-3">Msg extra: <strong>$65/msg</strong> · Fee: <strong>0,5%</strong>. <a href="terminos.html" class="underline hover:text-brand-600">Ver terminos</a></p>
             <a href="https://wa.me/5493515555555?text=Hola%2C%20quiero%20cotizar%20el%20plan%20Starter%20de%20HAMPI" target="_blank" rel="noopener" class="block text-center bg-gray-100 hover:bg-gray-200 text-gray-800 font-semibold py-2.5 rounded-xl transition-colors text-sm">Cotizar por WhatsApp</a>
           </div>
 
           <!-- Pro -->
-          <div class="bg-white p-6 rounded-2xl shadow-lg pricing-popular flex flex-col">
+          <div class="bg-white p-6 rounded-2xl shadow-lg pricing-popular flex flex-col plan-card">
             <div class="mb-4">
-              <h3 class="text-lg font-bold text-gray-900">Pro</h3>
+              <h3 class="text-lg font-bold text-gray-900">Pro <span class="text-xs font-semibold text-indigo-600 bg-indigo-50 px-2 py-0.5 rounded-full ml-1">con IA</span></h3>
               <p class="text-xs text-brand-600 font-medium mt-1">Para equipos con volumen</p>
             </div>
             <div class="mb-4">
               <div class="flex items-baseline gap-1">
-                <span class="plan-price text-2xl font-black text-gray-900" data-monthly="135.000" data-annual="112.500">$135.000</span>
+                <span class="plan-price text-2xl font-black text-gray-900" data-monthly="180.000" data-annual="150.000">$180.000</span>
                 <span class="text-xs text-gray-400 font-medium">/mes + IVA</span>
               </div>
               <p class="text-xs text-gray-400 mt-1">Setup unico: <strong>$125.000</strong> + IVA</p>
-              <p class="plan-annual-note text-xs text-green-600 font-semibold mt-1 hidden">(ahorras $270.000)</p>
+              <p class="plan-annual-note text-xs text-green-600 font-semibold mt-1 hidden">(ahorras $360.000)</p>
             </div>
             <ul class="space-y-1.5 mb-4 flex-1">
               <li class="flex items-start gap-1.5 text-xs text-gray-600"><svg class="w-3.5 h-3.5 text-brand-500 shrink-0 mt-0.5" fill="none" stroke="currentColor" viewBox="0 0 24 24"><path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M5 13l4 4L19 7"/></svg>Hasta <strong>2.000 contactos</strong></li>
-              <li class="flex items-start gap-1.5 text-xs text-gray-600"><svg class="w-3.5 h-3.5 text-brand-500 shrink-0 mt-0.5" fill="none" stroke="currentColor" viewBox="0 0 24 24"><path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M5 13l4 4L19 7"/></svg>Hasta <strong>1.500 msgs</strong>/mes incluidos</li>
+              <li class="flex items-start gap-1.5 text-xs text-gray-600"><svg class="w-3.5 h-3.5 text-brand-500 shrink-0 mt-0.5" fill="none" stroke="currentColor" viewBox="0 0 24 24"><path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M5 13l4 4L19 7"/></svg>Hasta <strong>1.500 msgs</strong></li>
               <li class="flex items-start gap-1.5 text-xs text-gray-600"><svg class="w-3.5 h-3.5 text-brand-500 shrink-0 mt-0.5" fill="none" stroke="currentColor" viewBox="0 0 24 24"><path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M5 13l4 4L19 7"/></svg>Recordatorios + <strong>Atencion IA</strong></li>
-              <li class="flex items-start gap-1.5 text-xs text-gray-600"><svg class="w-3.5 h-3.5 text-brand-500 shrink-0 mt-0.5" fill="none" stroke="currentColor" viewBox="0 0 24 24"><path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M5 13l4 4L19 7"/></svg>WhatsApp + Email + SMS</li>
-              <li class="flex items-start gap-1.5 text-xs text-gray-600"><svg class="w-3.5 h-3.5 text-brand-500 shrink-0 mt-0.5" fill="none" stroke="currentColor" viewBox="0 0 24 24"><path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M5 13l4 4L19 7"/></svg>Dashboard completo · 3 usuarios</li>
+              <li class="flex items-start gap-1.5 text-xs text-gray-600"><svg class="w-3.5 h-3.5 text-brand-500 shrink-0 mt-0.5" fill="none" stroke="currentColor" viewBox="0 0 24 24"><path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M5 13l4 4L19 7"/></svg><strong>Ventas IA + Post-venta</strong></li>
+              <li class="flex items-start gap-1.5 text-xs text-gray-600"><svg class="w-3.5 h-3.5 text-brand-500 shrink-0 mt-0.5" fill="none" stroke="currentColor" viewBox="0 0 24 24"><path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M5 13l4 4L19 7"/></svg>WhatsApp + Email · Dashboard · 3 usuarios</li>
               <li class="flex items-start gap-1.5 text-xs text-gray-600"><svg class="w-3.5 h-3.5 text-brand-500 shrink-0 mt-0.5" fill="none" stroke="currentColor" viewBox="0 0 24 24"><path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M5 13l4 4L19 7"/></svg>Links de pago MercadoPago</li>
             </ul>
-            <p class="text-xs text-gray-400 mb-3 border-t border-gray-100 pt-3">Msg extra: <strong>$55/msg</strong> · Fee: <strong>0,5%</strong>. <a href="terminos.html" class="underline hover:text-white/70">Ver terminos</a></p>
             <a href="https://wa.me/5493515555555?text=Hola%2C%20quiero%20cotizar%20el%20plan%20Pro%20de%20HAMPI" target="_blank" rel="noopener" class="block text-center bg-brand-600 hover:bg-brand-700 text-white font-semibold py-2.5 rounded-xl transition-colors text-sm">Quiero una propuesta</a>
           </div>
 
           <!-- Enterprise -->
-          <div class="bg-white p-6 rounded-2xl shadow-sm border border-gray-200 flex flex-col">
-            <div class="mb-4">
-              <h3 class="text-lg font-bold text-gray-900">Enterprise</h3>
-              <p class="text-xs text-brand-600 font-medium mt-1">Para operaciones complejas</p>
-            </div>
-            <div class="mb-4">
-              <div class="flex items-baseline gap-1">
-                <span class="plan-price text-2xl font-black text-gray-900" data-monthly="270.000" data-annual="225.000">$270.000</span>
-                <span class="text-xs text-gray-400 font-medium">/mes + IVA</span>
-              </div>
-              <p class="text-xs text-gray-400 mt-1">Setup unico: <strong>$150.000</strong> + IVA</p>
-              <p class="plan-annual-note text-xs text-green-600 font-semibold mt-1 hidden">(ahorras $540.000)</p>
-            </div>
-            <ul class="space-y-1.5 mb-4 flex-1">
-              <li class="flex items-start gap-1.5 text-xs text-gray-600"><svg class="w-3.5 h-3.5 text-brand-500 shrink-0 mt-0.5" fill="none" stroke="currentColor" viewBox="0 0 24 24"><path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M5 13l4 4L19 7"/></svg>Hasta <strong>5.000+ contactos</strong></li>
-              <li class="flex items-start gap-1.5 text-xs text-gray-600"><svg class="w-3.5 h-3.5 text-brand-500 shrink-0 mt-0.5" fill="none" stroke="currentColor" viewBox="0 0 24 24"><path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M5 13l4 4L19 7"/></svg>Hasta <strong>4.000 msgs</strong>/mes incluidos</li>
-              <li class="flex items-start gap-1.5 text-xs text-gray-600"><svg class="w-3.5 h-3.5 text-brand-500 shrink-0 mt-0.5" fill="none" stroke="currentColor" viewBox="0 0 24 24"><path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M5 13l4 4L19 7"/></svg>Atencion + Recordatorios + <strong>Fidelizacion</strong></li>
-              <li class="flex items-start gap-1.5 text-xs text-gray-600"><svg class="w-3.5 h-3.5 text-brand-500 shrink-0 mt-0.5" fill="none" stroke="currentColor" viewBox="0 0 24 24"><path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M5 13l4 4L19 7"/></svg>Todos los canales + custom</li>
-              <li class="flex items-start gap-1.5 text-xs text-gray-600"><svg class="w-3.5 h-3.5 text-brand-500 shrink-0 mt-0.5" fill="none" stroke="currentColor" viewBox="0 0 24 24"><path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M5 13l4 4L19 7"/></svg>Usuarios ilimitados + roles</li>
-              <li class="flex items-start gap-1.5 text-xs text-gray-600"><svg class="w-3.5 h-3.5 text-brand-500 shrink-0 mt-0.5" fill="none" stroke="currentColor" viewBox="0 0 24 24"><path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M5 13l4 4L19 7"/></svg>SLA dedicado · API & webhooks</li>
-            </ul>
-            <p class="text-xs text-gray-400 mb-3 border-t border-gray-100 pt-3">Msg extra: <strong>$45/msg</strong> · Fee: <strong>0,5%</strong>. <a href="terminos.html" class="underline hover:text-brand-600">Ver terminos</a></p>
-            <a href="https://wa.me/5493515555555?text=Hola%2C%20quiero%20info%20del%20plan%20Enterprise%20de%20HAMPI" target="_blank" rel="noopener" class="block text-center bg-gray-100 hover:bg-gray-200 text-gray-800 font-semibold py-2.5 rounded-xl transition-colors text-sm">Hablar con ventas</a>
-          </div>
-
-          <!-- HAMPI Agent -->
-          <div class="p-6 rounded-2xl shadow-lg flex flex-col relative overflow-hidden" style="background:linear-gradient(135deg,#1e1b4b 0%,#312e81 50%,#4f46e5 100%)">
+          <div class="p-6 rounded-2xl shadow-lg flex flex-col relative overflow-hidden plan-card" style="background:linear-gradient(135deg,#1e1b4b 0%,#312e81 50%,#4f46e5 100%)">
             <div class="absolute top-0 right-0 w-32 h-32 bg-indigo-400/10 rounded-full blur-2xl"></div>
             <div class="relative">
               <div class="mb-4">
-                <div class="flex items-start justify-between mb-0" style="min-height:2.2rem;padding-top:0.5rem">
+                <div class="flex items-center gap-2 mb-1">
+                  <h3 class="text-lg font-bold text-white">Enterprise</h3>
+                  <span class="text-xs font-semibold text-indigo-300 bg-indigo-500/30 px-2 py-0.5 rounded-full">con IA</span>
                   <span class="inline-flex items-center gap-0.5 bg-amber-400/20 text-amber-300 text-[9px] font-bold px-1.5 py-0.5 rounded-full border border-amber-400/30">
                     <svg class="w-2.5 h-2.5" fill="currentColor" viewBox="0 0 24 24"><path d="M12 2L15.09 8.26L22 9.27L17 14.14L18.18 21.02L12 17.77L5.82 21.02L7 14.14L2 9.27L8.91 8.26L12 2Z"/></svg>
                     PREMIUM
                   </span>
-                  <div class="flex flex-col gap-0.5 mt-auto">
-                    <button id="agent-ch-tg" onclick="setAgentChannel('tg')" class="inline-flex items-center gap-0.5 bg-sky-400/30 text-sky-200 text-[9px] font-bold px-1.5 py-0.5 rounded-full border border-sky-400/50 cursor-pointer transition-all duration-200 hover:brightness-125">
-                      <svg class="w-3 h-3" fill="currentColor" viewBox="0 0 24 24"><path d="M11.944 0A12 12 0 0 0 0 12a12 12 0 0 0 12 12 12 12 0 0 0 12-12A12 12 0 0 0 12 0a12 12 0 0 0-.056 0zm4.962 7.224c.1-.002.321.023.465.14a.506.506 0 0 1 .171.325c.016.093.036.306.02.472-.18 1.898-.962 6.502-1.36 8.627-.168.9-.499 1.201-.82 1.23-.696.065-1.225-.46-1.9-.902-1.056-.693-1.653-1.124-2.678-1.8-1.185-.78-.417-1.21.258-1.91.177-.184 3.247-2.977 3.307-3.23.007-.032.014-.15-.056-.212s-.174-.041-.249-.024c-.106.024-1.793 1.14-5.061 3.345-.48.33-.913.49-1.302.48-.428-.008-1.252-.241-1.865-.44-.752-.245-1.349-.374-1.297-.789.027-.216.325-.437.893-.663 3.498-1.524 5.83-2.529 6.998-3.014 3.332-1.386 4.025-1.627 4.476-1.635z"/></svg>
-                      TELEGRAM
-                    </button>
-                    <button id="agent-ch-wa" onclick="setAgentChannel('wa')" class="inline-flex items-center gap-0.5 bg-white/5 text-white/30 text-[9px] font-bold px-1.5 py-0.5 rounded-full border border-white/10 cursor-pointer transition-all duration-200 hover:brightness-125">
-                      <svg class="w-3 h-3" fill="currentColor" viewBox="0 0 24 24"><path d="M17.472 14.382c-.297-.149-1.758-.867-2.03-.967-.273-.099-.471-.148-.67.15-.197.297-.767.966-.94 1.164-.173.199-.347.223-.644.075-.297-.15-1.255-.463-2.39-1.475-.883-.788-1.48-1.761-1.653-2.059-.173-.297-.018-.458.13-.606.134-.133.298-.347.446-.52.149-.174.198-.298.298-.497.099-.198.05-.371-.025-.52-.075-.149-.669-1.612-.916-2.207-.242-.579-.487-.5-.669-.51-.173-.008-.371-.01-.57-.01-.198 0-.52.074-.792.372-.272.297-1.04 1.016-1.04 2.479 0 1.462 1.065 2.875 1.213 3.074.149.198 2.096 3.2 5.077 4.487.709.306 1.262.489 1.694.625.712.227 1.36.195 1.871.118.571-.085 1.758-.719 2.006-1.413.248-.694.248-1.289.173-1.413-.074-.124-.272-.198-.57-.347z"/><path d="M12 0C5.373 0 0 5.373 0 12c0 2.625.846 5.059 2.284 7.034L.789 23.492a.75.75 0 00.913.913l4.458-1.495A11.952 11.952 0 0012 24c6.627 0 12-5.373 12-12S18.627 0 12 0zm0 22c-2.347 0-4.518-.804-6.236-2.152l-.436-.35-3.027 1.015 1.015-3.027-.35-.436A9.956 9.956 0 012 12C2 6.486 6.486 2 12 2s10 4.486 10 10-4.486 10-10 10z"/></svg>
-                      WHATSAPP
-                    </button>
-                  </div>
                 </div>
-                <h3 class="text-lg font-bold text-white -mt-3">HAMPI Agent</h3>
-                <p class="text-xs text-indigo-300 font-medium mt-1">Asistente de IA para profesionales</p>
+                <p class="text-xs text-indigo-300 font-medium">Para operaciones complejas</p>
               </div>
               <div class="mb-4">
                 <div class="flex items-baseline gap-1">
-                  <span id="agent-price" class="plan-price text-2xl font-black text-white" data-monthly="139.000" data-annual="115.800" data-tg-monthly="139.000" data-tg-annual="115.800" data-wa-monthly="189.000" data-wa-annual="157.500">$139.000</span>
+                  <span class="plan-price text-2xl font-black text-white" data-monthly="360.000" data-annual="300.000">$360.000</span>
                   <span class="text-xs text-indigo-300 font-medium">/mes + IVA</span>
                 </div>
-                <p class="text-xs text-indigo-300/70 mt-1">Setup a medida: <strong class="text-indigo-200">$150.000</strong> + IVA</p>
-                <p id="agent-annual-note" class="plan-annual-note text-xs text-emerald-300 font-semibold mt-1 hidden" data-tg-save="278.400" data-wa-save="378.000">(ahorras $278.400)</p>
+                <p class="text-xs text-indigo-300/70 mt-1">Setup unico: <strong class="text-indigo-200">$150.000</strong> + IVA</p>
+                <p class="plan-annual-note text-xs text-emerald-300 font-semibold mt-1 hidden">(ahorras $720.000)</p>
               </div>
               <ul class="space-y-1.5 mb-4 flex-1">
-                <li class="flex items-start gap-1.5 text-xs text-indigo-100"><svg class="w-3.5 h-3.5 text-emerald-400 shrink-0 mt-0.5" fill="none" stroke="currentColor" viewBox="0 0 24 24"><path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M5 13l4 4L19 7"/></svg><strong class="text-white">Turnos y agenda</strong> automatica</li>
-                <li class="flex items-start gap-1.5 text-xs text-indigo-100"><svg class="w-3.5 h-3.5 text-emerald-400 shrink-0 mt-0.5" fill="none" stroke="currentColor" viewBox="0 0 24 24"><path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M5 13l4 4L19 7"/></svg><strong class="text-white">Confirmacion</strong> inteligente</li>
-                <li class="flex items-start gap-1.5 text-xs text-indigo-100"><svg class="w-3.5 h-3.5 text-emerald-400 shrink-0 mt-0.5" fill="none" stroke="currentColor" viewBox="0 0 24 24"><path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M5 13l4 4L19 7"/></svg>Atencion y respuestas <strong class="text-white">24/7</strong></li>
-                <li class="flex items-start gap-1.5 text-xs text-indigo-100"><svg class="w-3.5 h-3.5 text-emerald-400 shrink-0 mt-0.5" fill="none" stroke="currentColor" viewBox="0 0 24 24"><path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M5 13l4 4L19 7"/></svg><strong class="text-white">Resumen diario</strong> de tu operacion</li>
-                <li class="flex items-start gap-1.5 text-xs text-indigo-100"><svg class="w-3.5 h-3.5 text-emerald-400 shrink-0 mt-0.5" fill="none" stroke="currentColor" viewBox="0 0 24 24"><path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M5 13l4 4L19 7"/></svg><strong class="text-white">Cobro de honorarios</strong> automatico</li>
-                <li class="flex items-start gap-1.5 text-xs text-indigo-100"><svg class="w-3.5 h-3.5 text-emerald-400 shrink-0 mt-0.5" fill="none" stroke="currentColor" viewBox="0 0 24 24"><path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M5 13l4 4L19 7"/></svg>Ficha e <strong class="text-white">historial</strong> de cada cliente</li>
-                <li class="flex items-start gap-1.5 text-xs text-indigo-100"><svg class="w-3.5 h-3.5 text-emerald-400 shrink-0 mt-0.5" fill="none" stroke="currentColor" viewBox="0 0 24 24"><path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M5 13l4 4L19 7"/></svg><strong class="text-white">Configurado</strong> para tu rubro</li>
+                <li class="flex items-start gap-1.5 text-xs text-indigo-100"><svg class="w-3.5 h-3.5 text-emerald-400 shrink-0 mt-0.5" fill="none" stroke="currentColor" viewBox="0 0 24 24"><path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M5 13l4 4L19 7"/></svg>Hasta <strong class="text-white">5.000+ contactos</strong></li>
+                <li class="flex items-start gap-1.5 text-xs text-indigo-100"><svg class="w-3.5 h-3.5 text-emerald-400 shrink-0 mt-0.5" fill="none" stroke="currentColor" viewBox="0 0 24 24"><path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M5 13l4 4L19 7"/></svg>Hasta <strong class="text-white">4.000 msgs</strong></li>
+                <li class="flex items-start gap-1.5 text-xs text-indigo-100"><svg class="w-3.5 h-3.5 text-emerald-400 shrink-0 mt-0.5" fill="none" stroke="currentColor" viewBox="0 0 24 24"><path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M5 13l4 4L19 7"/></svg><strong class="text-white">Atencion IA</strong> premium</li>
+                <li class="flex items-start gap-1.5 text-xs text-indigo-100"><svg class="w-3.5 h-3.5 text-emerald-400 shrink-0 mt-0.5" fill="none" stroke="currentColor" viewBox="0 0 24 24"><path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M5 13l4 4L19 7"/></svg><strong class="text-white">Ventas IA + Post-venta</strong></li>
+                <li class="flex items-start gap-1.5 text-xs text-indigo-100"><svg class="w-3.5 h-3.5 text-emerald-400 shrink-0 mt-0.5" fill="none" stroke="currentColor" viewBox="0 0 24 24"><path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M5 13l4 4L19 7"/></svg><strong class="text-white">Reseñas en Google</strong> automaticas</li>
+                <li class="flex items-start gap-1.5 text-xs text-indigo-100"><svg class="w-3.5 h-3.5 text-emerald-400 shrink-0 mt-0.5" fill="none" stroke="currentColor" viewBox="0 0 24 24"><path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M5 13l4 4L19 7"/></svg><strong class="text-white">Personalizacion profunda</strong> + todos los canales</li>
+                <li class="flex items-start gap-1.5 text-xs text-indigo-100"><svg class="w-3.5 h-3.5 text-emerald-400 shrink-0 mt-0.5" fill="none" stroke="currentColor" viewBox="0 0 24 24"><path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M5 13l4 4L19 7"/></svg>Usuarios ilimitados · SLA · API & webhooks</li>
               </ul>
-              <p class="text-xs text-indigo-300/60 mb-3 border-t border-white/10 pt-3">1.500 interacciones/mes · Extra: <strong class="text-indigo-200">$80/msg</strong>. <a href="terminos.html" class="underline hover:text-white/70">Ver terminos</a></p>
-              <a id="agent-cta" href="https://wa.me/5493515555555?text=Hola%2C%20quiero%20info%20sobre%20HAMPI%20Agent%20(Telegram)%20para%20mi%20profesion" target="_blank" rel="noopener" class="block text-center bg-white text-indigo-900 font-semibold py-2.5 rounded-xl hover:bg-indigo-50 transition-colors text-sm">Quiero mi HAMPI Agent</a>
+              <a href="https://wa.me/5493515555555?text=Hola%2C%20quiero%20info%20del%20plan%20Enterprise%20de%20HAMPI" target="_blank" rel="noopener" class="block text-center bg-white text-indigo-900 font-semibold py-2.5 rounded-xl hover:bg-indigo-50 transition-colors text-sm">Hablar con ventas</a>
             </div>
           </div>
+
         </div>
       </div>
     </div>
   </section>
 
-  <!-- ===== 5. FAQ (compacto) ===== -->
-  <section id="faq" class="py-12 bg-gray-50">
-    <div class="max-w-3xl mx-auto px-4 sm:px-6">
-      <div class="text-center mb-8 reveal">
-        <p class="text-brand-600 font-semibold text-sm uppercase tracking-wider">FAQ</p>
-      </div>
-      <div class="space-y-2.5 reveal" id="faq-list">
-        <div class="faq-item border border-gray-200 rounded-xl overflow-hidden bg-white">
-          <button class="faq-toggle w-full flex items-center justify-between p-4 text-left hover:bg-gray-50 transition-colors" aria-expanded="false">
-            <span class="font-semibold text-gray-900 text-sm pr-4">¿Que es HAMPI exactamente?</span>
-            <svg class="w-5 h-5 text-gray-400 shrink-0 faq-icon transition-transform" fill="none" stroke="currentColor" viewBox="0 0 24 24"><path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M19 9l-7 7-7-7"/></svg>
-          </button>
-          <div class="faq-content hidden px-4 pb-4"><p class="text-gray-600 text-sm leading-relaxed">Un sistema inteligente que automatiza atencion al cliente, recordatorios de pago y fidelizacion para PyMEs argentinas. No es CRM, no es chatbot — es las 3 cosas conectadas en un solo flujo con IA.</p></div>
-        </div>
-        <div class="faq-item border border-gray-200 rounded-xl overflow-hidden bg-white">
-          <button class="faq-toggle w-full flex items-center justify-between p-4 text-left hover:bg-gray-50 transition-colors" aria-expanded="false">
-            <span class="font-semibold text-gray-900 text-sm pr-4">¿Como funciona WhatsApp sin que me bloqueen?</span>
-            <svg class="w-5 h-5 text-gray-400 shrink-0 faq-icon transition-transform" fill="none" stroke="currentColor" viewBox="0 0 24 24"><path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M19 9l-7 7-7-7"/></svg>
-          </button>
-          <div class="faq-content hidden px-4 pb-4"><p class="text-gray-600 text-sm leading-relaxed">Usamos la API oficial de WhatsApp Business (WABA) con templates pre-aprobados por Meta. Cada mensaje incluye opcion de opt-out y cumplimos todas las politicas. Horarios controlados, limite semanal por contacto y compliance automatico.</p></div>
-        </div>
-        <div class="faq-item border border-gray-200 rounded-xl overflow-hidden bg-white">
-          <button class="faq-toggle w-full flex items-center justify-between p-4 text-left hover:bg-gray-50 transition-colors" aria-expanded="false">
-            <span class="font-semibold text-gray-900 text-sm pr-4">¿Se integra con MercadoPago?</span>
-            <svg class="w-5 h-5 text-gray-400 shrink-0 faq-icon transition-transform" fill="none" stroke="currentColor" viewBox="0 0 24 24"><path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M19 9l-7 7-7-7"/></svg>
-          </button>
-          <div class="faq-content hidden px-4 pb-4"><p class="text-gray-600 text-sm leading-relaxed">Si. Genera links de pago y los envia automaticamente por WhatsApp o email. Cuando el cliente paga, HAMPI confirma en tiempo real y actualiza el estado.</p></div>
-        </div>
-        <div class="faq-item border border-gray-200 rounded-xl overflow-hidden bg-white">
-          <button class="faq-toggle w-full flex items-center justify-between p-4 text-left hover:bg-gray-50 transition-colors" aria-expanded="false">
-            <span class="font-semibold text-gray-900 text-sm pr-4">¿Cuanto tarda el setup?</span>
-            <svg class="w-5 h-5 text-gray-400 shrink-0 faq-icon transition-transform" fill="none" stroke="currentColor" viewBox="0 0 24 24"><path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M19 9l-7 7-7-7"/></svg>
-          </button>
-          <div class="faq-content hidden px-4 pb-4"><p class="text-gray-600 text-sm leading-relaxed">Entre 2 y 5 dias habiles. Incluye configuracion de canales, carga de tu base de clientes, personalizacion de mensajes y pruebas antes de salir en vivo.</p></div>
-        </div>
-      </div>
-    </div>
-  </section>
 
   <!-- ===== FOOTER (compacto) ===== -->
   <footer class="bg-white text-gray-500 py-6 border-t border-gray-200">
     <div class="max-w-6xl mx-auto px-4 sm:px-6">
       <div class="grid sm:grid-cols-2 lg:grid-cols-4 gap-5 mb-5">
         <div>
-          <div class="mb-2"><img src="logoabajo.png" alt="HAMPI" class="h-8 w-auto object-contain"></div>
-          <p class="text-[10px] font-semibold text-gray-700 mb-1">HAMPI-SAAS</p>
-          <p class="text-[10px] leading-relaxed text-gray-500">Atencion, recordatorios de pago, fidelizacion y agentes con IA para PyMEs y profesionales argentinos.</p>
+          <div class="mb-2"><picture><source srcset="logoabajo.webp" type="image/webp"><img src="logoabajo.png" alt="HAMPI" class="h-8 w-auto object-contain" width="200" height="111" loading="lazy"></picture></div>
+          <p class="text-[10px] font-semibold text-gray-700 mb-1">HAMPI — VILLAGRA AGUSTIN</p>
+          <p class="text-[10px] leading-relaxed text-gray-500">CUIT 20-39002520-4 · Felix Frias 24, Piso 2, Dpto B, B° Gral. Paz, Cordoba, Argentina</p>
+          <p class="text-[10px] leading-relaxed text-gray-500 mt-1">Atencion, recordatorios de pago, fidelizacion y agentes con IA para PyMEs y profesionales argentinos. <a href="faq.html" class="text-brand-600 hover:underline">FAQ</a></p>
         </div>
         <div>
           <h4 class="text-gray-900 font-semibold mb-2 text-sm">Producto</h4>
@@ -764,7 +999,6 @@
             <li><a href="#sistema" class="hover:text-gray-900 transition-colors">El sistema</a></li>
             <li><a href="#calculadora" class="hover:text-gray-900 transition-colors">Calculadora</a></li>
             <li><a href="#planes" class="hover:text-gray-900 transition-colors">Planes</a></li>
-            <li><a href="#faq" class="hover:text-gray-900 transition-colors">FAQ</a></li>
             <li><a href="historia.html" class="hover:text-gray-900 transition-colors">Historia</a></li>
             <li><a href="https://api.hampi.tech/dash/login" target="_blank" rel="noopener" class="hover:text-gray-900 transition-colors">Acceso clientes</a></li>
           </ul>
@@ -804,59 +1038,78 @@
     }, { threshold: 0.1, rootMargin: '0px 0px -50px 0px' });
     document.querySelectorAll('.reveal').forEach(el => obs.observe(el));
 
+    // === Sistema Carousel ===
+    (function(){
+      var TOTAL = 5;
+      var AUTO_MS = 9000;
+      var cur = 0;
+      var timer = null;
+      function updateUI(){
+        var slides = document.querySelectorAll('.sistema-slide');
+        var dots = document.querySelectorAll('.sistema-dot');
+        for(var i=0;i<TOTAL;i++){
+          slides[i].classList.toggle('hidden', i !== cur);
+          dots[i].style.background = i===cur ? '#4f46e5' : '#d1d5db';
+        }
+      }
+
+      window.goSlide = function(idx){
+        if(idx === cur) return;
+        cur = idx;
+        updateUI();
+        // Re-animate chats/panels in new slide
+        var slide = document.querySelectorAll('.sistema-slide')[cur];
+        slide.querySelectorAll('.chat-live').forEach(function(c){
+          delete c.dataset.animated;
+          c.querySelectorAll('.chat-bubble').forEach(function(b){ b.classList.remove('show'); b.classList.add('opacity-0'); });
+          c.querySelectorAll('.chat-badge').forEach(function(b){ b.classList.remove('show'); b.classList.add('opacity-0'); });
+          animateChat(c);
+        });
+        slide.querySelectorAll('.panel-live').forEach(function(p){
+          delete p.dataset.animated;
+          p.querySelectorAll('.panel-row').forEach(function(r){ r.classList.remove('show'); r.classList.add('opacity-0'); });
+          p.querySelectorAll('.panel-counter').forEach(function(r){ r.classList.remove('show'); r.classList.add('opacity-0'); });
+          p.querySelectorAll('.panel-summary').forEach(function(r){ r.classList.remove('show'); r.classList.add('opacity-0'); });
+          animatePanel(p);
+        });
+        resetAuto();
+      };
+
+      window.nextSlide = function(){ goSlide((cur + 1) % TOTAL); };
+      window.prevSlide = function(){ goSlide((cur - 1 + TOTAL) % TOTAL); };
+
+      function resetAuto(){
+        if(timer) clearInterval(timer);
+        timer = setInterval(function(){ nextSlide(); }, AUTO_MS);
+      }
+
+      resetAuto();
+    })();
+
     // === Chat Live Animation ===
     (function(){
-      const TYPING_DURATION = 500;
-
-      function animateChat(container){
+      window.animateChat = function(container){
         if(container.dataset.animated) return;
         container.dataset.animated = '1';
 
         const bubbles = container.querySelectorAll('.chat-bubble');
-        const typing = container.querySelector('.chat-typing');
         const badge = container.querySelector('.chat-badge');
         const timeEl = container.querySelector('.chat-time');
 
-        // Show current time
         if(timeEl){
           const now = new Date();
           timeEl.textContent = now.getHours().toString().padStart(2,'0') + ':' + now.getMinutes().toString().padStart(2,'0');
         }
 
-        let queue = [];
+        let elapsed = 0;
         bubbles.forEach(b => {
           const delay = parseInt(b.dataset.delay) || 0;
-          const isBot = b.dataset.sender === 'bot';
-          queue.push({ el: b, delay, isBot });
+          setTimeout(() => { b.classList.add('show'); }, delay);
+          elapsed = delay;
         });
 
-        let elapsed = 0;
-        queue.forEach((item, i) => {
-          const showAt = item.delay;
-
-          if(item.isBot){
-            // Show typing before bot message
-            setTimeout(() => {
-              typing.classList.add('visible');
-            }, showAt - TYPING_DURATION);
-
-            setTimeout(() => {
-              typing.classList.remove('visible');
-              item.el.classList.add('show');
-            }, showAt);
-          } else {
-            setTimeout(() => {
-              item.el.classList.add('show');
-            }, showAt);
-          }
-          elapsed = showAt;
-        });
-
-        // Show badge after last message
         if(badge){
-          setTimeout(() => {
-            badge.classList.add('show');
-          }, elapsed + 600);
+          setTimeout(() => { badge.classList.add('show'); }, elapsed + 600);
         }
       }
 
@@ -874,7 +1127,7 @@
 
     // === Panel Retention Animation ===
     (function(){
-      function animatePanel(container){
+      window.animatePanel = function(container){
         if(container.dataset.animated) return;
         container.dataset.animated = '1';
 
@@ -914,7 +1167,7 @@
     document.getElementById('menu-toggle').addEventListener('click', () => document.getElementById('mobile-menu').classList.toggle('hidden'));
     document.querySelectorAll('#mobile-menu a').forEach(a => a.addEventListener('click', () => document.getElementById('mobile-menu').classList.add('hidden')));
 
-    // === Nav scroll shadow (azulada) ===
+    // === Nav scroll shadow + glassmorphism ===
     (function(){
       const nav = document.getElementById('main-nav');
       if(!nav) return;
@@ -923,11 +1176,9 @@
         if(!ticking){
           requestAnimationFrame(function(){
             if(window.scrollY > 10){
-              nav.style.boxShadow = '0 10px 30px rgba(30,58,138,.08)';
-              nav.style.borderBottomColor = 'transparent';
+              nav.style.boxShadow = '0 4px 16px rgba(0,0,0,.06)';
             } else {
               nav.style.boxShadow = 'none';
-              nav.style.borderBottomColor = '';
             }
             ticking = false;
           });
@@ -1084,44 +1335,47 @@
         note.classList.toggle('hidden', !isAnnual);
       });
 
-      // Re-sync agent channel price after billing toggle
-      updateAgentPrice();
     });
 
-    // === Agent Channel Toggle (Telegram / WhatsApp) ===
-    const agentPrice = document.getElementById('agent-price');
-    const agentNote = document.getElementById('agent-annual-note');
-    const agentCta = document.getElementById('agent-cta');
-    let agentChannel = 'tg';
-
-    function updateAgentPrice() {
-      if (!agentPrice) return;
-      const p = agentChannel === 'tg' ? 'tg' : 'wa';
-      const monthly = agentPrice.dataset[p + 'Monthly'];
-      const annual = agentPrice.dataset[p + 'Annual'];
-      agentPrice.dataset.monthly = monthly;
-      agentPrice.dataset.annual = annual;
-      agentPrice.textContent = '$' + (isAnnual ? annual : monthly);
-      if (agentNote) agentNote.textContent = '(ahorras $' + agentNote.dataset[p + 'Save'] + ')';
-      if (agentCta) {
-        const ch = agentChannel === 'tg' ? 'Telegram' : 'WhatsApp';
-        agentCta.href = 'https://wa.me/5493515555555?text=' + encodeURIComponent('Hola, quiero info sobre HAMPI Agent (' + ch + ') para mi profesion');
+    // === GA4 Event Tracking ===
+    (function(){
+      function track(action, category, label){
+        if(typeof gtag === 'function') gtag('event', action, { event_category: category, event_label: label });
       }
-    }
 
-    function setAgentChannel(ch) {
-      agentChannel = ch;
-      const btnTg = document.getElementById('agent-ch-tg');
-      const btnWa = document.getElementById('agent-ch-wa');
-      if (ch === 'tg') {
-        btnTg.style.cssText = 'background:rgba(56,189,248,0.3);color:rgba(186,230,253,1);border-color:rgba(56,189,248,0.5);';
-        btnWa.style.cssText = 'background:rgba(255,255,255,0.05);color:rgba(255,255,255,0.3);border-color:rgba(255,255,255,0.1);';
-      } else {
-        btnWa.style.cssText = 'background:rgba(52,211,153,0.3);color:rgba(167,243,208,1);border-color:rgba(52,211,153,0.5);';
-        btnTg.style.cssText = 'background:rgba(255,255,255,0.05);color:rgba(255,255,255,0.3);border-color:rgba(255,255,255,0.1);';
-      }
-      updateAgentPrice();
-    }
+      // Track all WhatsApp CTA clicks
+      document.querySelectorAll('a[href*="wa.me"]').forEach(function(a){
+        a.addEventListener('click', function(){
+          var label = a.dataset.cta || a.closest('section')?.id || 'unknown';
+          track('cta_whatsapp', 'conversion', label);
+        });
+      });
+
+      // Track calculator interaction
+      var calcTracked = false;
+      document.querySelectorAll('#calc-clientes, #calc-ticket, #calc-mora, #calc-churn').forEach(function(el){
+        el.addEventListener('input', function(){
+          if(!calcTracked){ track('calculator_used', 'engagement', 'first_interaction'); calcTracked = true; }
+        });
+      });
+
+      // Track billing toggle
+      if(billingToggle) billingToggle.addEventListener('click', function(){ track('billing_toggle', 'engagement', isAnnual ? 'annual' : 'monthly'); });
+
+      // Track scroll depth milestones
+      var milestones = [25, 50, 75, 100];
+      var tracked = {};
+      window.addEventListener('scroll', function(){
+        var pct = Math.round((window.scrollY + window.innerHeight) / document.body.scrollHeight * 100);
+        milestones.forEach(function(m){
+          if(pct >= m && !tracked[m]){ tracked[m] = true; track('scroll_depth', 'engagement', m + '%'); }
+        });
+      }, {passive: true});
+
+      // Track time on page
+      setTimeout(function(){ track('engaged_time', 'engagement', '30s'); }, 30000);
+      setTimeout(function(){ track('engaged_time', 'engagement', '60s'); }, 60000);
+    })();
 
   </script>
 </body>

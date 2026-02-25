@@ -3,8 +3,11 @@
 <head>
   <meta charset="UTF-8">
   <meta name="viewport" content="width=device-width, initial-scale=1.0">
-  <title>Hampi</title>
-  <meta name="description" content="Por qué existe HAMPI. 8 años de experiencia en atención, recordatorios de pago y retención para PyMEs argentinas, convertidos en sistema.">
+  <title>Historia de HAMPI — Por que existe nuestro sistema</title>
+  <meta name="description" content="Conoce la historia de HAMPI: 8 anos de experiencia en atencion, recordatorios de pago y retencion para PyMEs argentinas, convertidos en un sistema integral con IA.">
+  <link rel="canonical" href="https://hampi.tech/historia.html">
+  <meta property="og:image" content="https://hampi.tech/hampilogo.png">
+  <meta name="theme-color" content="#4f46e5">
   <link rel="icon" type="image/png" sizes="32x32" href="logoxx.png">
   <link rel="apple-touch-icon" sizes="180x180" href="logoxx.png">
   <link rel="manifest" href="manifest.json">
@@ -39,6 +42,14 @@
     @keyframes pulse-ring{0%{box-shadow:0 0 0 0 rgba(37,211,102,.4)}70%{box-shadow:0 0 0 15px rgba(37,211,102,0)}100%{box-shadow:0 0 0 0 rgba(37,211,102,0)}}
     .whatsapp-float{animation:pulse-ring 2s infinite}
   </style>
+  <!-- Google Analytics (GA4) -->
+  <script async src="https://www.googletagmanager.com/gtag/js?id=G-XXXXXXXXXX"></script>
+  <script>
+    window.dataLayer = window.dataLayer || [];
+    function gtag(){dataLayer.push(arguments);}
+    gtag('js', new Date());
+    gtag('config', 'G-XXXXXXXXXX', { send_page_view: true });
+  </script>
 </head>
 
 <body class="font-sans text-gray-800 bg-white antialiased">
@@ -47,19 +58,20 @@
   <nav id="main-nav" class="fixed top-0 w-full bg-white z-40 border-b border-gray-200/60 transition-shadow duration-300" style="box-shadow:none">
     <div class="max-w-6xl mx-auto px-4 sm:px-6 flex items-center justify-between h-16">
       <a href="index.html" class="flex items-center gap-2">
-        <img src="hampilogo.png" alt="HAMPI" class="h-8 sm:h-9 w-auto object-contain" style="image-rendering:-webkit-optimize-contrast;transform:translateZ(0)">
+        <picture>
+          <source srcset="hampilogo.webp" type="image/webp">
+          <img src="hampilogo.png" alt="HAMPI - Sistema de gestion para PyMEs" class="h-8 sm:h-9 w-auto object-contain" width="200" height="61" style="image-rendering:-webkit-optimize-contrast;transform:translateZ(0)">
+        </picture>
       </a>
       <div class="hidden md:flex items-center gap-8 text-xs font-bold text-gray-700 uppercase" style="letter-spacing:.06em">
         <a href="index.html#sistema" class="hover:text-brand-600 transition-colors">El sistema</a>
         <a href="index.html#calculadora" class="hover:text-brand-600 transition-colors">Calculadora</a>
         <a href="index.html#planes" class="hover:text-brand-600 transition-colors">Planes</a>
-        <a href="index.html#faq" class="hover:text-brand-600 transition-colors">FAQ</a>
         <a href="historia.html" class="text-brand-600">Historia</a>
       </div>
       <div class="flex items-center gap-3">
-        <a href="index.html#calculadora" id="nav-calc-cta" class="hidden sm:inline-flex items-center gap-2 bg-brand-600 hover:bg-brand-700 text-white text-xs font-bold uppercase px-3.5 py-1.5 rounded-lg transition-colors" style="letter-spacing:.06em;line-height:1.5">
-          CALCULAR MI PERDIDA
-          <svg class="w-3.5 h-3.5" fill="none" stroke="currentColor" viewBox="0 0 24 24"><path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M9 7h6m0 10v-3m-3 3h.01M9 17h.01M9 14h.01M12 14h.01M15 11h.01M12 11h.01M9 11h.01M7 21h10a2 2 0 002-2V5a2 2 0 00-2-2H7a2 2 0 00-2 2v14a2 2 0 002 2z"/></svg>
+        <a href="https://wa.me/5493515555555?text=Hola%2C%20quiero%20info%20sobre%20HAMPI" target="_blank" rel="noopener" id="nav-calc-cta" class="hidden sm:inline-flex items-center bg-brand-600 hover:bg-brand-700 text-white text-xs font-bold uppercase px-3.5 py-1.5 rounded-lg transition-colors" style="letter-spacing:.06em;line-height:1.5">
+          CONTACTANOS
         </a>
       </div>
       <button id="menu-toggle" class="md:hidden ml-2 p-2 text-gray-600 hover:text-brand-600" aria-label="Menu">
@@ -71,7 +83,6 @@
         <a href="index.html#sistema" class="block py-2 text-xs font-bold text-gray-700 uppercase" style="letter-spacing:.06em">El sistema</a>
         <a href="index.html#calculadora" class="block py-2 text-xs font-bold text-gray-700 uppercase" style="letter-spacing:.06em">Calculadora</a>
         <a href="index.html#planes" class="block py-2 text-xs font-bold text-gray-700 uppercase" style="letter-spacing:.06em">Planes</a>
-        <a href="index.html#faq" class="block py-2 text-xs font-bold text-gray-700 uppercase" style="letter-spacing:.06em">FAQ</a>
         <a href="historia.html" class="block py-2 text-xs font-bold text-brand-600 uppercase" style="letter-spacing:.06em">Historia</a>
       </div>
     </div>
@@ -101,26 +112,22 @@
     </div>
 
     <!-- Quién está detrás — integrado en hero -->
-    <div class="mx-auto px-4 sm:px-6 mt-16" style="max-width:960px">
-      <div class="bg-white/10 backdrop-blur-sm rounded-2xl p-8 sm:p-10 md:p-12 border border-white/15">
-        <h3 class="text-brand-300 font-semibold text-xs sm:text-sm uppercase tracking-wider mb-3 text-center">Quién está detrás</h3>
-        <p class="text-center text-xs mb-8" style="color:#c7d2fe">Experiencia operativa real convertida en sistema.</p>
+    <div class="max-w-3xl mx-auto px-4 sm:px-6 mt-12">
+      <div class="bg-white/10 backdrop-blur-sm rounded-2xl p-6 sm:p-8 border border-white/15">
+        <h3 class="text-brand-300 font-semibold text-xs uppercase tracking-wider mb-2 text-center">Quién está detrás</h3>
+        <p class="text-center text-xs mb-6" style="color:#c7d2fe">Experiencia operativa real convertida en sistema.</p>
 
-        <div class="space-y-4 leading-relaxed hero-body-text" style="color:#e0e7ff;font-size:clamp(0.75rem,1.2vw,0.875rem);line-height:1.7">
-          <p>Durante 8 años gestioné operaciones de cobranzas, atención al cliente y retención en empresas con volúmenes reales: +8.000 cuentas mensuales, +$233M en recupero anual gestionado y más de 250 reseñas positivas acumuladas. Trabajé en estudios jurídicos especializados en mora pre-legal y legal, en operaciones masivas de contact center con segmentación por riesgo, y lideré la automatización completa del ciclo de vida del cliente en EMI Emergencias.</p>
+        <div class="space-y-3 hero-body-text" style="color:#e0e7ff;font-size:0.8rem;line-height:1.7">
+          <p>Durante 8 años gestioné operaciones de cobranzas, atención al cliente y retención en empresas con volúmenes reales: +8.000 cuentas mensuales, +$233M en recupero anual gestionado y más de 250 reseñas positivas. Trabajé en estudios jurídicos especializados, operaciones masivas de contact center y lideré la automatización completa del ciclo de vida del cliente en EMI Emergencias.</p>
 
-          <p>En cada una de esas operaciones identifiqué el mismo problema estructural: <strong class="text-white">cobranzas, atención y retención funcionan como procesos aislados.</strong> Herramientas distintas, equipos sin coordinación, cero trazabilidad entre áreas. El resultado es siempre el mismo: ingresos que se pierden por gestión tardía, clientes que se van por falta de respuesta y decisiones que se toman sin datos.</p>
+          <p>En cada operación identifiqué el mismo problema: <strong class="text-white">cobranzas, atención y retención funcionan como procesos aislados.</strong> Herramientas distintas, equipos sin coordinación, cero trazabilidad. El resultado: ingresos perdidos, clientes que se van y decisiones sin datos.</p>
 
-          <p>Esa fragmentación no es un problema de voluntad ni de equipo — es un problema de arquitectura operativa. Las PyMEs argentinas no necesitan más herramientas sueltas. Necesitan <strong class="text-white">un sistema que integre los tres procesos en un flujo único, medible y con escalado inteligente.</strong></p>
-
-          <p>HAMPI es exactamente eso. Nació de diseñar, ejecutar y optimizar estos procesos en la operación real — no en un laboratorio. Cada regla de negocio, cada flujo de automatización y cada métrica del dashboard responde a un problema que vi, medí y resolví antes de convertirlo en producto. <strong class="text-white">No es IA por moda. Es criterio operativo potenciado por tecnología.</strong></p>
-
-          <p>El objetivo es claro: que una PyME argentina pueda profesionalizar su gestión de cobranzas, atención y retención en semanas, sin infraestructura propia ni equipos técnicos — <strong class="text-white">con control total, auditoría completa y resultados medibles desde el día uno.</strong></p>
+          <p>Las PyMEs argentinas no necesitan más herramientas sueltas. Necesitan <strong class="text-white">un sistema que integre los tres procesos en un flujo único, medible y con escalado inteligente.</strong> HAMPI nació de diseñar y optimizar estos procesos en la operación real. <strong class="text-white">No es IA por moda. Es criterio operativo potenciado por tecnología.</strong></p>
         </div>
 
-        <div class="mt-6 pt-5 border-t border-white/10 text-center">
+        <div class="mt-5 pt-4 border-t border-white/10 text-center">
           <p class="font-bold text-white text-sm">— Agustín Villagra</p>
-          <p class="text-xs mt-1" style="color:#a5b4fc">Fundador de HAMPI · Especialista en operaciones de cobranzas, atención y retención · ex Evoltis, General Collect y EMI Emergencias</p>
+          <p class="text-xs mt-0.5" style="color:#a5b4fc">Fundador de HAMPI · Especialista en operaciones · ex Evoltis, General Collect y EMI Emergencias</p>
         </div>
       </div>
     </div>
@@ -135,7 +142,7 @@
         <!-- Estudio Jurídico -->
         <div class="bg-white rounded-2xl p-6 border border-gray-100 flex gap-5">
           <div class="shrink-0 w-14 h-14 bg-gray-50 rounded-xl border border-gray-100 flex items-center justify-center overflow-hidden">
-            <img src="RODRIGUEZMURUALOGO.png" alt="Rodríguez Murúa" class="w-10 h-10 object-contain">
+            <img src="RODRIGUEZMURUALOGO.png" alt="Logo Estudio Juridico Rodriguez Murua" class="w-10 h-10 object-contain" loading="lazy">
           </div>
           <div>
             <p class="text-xs font-semibold text-brand-600 mb-0.5">2016</p>
@@ -148,7 +155,7 @@
         <!-- Evoltis / Call Centers -->
         <div class="bg-white rounded-2xl p-6 border border-gray-100 flex gap-5">
           <div class="shrink-0 w-14 h-14 bg-gray-50 rounded-xl border border-gray-100 flex items-center justify-center overflow-hidden">
-            <img src="EVOLTISLOGO.jpeg" alt="Evoltis" class="w-10 h-10 object-contain">
+            <img src="EVOLTISLOGO.jpeg" alt="Logo Evoltis contact center" class="w-10 h-10 object-contain" loading="lazy">
           </div>
           <div>
             <p class="text-xs font-semibold text-brand-600 mb-0.5">2017</p>
@@ -161,7 +168,7 @@
         <!-- General Collect -->
         <div class="bg-white rounded-2xl p-6 border border-gray-100 flex gap-5">
           <div class="shrink-0 w-14 h-14 bg-gray-50 rounded-xl border border-gray-100 flex items-center justify-center overflow-hidden">
-            <img src="GENERALCOLLECTLOGO.jpeg" alt="General Collect" class="w-10 h-10 object-contain">
+            <img src="GENERALCOLLECTLOGO.jpeg" alt="Logo General Collect cobranzas" class="w-10 h-10 object-contain" loading="lazy">
           </div>
           <div>
             <p class="text-xs font-semibold text-brand-600 mb-0.5">2021</p>
@@ -174,7 +181,7 @@
         <!-- EMI Emergencias -->
         <div class="bg-white rounded-2xl p-6 border border-brand-100 ring-1 ring-brand-200 flex gap-5">
           <div class="shrink-0 w-14 h-14 bg-brand-50 rounded-xl border border-brand-100 flex items-center justify-center overflow-hidden">
-            <img src="EMILOGO.png" alt="EMI Emergencias" class="w-10 h-10 object-contain">
+            <img src="EMILOGO.png" alt="Logo EMI Emergencias medicas" class="w-10 h-10 object-contain" loading="lazy">
           </div>
           <div>
             <p class="text-xs font-semibold text-brand-600 mb-0.5">2023 – 2026</p>
@@ -188,7 +195,7 @@
       <!-- HAMPI cierre -->
       <div class="mt-8 bg-brand-700 rounded-2xl p-6 sm:p-8 text-center">
         <div class="flex items-center justify-center gap-3 mb-3">
-          <img src="logox.png" alt="HAMPI" class="h-7 w-auto object-contain">
+          <img src="logox.png" alt="Icono HAMPI" class="h-7 w-auto object-contain" loading="lazy">
           <h3 class="text-lg font-bold text-white">HAMPI — 2026</h3>
         </div>
         <p class="text-brand-200 text-sm max-w-xl mx-auto">Sistema integral de atención, recordatorios de pago y retención con IA — diseñado desde la operación real para PyMEs argentinas que necesitan profesionalizar su gestión sin sumar estructura.</p>
@@ -317,9 +324,15 @@
     <div class="max-w-6xl mx-auto px-4 sm:px-6">
       <div class="grid sm:grid-cols-2 lg:grid-cols-4 gap-5 mb-5">
         <div>
-          <div class="mb-2"><img src="logoabajo.png" alt="HAMPI" class="h-8 w-auto object-contain"></div>
-          <p class="text-[10px] font-semibold text-gray-700 mb-1">HAMPI-SAAS</p>
-          <p class="text-[10px] leading-relaxed text-gray-500">Atencion, recordatorios de pago, fidelizacion y agentes con IA para PyMEs y profesionales argentinos.</p>
+          <div class="mb-2">
+            <picture>
+              <source srcset="logoabajo.webp" type="image/webp">
+              <img src="logoabajo.png" alt="HAMPI - Logo pie de pagina" class="h-8 w-auto object-contain" loading="lazy" width="200" height="61">
+            </picture>
+          </div>
+          <p class="text-[10px] font-semibold text-gray-700 mb-1">HAMPI — VILLAGRA AGUSTIN</p>
+          <p class="text-[10px] leading-relaxed text-gray-500">CUIT 20-39002520-4 · Felix Frias 24, Piso 2, Dpto B, B° Gral. Paz, Cordoba, Argentina</p>
+          <p class="text-[10px] leading-relaxed text-gray-500 mt-1">Atencion, recordatorios de pago, fidelizacion y agentes con IA para PyMEs y profesionales argentinos. <a href="faq.html" class="text-brand-600 hover:underline">FAQ</a></p>
         </div>
         <div>
           <h4 class="text-gray-900 font-semibold mb-2 text-sm">Producto</h4>
@@ -327,7 +340,6 @@
             <li><a href="index.html#sistema" class="hover:text-gray-900 transition-colors">El sistema</a></li>
             <li><a href="index.html#calculadora" class="hover:text-gray-900 transition-colors">Calculadora</a></li>
             <li><a href="index.html#planes" class="hover:text-gray-900 transition-colors">Planes</a></li>
-            <li><a href="index.html#faq" class="hover:text-gray-900 transition-colors">FAQ</a></li>
             <li><a href="historia.html" class="hover:text-gray-900 transition-colors">Historia</a></li>
             <li><a href="https://api.hampi.tech/dash/login" target="_blank" rel="noopener" class="hover:text-gray-900 transition-colors">Acceso clientes</a></li>
           </ul>

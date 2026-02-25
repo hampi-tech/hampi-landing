@@ -1,0 +1,8 @@
+User-agent: *
+Allow: /
+
+Sitemap: https://hampi.tech/sitemap.xml
+
+# Bloquear assets internos innecesarios
+Disallow: /kallpaprueba.html
+Disallow: /*.pdf$
