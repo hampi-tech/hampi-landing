@@ -1311,8 +1311,8 @@
         });
         const data = await res.json();
         if (data.ok) {
-          msgEl.textContent = 'Email enviado! Revisa tu casilla.';
-          msgEl.className = 'text-center text-[10px] mt-1.5 text-green-400';
+          msgEl.innerHTML = '<svg class="w-5 h-5 mx-auto text-green-400" fill="none" stroke="currentColor" viewBox="0 0 24 24"><path stroke-linecap="round" stroke-linejoin="round" stroke-width="2.5" d="M5 13l4 4L19 7"/></svg>';
+          msgEl.className = 'text-center mt-1.5';
         } else {
           msgEl.textContent = 'No se pudo enviar. Intenta de nuevo.';
           msgEl.className = 'text-center text-[10px] mt-1.5 text-red-400';
