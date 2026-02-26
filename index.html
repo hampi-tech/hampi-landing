@@ -575,7 +575,7 @@
               </div>
               <div class="space-y-3 chat-messages flex-1 overflow-hidden" id="chat-atencion">
               </div>
-                            <div class="mt-4 text-center chat-badge opacity-0"><span class="inline-flex items-center gap-1 text-xs text-blue-600 font-medium bg-blue-50 px-3 py-1 rounded-full">Respuesta en 8 seg · IA contextual</span></div>
+                            <div class="mt-1 text-center chat-badge opacity-0"><span class="inline-flex items-center gap-1 text-[10px] text-blue-500 font-medium bg-blue-50/70 px-2 py-0.5 rounded-full">Respuesta en 8 seg · IA contextual</span></div>
             </div>
           </div>
         </div>
@@ -594,7 +594,7 @@
                 </div>
                 <div class="space-y-3 chat-messages flex-1 overflow-hidden" id="chat-cierre">
                 </div>
-                <div class="mt-4 text-center chat-badge opacity-0"><span class="inline-flex items-center gap-1 text-xs text-green-600 font-medium bg-green-50 px-3 py-1 rounded-full">Venta cerrada en 2 min · Sin intervencion humana</span></div>
+                <div class="mt-1 text-center chat-badge opacity-0"><span class="inline-flex items-center gap-1 text-[10px] text-green-500 font-medium bg-green-50/70 px-2 py-0.5 rounded-full">Venta cerrada en 2 min · Sin intervencion humana</span></div>
               </div>
             </div>
             <div class="order-1 md:order-2">
@@ -633,7 +633,7 @@
               </div>
               <div class="space-y-3 chat-messages flex-1 overflow-hidden" id="chat-postventa">
               </div>
-                            <div class="mt-4 text-center chat-badge opacity-0"><span class="inline-flex items-center gap-1 text-xs text-amber-600 font-medium bg-amber-50 px-3 py-1 rounded-full">Feedback 5/5 · Automatico</span></div>
+                            <div class="mt-1 text-center chat-badge opacity-0"><span class="inline-flex items-center gap-1 text-[10px] text-amber-500 font-medium bg-amber-50/70 px-2 py-0.5 rounded-full">Feedback 5/5 · Automatico</span></div>
             </div>
           </div>
         </div>
@@ -650,7 +650,7 @@
                 </div>
                 <div class="space-y-3 chat-messages flex-1 overflow-hidden" id="chat-reviews">
                 </div>
-                                <div class="mt-4 text-center chat-badge opacity-0"><span class="inline-flex items-center gap-1 text-xs text-yellow-700 font-medium bg-yellow-50 px-3 py-1 rounded-full">Solo clientes con score 4+ · Automatico</span></div>
+                                <div class="mt-1 text-center chat-badge opacity-0"><span class="inline-flex items-center gap-1 text-[10px] text-yellow-600 font-medium bg-yellow-50/70 px-2 py-0.5 rounded-full">Solo clientes con score 4+ · Automatico</span></div>
               </div>
             </div>
             <div class="order-1 md:order-2">
@@ -681,7 +681,7 @@
                 </div>
                 <div class="space-y-3 chat-messages flex-1 overflow-hidden" id="chat-recordatorios">
                 </div>
-                <div class="mt-4 text-center chat-badge opacity-0"><span class="inline-flex items-center gap-1 text-xs text-indigo-600 font-medium bg-indigo-50 px-3 py-1 rounded-full">Cobrado en 4 min · Enterprise</span></div>
+                <div class="mt-1 text-center chat-badge opacity-0"><span class="inline-flex items-center gap-1 text-[10px] text-indigo-500 font-medium bg-indigo-50/70 px-2 py-0.5 rounded-full">Cobrado en 4 min · Enterprise</span></div>
               </div>
             </div>
             <div class="order-1 md:order-2">
@@ -1085,29 +1085,29 @@
       var STORIES = [
         { // Sofia — Peluqueria
           atencion: [
-            {s:'user',d:600,t:'Hola! Soy Sofia, quiero saber que servicios tienen y los precios'},
-            {s:'bot',d:2200,t:'Hola Sofia! Tenemos corte $5.500, color $8.000 y brushing $4.000. Queres reservar un turno?',c:'blue'},
-            {s:'user',d:4000,t:'Si! Quiero corte y color para el sabado'},
-            {s:'bot',d:5800,t:'Perfecto! Sabado 01/03 a las 10:00 hay lugar. Te paso al cierre de reserva',c:'blue'}
+            {s:'user',d:600,t:'Hola! Soy Sofia, quiero saber precios de corte y color'},
+            {s:'bot',d:2200,t:'Hola Sofia! Corte $18.000, color $35.000 y brushing $12.000. Queres reservar turno?',c:'blue'},
+            {s:'user',d:4000,t:'Si! Corte y color para el sabado'},
+            {s:'bot',d:5800,t:'Sabado 01/03 a las 10:00 hay lugar. Te paso a confirmar!',c:'blue'}
           ],
           cierre: [
-            {s:'bot',d:600,t:'Sofia, tu corte + color sale $13.500. Te dejo el link para reservar:',c:'green',link:'Pagar con MercadoPago →'},
+            {s:'bot',d:600,t:'Sofia, corte + color sale $53.000. Te dejo el link:',c:'green',link:'Pagar con MercadoPago →'},
             {s:'user',d:2800,t:'Listo, ya pague!'},
-            {s:'bot',d:4600,t:'Pago confirmado! Turno reservado: sabado 01/03 a las 10:00. Te aviso el viernes!',c:'green'}
+            {s:'bot',d:4600,t:'Pago confirmado! Turno: sabado 01/03, 10:00hs. Te aviso el viernes!',c:'green'}
           ],
           postventa: [
-            {s:'bot',d:600,t:'Hola Sofia! Como te fue con el corte y color del sabado?',c:'amber'},
-            {s:'user',d:2400,t:'Me encanto! Quede muy conforme'},
+            {s:'bot',d:600,t:'Sofia! Como te fue con el corte y color del sabado?',c:'amber'},
+            {s:'user',d:2400,t:'Me encanto! Quede hermosa'},
             {s:'bot',d:4000,t:'Que bueno! Del 1 al 5, como calificarias la experiencia?',c:'amber'},
             {s:'user',d:5400,t:'5!'}
           ],
           reviews: [
-            {s:'bot',d:600,t:'Sofia, nos alegra que te haya gustado! Nos ayudarias con una reseña en Google?',c:'yellow',link:'Dejar reseña en Google →'},
-            {s:'user',d:3200,t:'Listo, ya la deje! 5 estrellas'},
+            {s:'bot',d:600,t:'Sofia, nos alegra! Nos dejarias una reseña en Google?',c:'yellow',link:'Dejar reseña en Google →'},
+            {s:'user',d:3200,t:'Listo, 5 estrellas!'},
             {s:'bot',d:5000,t:'Muchas gracias Sofia! Te esperamos pronto',c:'yellow'}
           ],
           recordatorios: [
-            {s:'bot',d:800,t:'Hola Sofia! Tenes pendiente el pago de tu corte + color del 01/03 ($13.500). Te dejo el link:',c:'indigo',link:'Pagar con MercadoPago →'},
+            {s:'bot',d:800,t:'Sofia! Tenes pendiente el saldo del corte + color del 01/03 ($53.000). Te dejo el link:',c:'indigo',link:'Pagar con MercadoPago →'},
             {s:'user',d:3200,t:'Mil gracias, se me habia pasado! Ahora lo pago'},
             {s:'user',d:4400,t:'📎 Comprobante.pdf',file:true},
             {s:'bot',d:5600,t:'Pago recibido! Gracias Sofia, quedas al dia',c:'indigo'}
@@ -1115,29 +1115,29 @@
         },
         { // Jose — Gimnasio
           atencion: [
-            {s:'user',d:600,t:'Buenas! Soy Jose, quiero consultar por los planes del gimnasio'},
-            {s:'bot',d:2200,t:'Hola Jose! Tenemos plan basico $12.000/mes y full $18.000/mes con musculacion + clases. Te interesa alguno?',c:'blue'},
+            {s:'user',d:600,t:'Buenas! Soy Jose, quiero saber los planes del gym'},
+            {s:'bot',d:2200,t:'Hola Jose! Musculacion $45.000/mes, Full (muscu + clases) $65.000/mes. Te interesa?',c:'blue'},
             {s:'user',d:4000,t:'El full! Puedo arrancar el lunes?'},
-            {s:'bot',d:5800,t:'Si! Lunes 03/03 a las 8:00 tenes tu primer clase. Te paso a la inscripcion',c:'blue'}
+            {s:'bot',d:5800,t:'Si! Lunes 03/03 arrancas. Te paso la inscripcion',c:'blue'}
           ],
           cierre: [
-            {s:'bot',d:600,t:'Jose, el plan full tiene un costo de $18.000/mes. Te dejo el link de inscripcion:',c:'green',link:'Pagar con MercadoPago →'},
+            {s:'bot',d:600,t:'Jose, Plan Full $65.000/mes. Te dejo el link:',c:'green',link:'Pagar con MercadoPago →'},
             {s:'user',d:2800,t:'Pague! Arranco el lunes'},
-            {s:'bot',d:4600,t:'Inscripcion confirmada! Plan Full desde el lunes 03/03. Te esperamos!',c:'green'}
+            {s:'bot',d:4600,t:'Inscripcion confirmada! Plan Full desde lunes 03/03. Te esperamos!',c:'green'}
           ],
           postventa: [
-            {s:'bot',d:600,t:'Jose! Ya llevas una semana entrenando. Como te sentis con el plan full?',c:'amber'},
+            {s:'bot',d:600,t:'Jose! Ya llevas una semana. Como te sentis con el plan?',c:'amber'},
             {s:'user',d:2400,t:'Muy bien, las clases son geniales'},
-            {s:'bot',d:4000,t:'Nos alegra! Del 1 al 5, como calificarias tu experiencia?',c:'amber'},
+            {s:'bot',d:4000,t:'Nos alegra! Del 1 al 5, como calificarias?',c:'amber'},
             {s:'user',d:5400,t:'5, excelente!'}
           ],
           reviews: [
-            {s:'bot',d:600,t:'Jose, que bueno que te guste! Nos dejarias una reseña en Google? Nos ayuda mucho:',c:'yellow',link:'Dejar reseña en Google →'},
+            {s:'bot',d:600,t:'Jose, que bueno! Nos dejarias una reseña en Google?',c:'yellow',link:'Dejar reseña en Google →'},
             {s:'user',d:3200,t:'Dale, ya la deje! Muy recomendable'},
-            {s:'bot',d:5000,t:'Gracias Jose! Seguimos sumando a tu entrenamiento',c:'yellow'}
+            {s:'bot',d:5000,t:'Gracias Jose! Seguimos sumando',c:'yellow'}
           ],
           recordatorios: [
-            {s:'bot',d:800,t:'Jose! Tu cuota de marzo del plan full esta pendiente ($18.000). Te dejo el link:',c:'indigo',link:'Pagar con MercadoPago →'},
+            {s:'bot',d:800,t:'Jose! Tu cuota de marzo del Plan Full esta pendiente ($65.000). Te dejo el link:',c:'indigo',link:'Pagar con MercadoPago →'},
             {s:'user',d:3200,t:'Uh, se me paso! Ahi lo transfiero'},
             {s:'user',d:4400,t:'📎 Comprobante.pdf',file:true},
             {s:'bot',d:5600,t:'Recibido! Cuota al dia. Gracias Jose',c:'indigo'}
@@ -1146,31 +1146,121 @@
         { // Ana — Consultorio odontologico
           atencion: [
             {s:'user',d:600,t:'Hola, soy Ana. Quiero consultar por una limpieza dental'},
-            {s:'bot',d:2200,t:'Hola Ana! La limpieza dental tiene un costo de $15.000. Tenemos turnos disponibles esta semana. Te agendo?',c:'blue'},
-            {s:'user',d:4000,t:'Si, para el jueves a la tarde si hay'},
-            {s:'bot',d:5800,t:'Jueves 06/03 a las 16:00 esta disponible. Te paso a confirmar el turno',c:'blue'}
+            {s:'bot',d:2200,t:'Hola Ana! Limpieza dental $28.000. Hay turnos esta semana, te agendo?',c:'blue'},
+            {s:'user',d:4000,t:'Si, para el jueves a la tarde'},
+            {s:'bot',d:5800,t:'Jueves 06/03 a las 16:00 disponible. Te confirmo!',c:'blue'}
           ],
           cierre: [
-            {s:'bot',d:600,t:'Ana, la limpieza dental sale $15.000. Te dejo el link para confirmar tu turno:',c:'green',link:'Pagar seña con MercadoPago →'},
+            {s:'bot',d:600,t:'Ana, la limpieza sale $28.000. Seña de $10.000:',c:'green',link:'Pagar seña con MercadoPago →'},
             {s:'user',d:2800,t:'Listo, pague la seña!'},
-            {s:'bot',d:4600,t:'Seña confirmada! Turno: jueves 06/03 a las 16:00. Te recordamos el miercoles',c:'green'}
+            {s:'bot',d:4600,t:'Seña confirmada! Jueves 06/03, 16:00hs. Te recordamos el miercoles',c:'green'}
           ],
           postventa: [
-            {s:'bot',d:600,t:'Ana! Como te fue con la limpieza dental del jueves?',c:'amber'},
+            {s:'bot',d:600,t:'Ana! Como te fue con la limpieza del jueves?',c:'amber'},
             {s:'user',d:2400,t:'Muy bien! Rapido y sin dolor'},
-            {s:'bot',d:4000,t:'Genial! Del 1 al 5, como calificarias la atencion?',c:'amber'},
+            {s:'bot',d:4000,t:'Genial! Del 1 al 5, como calificarias?',c:'amber'},
             {s:'user',d:5400,t:'5, impecable!'}
           ],
           reviews: [
-            {s:'bot',d:600,t:'Ana, nos encanta que te haya gustado! Nos ayudarias dejando una reseña en Google?',c:'yellow',link:'Dejar reseña en Google →'},
+            {s:'bot',d:600,t:'Ana, que bueno! Nos dejarias una reseña en Google?',c:'yellow',link:'Dejar reseña en Google →'},
             {s:'user',d:3200,t:'Si, ya la deje con 5 estrellas'},
-            {s:'bot',d:5000,t:'Muchas gracias Ana! Te esperamos en tu proximo control',c:'yellow'}
+            {s:'bot',d:5000,t:'Gracias Ana! Te esperamos en tu proximo control',c:'yellow'}
           ],
           recordatorios: [
-            {s:'bot',d:800,t:'Ana! Tenes pendiente el saldo de tu limpieza dental del 06/03 ($10.000). Te dejo el link:',c:'indigo',link:'Pagar con MercadoPago →'},
+            {s:'bot',d:800,t:'Ana! Tenes pendiente el saldo de la limpieza del 06/03 ($18.000). Link:',c:'indigo',link:'Pagar con MercadoPago →'},
             {s:'user',d:3200,t:'Es verdad! Se me paso, ahora pago'},
             {s:'user',d:4400,t:'📎 Comprobante.pdf',file:true},
             {s:'bot',d:5600,t:'Pago registrado! Gracias Ana, quedas al dia',c:'indigo'}
+          ]
+        },
+        { // Claudio — Academia de idiomas
+          atencion: [
+            {s:'user',d:600,t:'Hola! Soy Claudio, quiero info del curso de ingles'},
+            {s:'bot',d:2200,t:'Hola Claudio! Curso intensivo $85.000/mes (3 veces x semana). Arrancamos todos los lunes!',c:'blue'},
+            {s:'user',d:4000,t:'Me interesa! Puedo empezar la semana que viene?'},
+            {s:'bot',d:5800,t:'Si! Lunes 10/03 a las 19:00. Te paso la inscripcion',c:'blue'}
+          ],
+          cierre: [
+            {s:'bot',d:600,t:'Claudio, curso intensivo ingles $85.000/mes. Link:',c:'green',link:'Pagar con MercadoPago →'},
+            {s:'user',d:2800,t:'Pague! Nos vemos el lunes'},
+            {s:'bot',d:4600,t:'Inscripcion OK! Lunes 10/03, 19:00hs. Te enviamos el material por email',c:'green'}
+          ],
+          postventa: [
+            {s:'bot',d:600,t:'Claudio! Como vas con las clases de ingles?',c:'amber'},
+            {s:'user',d:2400,t:'Genial, ya noto avances!'},
+            {s:'bot',d:4000,t:'Excelente! Del 1 al 5, como calificarias?',c:'amber'},
+            {s:'user',d:5400,t:'5!'}
+          ],
+          reviews: [
+            {s:'bot',d:600,t:'Claudio, nos alegra tu progreso! Nos dejarias una reseña?',c:'yellow',link:'Dejar reseña en Google →'},
+            {s:'user',d:3200,t:'Listo, la deje! Muy buena academia'},
+            {s:'bot',d:5000,t:'Gracias Claudio! Seguimos con todo',c:'yellow'}
+          ],
+          recordatorios: [
+            {s:'bot',d:800,t:'Claudio! Tu cuota de abril del curso de ingles esta pendiente ($85.000). Link:',c:'indigo',link:'Pagar con MercadoPago →'},
+            {s:'user',d:3200,t:'Gracias por avisar! Lo pago ahora'},
+            {s:'user',d:4400,t:'📎 Comprobante.pdf',file:true},
+            {s:'bot',d:5600,t:'Pago recibido! Gracias Claudio, quedas al dia',c:'indigo'}
+          ]
+        },
+        { // Maria — Estudio contable
+          atencion: [
+            {s:'user',d:600,t:'Buenas! Soy Maria, necesito asesoramiento contable'},
+            {s:'bot',d:2200,t:'Hola Maria! Ofrecemos monotributo $35.000/mes, RI $70.000/mes y SAS $120.000/mes. Te interesa alguno?',c:'blue'},
+            {s:'user',d:4000,t:'El de monotributo, recien arranco con mi emprendimiento'},
+            {s:'bot',d:5800,t:'Perfecto! Te agendo una reunion inicial gratuita. Te paso a confirmar',c:'blue'}
+          ],
+          cierre: [
+            {s:'bot',d:600,t:'Maria, plan Monotributo $35.000/mes. Link para el primer mes:',c:'green',link:'Pagar con MercadoPago →'},
+            {s:'user',d:2800,t:'Pague! Cuando nos reunimos?'},
+            {s:'bot',d:4600,t:'Agendado! Miercoles 05/03 a las 11:00 por videollamada. Te enviamos el link',c:'green'}
+          ],
+          postventa: [
+            {s:'bot',d:600,t:'Maria! Como te fue con la reunion del miercoles?',c:'amber'},
+            {s:'user',d:2400,t:'Excelente, me quedo todo muy claro'},
+            {s:'bot',d:4000,t:'Que bueno! Del 1 al 5, como calificarias la atencion?',c:'amber'},
+            {s:'user',d:5400,t:'5, muy profesionales!'}
+          ],
+          reviews: [
+            {s:'bot',d:600,t:'Maria, que bueno! Nos dejarias una reseña en Google?',c:'yellow',link:'Dejar reseña en Google →'},
+            {s:'user',d:3200,t:'Si, ya la deje! Los recomiendo'},
+            {s:'bot',d:5000,t:'Gracias Maria! Estamos para lo que necesites',c:'yellow'}
+          ],
+          recordatorios: [
+            {s:'bot',d:800,t:'Maria! Tu honorario de abril esta pendiente ($35.000). Te dejo el link:',c:'indigo',link:'Pagar con MercadoPago →'},
+            {s:'user',d:3200,t:'Ay, se me paso! Lo transfiero ahora'},
+            {s:'user',d:4400,t:'📎 Comprobante.pdf',file:true},
+            {s:'bot',d:5600,t:'Recibido! Gracias Maria, quedas al dia',c:'indigo'}
+          ]
+        },
+        { // Lucas — Taller mecanico
+          atencion: [
+            {s:'user',d:600,t:'Hola! Soy Lucas, el auto me hace un ruido raro al frenar'},
+            {s:'bot',d:2200,t:'Hola Lucas! Puede ser pastillas o discos. Revision de frenos $25.000. Te agendo turno?',c:'blue'},
+            {s:'user',d:4000,t:'Si, lo antes posible por favor'},
+            {s:'bot',d:5800,t:'Mañana viernes 07/03 a las 9:00. Te confirmo!',c:'blue'}
+          ],
+          cierre: [
+            {s:'bot',d:600,t:'Lucas, revision de frenos $25.000. Link para confirmar:',c:'green',link:'Pagar seña con MercadoPago →'},
+            {s:'user',d:2800,t:'Pague la seña! Mañana llevo el auto'},
+            {s:'bot',d:4600,t:'Seña OK! Viernes 07/03, 9:00hs. Te esperamos con el vehiculo',c:'green'}
+          ],
+          postventa: [
+            {s:'bot',d:600,t:'Lucas! Como quedo el auto despues de la revision?',c:'amber'},
+            {s:'user',d:2400,t:'Impecable, no hace mas ruido!'},
+            {s:'bot',d:4000,t:'Genial! Del 1 al 5, como calificarias el servicio?',c:'amber'},
+            {s:'user',d:5400,t:'5, muy rapidos!'}
+          ],
+          reviews: [
+            {s:'bot',d:600,t:'Lucas, que bueno! Nos dejarias una reseña en Google?',c:'yellow',link:'Dejar reseña en Google →'},
+            {s:'user',d:3200,t:'Dale, ya la deje! Buen taller'},
+            {s:'bot',d:5000,t:'Gracias Lucas! Para lo que necesites',c:'yellow'}
+          ],
+          recordatorios: [
+            {s:'bot',d:800,t:'Lucas! Queda pendiente el saldo del service del 07/03 ($45.000). Link:',c:'indigo',link:'Pagar con MercadoPago →'},
+            {s:'user',d:3200,t:'Cierto! Lo pago ahora mismo'},
+            {s:'user',d:4400,t:'📎 Comprobante.pdf',file:true},
+            {s:'bot',d:5600,t:'Pago registrado! Gracias Lucas',c:'indigo'}
           ]
         }
       ];
