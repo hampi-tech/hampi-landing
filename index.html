@@ -584,7 +584,7 @@
           </div>
         </div>
 
-        <!-- Slide 1: RECORDATORIOS DE PAGO AUTOMATICOS -->
+        <!-- Slide 1: CIERRE DE VENTA -->
         <div class="sistema-slide transition-all duration-500 hidden" data-slide="1">
           <div class="grid md:grid-cols-2 gap-8 items-center">
             <div class="order-2 md:order-1">
@@ -592,27 +592,28 @@
                 <div class="flex items-center gap-3 mb-3 pb-3 border-b border-gray-100">
                   <div class="w-9 h-9 rounded-full bg-white shrink-0 flex items-center justify-center border border-gray-200 shadow-sm"><img src="logox.png" alt="HAMPI Bot" class="w-5 h-5 object-contain" width="40" height="32" loading="lazy"></div>
                   <div>
-                    <p class="font-semibold text-gray-900 text-sm">HAMPI Bot</p>
+                    <p class="font-semibold text-gray-900 text-sm">Cierre automatico</p>
                     <div class="chat-status flex items-center gap-1.5"><span class="w-2 h-2 bg-green-400 rounded-full animate-pulse"></span><span class="text-xs text-green-500 font-medium">En linea</span></div>
                   </div>
                 </div>
                 <div class="space-y-3 chat-messages flex-1 overflow-hidden">
-                  <div class="chat-bubble opacity-0" data-sender="bot" data-delay="800"><div class="flex items-start gap-2"><div class="bg-brand-50 rounded-2xl rounded-tl-sm px-4 py-2.5 max-w-[80%]"><p class="text-sm text-gray-700">Hola Juan! Tu cuota de febrero esta pendiente ($18.500). Te dejo el link para pagar rapido:</p><span class="text-sm text-brand-600 font-semibold mt-1 block">Pagar con MercadoPago →</span></div></div></div>
-                  <div class="chat-bubble opacity-0" data-sender="user" data-delay="3400"><div class="flex items-start gap-2 justify-end"><div class="bg-green-50 rounded-2xl rounded-tr-sm px-4 py-2.5"><p class="text-sm text-gray-700">Listo, ya pague!</p></div></div></div>
-                  <div class="chat-bubble opacity-0" data-sender="bot" data-delay="5200"><div class="flex items-start gap-2"><div class="bg-brand-50 rounded-2xl rounded-tl-sm px-4 py-2.5"><p class="text-sm text-gray-700">Confirmado! Pago de $18.500 registrado. Gracias Juan!</p></div></div></div>
+                  <div class="chat-bubble opacity-0" data-sender="user" data-delay="600"><div class="flex items-start gap-2 justify-end"><div class="bg-gray-100 rounded-2xl rounded-tr-sm px-4 py-2.5"><p class="text-sm text-gray-700">Quiero reservar para el sabado a las 10</p></div></div></div>
+                  <div class="chat-bubble opacity-0" data-sender="bot" data-delay="2200"><div class="flex items-start gap-2"><div class="bg-green-50 rounded-2xl rounded-tl-sm px-4 py-2.5 max-w-[80%]"><p class="text-sm text-gray-700">Perfecto! Sabado 01/03 a las 10:00. El turno tiene un costo de $8.500. Te dejo el link para confirmar:</p><span class="text-sm text-green-600 font-semibold mt-1 block">Pagar seña con MercadoPago →</span></div></div></div>
+                  <div class="chat-bubble opacity-0" data-sender="user" data-delay="4200"><div class="flex items-start gap-2 justify-end"><div class="bg-gray-100 rounded-2xl rounded-tr-sm px-4 py-2.5"><p class="text-sm text-gray-700">Listo, pague!</p></div></div></div>
+                  <div class="chat-bubble opacity-0" data-sender="bot" data-delay="5800"><div class="flex items-start gap-2"><div class="bg-green-50 rounded-2xl rounded-tl-sm px-4 py-2.5"><p class="text-sm text-gray-700">Pago confirmado! Tu turno esta reservado para el sabado 01/03 a las 10:00. Te envio recordatorio el viernes.</p></div></div></div>
                 </div>
-                                <div class="mt-4 text-center chat-badge opacity-0"><span class="inline-flex items-center gap-1 text-xs text-green-600 font-medium bg-green-50 px-3 py-1 rounded-full">Cobrado en 4 min · Sin intervencion humana</span></div>
+                <div class="mt-4 text-center chat-badge opacity-0"><span class="inline-flex items-center gap-1 text-xs text-green-600 font-medium bg-green-50 px-3 py-1 rounded-full">Venta cerrada en 2 min · Sin intervencion humana</span></div>
               </div>
             </div>
             <div class="order-1 md:order-2">
-              <div class="inline-flex items-center gap-2 bg-green-50 text-green-700 text-xs font-bold px-3 py-1 rounded-full mb-3 tracking-wide">RECORDATORIOS DE PAGO AUTOMATICOS</div>
-              <p class="text-gray-600 text-sm leading-relaxed mb-4">HAMPI detecta pagos pendientes, envia recordatorios por WhatsApp o email en el momento justo, genera links de pago de MercadoPago y hace seguimiento hasta que se cobra.</p>
+              <div class="inline-flex items-center gap-2 bg-green-50 text-green-700 text-xs font-bold px-3 py-1 rounded-full mb-3 tracking-wide">CIERRE DE VENTA</div>
+              <p class="text-gray-600 text-sm leading-relaxed mb-4">Cuando el cliente quiere comprar o reservar, HAMPI cierra la venta: genera el link de pago de MercadoPago, cobra y confirma. Sin que vos intervengas.</p>
               <ul class="space-y-2">
-                <li class="flex items-start gap-2.5 text-xs text-gray-700"><svg class="w-4 h-4 text-green-500 shrink-0 mt-0.5" fill="none" stroke="currentColor" viewBox="0 0 24 24"><path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M5 13l4 4L19 7"/></svg>Recordatorios escalonados — 3 tonos (amigable → firme → urgente) segun dias</li>
-                <li class="flex items-start gap-2.5 text-xs text-gray-700"><svg class="w-4 h-4 text-green-500 shrink-0 mt-0.5" fill="none" stroke="currentColor" viewBox="0 0 24 24"><path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M5 13l4 4L19 7"/></svg>Links de pago MercadoPago — pago 1 click + confirmacion automatica</li>
-                <li class="flex items-start gap-2.5 text-xs text-gray-700"><svg class="w-4 h-4 text-green-500 shrink-0 mt-0.5" fill="none" stroke="currentColor" viewBox="0 0 24 24"><path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M5 13l4 4L19 7"/></svg>Promesas de pago — seguimiento automatico si no se cumple</li>
-                <li class="flex items-start gap-2.5 text-xs text-gray-700"><svg class="w-4 h-4 text-green-500 shrink-0 mt-0.5" fill="none" stroke="currentColor" viewBox="0 0 24 24"><path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M5 13l4 4L19 7"/></svg>Priorizacion inteligente — segmenta por monto, antiguedad y respuesta</li>
-                <li class="flex items-start gap-2.5 text-xs text-gray-700"><svg class="w-4 h-4 text-green-500 shrink-0 mt-0.5" fill="none" stroke="currentColor" viewBox="0 0 24 24"><path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M5 13l4 4L19 7"/></svg>Reporte de recuperacion — resultados por periodo, cliente y canal</li>
+                <li class="flex items-start gap-2.5 text-xs text-gray-700"><svg class="w-4 h-4 text-green-500 shrink-0 mt-0.5" fill="none" stroke="currentColor" viewBox="0 0 24 24"><path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M5 13l4 4L19 7"/></svg>Link de pago automatico — MercadoPago 1 click, sin copiar datos</li>
+                <li class="flex items-start gap-2.5 text-xs text-gray-700"><svg class="w-4 h-4 text-green-500 shrink-0 mt-0.5" fill="none" stroke="currentColor" viewBox="0 0 24 24"><path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M5 13l4 4L19 7"/></svg>Confirmacion instantanea — el cliente recibe comprobante al pagar</li>
+                <li class="flex items-start gap-2.5 text-xs text-gray-700"><svg class="w-4 h-4 text-green-500 shrink-0 mt-0.5" fill="none" stroke="currentColor" viewBox="0 0 24 24"><path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M5 13l4 4L19 7"/></svg>Turnos y reservas — agenda, cobra seña y envia recordatorio</li>
+                <li class="flex items-start gap-2.5 text-xs text-gray-700"><svg class="w-4 h-4 text-green-500 shrink-0 mt-0.5" fill="none" stroke="currentColor" viewBox="0 0 24 24"><path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M5 13l4 4L19 7"/></svg>Venta directa — el cliente elige producto y paga sin salir de WhatsApp</li>
+                <li class="flex items-start gap-2.5 text-xs text-gray-700"><svg class="w-4 h-4 text-green-500 shrink-0 mt-0.5" fill="none" stroke="currentColor" viewBox="0 0 24 24"><path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M5 13l4 4L19 7"/></svg>Notificacion al duenio — te avisa cada venta cerrada en tiempo real</li>
               </ul>
             </div>
           </div>
@@ -681,8 +682,42 @@
           </div>
         </div>
 
-        <!-- Slide 4: FIDELIZACION INTELIGENTE -->
+        <!-- Slide 4: RECORDATORIOS DE PAGO (Enterprise) -->
         <div class="sistema-slide transition-all duration-500 hidden" data-slide="4">
+          <div class="grid md:grid-cols-2 gap-8 items-center">
+            <div class="order-2 md:order-1">
+              <div class="bg-white rounded-xl shadow-lg p-5 border border-gray-100 h-[380px] flex flex-col chat-live" data-chat="5">
+                <div class="flex items-center gap-3 mb-3 pb-3 border-b border-gray-100">
+                  <div class="w-9 h-9 rounded-full bg-white shrink-0 flex items-center justify-center border border-gray-200 shadow-sm"><img src="logox.png" alt="HAMPI Bot" class="w-5 h-5 object-contain" width="40" height="32" loading="lazy"></div>
+                  <div>
+                    <p class="font-semibold text-gray-900 text-sm">HAMPI Bot</p>
+                    <div class="chat-status flex items-center gap-1.5"><span class="w-2 h-2 bg-indigo-400 rounded-full animate-pulse"></span><span class="text-xs text-indigo-500 font-medium">Enterprise</span></div>
+                  </div>
+                </div>
+                <div class="space-y-3 chat-messages flex-1 overflow-hidden">
+                  <div class="chat-bubble opacity-0" data-sender="bot" data-delay="800"><div class="flex items-start gap-2"><div class="bg-indigo-50 rounded-2xl rounded-tl-sm px-4 py-2.5 max-w-[80%]"><p class="text-sm text-gray-700">Hola Juan! Tu cuota de febrero esta pendiente ($18.500). Te dejo el link para pagar rapido:</p><span class="text-sm text-indigo-600 font-semibold mt-1 block">Pagar con MercadoPago →</span></div></div></div>
+                  <div class="chat-bubble opacity-0" data-sender="user" data-delay="3400"><div class="flex items-start gap-2 justify-end"><div class="bg-green-50 rounded-2xl rounded-tr-sm px-4 py-2.5"><p class="text-sm text-gray-700">Listo, ya pague!</p></div></div></div>
+                  <div class="chat-bubble opacity-0" data-sender="bot" data-delay="5200"><div class="flex items-start gap-2"><div class="bg-indigo-50 rounded-2xl rounded-tl-sm px-4 py-2.5"><p class="text-sm text-gray-700">Confirmado! Pago de $18.500 registrado. Gracias Juan!</p></div></div></div>
+                </div>
+                <div class="mt-4 text-center chat-badge opacity-0"><span class="inline-flex items-center gap-1 text-xs text-indigo-600 font-medium bg-indigo-50 px-3 py-1 rounded-full">Cobrado en 4 min · Enterprise</span></div>
+              </div>
+            </div>
+            <div class="order-1 md:order-2">
+              <div class="inline-flex items-center gap-2 bg-indigo-50 text-indigo-700 text-xs font-bold px-3 py-1 rounded-full mb-3 tracking-wide">RECORDATORIOS DE PAGO <span class="text-indigo-400 font-normal ml-1">Enterprise</span></div>
+              <p class="text-gray-600 text-sm leading-relaxed mb-4">HAMPI detecta pagos pendientes, envia recordatorios por WhatsApp o email en el momento justo, genera links de pago de MercadoPago y hace seguimiento hasta que se cobra.</p>
+              <ul class="space-y-2">
+                <li class="flex items-start gap-2.5 text-xs text-gray-700"><svg class="w-4 h-4 text-indigo-500 shrink-0 mt-0.5" fill="none" stroke="currentColor" viewBox="0 0 24 24"><path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M5 13l4 4L19 7"/></svg>Recordatorios escalonados — 3 tonos (amigable → firme → urgente) segun dias</li>
+                <li class="flex items-start gap-2.5 text-xs text-gray-700"><svg class="w-4 h-4 text-indigo-500 shrink-0 mt-0.5" fill="none" stroke="currentColor" viewBox="0 0 24 24"><path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M5 13l4 4L19 7"/></svg>Links de pago MercadoPago — pago 1 click + confirmacion automatica</li>
+                <li class="flex items-start gap-2.5 text-xs text-gray-700"><svg class="w-4 h-4 text-indigo-500 shrink-0 mt-0.5" fill="none" stroke="currentColor" viewBox="0 0 24 24"><path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M5 13l4 4L19 7"/></svg>Promesas de pago — seguimiento automatico si no se cumple</li>
+                <li class="flex items-start gap-2.5 text-xs text-gray-700"><svg class="w-4 h-4 text-indigo-500 shrink-0 mt-0.5" fill="none" stroke="currentColor" viewBox="0 0 24 24"><path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M5 13l4 4L19 7"/></svg>Priorizacion inteligente — segmenta por monto, antiguedad y respuesta</li>
+                <li class="flex items-start gap-2.5 text-xs text-gray-700"><svg class="w-4 h-4 text-indigo-500 shrink-0 mt-0.5" fill="none" stroke="currentColor" viewBox="0 0 24 24"><path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M5 13l4 4L19 7"/></svg>Reporte de recuperacion — resultados por periodo, cliente y canal</li>
+              </ul>
+            </div>
+          </div>
+        </div>
+
+        <!-- Slide 5: FIDELIZACION INTELIGENTE (Enterprise) -->
+        <div class="sistema-slide transition-all duration-500 hidden" data-slide="5">
           <div class="grid md:grid-cols-2 gap-8 items-center">
             <div>
               <div class="inline-flex items-center gap-2 bg-purple-50 text-purple-700 text-xs font-bold px-3 py-1 rounded-full mb-3 tracking-wide">FIDELIZACION INTELIGENTE</div>
@@ -738,6 +773,7 @@
           <span class="sistema-dot w-2 h-2 rounded-full bg-gray-300 transition-all cursor-pointer" onclick="goSlide(2)"></span>
           <span class="sistema-dot w-2 h-2 rounded-full bg-gray-300 transition-all cursor-pointer" onclick="goSlide(3)"></span>
           <span class="sistema-dot w-2 h-2 rounded-full bg-gray-300 transition-all cursor-pointer" onclick="goSlide(4)"></span>
+          <span class="sistema-dot w-2 h-2 rounded-full bg-gray-300 transition-all cursor-pointer" onclick="goSlide(5)"></span>
         </div>
         <button onclick="nextSlide()" class="w-8 h-8 rounded-full border border-gray-200 bg-white hover:bg-gray-50 flex items-center justify-center transition-colors" aria-label="Siguiente">
           <svg class="w-4 h-4 text-gray-400" fill="none" stroke="currentColor" viewBox="0 0 24 24"><path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M9 5l7 7-7 7"/></svg>
@@ -1064,7 +1100,7 @@
 
     // === Sistema Carousel ===
     (function(){
-      var TOTAL = 5;
+      var TOTAL = 6;
       var AUTO_MS = 9000;
       var cur = 0;
       var timer = null;
