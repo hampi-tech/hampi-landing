@@ -95,6 +95,41 @@
     @keyframes slideUp{from{opacity:0;transform:translateY(12px)}to{opacity:1;transform:translateY(0)}}
     .chat-bubble.show[data-sender="user"]{animation:slideUp .35s ease forwards}
     .chat-bubble.show[data-sender="bot"]{animation:slideUp .4s cubic-bezier(.34,1.56,.64,1) forwards}
+    /* === iPhone mockup === */
+    .phone-frame{position:relative;width:100%;max-width:300px;margin:0 auto;background:linear-gradient(145deg,#2a2a2a 0%,#1a1a1a 40%,#222 100%);border-radius:48px;padding:10px;box-shadow:0 30px 80px rgba(0,0,0,.35),0 0 0 1px #444,inset 0 1px 0 rgba(255,255,255,.06),inset 0 0 0 1px rgba(255,255,255,.04)}
+    .phone-frame::before{content:'';position:absolute;right:-3px;top:140px;width:3px;height:56px;background:linear-gradient(180deg,#555,#404040,#555);border-radius:0 2px 2px 0;z-index:5}
+    .phone-frame::after{content:'';position:absolute;left:-3px;top:100px;width:3px;height:18px;background:linear-gradient(180deg,#555,#404040,#555);border-radius:2px 0 0 2px;z-index:5}
+    .phone-frame .vol-btns{position:absolute;left:-3px;top:0;width:3px;height:100%;z-index:5;pointer-events:none}
+    .phone-frame .vol-btns::before{content:'';position:absolute;left:0;top:135px;width:3px;height:36px;background:linear-gradient(180deg,#555,#404040,#555);border-radius:2px 0 0 2px}
+    .phone-frame .vol-btns::after{content:'';position:absolute;left:0;top:179px;width:3px;height:36px;background:linear-gradient(180deg,#555,#404040,#555);border-radius:2px 0 0 2px}
+    .phone-screen{position:relative;border-radius:38px;overflow:hidden;background:#ECE5DD;height:580px;display:flex;flex-direction:column}
+    .phone-screen::before{content:'';position:absolute;top:0;left:0;right:0;bottom:0;pointer-events:none;z-index:30;border-radius:38px;box-shadow:inset 0 0 0 .5px rgba(255,255,255,.08)}
+    .phone-dynamic-island{position:absolute;top:10px;left:50%;transform:translateX(-50%);width:84px;height:22px;background:#000;border-radius:20px;z-index:25;display:flex;align-items:center;justify-content:center;gap:8px}
+    .phone-dynamic-island::before{content:'';width:7px;height:7px;background:radial-gradient(circle,#1a3a4a 20%,#0d1b24 80%);border-radius:50%;box-shadow:0 0 3px rgba(30,120,180,.3)}
+    .phone-dynamic-island::after{content:'';width:3.5px;height:3.5px;background:#111;border-radius:50%}
+    .phone-statusbar{display:flex;justify-content:space-between;align-items:center;padding:14px 22px 0;height:48px;background:#075E54;color:#fff;font-size:12px;font-weight:600;z-index:10;position:relative;letter-spacing:.02em}
+    .phone-statusbar-icons{display:flex;gap:5px;align-items:center}
+    .wa-header{display:flex;align-items:center;gap:8px;padding:7px 10px 8px;background:#075E54;color:#fff;position:relative;z-index:10}
+    .wa-header-back{width:20px;height:20px;opacity:.9}
+    .wa-header-avatar{width:34px;height:34px;border-radius:50%;overflow:hidden;flex-shrink:0;border:1.5px solid rgba(255,255,255,.15)}
+    .wa-header-avatar img{width:34px;height:34px;object-fit:cover}
+    .wa-header-name{font-size:14.5px;font-weight:600;line-height:1.2}
+    .wa-header-status{font-size:11px;opacity:.85;font-weight:400}
+    .wa-header-icons{margin-left:auto;display:flex;gap:16px;align-items:center;opacity:.85}
+    .wa-messages{flex:1;overflow:hidden;padding:12px 10px 6px;display:flex;flex-direction:column;gap:6px;background:#ECE5DD url("data:image/svg+xml,%3Csvg width='400' height='400' viewBox='0 0 400 400' xmlns='http://www.w3.org/2000/svg'%3E%3Cg fill='%23c8c3b8' fill-opacity='.06'%3E%3Ccircle cx='50' cy='50' r='3'/%3E%3Ccircle cx='150' cy='100' r='2'/%3E%3Ccircle cx='300' cy='60' r='2.5'/%3E%3Ccircle cx='80' cy='200' r='2'/%3E%3Ccircle cx='250' cy='250' r='3'/%3E%3Ccircle cx='350' cy='180' r='2'/%3E%3Ccircle cx='120' cy='330' r='2.5'/%3E%3Ccircle cx='300' cy='350' r='2'/%3E%3C/g%3E%3C/svg%3E")}
+    .wa-inputbar{display:flex;align-items:center;gap:5px;padding:4px 6px;background:#F0F0F0}
+    .wa-input-wrap{flex:1;display:flex;align-items:center;gap:6px;background:#fff;border-radius:22px;padding:7px 10px}
+    .wa-input-text{flex:1;font-size:12px;color:#999}
+    .wa-send-btn{width:36px;height:36px;border-radius:50%;background:#25D366;display:flex;align-items:center;justify-content:center;flex-shrink:0}
+    .wa-home-bar{width:120px;height:4px;background:rgba(0,0,0,.18);border-radius:4px;margin:6px auto 2px}
+    /* WA-style bubbles */
+    .wa-bubble-user{background:#DCF8C6;border-radius:8px 2px 8px 8px;padding:6px 10px 16px;max-width:82%;margin-left:auto;position:relative;box-shadow:0 1px 1px rgba(0,0,0,.08)}
+    .wa-bubble-bot{background:#fff;border-radius:2px 8px 8px 8px;padding:6px 10px 16px;max-width:82%;position:relative;box-shadow:0 1px 1px rgba(0,0,0,.08)}
+    .wa-bubble-user p,.wa-bubble-bot p{font-size:12.5px;line-height:1.4;color:#303030;margin:0}
+    .wa-bubble-time{position:absolute;bottom:3px;right:8px;font-size:9px;color:#999}
+    .wa-bubble-link{display:block;font-size:12px;color:#075E54;font-weight:600;margin-top:3px}
+    .wa-bubble-file{background:#E3F0D5;border:1px solid #b8dfab}
+    @media(max-width:639px){.phone-frame{max-width:300px;border-radius:42px;padding:8px}.phone-screen{height:540px;border-radius:34px}.phone-dynamic-island{width:70px;height:18px;top:8px}.wa-bubble-user p,.wa-bubble-bot p{font-size:11.5px}.wa-bubble-user,.wa-bubble-bot{padding:5px 8px 14px;max-width:85%}.wa-header-icons{gap:10px}.wa-header-icons svg{width:15px;height:15px}#orch-agents{gap:6px!important}#orch-agents .orch-agent{padding:5px 2px!important;min-width:calc(33% - 6px);flex:0 0 auto}.orch-agent p{font-size:7px!important;letter-spacing:.02em!important;white-space:nowrap}}
     /* Panel retention animations */
     .panel-row{transition:opacity .4s ease,transform .4s cubic-bezier(.34,1.56,.64,1);transform:translateX(-20px)}
     .panel-row.show{opacity:1!important;transform:translateX(0)}
@@ -317,7 +352,7 @@
     <div class="max-w-6xl mx-auto px-4 sm:px-6">
       <div class="mb-14 reveal">
         <p class="text-brand-600 font-semibold text-sm uppercase tracking-wider mb-4 text-center">¿Que es HAMPI?</p>
-        <p class="text-gray-500 text-sm sm:text-base leading-relaxed text-justify">HAMPI no es un chatbot aislado ni una herramienta mas: es un sistema integral que conecta atencion al cliente, recordatorios de pago y fidelizacion en un unico flujo inteligente, pensado para PyMEs argentinas que necesitan orden operativo sin sumar personal. Opera a traves de WhatsApp con API oficial y plantillas aprobadas por Meta, email y SMS, adaptando el canal y el momento al perfil de cada cliente. Cuando un pago esta pendiente, envia recordatorios automaticos con link directo de MercadoPago y confirma el cobro en tiempo real — sin que vos ni tu equipo tengan que intervenir. Si la situacion requiere atencion humana, el sistema escala la conversacion con todo el contexto previo para que no se pierda nada. En paralelo, analiza patrones de comportamiento para detectar clientes en riesgo de baja y activar acciones de retencion antes de que sea tarde. Todo queda registrado en un dashboard con metricas: tasa de respuesta, pagos recuperados y clientes retenidos.</p>
+        <p class="text-gray-500 text-sm sm:text-base leading-relaxed text-justify">HAMPI no es un chatbot aislado ni una herramienta mas: es un sistema integral de atencion, ventas y seguimiento post-venta con inteligencia artificial, pensado para PyMEs argentinas que necesitan escalar sin sumar personal. Opera a traves de WhatsApp con API oficial de Meta, respondiendo consultas, cerrando ventas con cobro directo por MercadoPago y haciendo seguimiento post-venta de cada cliente — todo automatico, 24/7. Cuando la conversacion lo requiere, solicita reseñas en Google para potenciar tu reputacion online de forma organica. Si la situacion necesita atencion humana, el sistema escala la conversacion con todo el contexto previo para que no se pierda nada. Proximamente se incorporan modulos de recordatorios de pago automaticos y fidelizacion inteligente para recuperar clientes inactivos. Todo queda registrado en un dashboard con metricas en tiempo real: conversaciones atendidas, ventas cerradas, reseñas obtenidas y clientes recuperados.</p>
       </div>
 
       <!-- ===== ORQUESTACION VISUAL ===== -->
@@ -465,7 +500,7 @@
         <div class="hidden sm:flex justify-end mb-0" style="padding-right:0">
           <div class="flex items-center gap-1" style="width:calc(2/6 * 100% - 2px)">
             <div class="flex-1 h-px bg-indigo-200"></div>
-            <span class="text-[8px] font-bold text-indigo-400 uppercase tracking-[.15em] whitespace-nowrap">Enterprise</span>
+            <span class="text-[8px] font-bold text-indigo-400 uppercase tracking-[.15em] whitespace-nowrap">Proximamente</span>
             <div class="flex-1 h-px bg-indigo-200"></div>
           </div>
         </div>
@@ -501,8 +536,8 @@
           {t:'Cliente: "Quiero reservar para el sabado"',a:1,r:'Agenda turno, cobra seña y confirma',c:'#16a34a',ic:MP,bg:'#16a34a',lb:'Mensaje entrante',g:'pro'},
           {t:'Pago confirmado: $5.000 de cliente',a:2,r:'Agradece al cliente y le pide feedback',c:'#d97706',ic:THUMB,bg:'#d97706',lb:'Mensaje entrante',g:'pro'},
           {t:'Cliente responde: "Todo genial, 5/5"',a:3,r:'Le envia link para dejar reseña en Google',c:'#ca8a04',ic:GMAP,bg:'#4285f4',lb:'Mensaje entrante',g:'pro'},
-          {t:'Cuota de cliente vencida hace 3 dias',a:4,r:'Envia recordatorio + link de MercadoPago',c:'#4f46e5',ic:MP,bg:'#4f46e5',lb:'Enterprise',g:'ent'},
-          {t:'Cliente: 30 dias sin actividad',a:5,r:'Le ofrece volver con beneficio exclusivo',c:'#7c3aed',ic:GIFT,bg:'#7c3aed',lb:'Enterprise',g:'ent'}
+          {t:'Cuota de cliente vencida hace 3 dias',a:4,r:'Envia recordatorio + link de MercadoPago',c:'#4f46e5',ic:MP,bg:'#4f46e5',lb:'Proximamente',g:'ent'},
+          {t:'Cliente: 30 dias sin actividad',a:5,r:'Le ofrece volver con beneficio exclusivo',c:'#7c3aed',ic:GIFT,bg:'#7c3aed',lb:'Proximamente',g:'ent'}
         ];
         var i=0,agents=document.querySelectorAll('#orch-agents .orch-agent'),
             tEl=document.getElementById('orch-trigger'),
@@ -561,8 +596,8 @@
           {t:'Cierre',d:'Cuando el cliente quiere comprar, HAMPI cierra la venta: genera link de pago de MercadoPago, cobra y confirma. Sin intervencion humana.'},
           {t:'Post-venta',d:'Despues de cada pago, HAMPI agradece automaticamente, confirma el pago y solicita feedback sobre el servicio.'},
           {t:'Reseñas Google',d:'Detecta clientes satisfechos y les envia el link directo para dejar una reseña en Google Maps. Aumenta tu reputacion online.'},
-          {t:'Recordatorios (Enterprise)',d:'Detecta pagos pendientes y envia recordatorios escalonados con link de MercadoPago. Seguimiento automatico hasta que se cobra.'},
-          {t:'Fidelizacion (Enterprise)',d:'Identifica clientes inactivos y les ofrece volver con beneficios exclusivos. Reactiva clientes perdidos automaticamente.'}
+          {t:'Recordatorios (Proximamente)',d:'Detecta pagos pendientes y envia recordatorios escalonados con link de MercadoPago. Seguimiento automatico hasta que se cobra.'},
+          {t:'Fidelizacion (Proximamente)',d:'Identifica clientes inactivos y les ofrece volver con beneficios exclusivos. Reactiva clientes perdidos automaticamente.'}
         ];
         if(infoEl){
           agents.forEach(function(a,j){
@@ -624,7 +659,7 @@
 
   <!-- ===== 2. EL SISTEMA — CARRUSEL 5 ETAPAS ===== -->
   <section id="sistema" class="py-20 bg-gray-50">
-    <div class="max-w-6xl mx-auto px-4 sm:px-6">
+    <div class="max-w-4xl mx-auto px-4 sm:px-6">
       <div class="text-center mb-8 reveal">
         <p class="text-brand-600 font-semibold text-xs uppercase tracking-wider">El sistema</p>
       </div>
@@ -635,7 +670,7 @@
 
         <!-- Slide 0: ATENCION Y VENTAS CON IA -->
         <div class="sistema-slide transition-all duration-500" data-slide="0">
-          <div class="grid md:grid-cols-2 gap-8 items-center">
+          <div class="grid md:grid-cols-2 gap-5 items-center">
             <div>
               <div class="inline-flex items-center gap-2 bg-blue-50 text-blue-700 text-xs font-bold px-3 py-1 rounded-full mb-3 tracking-wide">ATENCION Y VENTAS CON IA</div>
               <p class="text-gray-600 text-sm leading-relaxed mb-4">IA que entiende contexto, responde consultas, vende desde tu catalogo, agenda turnos y escala a un humano solo cuando es necesario.</p>
@@ -647,36 +682,44 @@
                 <li class="flex items-start gap-2.5 text-xs text-gray-700"><svg class="w-4 h-4 text-blue-500 shrink-0 mt-0.5" fill="none" stroke="currentColor" viewBox="0 0 24 24"><path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M5 13l4 4L19 7"/></svg>WABA propio — opera desde el numero WhatsApp de tu negocio</li>
               </ul>
             </div>
-            <div class="bg-white rounded-xl shadow-lg p-5 border border-gray-100 h-[380px] flex flex-col chat-live" data-chat="1">
-              <div class="flex items-center gap-3 mb-3 pb-3 border-b border-gray-100">
-                <div class="w-9 h-9 rounded-full bg-white shrink-0 flex items-center justify-center border border-gray-200 shadow-sm"><img src="logox.png" alt="HAMPI Bot" class="w-5 h-5 object-contain" width="40" height="32" loading="lazy"></div>
-                <div>
-                  <p class="font-semibold text-gray-900 text-sm">Atencion automatica</p>
-                  <div class="chat-status flex items-center gap-1.5"><span class="w-2 h-2 bg-green-400 rounded-full animate-pulse"></span><span class="text-xs text-green-500 font-medium">En linea</span></div>
+            <div class="phone-frame chat-live" data-chat="1">
+              <div class="vol-btns"></div><div class="phone-screen">
+                <div class="phone-dynamic-island"></div>
+                <div class="phone-statusbar"><span>9:41</span><span class="phone-statusbar-icons"><svg width="15" height="10" fill="none" viewBox="0 0 18 12"><path d="M1 8.5a7.5 7.5 0 0114 0" stroke="#fff" stroke-width="1.5" stroke-linecap="round" fill="none"/><path d="M4.5 11a4 4 0 017 0" stroke="#fff" stroke-width="1.5" stroke-linecap="round"/><circle cx="8" cy="12" r="1" fill="#fff"/></svg><svg width="16" height="10" fill="#fff" viewBox="0 0 20 12"><rect x="1" y="3" width="2.5" height="9" rx="0.5"/><rect x="5" y="2" width="2.5" height="10" rx="0.5"/><rect x="9" y="1" width="2.5" height="11" rx="0.5"/><rect x="13" y="0" width="2.5" height="12" rx="0.5"/></svg><svg width="22" height="11" viewBox="0 0 27 13" fill="none"><rect x=".5" y=".5" width="23" height="12" rx="2.5" stroke="#fff" stroke-opacity=".4"/><rect x="24.5" y="3.5" width="2" height="6" rx="1" fill="#fff" fill-opacity=".5"/><rect x="2" y="2" width="19" height="9" rx="1.5" fill="#fff"/></svg></span></div>
+                <div class="wa-header">
+                  <svg class="wa-header-back" viewBox="0 0 24 24" fill="none" stroke="#fff" stroke-width="2"><path d="M19 12H5M12 19l-7-7 7-7"/></svg>
+                  <div class="wa-header-avatar"><img src="hampi_wa_profile2.jpg" alt="Hampi" width="34" height="34" loading="lazy"></div>
+                  <div><div class="wa-header-name">Hampi</div><div class="wa-header-status">en linea</div></div>
+                  <div class="wa-header-icons"><svg width="18" height="18" fill="none" viewBox="0 0 24 24"><path d="M15 10l4.553-2.276A1 1 0 0121 8.618v6.764a1 1 0 01-1.447.894L15 14M5 18h8a2 2 0 002-2V8a2 2 0 00-2-2H5a2 2 0 00-2 2v8a2 2 0 002 2z" stroke="#fff" stroke-width="1.5" stroke-linecap="round" stroke-linejoin="round"/></svg><svg width="18" height="18" fill="none" viewBox="0 0 24 24"><path d="M3 5a2 2 0 012-2h3.28a1 1 0 01.948.684l1.498 4.493a1 1 0 01-.502 1.21l-2.257 1.13a11.042 11.042 0 005.516 5.516l1.13-2.257a1 1 0 011.21-.502l4.493 1.498a1 1 0 01.684.949V19a2 2 0 01-2 2h-1C9.716 21 3 14.284 3 6V5z" stroke="#fff" stroke-width="1.5" stroke-linecap="round" stroke-linejoin="round"/></svg><svg width="18" height="18" fill="#fff" viewBox="0 0 24 24"><circle cx="12" cy="5" r="2"/><circle cx="12" cy="12" r="2"/><circle cx="12" cy="19" r="2"/></svg></div>
                 </div>
+                <div class="wa-messages chat-messages" id="chat-atencion"></div>
+                <div class="mt-1 text-center chat-badge opacity-0" style="background:#ECE5DD;padding:2px 0"><span class="inline-flex items-center gap-1 text-[10px] text-blue-500 font-medium bg-blue-50/70 px-2 py-0.5 rounded-full">Respuesta en 8 seg · IA contextual</span></div>
+                <div class="wa-inputbar"><div class="wa-input-wrap"><svg width="18" height="18" fill="#919191" viewBox="0 0 24 24"><path d="M12 2C6.48 2 2 6.48 2 12s4.48 10 10 10 10-4.48 10-10S17.52 2 12 2zm0 18c-4.41 0-8-3.59-8-8s3.59-8 8-8 8 3.59 8 8-3.59 8-8 8zm-4-8c.79 0 1.5-.71 1.5-1.5S8.79 9 8 9s-1.5.71-1.5 1.5S7.21 12 8 12zm8 0c.79 0 1.5-.71 1.5-1.5S16.79 9 16 9s-1.5.71-1.5 1.5.71 1.5 1.5 1.5zm-4 5.5c2.33 0 4.31-1.46 5.11-3.5H6.89c.8 2.04 2.78 3.5 5.11 3.5z"/></svg><span class="wa-input-text">Escribe un mensaje</span><svg width="18" height="18" fill="#919191" viewBox="0 0 24 24"><path d="M21.44 11.05l-9.19 9.19a6 6 0 01-8.49-8.49l9.19-9.19a4 4 0 015.66 5.66l-9.2 9.19a2 2 0 01-2.83-2.83l8.49-8.48" stroke="#919191" stroke-width="1.5" fill="none" stroke-linecap="round"/></svg><svg width="18" height="18" fill="#919191" viewBox="0 0 24 24"><path d="M23 19a2 2 0 01-2 2H3a2 2 0 01-2-2V8a2 2 0 012-2h4l2-3h6l2 3h4a2 2 0 012 2z" stroke="#919191" stroke-width="1.5" fill="none"/><circle cx="12" cy="13" r="4" stroke="#919191" stroke-width="1.5" fill="none"/></svg></div><div class="wa-send-btn"><svg width="18" height="18" fill="#fff" viewBox="0 0 24 24"><path d="M12 14c1.66 0 3-1.34 3-3V5c0-1.66-1.34-3-3-3S9 3.34 9 5v6c0 1.66 1.34 3 3 3zm5-3c0 2.76-2.24 5-5 5s-5-2.24-5-5H5c0 3.53 2.61 6.43 6 6.92V21h2v-3.08c3.39-.49 6-3.39 6-6.92h-2z"/></svg></div></div>
+                <div class="wa-home-bar"></div>
               </div>
-              <div class="space-y-3 chat-messages flex-1 overflow-hidden" id="chat-atencion">
-              </div>
-                            <div class="mt-1 text-center chat-badge opacity-0"><span class="inline-flex items-center gap-1 text-[10px] text-blue-500 font-medium bg-blue-50/70 px-2 py-0.5 rounded-full">Respuesta en 8 seg · IA contextual</span></div>
             </div>
           </div>
         </div>
 
         <!-- Slide 1: CIERRE DE VENTA -->
         <div class="sistema-slide transition-all duration-500 hidden" data-slide="1">
-          <div class="grid md:grid-cols-2 gap-8 items-center">
+          <div class="grid md:grid-cols-2 gap-5 items-center">
             <div class="order-2 md:order-1">
-              <div class="bg-white rounded-xl shadow-lg p-5 border border-gray-100 h-[380px] flex flex-col chat-live" data-chat="2">
-                <div class="flex items-center gap-3 mb-3 pb-3 border-b border-gray-100">
-                  <div class="w-9 h-9 rounded-full bg-white shrink-0 flex items-center justify-center border border-gray-200 shadow-sm"><img src="logox.png" alt="HAMPI Bot" class="w-5 h-5 object-contain" width="40" height="32" loading="lazy"></div>
-                  <div>
-                    <p class="font-semibold text-gray-900 text-sm">Cierre automatico</p>
-                    <div class="chat-status flex items-center gap-1.5"><span class="w-2 h-2 bg-green-400 rounded-full animate-pulse"></span><span class="text-xs text-green-500 font-medium">En linea</span></div>
+              <div class="phone-frame chat-live" data-chat="2">
+                <div class="vol-btns"></div><div class="phone-screen">
+                  <div class="phone-dynamic-island"></div>
+                  <div class="phone-statusbar"><span>9:41</span><span class="phone-statusbar-icons"><svg width="15" height="10" fill="none" viewBox="0 0 18 12"><path d="M1 8.5a7.5 7.5 0 0114 0" stroke="#fff" stroke-width="1.5" stroke-linecap="round" fill="none"/><path d="M4.5 11a4 4 0 017 0" stroke="#fff" stroke-width="1.5" stroke-linecap="round"/><circle cx="8" cy="12" r="1" fill="#fff"/></svg><svg width="16" height="10" fill="#fff" viewBox="0 0 20 12"><rect x="1" y="3" width="2.5" height="9" rx="0.5"/><rect x="5" y="2" width="2.5" height="10" rx="0.5"/><rect x="9" y="1" width="2.5" height="11" rx="0.5"/><rect x="13" y="0" width="2.5" height="12" rx="0.5"/></svg><svg width="22" height="11" viewBox="0 0 27 13" fill="none"><rect x=".5" y=".5" width="23" height="12" rx="2.5" stroke="#fff" stroke-opacity=".4"/><rect x="24.5" y="3.5" width="2" height="6" rx="1" fill="#fff" fill-opacity=".5"/><rect x="2" y="2" width="19" height="9" rx="1.5" fill="#fff"/></svg></span></div>
+                  <div class="wa-header">
+                    <svg class="wa-header-back" viewBox="0 0 24 24" fill="none" stroke="#fff" stroke-width="2"><path d="M19 12H5M12 19l-7-7 7-7"/></svg>
+                    <div class="wa-header-avatar"><img src="hampi_wa_profile2.jpg" alt="Hampi" width="34" height="34" loading="lazy"></div>
+                    <div><div class="wa-header-name">Hampi</div><div class="wa-header-status">en linea</div></div>
+                    <div class="wa-header-icons"><svg width="18" height="18" fill="none" viewBox="0 0 24 24"><path d="M15 10l4.553-2.276A1 1 0 0121 8.618v6.764a1 1 0 01-1.447.894L15 14M5 18h8a2 2 0 002-2V8a2 2 0 00-2-2H5a2 2 0 00-2 2v8a2 2 0 002 2z" stroke="#fff" stroke-width="1.5" stroke-linecap="round" stroke-linejoin="round"/></svg><svg width="18" height="18" fill="none" viewBox="0 0 24 24"><path d="M3 5a2 2 0 012-2h3.28a1 1 0 01.948.684l1.498 4.493a1 1 0 01-.502 1.21l-2.257 1.13a11.042 11.042 0 005.516 5.516l1.13-2.257a1 1 0 011.21-.502l4.493 1.498a1 1 0 01.684.949V19a2 2 0 01-2 2h-1C9.716 21 3 14.284 3 6V5z" stroke="#fff" stroke-width="1.5" stroke-linecap="round" stroke-linejoin="round"/></svg><svg width="18" height="18" fill="#fff" viewBox="0 0 24 24"><circle cx="12" cy="5" r="2"/><circle cx="12" cy="12" r="2"/><circle cx="12" cy="19" r="2"/></svg></div>
                   </div>
+                  <div class="wa-messages chat-messages" id="chat-cierre"></div>
+                  <div class="mt-1 text-center chat-badge opacity-0" style="background:#ECE5DD;padding:2px 0"><span class="inline-flex items-center gap-1 text-[10px] text-green-500 font-medium bg-green-50/70 px-2 py-0.5 rounded-full">Venta cerrada en 2 min · Sin intervencion humana</span></div>
+                  <div class="wa-inputbar"><div class="wa-input-wrap"><svg width="18" height="18" fill="#919191" viewBox="0 0 24 24"><path d="M12 2C6.48 2 2 6.48 2 12s4.48 10 10 10 10-4.48 10-10S17.52 2 12 2zm0 18c-4.41 0-8-3.59-8-8s3.59-8 8-8 8 3.59 8 8-3.59 8-8 8zm-4-8c.79 0 1.5-.71 1.5-1.5S8.79 9 8 9s-1.5.71-1.5 1.5S7.21 12 8 12zm8 0c.79 0 1.5-.71 1.5-1.5S16.79 9 16 9s-1.5.71-1.5 1.5.71 1.5 1.5 1.5zm-4 5.5c2.33 0 4.31-1.46 5.11-3.5H6.89c.8 2.04 2.78 3.5 5.11 3.5z"/></svg><span class="wa-input-text">Escribe un mensaje</span><svg width="18" height="18" fill="#919191" viewBox="0 0 24 24"><path d="M21.44 11.05l-9.19 9.19a6 6 0 01-8.49-8.49l9.19-9.19a4 4 0 015.66 5.66l-9.2 9.19a2 2 0 01-2.83-2.83l8.49-8.48" stroke="#919191" stroke-width="1.5" fill="none" stroke-linecap="round"/></svg><svg width="18" height="18" fill="#919191" viewBox="0 0 24 24"><path d="M23 19a2 2 0 01-2 2H3a2 2 0 01-2-2V8a2 2 0 012-2h4l2-3h6l2 3h4a2 2 0 012 2z" stroke="#919191" stroke-width="1.5" fill="none"/><circle cx="12" cy="13" r="4" stroke="#919191" stroke-width="1.5" fill="none"/></svg></div><div class="wa-send-btn"><svg width="18" height="18" fill="#fff" viewBox="0 0 24 24"><path d="M12 14c1.66 0 3-1.34 3-3V5c0-1.66-1.34-3-3-3S9 3.34 9 5v6c0 1.66 1.34 3 3 3zm5-3c0 2.76-2.24 5-5 5s-5-2.24-5-5H5c0 3.53 2.61 6.43 6 6.92V21h2v-3.08c3.39-.49 6-3.39 6-6.92h-2z"/></svg></div></div>
+                <div class="wa-home-bar"></div>
                 </div>
-                <div class="space-y-3 chat-messages flex-1 overflow-hidden" id="chat-cierre">
-                </div>
-                <div class="mt-1 text-center chat-badge opacity-0"><span class="inline-flex items-center gap-1 text-[10px] text-green-500 font-medium bg-green-50/70 px-2 py-0.5 rounded-full">Venta cerrada en 2 min · Sin intervencion humana</span></div>
               </div>
             </div>
             <div class="order-1 md:order-2">
@@ -695,7 +738,7 @@
 
         <!-- Slide 2: SEGUIMIENTO POST-VENTA -->
         <div class="sistema-slide transition-all duration-500 hidden" data-slide="2">
-          <div class="grid md:grid-cols-2 gap-8 items-center">
+          <div class="grid md:grid-cols-2 gap-5 items-center">
             <div>
               <div class="inline-flex items-center gap-2 bg-amber-50 text-amber-700 text-xs font-bold px-3 py-1 rounded-full mb-3 tracking-wide">SEGUIMIENTO POST-VENTA</div>
               <p class="text-gray-600 text-sm leading-relaxed mb-4">Despues de cada pago, HAMPI activa un flujo automatico: agradece, pide feedback y mide la satisfaccion de tu cliente.</p>
@@ -707,32 +750,44 @@
                 <li class="flex items-start gap-2.5 text-xs text-gray-700"><svg class="w-4 h-4 text-amber-500 shrink-0 mt-0.5" fill="none" stroke="currentColor" viewBox="0 0 24 24"><path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M5 13l4 4L19 7"/></svg>Timing configurable — vos elegis cuando se envia cada paso</li>
               </ul>
             </div>
-            <div class="bg-white rounded-xl shadow-lg p-5 border border-gray-100 h-[380px] flex flex-col chat-live" data-chat="3">
-              <div class="flex items-center gap-3 mb-3 pb-3 border-b border-gray-100">
-                <div class="w-9 h-9 rounded-full bg-white shrink-0 flex items-center justify-center border border-gray-200 shadow-sm"><img src="logox.png" alt="HAMPI Bot" class="w-5 h-5 object-contain" width="40" height="32" loading="lazy"></div>
-                <div><p class="font-semibold text-gray-900 text-sm">Post-venta</p><div class="chat-status flex items-center gap-1.5"><span class="w-2 h-2 bg-amber-400 rounded-full animate-pulse"></span><span class="text-xs text-amber-500 font-medium">Automatico</span></div></div>
-                <div class="ml-auto text-xs text-gray-300 chat-time"></div>
+            <div class="phone-frame chat-live" data-chat="3">
+              <div class="vol-btns"></div><div class="phone-screen">
+                <div class="phone-dynamic-island"></div>
+                <div class="phone-statusbar"><span>9:41</span><span class="phone-statusbar-icons"><svg width="15" height="10" fill="none" viewBox="0 0 18 12"><path d="M1 8.5a7.5 7.5 0 0114 0" stroke="#fff" stroke-width="1.5" stroke-linecap="round" fill="none"/><path d="M4.5 11a4 4 0 017 0" stroke="#fff" stroke-width="1.5" stroke-linecap="round"/><circle cx="8" cy="12" r="1" fill="#fff"/></svg><svg width="16" height="10" fill="#fff" viewBox="0 0 20 12"><rect x="1" y="3" width="2.5" height="9" rx="0.5"/><rect x="5" y="2" width="2.5" height="10" rx="0.5"/><rect x="9" y="1" width="2.5" height="11" rx="0.5"/><rect x="13" y="0" width="2.5" height="12" rx="0.5"/></svg><svg width="22" height="11" viewBox="0 0 27 13" fill="none"><rect x=".5" y=".5" width="23" height="12" rx="2.5" stroke="#fff" stroke-opacity=".4"/><rect x="24.5" y="3.5" width="2" height="6" rx="1" fill="#fff" fill-opacity=".5"/><rect x="2" y="2" width="19" height="9" rx="1.5" fill="#fff"/></svg></span></div>
+                <div class="wa-header">
+                  <svg class="wa-header-back" viewBox="0 0 24 24" fill="none" stroke="#fff" stroke-width="2"><path d="M19 12H5M12 19l-7-7 7-7"/></svg>
+                  <div class="wa-header-avatar"><img src="hampi_wa_profile2.jpg" alt="Hampi" width="34" height="34" loading="lazy"></div>
+                  <div><div class="wa-header-name">Hampi</div><div class="wa-header-status">en linea</div></div>
+                  <div class="wa-header-icons"><svg width="18" height="18" fill="none" viewBox="0 0 24 24"><path d="M15 10l4.553-2.276A1 1 0 0121 8.618v6.764a1 1 0 01-1.447.894L15 14M5 18h8a2 2 0 002-2V8a2 2 0 00-2-2H5a2 2 0 00-2 2v8a2 2 0 002 2z" stroke="#fff" stroke-width="1.5" stroke-linecap="round" stroke-linejoin="round"/></svg><svg width="18" height="18" fill="none" viewBox="0 0 24 24"><path d="M3 5a2 2 0 012-2h3.28a1 1 0 01.948.684l1.498 4.493a1 1 0 01-.502 1.21l-2.257 1.13a11.042 11.042 0 005.516 5.516l1.13-2.257a1 1 0 011.21-.502l4.493 1.498a1 1 0 01.684.949V19a2 2 0 01-2 2h-1C9.716 21 3 14.284 3 6V5z" stroke="#fff" stroke-width="1.5" stroke-linecap="round" stroke-linejoin="round"/></svg><svg width="18" height="18" fill="#fff" viewBox="0 0 24 24"><circle cx="12" cy="5" r="2"/><circle cx="12" cy="12" r="2"/><circle cx="12" cy="19" r="2"/></svg></div>
+                </div>
+                <div class="wa-messages chat-messages" id="chat-postventa"></div>
+                <div class="mt-1 text-center chat-badge opacity-0" style="background:#ECE5DD;padding:2px 0"><span class="inline-flex items-center gap-1 text-[10px] text-amber-500 font-medium bg-amber-50/70 px-2 py-0.5 rounded-full">Feedback 5/5 · Automatico</span></div>
+                <div class="wa-inputbar"><div class="wa-input-wrap"><svg width="18" height="18" fill="#919191" viewBox="0 0 24 24"><path d="M12 2C6.48 2 2 6.48 2 12s4.48 10 10 10 10-4.48 10-10S17.52 2 12 2zm0 18c-4.41 0-8-3.59-8-8s3.59-8 8-8 8 3.59 8 8-3.59 8-8 8zm-4-8c.79 0 1.5-.71 1.5-1.5S8.79 9 8 9s-1.5.71-1.5 1.5S7.21 12 8 12zm8 0c.79 0 1.5-.71 1.5-1.5S16.79 9 16 9s-1.5.71-1.5 1.5.71 1.5 1.5 1.5zm-4 5.5c2.33 0 4.31-1.46 5.11-3.5H6.89c.8 2.04 2.78 3.5 5.11 3.5z"/></svg><span class="wa-input-text">Escribe un mensaje</span><svg width="18" height="18" fill="#919191" viewBox="0 0 24 24"><path d="M21.44 11.05l-9.19 9.19a6 6 0 01-8.49-8.49l9.19-9.19a4 4 0 015.66 5.66l-9.2 9.19a2 2 0 01-2.83-2.83l8.49-8.48" stroke="#919191" stroke-width="1.5" fill="none" stroke-linecap="round"/></svg><svg width="18" height="18" fill="#919191" viewBox="0 0 24 24"><path d="M23 19a2 2 0 01-2 2H3a2 2 0 01-2-2V8a2 2 0 012-2h4l2-3h6l2 3h4a2 2 0 012 2z" stroke="#919191" stroke-width="1.5" fill="none"/><circle cx="12" cy="13" r="4" stroke="#919191" stroke-width="1.5" fill="none"/></svg></div><div class="wa-send-btn"><svg width="18" height="18" fill="#fff" viewBox="0 0 24 24"><path d="M12 14c1.66 0 3-1.34 3-3V5c0-1.66-1.34-3-3-3S9 3.34 9 5v6c0 1.66 1.34 3 3 3zm5-3c0 2.76-2.24 5-5 5s-5-2.24-5-5H5c0 3.53 2.61 6.43 6 6.92V21h2v-3.08c3.39-.49 6-3.39 6-6.92h-2z"/></svg></div></div>
+                <div class="wa-home-bar"></div>
               </div>
-              <div class="space-y-3 chat-messages flex-1 overflow-hidden" id="chat-postventa">
-              </div>
-                            <div class="mt-1 text-center chat-badge opacity-0"><span class="inline-flex items-center gap-1 text-[10px] text-amber-500 font-medium bg-amber-50/70 px-2 py-0.5 rounded-full">Feedback 5/5 · Automatico</span></div>
             </div>
           </div>
         </div>
 
         <!-- Slide 3: GOOGLE REVIEWS -->
         <div class="sistema-slide transition-all duration-500 hidden" data-slide="3">
-          <div class="grid md:grid-cols-2 gap-8 items-center">
+          <div class="grid md:grid-cols-2 gap-5 items-center">
             <div class="order-2 md:order-1">
-              <div class="bg-white rounded-xl shadow-lg p-5 border border-gray-100 h-[380px] flex flex-col chat-live" data-chat="4">
-                <div class="flex items-center gap-3 mb-3 pb-3 border-b border-gray-100">
-                  <div class="w-9 h-9 rounded-full bg-white shrink-0 flex items-center justify-center border border-gray-200 shadow-sm"><img src="logox.png" alt="HAMPI Bot" class="w-5 h-5 object-contain" width="40" height="32" loading="lazy"></div>
-                  <div><p class="font-semibold text-gray-900 text-sm">Google Reviews</p><div class="chat-status flex items-center gap-1.5"><span class="w-2 h-2 bg-yellow-400 rounded-full animate-pulse"></span><span class="text-xs text-yellow-600 font-medium">Automatico</span></div></div>
-                  <div class="ml-auto text-xs text-gray-300 chat-time"></div>
+              <div class="phone-frame chat-live" data-chat="4">
+                <div class="vol-btns"></div><div class="phone-screen">
+                  <div class="phone-dynamic-island"></div>
+                  <div class="phone-statusbar"><span>9:41</span><span class="phone-statusbar-icons"><svg width="15" height="10" fill="none" viewBox="0 0 18 12"><path d="M1 8.5a7.5 7.5 0 0114 0" stroke="#fff" stroke-width="1.5" stroke-linecap="round" fill="none"/><path d="M4.5 11a4 4 0 017 0" stroke="#fff" stroke-width="1.5" stroke-linecap="round"/><circle cx="8" cy="12" r="1" fill="#fff"/></svg><svg width="16" height="10" fill="#fff" viewBox="0 0 20 12"><rect x="1" y="3" width="2.5" height="9" rx="0.5"/><rect x="5" y="2" width="2.5" height="10" rx="0.5"/><rect x="9" y="1" width="2.5" height="11" rx="0.5"/><rect x="13" y="0" width="2.5" height="12" rx="0.5"/></svg><svg width="22" height="11" viewBox="0 0 27 13" fill="none"><rect x=".5" y=".5" width="23" height="12" rx="2.5" stroke="#fff" stroke-opacity=".4"/><rect x="24.5" y="3.5" width="2" height="6" rx="1" fill="#fff" fill-opacity=".5"/><rect x="2" y="2" width="19" height="9" rx="1.5" fill="#fff"/></svg></span></div>
+                  <div class="wa-header">
+                    <svg class="wa-header-back" viewBox="0 0 24 24" fill="none" stroke="#fff" stroke-width="2"><path d="M19 12H5M12 19l-7-7 7-7"/></svg>
+                    <div class="wa-header-avatar"><img src="hampi_wa_profile2.jpg" alt="Hampi" width="34" height="34" loading="lazy"></div>
+                    <div><div class="wa-header-name">Hampi</div><div class="wa-header-status">en linea</div></div>
+                    <div class="wa-header-icons"><svg width="18" height="18" fill="none" viewBox="0 0 24 24"><path d="M15 10l4.553-2.276A1 1 0 0121 8.618v6.764a1 1 0 01-1.447.894L15 14M5 18h8a2 2 0 002-2V8a2 2 0 00-2-2H5a2 2 0 00-2 2v8a2 2 0 002 2z" stroke="#fff" stroke-width="1.5" stroke-linecap="round" stroke-linejoin="round"/></svg><svg width="18" height="18" fill="none" viewBox="0 0 24 24"><path d="M3 5a2 2 0 012-2h3.28a1 1 0 01.948.684l1.498 4.493a1 1 0 01-.502 1.21l-2.257 1.13a11.042 11.042 0 005.516 5.516l1.13-2.257a1 1 0 011.21-.502l4.493 1.498a1 1 0 01.684.949V19a2 2 0 01-2 2h-1C9.716 21 3 14.284 3 6V5z" stroke="#fff" stroke-width="1.5" stroke-linecap="round" stroke-linejoin="round"/></svg><svg width="18" height="18" fill="#fff" viewBox="0 0 24 24"><circle cx="12" cy="5" r="2"/><circle cx="12" cy="12" r="2"/><circle cx="12" cy="19" r="2"/></svg></div>
+                  </div>
+                  <div class="wa-messages chat-messages" id="chat-reviews"></div>
+                  <div class="mt-1 text-center chat-badge opacity-0" style="background:#ECE5DD;padding:2px 0"><span class="inline-flex items-center gap-1 text-[10px] text-yellow-600 font-medium bg-yellow-50/70 px-2 py-0.5 rounded-full">Solo clientes con score 4+ · Automatico</span></div>
+                  <div class="wa-inputbar"><div class="wa-input-wrap"><svg width="18" height="18" fill="#919191" viewBox="0 0 24 24"><path d="M12 2C6.48 2 2 6.48 2 12s4.48 10 10 10 10-4.48 10-10S17.52 2 12 2zm0 18c-4.41 0-8-3.59-8-8s3.59-8 8-8 8 3.59 8 8-3.59 8-8 8zm-4-8c.79 0 1.5-.71 1.5-1.5S8.79 9 8 9s-1.5.71-1.5 1.5S7.21 12 8 12zm8 0c.79 0 1.5-.71 1.5-1.5S16.79 9 16 9s-1.5.71-1.5 1.5.71 1.5 1.5 1.5zm-4 5.5c2.33 0 4.31-1.46 5.11-3.5H6.89c.8 2.04 2.78 3.5 5.11 3.5z"/></svg><span class="wa-input-text">Escribe un mensaje</span><svg width="18" height="18" fill="#919191" viewBox="0 0 24 24"><path d="M21.44 11.05l-9.19 9.19a6 6 0 01-8.49-8.49l9.19-9.19a4 4 0 015.66 5.66l-9.2 9.19a2 2 0 01-2.83-2.83l8.49-8.48" stroke="#919191" stroke-width="1.5" fill="none" stroke-linecap="round"/></svg><svg width="18" height="18" fill="#919191" viewBox="0 0 24 24"><path d="M23 19a2 2 0 01-2 2H3a2 2 0 01-2-2V8a2 2 0 012-2h4l2-3h6l2 3h4a2 2 0 012 2z" stroke="#919191" stroke-width="1.5" fill="none"/><circle cx="12" cy="13" r="4" stroke="#919191" stroke-width="1.5" fill="none"/></svg></div><div class="wa-send-btn"><svg width="18" height="18" fill="#fff" viewBox="0 0 24 24"><path d="M12 14c1.66 0 3-1.34 3-3V5c0-1.66-1.34-3-3-3S9 3.34 9 5v6c0 1.66 1.34 3 3 3zm5-3c0 2.76-2.24 5-5 5s-5-2.24-5-5H5c0 3.53 2.61 6.43 6 6.92V21h2v-3.08c3.39-.49 6-3.39 6-6.92h-2z"/></svg></div></div>
+                <div class="wa-home-bar"></div>
                 </div>
-                <div class="space-y-3 chat-messages flex-1 overflow-hidden" id="chat-reviews">
-                </div>
-                                <div class="mt-1 text-center chat-badge opacity-0"><span class="inline-flex items-center gap-1 text-[10px] text-yellow-600 font-medium bg-yellow-50/70 px-2 py-0.5 rounded-full">Solo clientes con score 4+ · Automatico</span></div>
               </div>
             </div>
             <div class="order-1 md:order-2">
@@ -751,23 +806,27 @@
 
         <!-- Slide 4: RECORDATORIOS DE PAGO (Enterprise) -->
         <div class="sistema-slide transition-all duration-500 hidden" data-slide="4">
-          <div class="grid md:grid-cols-2 gap-8 items-center">
+          <div class="grid md:grid-cols-2 gap-5 items-center">
             <div class="order-2 md:order-1">
-              <div class="bg-white rounded-xl shadow-lg p-5 border border-gray-100 h-[380px] flex flex-col chat-live" data-chat="5">
-                <div class="flex items-center gap-3 mb-3 pb-3 border-b border-gray-100">
-                  <div class="w-9 h-9 rounded-full bg-white shrink-0 flex items-center justify-center border border-gray-200 shadow-sm"><img src="logox.png" alt="HAMPI Bot" class="w-5 h-5 object-contain" width="40" height="32" loading="lazy"></div>
-                  <div>
-                    <p class="font-semibold text-gray-900 text-sm">HAMPI Bot</p>
-                    <div class="chat-status flex items-center gap-1.5"><span class="w-2 h-2 bg-indigo-400 rounded-full animate-pulse"></span><span class="text-xs text-indigo-500 font-medium">Enterprise</span></div>
+              <div class="phone-frame chat-live" data-chat="5">
+                <div class="vol-btns"></div><div class="phone-screen">
+                  <div class="phone-dynamic-island"></div>
+                  <div class="phone-statusbar"><span>9:41</span><span class="phone-statusbar-icons"><svg width="15" height="10" fill="none" viewBox="0 0 18 12"><path d="M1 8.5a7.5 7.5 0 0114 0" stroke="#fff" stroke-width="1.5" stroke-linecap="round" fill="none"/><path d="M4.5 11a4 4 0 017 0" stroke="#fff" stroke-width="1.5" stroke-linecap="round"/><circle cx="8" cy="12" r="1" fill="#fff"/></svg><svg width="16" height="10" fill="#fff" viewBox="0 0 20 12"><rect x="1" y="3" width="2.5" height="9" rx="0.5"/><rect x="5" y="2" width="2.5" height="10" rx="0.5"/><rect x="9" y="1" width="2.5" height="11" rx="0.5"/><rect x="13" y="0" width="2.5" height="12" rx="0.5"/></svg><svg width="22" height="11" viewBox="0 0 27 13" fill="none"><rect x=".5" y=".5" width="23" height="12" rx="2.5" stroke="#fff" stroke-opacity=".4"/><rect x="24.5" y="3.5" width="2" height="6" rx="1" fill="#fff" fill-opacity=".5"/><rect x="2" y="2" width="19" height="9" rx="1.5" fill="#fff"/></svg></span></div>
+                  <div class="wa-header">
+                    <svg class="wa-header-back" viewBox="0 0 24 24" fill="none" stroke="#fff" stroke-width="2"><path d="M19 12H5M12 19l-7-7 7-7"/></svg>
+                    <div class="wa-header-avatar"><img src="hampi_wa_profile2.jpg" alt="Hampi" width="34" height="34" loading="lazy"></div>
+                    <div><div class="wa-header-name">Hampi</div><div class="wa-header-status">en linea</div></div>
+                    <div class="wa-header-icons"><svg width="18" height="18" fill="none" viewBox="0 0 24 24"><path d="M15 10l4.553-2.276A1 1 0 0121 8.618v6.764a1 1 0 01-1.447.894L15 14M5 18h8a2 2 0 002-2V8a2 2 0 00-2-2H5a2 2 0 00-2 2v8a2 2 0 002 2z" stroke="#fff" stroke-width="1.5" stroke-linecap="round" stroke-linejoin="round"/></svg><svg width="18" height="18" fill="none" viewBox="0 0 24 24"><path d="M3 5a2 2 0 012-2h3.28a1 1 0 01.948.684l1.498 4.493a1 1 0 01-.502 1.21l-2.257 1.13a11.042 11.042 0 005.516 5.516l1.13-2.257a1 1 0 011.21-.502l4.493 1.498a1 1 0 01.684.949V19a2 2 0 01-2 2h-1C9.716 21 3 14.284 3 6V5z" stroke="#fff" stroke-width="1.5" stroke-linecap="round" stroke-linejoin="round"/></svg><svg width="18" height="18" fill="#fff" viewBox="0 0 24 24"><circle cx="12" cy="5" r="2"/><circle cx="12" cy="12" r="2"/><circle cx="12" cy="19" r="2"/></svg></div>
                   </div>
+                  <div class="wa-messages chat-messages" id="chat-recordatorios"></div>
+                  <div class="mt-1 text-center chat-badge opacity-0" style="background:#ECE5DD;padding:2px 0"><span class="inline-flex items-center gap-1 text-[10px] text-indigo-500 font-medium bg-indigo-50/70 px-2 py-0.5 rounded-full">Cobrado en 4 min · Enterprise</span></div>
+                  <div class="wa-inputbar"><div class="wa-input-wrap"><svg width="18" height="18" fill="#919191" viewBox="0 0 24 24"><path d="M12 2C6.48 2 2 6.48 2 12s4.48 10 10 10 10-4.48 10-10S17.52 2 12 2zm0 18c-4.41 0-8-3.59-8-8s3.59-8 8-8 8 3.59 8 8-3.59 8-8 8zm-4-8c.79 0 1.5-.71 1.5-1.5S8.79 9 8 9s-1.5.71-1.5 1.5S7.21 12 8 12zm8 0c.79 0 1.5-.71 1.5-1.5S16.79 9 16 9s-1.5.71-1.5 1.5.71 1.5 1.5 1.5zm-4 5.5c2.33 0 4.31-1.46 5.11-3.5H6.89c.8 2.04 2.78 3.5 5.11 3.5z"/></svg><span class="wa-input-text">Escribe un mensaje</span><svg width="18" height="18" fill="#919191" viewBox="0 0 24 24"><path d="M21.44 11.05l-9.19 9.19a6 6 0 01-8.49-8.49l9.19-9.19a4 4 0 015.66 5.66l-9.2 9.19a2 2 0 01-2.83-2.83l8.49-8.48" stroke="#919191" stroke-width="1.5" fill="none" stroke-linecap="round"/></svg><svg width="18" height="18" fill="#919191" viewBox="0 0 24 24"><path d="M23 19a2 2 0 01-2 2H3a2 2 0 01-2-2V8a2 2 0 012-2h4l2-3h6l2 3h4a2 2 0 012 2z" stroke="#919191" stroke-width="1.5" fill="none"/><circle cx="12" cy="13" r="4" stroke="#919191" stroke-width="1.5" fill="none"/></svg></div><div class="wa-send-btn"><svg width="18" height="18" fill="#fff" viewBox="0 0 24 24"><path d="M12 14c1.66 0 3-1.34 3-3V5c0-1.66-1.34-3-3-3S9 3.34 9 5v6c0 1.66 1.34 3 3 3zm5-3c0 2.76-2.24 5-5 5s-5-2.24-5-5H5c0 3.53 2.61 6.43 6 6.92V21h2v-3.08c3.39-.49 6-3.39 6-6.92h-2z"/></svg></div></div>
+                <div class="wa-home-bar"></div>
                 </div>
-                <div class="space-y-3 chat-messages flex-1 overflow-hidden" id="chat-recordatorios">
-                </div>
-                <div class="mt-1 text-center chat-badge opacity-0"><span class="inline-flex items-center gap-1 text-[10px] text-indigo-500 font-medium bg-indigo-50/70 px-2 py-0.5 rounded-full">Cobrado en 4 min · Enterprise</span></div>
               </div>
             </div>
             <div class="order-1 md:order-2">
-              <div class="inline-flex items-center gap-2 bg-indigo-50 text-indigo-700 text-xs font-bold px-3 py-1 rounded-full mb-3 tracking-wide">RECORDATORIOS DE PAGO <span class="text-indigo-400 font-normal ml-1">Enterprise</span></div>
+              <div class="inline-flex items-center gap-2 bg-indigo-50 text-indigo-700 text-xs font-bold px-3 py-1 rounded-full mb-3 tracking-wide">RECORDATORIOS DE PAGO <span class="text-indigo-400 font-normal ml-1">Proximamente</span></div>
               <p class="text-gray-600 text-sm leading-relaxed mb-4">HAMPI detecta pagos pendientes, envia recordatorios por WhatsApp o email en el momento justo, genera links de pago de MercadoPago y hace seguimiento hasta que se cobra.</p>
               <ul class="space-y-2">
                 <li class="flex items-start gap-2.5 text-xs text-gray-700"><svg class="w-4 h-4 text-indigo-500 shrink-0 mt-0.5" fill="none" stroke="currentColor" viewBox="0 0 24 24"><path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M5 13l4 4L19 7"/></svg>Recordatorios escalonados — 3 tonos (amigable → firme → urgente) segun dias</li>
@@ -782,9 +841,9 @@
 
         <!-- Slide 5: FIDELIZACION INTELIGENTE (Enterprise) -->
         <div class="sistema-slide transition-all duration-500 hidden" data-slide="5">
-          <div class="grid md:grid-cols-2 gap-8 items-center">
+          <div class="grid md:grid-cols-2 gap-5 items-center">
             <div>
-              <div class="inline-flex items-center gap-2 bg-purple-50 text-purple-700 text-xs font-bold px-3 py-1 rounded-full mb-3 tracking-wide">FIDELIZACION INTELIGENTE</div>
+              <div class="inline-flex items-center gap-2 bg-purple-50 text-purple-700 text-xs font-bold px-3 py-1 rounded-full mb-3 tracking-wide">FIDELIZACION INTELIGENTE <span class="text-purple-400 font-normal ml-1">Proximamente</span></div>
               <p class="text-gray-600 text-sm leading-relaxed mb-4">Analiza señales de riesgo (inactividad, quejas, impagos acumulados) y activa flujos de retencion personalizados.</p>
               <ul class="space-y-2">
                 <li class="flex items-start gap-2.5 text-xs text-gray-700"><svg class="w-4 h-4 text-purple-500 shrink-0 mt-0.5" fill="none" stroke="currentColor" viewBox="0 0 24 24"><path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M5 13l4 4L19 7"/></svg>Señales de riesgo — inactividad, quejas o impagos disparan alertas</li>
@@ -794,31 +853,20 @@
                 <li class="flex items-start gap-2.5 text-xs text-gray-700"><svg class="w-4 h-4 text-purple-500 shrink-0 mt-0.5" fill="none" stroke="currentColor" viewBox="0 0 24 24"><path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M5 13l4 4L19 7"/></svg>Ofertas controladas — reglas de descuento para no perder margen</li>
               </ul>
             </div>
-            <div class="bg-white rounded-xl shadow-lg p-5 border border-gray-100 h-[380px] flex flex-col panel-live" data-panel="retention">
-              <div class="flex items-center justify-between mb-4 pb-3 border-b border-gray-100">
-                <div class="flex items-center gap-2"><p class="font-semibold text-gray-900 text-sm">Panel de retencion</p><span class="w-2 h-2 bg-purple-400 rounded-full animate-pulse"></span></div>
-                <span class="panel-counter text-xs text-purple-600 font-medium bg-purple-50 px-2.5 py-1 rounded-full opacity-0">6 alertas</span>
-              </div>
-              <div class="space-y-2.5 panel-rows flex-1 overflow-hidden">
-                <div class="panel-row opacity-0 flex items-center gap-3 p-3 bg-red-50 rounded-xl border border-red-100" data-delay="500">
-                  <div class="w-8 h-8 bg-red-100 rounded-lg flex items-center justify-center shrink-0"><span class="text-red-500 text-xs font-bold">!</span></div>
-                  <div class="flex-1 min-w-0"><p class="text-sm font-semibold text-gray-900 truncate">Maria Lopez</p><p class="text-xs text-gray-500">3 cuotas impagas · Sin actividad 45d</p></div>
-                  <div class="text-right shrink-0"><span class="text-xs bg-red-500 text-white px-2 py-0.5 rounded-full">92%</span><p class="text-[10px] text-red-400 mt-0.5">ALTO</p></div>
+            <div class="phone-frame chat-live" data-chat="6">
+              <div class="vol-btns"></div><div class="phone-screen">
+                <div class="phone-dynamic-island"></div>
+                <div class="phone-statusbar"><span>9:41</span><span class="phone-statusbar-icons"><svg width="15" height="10" fill="none" viewBox="0 0 18 12"><path d="M1 8.5a7.5 7.5 0 0114 0" stroke="#fff" stroke-width="1.5" stroke-linecap="round" fill="none"/><path d="M4.5 11a4 4 0 017 0" stroke="#fff" stroke-width="1.5" stroke-linecap="round"/><circle cx="8" cy="12" r="1" fill="#fff"/></svg><svg width="16" height="10" fill="#fff" viewBox="0 0 20 12"><rect x="1" y="3" width="2.5" height="9" rx="0.5"/><rect x="5" y="2" width="2.5" height="10" rx="0.5"/><rect x="9" y="1" width="2.5" height="11" rx="0.5"/><rect x="13" y="0" width="2.5" height="12" rx="0.5"/></svg><svg width="22" height="11" viewBox="0 0 27 13" fill="none"><rect x=".5" y=".5" width="23" height="12" rx="2.5" stroke="#fff" stroke-opacity=".4"/><rect x="24.5" y="3.5" width="2" height="6" rx="1" fill="#fff" fill-opacity=".5"/><rect x="2" y="2" width="19" height="9" rx="1.5" fill="#fff"/></svg></span></div>
+                <div class="wa-header">
+                  <svg class="wa-header-back" viewBox="0 0 24 24" fill="none" stroke="#fff" stroke-width="2"><path d="M19 12H5M12 19l-7-7 7-7"/></svg>
+                  <div class="wa-header-avatar"><img src="hampi_wa_profile2.jpg" alt="Hampi" width="34" height="34" loading="lazy"></div>
+                  <div><div class="wa-header-name">Hampi</div><div class="wa-header-status">en linea</div></div>
+                  <div class="wa-header-icons"><svg width="18" height="18" fill="none" viewBox="0 0 24 24"><path d="M15 10l4.553-2.276A1 1 0 0121 8.618v6.764a1 1 0 01-1.447.894L15 14M5 18h8a2 2 0 002-2V8a2 2 0 00-2-2H5a2 2 0 00-2 2v8a2 2 0 002 2z" stroke="#fff" stroke-width="1.5" stroke-linecap="round" stroke-linejoin="round"/></svg><svg width="18" height="18" fill="none" viewBox="0 0 24 24"><path d="M3 5a2 2 0 012-2h3.28a1 1 0 01.948.684l1.498 4.493a1 1 0 01-.502 1.21l-2.257 1.13a11.042 11.042 0 005.516 5.516l1.13-2.257a1 1 0 011.21-.502l4.493 1.498a1 1 0 01.684.949V19a2 2 0 01-2 2h-1C9.716 21 3 14.284 3 6V5z" stroke="#fff" stroke-width="1.5" stroke-linecap="round" stroke-linejoin="round"/></svg><svg width="18" height="18" fill="#fff" viewBox="0 0 24 24"><circle cx="12" cy="5" r="2"/><circle cx="12" cy="12" r="2"/><circle cx="12" cy="19" r="2"/></svg></div>
                 </div>
-                <div class="panel-row opacity-0 flex items-center gap-3 p-3 bg-amber-50 rounded-xl border border-amber-100" data-delay="1200">
-                  <div class="w-8 h-8 bg-amber-100 rounded-lg flex items-center justify-center shrink-0"><span class="text-amber-500 text-xs font-bold">!</span></div>
-                  <div class="flex-1 min-w-0"><p class="text-sm font-semibold text-gray-900 truncate">Carlos Ruiz</p><p class="text-xs text-gray-500">Consulto cancelacion ayer</p></div>
-                  <div class="text-right shrink-0"><span class="text-xs bg-amber-500 text-white px-2 py-0.5 rounded-full">64%</span><p class="text-[10px] text-amber-500 mt-0.5">MEDIO</p></div>
-                </div>
-                <div class="panel-row opacity-0 flex items-center gap-3 p-3 bg-green-50 rounded-xl border border-green-100" data-delay="1900">
-                  <div class="w-8 h-8 bg-green-100 rounded-lg flex items-center justify-center shrink-0"><span class="text-green-500 text-xs font-bold">✓</span></div>
-                  <div class="flex-1 min-w-0"><p class="text-sm font-semibold text-gray-900 truncate">Ana Torres</p><p class="text-xs text-gray-500">Acepto descuento 15% · Retenida</p></div>
-                  <div class="text-right shrink-0"><span class="text-xs bg-green-500 text-white px-2 py-0.5 rounded-full">OK</span><p class="text-[10px] text-green-500 mt-0.5">RETENIDA</p></div>
-                </div>
-              </div>
-              <div class="mt-4 flex items-center justify-between panel-summary opacity-0">
-                <span class="inline-flex items-center gap-1 text-xs text-purple-600 font-medium bg-purple-50 px-3 py-1.5 rounded-full">3 de 4 clientes retenidos este mes</span>
-                <span class="text-xs text-gray-400">Actualizado recien</span>
+                <div class="wa-messages chat-messages" id="chat-fidelizacion"></div>
+                <div class="mt-1 text-center chat-badge opacity-0" style="background:#ECE5DD;padding:2px 0"><span class="inline-flex items-center gap-1 text-[10px] text-purple-500 font-medium bg-purple-50/70 px-2 py-0.5 rounded-full">Cliente reactivado · Descuento 15%</span></div>
+                <div class="wa-inputbar"><div class="wa-input-wrap"><svg width="18" height="18" fill="#919191" viewBox="0 0 24 24"><path d="M12 2C6.48 2 2 6.48 2 12s4.48 10 10 10 10-4.48 10-10S17.52 2 12 2zm0 18c-4.41 0-8-3.59-8-8s3.59-8 8-8 8 3.59 8 8-3.59 8-8 8zm-4-8c.79 0 1.5-.71 1.5-1.5S8.79 9 8 9s-1.5.71-1.5 1.5S7.21 12 8 12zm8 0c.79 0 1.5-.71 1.5-1.5S16.79 9 16 9s-1.5.71-1.5 1.5.71 1.5 1.5 1.5zm-4 5.5c2.33 0 4.31-1.46 5.11-3.5H6.89c.8 2.04 2.78 3.5 5.11 3.5z"/></svg><span class="wa-input-text">Escribe un mensaje</span><svg width="18" height="18" fill="#919191" viewBox="0 0 24 24"><path d="M21.44 11.05l-9.19 9.19a6 6 0 01-8.49-8.49l9.19-9.19a4 4 0 015.66 5.66l-9.2 9.19a2 2 0 01-2.83-2.83l8.49-8.48" stroke="#919191" stroke-width="1.5" fill="none" stroke-linecap="round"/></svg><svg width="18" height="18" fill="#919191" viewBox="0 0 24 24"><path d="M23 19a2 2 0 01-2 2H3a2 2 0 01-2-2V8a2 2 0 012-2h4l2-3h6l2 3h4a2 2 0 012 2z" stroke="#919191" stroke-width="1.5" fill="none"/><circle cx="12" cy="13" r="4" stroke="#919191" stroke-width="1.5" fill="none"/></svg></div><div class="wa-send-btn"><svg width="18" height="18" fill="#fff" viewBox="0 0 24 24"><path d="M12 14c1.66 0 3-1.34 3-3V5c0-1.66-1.34-3-3-3S9 3.34 9 5v6c0 1.66 1.34 3 3 3zm5-3c0 2.76-2.24 5-5 5s-5-2.24-5-5H5c0 3.53 2.61 6.43 6 6.92V21h2v-3.08c3.39-.49 6-3.39 6-6.92h-2z"/></svg></div></div>
+                <div class="wa-home-bar"></div>
               </div>
             </div>
           </div>
@@ -1125,7 +1173,7 @@
             <li><a href="#calculadora" class="hover:text-gray-900 transition-colors">Calculadora</a></li>
             <li><a href="#planes" class="hover:text-gray-900 transition-colors">Planes</a></li>
             <li><a href="historia.html" class="hover:text-gray-900 transition-colors">Historia</a></li>
-            <li><a href="https://api.hampi.tech/dash/login" target="_blank" rel="noopener" class="hover:text-gray-900 transition-colors">Acceso clientes</a></li>
+            <li><a href="https://dash.hampi.tech/login" target="_blank" rel="noopener" class="hover:text-gray-900 transition-colors">Acceso clientes</a></li>
           </ul>
         </div>
         <div>
@@ -1173,30 +1221,49 @@
             {s:'user',d:600,t:'Hola! Soy Sofia, quiero saber precios de corte y color'},
             {s:'bot',d:2200,t:'Hola Sofia! Corte $18.000, color $35.000 y brushing $12.000. Queres reservar turno?',c:'blue'},
             {s:'user',d:4000,t:'Si! Corte y color para el sabado'},
-            {s:'bot',d:5800,t:'Sabado 01/03 a las 10:00 hay lugar. Te paso a confirmar!',c:'blue'}
+            {s:'bot',d:5800,t:'Sabado 01/03 a las 10:00 hay lugar. Te confirmo!',c:'blue'},
+            {s:'user',d:7000,t:'Perfecto! Ahi voy'},
+            {s:'bot',d:8200,t:'Te esperamos Sofia! Cualquier consulta escribinos',c:'blue'}
           ],
           cierre: [
             {s:'bot',d:600,t:'Sofia, corte + color sale $53.000. Te dejo el link:',c:'green',link:'Pagar con MercadoPago →'},
-            {s:'user',d:2600,t:'Listo, ya pague!'},
-            {s:'user',d:3400,t:'📎 Comprobante.pdf',file:true},
-            {s:'bot',d:4800,t:'✅ Comprobante verificado! Turno confirmado: sabado 01/03, 10:00hs',c:'green'}
+            {s:'user',d:2200,t:'Ahi lo pago'},
+            {s:'user',d:3000,t:'Listo, ya pague!'},
+            {s:'user',d:3800,t:'📎 Comprobante.pdf',file:true},
+            {s:'bot',d:5000,t:'✅ Comprobante verificado! Turno confirmado: sabado 01/03, 10:00hs',c:'green'},
+            {s:'bot',d:6200,t:'Te mandamos recordatorio el viernes. Nos vemos!',c:'green'}
           ],
           postventa: [
-            {s:'bot',d:600,t:'Sofia! Como te fue con el corte y color del sabado?',c:'amber'},
+            {s:'bot',d:600,t:'Sofia! Como te fue con el corte y color?',c:'amber'},
             {s:'user',d:2400,t:'Me encanto! Quede hermosa'},
-            {s:'bot',d:4000,t:'Que bueno! Del 1 al 5, como calificarias la experiencia?',c:'amber'},
-            {s:'user',d:5400,t:'5!'}
+            {s:'bot',d:3800,t:'Que bueno! Del 1 al 5, como calificarias?',c:'amber'},
+            {s:'user',d:5000,t:'5!'},
+            {s:'bot',d:6200,t:'Genial! Gracias por tu feedback Sofia',c:'amber'},
+            {s:'user',d:7400,t:'De nada, vuelvo pronto!'}
           ],
           reviews: [
-            {s:'bot',d:600,t:'Sofia, nos alegra! Nos dejarias una reseña en Google?',c:'yellow',link:'Dejar reseña en Google →'},
-            {s:'user',d:3200,t:'Listo, 5 estrellas!'},
-            {s:'bot',d:5000,t:'Muchas gracias Sofia! Te esperamos pronto',c:'yellow'}
+            {s:'bot',d:600,t:'Sofia, nos alegra! Nos dejarias una reseña en Google? Nos ayuda mucho',c:'yellow',link:'Dejar reseña en Google →'},
+            {s:'user',d:2400,t:'Si, por supuesto!'},
+            {s:'user',d:3800,t:'Listo, 5 estrellas! Puse que me encanto el color'},
+            {s:'bot',d:5200,t:'Muchas gracias Sofia! Tu reseña nos ayuda un monton',c:'yellow'},
+            {s:'user',d:6400,t:'De nada! Los recomiendo siempre'},
+            {s:'bot',d:7600,t:'Te esperamos pronto!',c:'yellow'}
           ],
           recordatorios: [
-            {s:'bot',d:800,t:'Sofia! Tenes pendiente el saldo del corte + color del 01/03 ($53.000). Te dejo el link:',c:'indigo',link:'Pagar con MercadoPago →'},
-            {s:'user',d:3200,t:'Mil gracias, se me habia pasado! Ahora lo pago'},
+            {s:'bot',d:800,t:'Sofia! Pendiente: corte + color $53.000. Link:',c:'indigo',link:'Pagar con MercadoPago →'},
+            {s:'user',d:2800,t:'Mil gracias, se me habia pasado!'},
+            {s:'user',d:3600,t:'Ahora lo pago'},
             {s:'user',d:4400,t:'📎 Comprobante.pdf',file:true},
-            {s:'bot',d:5600,t:'Pago recibido! Gracias Sofia, quedas al dia',c:'indigo'}
+            {s:'bot',d:5600,t:'Pago recibido! Gracias Sofia, quedas al dia',c:'indigo'},
+            {s:'bot',d:6800,t:'Te mandamos el recibo por email. Hasta la proxima!',c:'indigo'}
+          ],
+          fidelizacion: [
+            {s:'bot',d:600,t:'Sofia! Hace 3 semanas que no te vemos. Esta todo bien?',c:'purple'},
+            {s:'user',d:2400,t:'Si! Anduve con poco tiempo'},
+            {s:'bot',d:3800,t:'Te entendemos! Tenes 15% off en corte + color esta semana',c:'purple'},
+            {s:'user',d:5200,t:'Me encanta! Agendame para el viernes'},
+            {s:'bot',d:6600,t:'Viernes 14/03 a las 16:00. Te esperamos!',c:'purple'},
+            {s:'user',d:7800,t:'Genial, ahi voy!'}
           ]
         },
         { // Jose — Gimnasio
@@ -1204,30 +1271,49 @@
             {s:'user',d:600,t:'Buenas! Soy Jose, quiero saber los planes del gym'},
             {s:'bot',d:2200,t:'Hola Jose! Musculacion $45.000/mes, Full (muscu + clases) $65.000/mes. Te interesa?',c:'blue'},
             {s:'user',d:4000,t:'El full! Puedo arrancar el lunes?'},
-            {s:'bot',d:5800,t:'Si! Lunes 03/03 arrancas. Te paso la inscripcion',c:'blue'}
+            {s:'bot',d:5800,t:'Si! Lunes 03/03 arrancas. Te paso la inscripcion',c:'blue'},
+            {s:'user',d:7000,t:'Dale, me anoto!'},
+            {s:'bot',d:8200,t:'Listo Jose! Te mandamos toda la info por aca',c:'blue'}
           ],
           cierre: [
             {s:'bot',d:600,t:'Jose, Plan Full $65.000/mes. Te dejo el link:',c:'green',link:'Pagar con MercadoPago →'},
-            {s:'user',d:2600,t:'Pague!'},
-            {s:'user',d:3400,t:'📎 Comprobante.pdf',file:true},
-            {s:'bot',d:4800,t:'✅ Pago acreditado! Plan Full desde lunes 03/03. Te esperamos!',c:'green'}
+            {s:'user',d:2200,t:'Dale, lo pago ahora'},
+            {s:'user',d:3000,t:'Pague!'},
+            {s:'user',d:3800,t:'📎 Comprobante.pdf',file:true},
+            {s:'bot',d:5000,t:'✅ Pago acreditado! Plan Full desde lunes 03/03',c:'green'},
+            {s:'bot',d:6200,t:'El lunes te recibe Marcos en recepcion. Traete toalla y candado!',c:'green'}
           ],
           postventa: [
-            {s:'bot',d:600,t:'Jose! Ya llevas una semana. Como te sentis con el plan?',c:'amber'},
+            {s:'bot',d:600,t:'Jose! Como te sentis con el plan Full?',c:'amber'},
             {s:'user',d:2400,t:'Muy bien, las clases son geniales'},
-            {s:'bot',d:4000,t:'Nos alegra! Del 1 al 5, como calificarias?',c:'amber'},
-            {s:'user',d:5400,t:'5, excelente!'}
+            {s:'bot',d:3800,t:'Nos alegra! Del 1 al 5, como calificarias?',c:'amber'},
+            {s:'user',d:5000,t:'5, excelente!'},
+            {s:'bot',d:6200,t:'Gracias Jose! Nos vemos en la proxima clase',c:'amber'},
+            {s:'user',d:7400,t:'Dale, mañana estoy!'}
           ],
           reviews: [
-            {s:'bot',d:600,t:'Jose, que bueno! Nos dejarias una reseña en Google?',c:'yellow',link:'Dejar reseña en Google →'},
-            {s:'user',d:3200,t:'Dale, ya la deje! Muy recomendable'},
-            {s:'bot',d:5000,t:'Gracias Jose! Seguimos sumando',c:'yellow'}
+            {s:'bot',d:600,t:'Jose, que bueno tu progreso! Nos dejarias una reseña en Google?',c:'yellow',link:'Dejar reseña en Google →'},
+            {s:'user',d:2400,t:'Dale!'},
+            {s:'user',d:3800,t:'Listo, la deje. Puse que es muy completo'},
+            {s:'bot',d:5200,t:'Gracias Jose! Tu reseña suma un monton',c:'yellow'},
+            {s:'user',d:6400,t:'De nada, se lo merecen!'},
+            {s:'bot',d:7600,t:'Nos vemos en la proxima clase!',c:'yellow'}
           ],
           recordatorios: [
-            {s:'bot',d:800,t:'Jose! Tu cuota de marzo del Plan Full esta pendiente ($65.000). Te dejo el link:',c:'indigo',link:'Pagar con MercadoPago →'},
-            {s:'user',d:3200,t:'Uh, se me paso! Ahi lo transfiero'},
+            {s:'bot',d:800,t:'Jose! Cuota marzo Plan Full $65.000. Link:',c:'indigo',link:'Pagar con MercadoPago →'},
+            {s:'user',d:2800,t:'Uh, se me paso!'},
+            {s:'user',d:3600,t:'Ahi lo transfiero'},
             {s:'user',d:4400,t:'📎 Comprobante.pdf',file:true},
-            {s:'bot',d:5600,t:'Recibido! Cuota al dia. Gracias Jose',c:'indigo'}
+            {s:'bot',d:5600,t:'Recibido! Cuota al dia. Gracias Jose',c:'indigo'},
+            {s:'user',d:6800,t:'Gracias, saludos'}
+          ],
+          fidelizacion: [
+            {s:'bot',d:600,t:'Jose! Hace 2 semanas que no venis al gym. Todo bien?',c:'purple'},
+            {s:'user',d:2400,t:'Si, tuve un viaje de laburo'},
+            {s:'bot',d:3800,t:'Te congelamos la cuota sin cargo + 1 clase gratis',c:'purple'},
+            {s:'user',d:5200,t:'Genial! El lunes estoy ahi'},
+            {s:'bot',d:6600,t:'Te esperamos Jose! Buen regreso',c:'purple'},
+            {s:'user',d:7800,t:'Gracias!'}
           ]
         },
         { // Ana — Consultorio odontologico
@@ -1235,30 +1321,50 @@
             {s:'user',d:600,t:'Hola, soy Ana. Quiero consultar por una limpieza dental'},
             {s:'bot',d:2200,t:'Hola Ana! Limpieza dental $28.000. Hay turnos esta semana, te agendo?',c:'blue'},
             {s:'user',d:4000,t:'Si, para el jueves a la tarde'},
-            {s:'bot',d:5800,t:'Jueves 06/03 a las 16:00 disponible. Te confirmo!',c:'blue'}
+            {s:'bot',d:5800,t:'Jueves 06/03 a las 16:00 disponible. Te confirmo!',c:'blue'},
+            {s:'user',d:7000,t:'Genial, gracias!'},
+            {s:'bot',d:8200,t:'De nada Ana! Te mandamos recordatorio el miercoles',c:'blue'}
           ],
           cierre: [
             {s:'bot',d:600,t:'Ana, la limpieza sale $28.000. Seña de $10.000:',c:'green',link:'Pagar seña con MercadoPago →'},
-            {s:'user',d:2600,t:'Listo, pague!'},
-            {s:'user',d:3400,t:'📎 Comprobante.pdf',file:true},
-            {s:'bot',d:4800,t:'✅ Comprobante verificado! Turno: jueves 06/03, 16:00hs',c:'green'}
+            {s:'user',d:2200,t:'Ahi pago la seña'},
+            {s:'user',d:3000,t:'Listo!'},
+            {s:'user',d:3800,t:'📎 Comprobante.pdf',file:true},
+            {s:'bot',d:5000,t:'✅ Seña recibida! Turno: jueves 06/03, 16:00hs',c:'green'},
+            {s:'bot',d:6200,t:'Recordatorio: no comer ni tomar nada caliente 2hs antes',c:'green'}
           ],
           postventa: [
-            {s:'bot',d:600,t:'Ana! Como te fue con la limpieza del jueves?',c:'amber'},
+            {s:'bot',d:600,t:'Ana! Como te fue con la limpieza?',c:'amber'},
             {s:'user',d:2400,t:'Muy bien! Rapido y sin dolor'},
-            {s:'bot',d:4000,t:'Genial! Del 1 al 5, como calificarias?',c:'amber'},
-            {s:'user',d:5400,t:'5, impecable!'}
+            {s:'bot',d:3800,t:'Genial! Del 1 al 5, como calificarias?',c:'amber'},
+            {s:'user',d:5000,t:'5, impecable!'},
+            {s:'bot',d:6200,t:'Excelente! Proximo control en 6 meses',c:'amber'},
+            {s:'user',d:7400,t:'Dale, lo anoto!'},
+            {s:'user',d:8400,t:'Muchas gracias'}
           ],
           reviews: [
-            {s:'bot',d:600,t:'Ana, que bueno! Nos dejarias una reseña en Google?',c:'yellow',link:'Dejar reseña en Google →'},
-            {s:'user',d:3200,t:'Si, ya la deje con 5 estrellas'},
-            {s:'bot',d:5000,t:'Gracias Ana! Te esperamos en tu proximo control',c:'yellow'}
+            {s:'bot',d:600,t:'Ana, que bueno! Nos dejarias una reseña en Google? Nos ayuda mucho',c:'yellow',link:'Dejar reseña en Google →'},
+            {s:'user',d:2400,t:'Claro, con gusto!'},
+            {s:'user',d:3800,t:'Listo! 5 estrellas, muy profesionales'},
+            {s:'bot',d:5200,t:'Gracias Ana! Tu reseña nos ayuda a crecer',c:'yellow'},
+            {s:'user',d:6400,t:'Se lo merecen, excelente atencion'},
+            {s:'bot',d:7600,t:'Te esperamos en tu proximo control!',c:'yellow'}
           ],
           recordatorios: [
-            {s:'bot',d:800,t:'Ana! Tenes pendiente el saldo de la limpieza del 06/03 ($18.000). Link:',c:'indigo',link:'Pagar con MercadoPago →'},
-            {s:'user',d:3200,t:'Es verdad! Se me paso, ahora pago'},
+            {s:'bot',d:800,t:'Ana! Pendiente: limpieza dental $18.000. Link:',c:'indigo',link:'Pagar con MercadoPago →'},
+            {s:'user',d:2800,t:'Es verdad! Se me paso'},
+            {s:'user',d:3600,t:'Ahora pago'},
             {s:'user',d:4400,t:'📎 Comprobante.pdf',file:true},
-            {s:'bot',d:5600,t:'Pago registrado! Gracias Ana, quedas al dia',c:'indigo'}
+            {s:'bot',d:5600,t:'Pago registrado! Gracias Ana, quedas al dia',c:'indigo'},
+            {s:'bot',d:6800,t:'Recorda tu proximo control en 6 meses!',c:'indigo'}
+          ],
+          fidelizacion: [
+            {s:'bot',d:600,t:'Ana! Tu ultimo control fue hace 8 meses. Agendamos?',c:'purple'},
+            {s:'user',d:2400,t:'Tenes razon! Me habia olvidado'},
+            {s:'bot',d:3800,t:'Para pacientes recurrentes tenes 20% off. Te agendo?',c:'purple'},
+            {s:'user',d:5200,t:'Dale! Para la semana que viene'},
+            {s:'bot',d:6600,t:'Martes 11/03 a las 10:00. Te mandamos recordatorio',c:'purple'},
+            {s:'user',d:7800,t:'Perfecto, gracias!'}
           ]
         },
         { // Claudio — Academia de idiomas
@@ -1266,30 +1372,49 @@
             {s:'user',d:600,t:'Hola! Soy Claudio, quiero info del curso de ingles'},
             {s:'bot',d:2200,t:'Hola Claudio! Curso intensivo $85.000/mes (3 veces x semana). Arrancamos todos los lunes!',c:'blue'},
             {s:'user',d:4000,t:'Me interesa! Puedo empezar la semana que viene?'},
-            {s:'bot',d:5800,t:'Si! Lunes 10/03 a las 19:00. Te paso la inscripcion',c:'blue'}
+            {s:'bot',d:5800,t:'Si! Lunes 10/03 a las 19:00. Te paso la inscripcion',c:'blue'},
+            {s:'user',d:7000,t:'Buenisimo, me inscribo!'},
+            {s:'bot',d:8200,t:'Anotado Claudio! Te enviamos el material de bienvenida',c:'blue'}
           ],
           cierre: [
             {s:'bot',d:600,t:'Claudio, curso intensivo ingles $85.000/mes. Link:',c:'green',link:'Pagar con MercadoPago →'},
-            {s:'user',d:2600,t:'Pague!'},
-            {s:'user',d:3400,t:'📎 Comprobante.pdf',file:true},
-            {s:'bot',d:4800,t:'✅ Pago acreditado! Lunes 10/03, 19:00hs. Te enviamos el material',c:'green'}
+            {s:'user',d:2200,t:'Lo pago ahora'},
+            {s:'user',d:3000,t:'Pague!'},
+            {s:'user',d:3800,t:'📎 Comprobante.pdf',file:true},
+            {s:'bot',d:5000,t:'✅ Pago acreditado! Lunes 10/03, 19:00hs',c:'green'},
+            {s:'bot',d:6200,t:'Te mandamos el material de bienvenida y el link de Zoom por aca',c:'green'}
           ],
           postventa: [
             {s:'bot',d:600,t:'Claudio! Como vas con las clases de ingles?',c:'amber'},
             {s:'user',d:2400,t:'Genial, ya noto avances!'},
-            {s:'bot',d:4000,t:'Excelente! Del 1 al 5, como calificarias?',c:'amber'},
-            {s:'user',d:5400,t:'5!'}
+            {s:'bot',d:3800,t:'Excelente! Del 1 al 5, como calificarias?',c:'amber'},
+            {s:'user',d:5000,t:'5!'},
+            {s:'bot',d:6200,t:'Gracias Claudio! Vamos por mas',c:'amber'},
+            {s:'user',d:7400,t:'Seguro! Nos vemos el lunes'}
           ],
           reviews: [
-            {s:'bot',d:600,t:'Claudio, nos alegra tu progreso! Nos dejarias una reseña?',c:'yellow',link:'Dejar reseña en Google →'},
-            {s:'user',d:3200,t:'Listo, la deje! Muy buena academia'},
-            {s:'bot',d:5000,t:'Gracias Claudio! Seguimos con todo',c:'yellow'}
+            {s:'bot',d:600,t:'Claudio, nos alegra tu progreso! Nos dejarias una reseña en Google?',c:'yellow',link:'Dejar reseña en Google →'},
+            {s:'user',d:2400,t:'Si, obvio!'},
+            {s:'user',d:3800,t:'Listo! Puse que los profes son excelentes'},
+            {s:'bot',d:5200,t:'Gracias Claudio! Eso nos motiva mucho',c:'yellow'},
+            {s:'user',d:6400,t:'De nada! Son los mejores'},
+            {s:'bot',d:7600,t:'Seguimos con todo! Nos vemos en clase',c:'yellow'}
           ],
           recordatorios: [
-            {s:'bot',d:800,t:'Claudio! Tu cuota de abril del curso de ingles esta pendiente ($85.000). Link:',c:'indigo',link:'Pagar con MercadoPago →'},
-            {s:'user',d:3200,t:'Gracias por avisar! Lo pago ahora'},
+            {s:'bot',d:800,t:'Claudio! Cuota abril ingles $85.000. Link:',c:'indigo',link:'Pagar con MercadoPago →'},
+            {s:'user',d:2800,t:'Gracias por avisar!'},
+            {s:'user',d:3600,t:'Lo pago ahora'},
             {s:'user',d:4400,t:'📎 Comprobante.pdf',file:true},
-            {s:'bot',d:5600,t:'Pago recibido! Gracias Claudio, quedas al dia',c:'indigo'}
+            {s:'bot',d:5600,t:'Pago recibido! Gracias Claudio, quedas al dia',c:'indigo'},
+            {s:'bot',d:6800,t:'Te esperamos en la clase de mañana!',c:'indigo'}
+          ],
+          fidelizacion: [
+            {s:'bot',d:600,t:'Claudio! Faltaste a las ultimas 2 clases. Todo bien?',c:'purple'},
+            {s:'user',d:2400,t:'Si! El horario de las 19hs no me sirve mas'},
+            {s:'bot',d:3800,t:'Tenemos grupo de 8:00 y 21:00. Cual preferis?',c:'purple'},
+            {s:'user',d:5200,t:'El de las 21:00!'},
+            {s:'bot',d:6600,t:'Listo! Arrancas miercoles 12/03 a las 21:00',c:'purple'},
+            {s:'user',d:7800,t:'Gracias, ahi estoy!'}
           ]
         },
         { // Maria — Estudio contable
@@ -1297,30 +1422,49 @@
             {s:'user',d:600,t:'Buenas! Soy Maria, necesito asesoramiento contable'},
             {s:'bot',d:2200,t:'Hola Maria! Ofrecemos monotributo $35.000/mes, RI $70.000/mes y SAS $120.000/mes. Te interesa alguno?',c:'blue'},
             {s:'user',d:4000,t:'El de monotributo, recien arranco con mi emprendimiento'},
-            {s:'bot',d:5800,t:'Perfecto! Te agendo una reunion inicial gratuita. Te paso a confirmar',c:'blue'}
+            {s:'bot',d:5800,t:'Perfecto! Te agendo una reunion inicial gratuita',c:'blue'},
+            {s:'user',d:7000,t:'Dale, cuando seria?'},
+            {s:'bot',d:8200,t:'Miercoles 05/03 a las 11:00 por videollamada. Te mandamos el link!',c:'blue'}
           ],
           cierre: [
             {s:'bot',d:600,t:'Maria, plan Monotributo $35.000/mes. Link:',c:'green',link:'Pagar con MercadoPago →'},
-            {s:'user',d:2600,t:'Pague!'},
-            {s:'user',d:3400,t:'📎 Comprobante.pdf',file:true},
-            {s:'bot',d:4800,t:'✅ Comprobante verificado! Reunion: miercoles 05/03, 11:00hs por videollamada',c:'green'}
+            {s:'user',d:2200,t:'Ahi lo transfiero'},
+            {s:'user',d:3000,t:'Pague!'},
+            {s:'user',d:3800,t:'📎 Comprobante.pdf',file:true},
+            {s:'bot',d:5000,t:'✅ Comprobante verificado! Reunion: miercoles 05/03, 11:00hs',c:'green'},
+            {s:'bot',d:6200,t:'Te mandamos el link de Google Meet el martes por la noche',c:'green'}
           ],
           postventa: [
-            {s:'bot',d:600,t:'Maria! Como te fue con la reunion del miercoles?',c:'amber'},
-            {s:'user',d:2400,t:'Excelente, me quedo todo muy claro'},
-            {s:'bot',d:4000,t:'Que bueno! Del 1 al 5, como calificarias la atencion?',c:'amber'},
-            {s:'user',d:5400,t:'5, muy profesionales!'}
+            {s:'bot',d:600,t:'Maria! Como te fue con la reunion?',c:'amber'},
+            {s:'user',d:2400,t:'Excelente, me quedo todo claro'},
+            {s:'bot',d:3800,t:'Que bueno! Del 1 al 5, como calificarias?',c:'amber'},
+            {s:'user',d:5000,t:'5, muy profesionales!'},
+            {s:'bot',d:6200,t:'Gracias Maria! Tu contador te contacta pronto',c:'amber'},
+            {s:'user',d:7400,t:'Perfecto, los espero!'}
           ],
           reviews: [
-            {s:'bot',d:600,t:'Maria, que bueno! Nos dejarias una reseña en Google?',c:'yellow',link:'Dejar reseña en Google →'},
-            {s:'user',d:3200,t:'Si, ya la deje! Los recomiendo'},
-            {s:'bot',d:5000,t:'Gracias Maria! Estamos para lo que necesites',c:'yellow'}
+            {s:'bot',d:600,t:'Maria, que bueno! Nos dejarias una reseña en Google? Nos ayuda a crecer',c:'yellow',link:'Dejar reseña en Google →'},
+            {s:'user',d:2400,t:'Dale, encantada!'},
+            {s:'user',d:3800,t:'Listo, 5 estrellas! Los recomiendo'},
+            {s:'bot',d:5200,t:'Gracias Maria! Tu reseña nos suma mucho',c:'yellow'},
+            {s:'user',d:6400,t:'De nada! Excelente servicio'},
+            {s:'bot',d:7600,t:'Estamos para lo que necesites!',c:'yellow'}
           ],
           recordatorios: [
-            {s:'bot',d:800,t:'Maria! Tu honorario de abril esta pendiente ($35.000). Te dejo el link:',c:'indigo',link:'Pagar con MercadoPago →'},
-            {s:'user',d:3200,t:'Ay, se me paso! Lo transfiero ahora'},
+            {s:'bot',d:800,t:'Maria! Honorario abril pendiente $35.000. Link:',c:'indigo',link:'Pagar con MercadoPago →'},
+            {s:'user',d:2800,t:'Ay, se me paso!'},
+            {s:'user',d:3600,t:'Lo transfiero ahora'},
             {s:'user',d:4400,t:'📎 Comprobante.pdf',file:true},
-            {s:'bot',d:5600,t:'Recibido! Gracias Maria, quedas al dia',c:'indigo'}
+            {s:'bot',d:5600,t:'Recibido! Gracias Maria, quedas al dia',c:'indigo'},
+            {s:'bot',d:6800,t:'Te mandamos el recibo. Cualquier duda estamos!',c:'indigo'}
+          ],
+          fidelizacion: [
+            {s:'bot',d:600,t:'Maria! Hace 3 meses sin actividad. Sigue todo bien?',c:'purple'},
+            {s:'user',d:2400,t:'Si! Pensaba en pausar, tuve meses flojos'},
+            {s:'bot',d:3800,t:'Te ofrecemos 2 meses al 50%. Que te parece?',c:'purple'},
+            {s:'user',d:5200,t:'Buenisimo! Acepto'},
+            {s:'bot',d:6600,t:'Listo! Proximo mes a $17.500. Cualquier duda estamos',c:'purple'},
+            {s:'user',d:7800,t:'Gracias, me sirve mucho!'}
           ]
         },
         { // Lucas — Taller mecanico
@@ -1328,30 +1472,49 @@
             {s:'user',d:600,t:'Hola! Soy Lucas, el auto me hace un ruido raro al frenar'},
             {s:'bot',d:2200,t:'Hola Lucas! Puede ser pastillas o discos. Revision de frenos $25.000. Te agendo turno?',c:'blue'},
             {s:'user',d:4000,t:'Si, lo antes posible por favor'},
-            {s:'bot',d:5800,t:'Mañana viernes 07/03 a las 9:00. Te confirmo!',c:'blue'}
+            {s:'bot',d:5800,t:'Mañana viernes 07/03 a las 9:00. Te confirmo!',c:'blue'},
+            {s:'user',d:7000,t:'Genial, ahi lo llevo'},
+            {s:'bot',d:8200,t:'Te esperamos Lucas! Traelo con el tanque lleno',c:'blue'}
           ],
           cierre: [
             {s:'bot',d:600,t:'Lucas, revision de frenos $25.000. Link:',c:'green',link:'Pagar seña con MercadoPago →'},
-            {s:'user',d:2600,t:'Pague la seña!'},
-            {s:'user',d:3400,t:'📎 Comprobante.pdf',file:true},
-            {s:'bot',d:4800,t:'✅ Pago acreditado! Viernes 07/03, 9:00hs. Te esperamos',c:'green'}
+            {s:'user',d:2200,t:'Dale, ahi pago'},
+            {s:'user',d:3000,t:'Pague la seña!'},
+            {s:'user',d:3800,t:'📎 Comprobante.pdf',file:true},
+            {s:'bot',d:5000,t:'✅ Pago acreditado! Viernes 07/03, 9:00hs',c:'green'},
+            {s:'bot',d:6200,t:'Traelo con tanque lleno y sin objetos en el baul. Te esperamos!',c:'green'}
           ],
           postventa: [
-            {s:'bot',d:600,t:'Lucas! Como quedo el auto despues de la revision?',c:'amber'},
+            {s:'bot',d:600,t:'Lucas! Como quedo el auto?',c:'amber'},
             {s:'user',d:2400,t:'Impecable, no hace mas ruido!'},
-            {s:'bot',d:4000,t:'Genial! Del 1 al 5, como calificarias el servicio?',c:'amber'},
-            {s:'user',d:5400,t:'5, muy rapidos!'}
+            {s:'bot',d:3800,t:'Genial! Del 1 al 5, como calificarias?',c:'amber'},
+            {s:'user',d:5000,t:'5, muy rapidos!'},
+            {s:'bot',d:6200,t:'Gracias Lucas! Te avisamos para el proximo',c:'amber'},
+            {s:'user',d:7400,t:'Dale, gracias!'}
           ],
           reviews: [
             {s:'bot',d:600,t:'Lucas, que bueno! Nos dejarias una reseña en Google?',c:'yellow',link:'Dejar reseña en Google →'},
-            {s:'user',d:3200,t:'Dale, ya la deje! Buen taller'},
-            {s:'bot',d:5000,t:'Gracias Lucas! Para lo que necesites',c:'yellow'}
+            {s:'user',d:2400,t:'Si, claro!'},
+            {s:'user',d:3800,t:'Listo! Puse que son muy rapidos y honestos'},
+            {s:'bot',d:5200,t:'Gracias Lucas! Eso vale mucho para nosotros',c:'yellow'},
+            {s:'user',d:6400,t:'Se lo merecen, muy buen taller'},
+            {s:'bot',d:7600,t:'Para lo que necesites! Buen viaje',c:'yellow'}
           ],
           recordatorios: [
-            {s:'bot',d:800,t:'Lucas! Queda pendiente el saldo del service del 07/03 ($45.000). Link:',c:'indigo',link:'Pagar con MercadoPago →'},
-            {s:'user',d:3200,t:'Cierto! Lo pago ahora mismo'},
+            {s:'bot',d:800,t:'Lucas! Pendiente: service $45.000. Link:',c:'indigo',link:'Pagar con MercadoPago →'},
+            {s:'user',d:2800,t:'Cierto! Se me paso'},
+            {s:'user',d:3600,t:'Lo pago ahora mismo'},
             {s:'user',d:4400,t:'📎 Comprobante.pdf',file:true},
-            {s:'bot',d:5600,t:'Pago registrado! Gracias Lucas',c:'indigo'}
+            {s:'bot',d:5600,t:'Pago registrado! Gracias Lucas',c:'indigo'},
+            {s:'bot',d:6800,t:'Te avisamos cuando toque el proximo service!',c:'indigo'}
+          ],
+          fidelizacion: [
+            {s:'bot',d:600,t:'Lucas! Tu auto cumple 6 meses desde el ultimo service',c:'purple'},
+            {s:'user',d:2400,t:'Cierto! Ni me acordaba'},
+            {s:'bot',d:3800,t:'Service completo con 10% off: $22.500. Te agendo?',c:'purple'},
+            {s:'user',d:5200,t:'Si, dale! Lo antes posible'},
+            {s:'bot',d:6600,t:'Jueves 13/03 a las 9:00. Te esperamos!',c:'purple'},
+            {s:'user',d:7800,t:'Ahi lo llevo, gracias!'}
           ]
         }
       ];
@@ -1362,7 +1525,8 @@
         cierre: 'chat-cierre',
         postventa: 'chat-postventa',
         reviews: 'chat-reviews',
-        recordatorios: 'chat-recordatorios'
+        recordatorios: 'chat-recordatorios',
+        fidelizacion: 'chat-fidelizacion'
       };
 
       function buildBubble(msg) {
@@ -1370,13 +1534,14 @@
         wrap.className = 'chat-bubble opacity-0';
         wrap.dataset.sender = msg.s;
         wrap.dataset.delay = msg.d;
-        var color = msg.c || 'gray';
+        var now = new Date();
+        var timeStr = now.getHours() + ':' + String(now.getMinutes()).padStart(2,'0');
         if (msg.s === 'user') {
-          var fileClass = msg.file ? ' bg-blue-50 border border-blue-200' : ' bg-gray-100';
-          wrap.innerHTML = '<div class="flex items-start gap-2 justify-end"><div class="rounded-2xl rounded-tr-sm px-4 py-2.5' + fileClass + '"><p class="text-sm text-gray-700">' + msg.t + '</p></div></div>';
+          var cls = msg.file ? 'wa-bubble-user wa-bubble-file' : 'wa-bubble-user';
+          wrap.innerHTML = '<div class="' + cls + '"><p>' + msg.t + '</p><span class="wa-bubble-time">' + timeStr + ' <svg width="13" height="8" viewBox="0 0 16 10" fill="none" style="display:inline;vertical-align:middle;margin-left:1px"><path d="M1 5.5L4.5 9L11 1" stroke="#53BDEB" stroke-width="1.5" stroke-linecap="round" stroke-linejoin="round"/><path d="M5 5.5L8.5 9L15 1" stroke="#53BDEB" stroke-width="1.5" stroke-linecap="round" stroke-linejoin="round"/></svg></span></div>';
         } else {
-          var linkHtml = msg.link ? '<span class="text-sm text-' + color + '-600 font-semibold mt-1 block">' + msg.link + '</span>' : '';
-          wrap.innerHTML = '<div class="flex items-start gap-2"><div class="bg-' + color + '-50 rounded-2xl rounded-tl-sm px-4 py-2.5 max-w-[80%]"><p class="text-sm text-gray-700">' + msg.t + '</p>' + linkHtml + '</div></div>';
+          var linkHtml = msg.link ? '<a class="wa-bubble-link">' + msg.link + '</a>' : '';
+          wrap.innerHTML = '<div class="wa-bubble-bot"><p>' + msg.t + '</p>' + linkHtml + '<span class="wa-bubble-time">' + timeStr + '</span></div>';
         }
         return wrap;
       }
@@ -1405,7 +1570,7 @@
     // === Sistema Carousel ===
     (function(){
       var TOTAL = 6;
-      var AUTO_MS = 9000;
+      var AUTO_MS = 13000;
       var cur = 0;
       var timer = null;
       function updateUI(){
