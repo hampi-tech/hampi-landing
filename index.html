@@ -184,7 +184,7 @@
     "name": "HAMPI",
     "legalName": "HAMPI-SAAS",
     "url": "https://hampi.tech",
-    "logo": "https://hampi.tech/LOGO.png",
+    "logo": "https://hampi.tech/og-logo.png",
     "image": "https://hampi.tech/og-image.jpg",
     "description": "Sistema de atencion y ventas con IA por WhatsApp para PyMEs argentinas. Automatiza atencion al cliente, ventas, post-venta y resenas Google.",
     "address": {
@@ -1081,7 +1081,7 @@
               <li class="flex items-start gap-1.5 text-xs text-gray-600"><svg class="w-3.5 h-3.5 text-brand-500 shrink-0 mt-0.5" fill="none" stroke="currentColor" viewBox="0 0 24 24"><path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M5 13l4 4L19 7"/></svg>Catalogo hasta 20 productos · 1 usuario</li>
             </ul>
             <p class="text-[10px] text-gray-400 mb-3 text-center">Sin IA · Sin ventas · Sin post-venta</p>
-            <a href="https://wa.me/5493514084090?text=Hola%2C%20quiero%20cotizar%20el%20plan%20Starter%20de%20HAMPI" target="_blank" rel="noopener" class="block text-center bg-gray-100 hover:bg-gray-200 text-gray-800 font-semibold py-2.5 rounded-xl transition-colors text-sm">Cotizar por WhatsApp</a>
+            <a href="https://wa.me/5493514084090?text=Hola%2C%20quiero%20cotizar%20el%20plan%20Starter%20de%20HAMPI" target="_blank" rel="noopener" data-cta="plan-starter" class="block text-center bg-gray-100 hover:bg-gray-200 text-gray-800 font-semibold py-2.5 rounded-xl transition-colors text-sm">Cotizar por WhatsApp</a>
           </div>
 
           <!-- Pro -->
@@ -1106,7 +1106,7 @@
               <li class="flex items-start gap-1.5 text-xs text-gray-600"><svg class="w-3.5 h-3.5 text-brand-500 shrink-0 mt-0.5" fill="none" stroke="currentColor" viewBox="0 0 24 24"><path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M5 13l4 4L19 7"/></svg>Hasta <strong>750 msgs/mes</strong> · WhatsApp + Email</li>
               <li class="flex items-start gap-1.5 text-xs text-gray-600"><svg class="w-3.5 h-3.5 text-brand-500 shrink-0 mt-0.5" fill="none" stroke="currentColor" viewBox="0 0 24 24"><path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M5 13l4 4L19 7"/></svg>Cobro por MercadoPago · Dashboard ventas · 3 usuarios</li>
             </ul>
-            <a href="https://wa.me/5493514084090?text=Hola%2C%20quiero%20cotizar%20el%20plan%20Pro%20de%20HAMPI" target="_blank" rel="noopener" class="block text-center bg-brand-600 hover:bg-brand-700 text-white font-semibold py-2.5 rounded-xl transition-colors text-sm">Quiero una propuesta</a>
+            <a href="https://wa.me/5493514084090?text=Hola%2C%20quiero%20cotizar%20el%20plan%20Pro%20de%20HAMPI" target="_blank" rel="noopener" data-cta="plan-pro" class="block text-center bg-brand-600 hover:bg-brand-700 text-white font-semibold py-2.5 rounded-xl transition-colors text-sm">Quiero una propuesta</a>
           </div>
 
           <!-- Enterprise -->
@@ -1140,7 +1140,7 @@
                 <li class="flex items-start gap-1.5 text-xs text-indigo-100"><svg class="w-3.5 h-3.5 text-emerald-400 shrink-0 mt-0.5" fill="none" stroke="currentColor" viewBox="0 0 24 24"><path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M5 13l4 4L19 7"/></svg>Hasta <strong class="text-white">1.800 msgs/mes</strong> · Catalogo 500 productos</li>
                 <li class="flex items-start gap-1.5 text-xs text-indigo-100"><svg class="w-3.5 h-3.5 text-emerald-400 shrink-0 mt-0.5" fill="none" stroke="currentColor" viewBox="0 0 24 24"><path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M5 13l4 4L19 7"/></svg><strong class="text-white">10 usuarios</strong> · Soporte prioritario · API & webhooks</li>
               </ul>
-              <a href="https://wa.me/5493514084090?text=Hola%2C%20quiero%20info%20del%20plan%20Enterprise%20de%20HAMPI" target="_blank" rel="noopener" class="block text-center bg-white text-indigo-900 font-semibold py-2.5 rounded-xl hover:bg-indigo-50 transition-colors text-sm">Hablar con ventas</a>
+              <a href="https://wa.me/5493514084090?text=Hola%2C%20quiero%20info%20del%20plan%20Enterprise%20de%20HAMPI" target="_blank" rel="noopener" data-cta="plan-enterprise" class="block text-center bg-white text-indigo-900 font-semibold py-2.5 rounded-xl hover:bg-indigo-50 transition-colors text-sm">Hablar con ventas</a>
             </div>
           </div>
 
@@ -1835,6 +1835,8 @@
         if (data.ok) {
           msgEl.innerHTML = '<svg class="w-5 h-5 mx-auto text-green-400" fill="none" stroke="currentColor" viewBox="0 0 24 24"><path stroke-linecap="round" stroke-linejoin="round" stroke-width="2.5" d="M5 13l4 4L19 7"/></svg>';
           msgEl.className = 'text-center mt-1.5';
+          // GA4: track lead email submitted
+          if(typeof gtag === 'function') gtag('event', 'lead_email_submitted', { event_category: 'conversion', event_label: 'calculator' });
         } else {
           msgEl.textContent = 'No se pudo enviar. Intenta de nuevo.';
           msgEl.className = 'text-center text-[10px] mt-1.5 text-red-400';
@@ -1898,11 +1900,26 @@
         if(typeof gtag === 'function') gtag('event', action, { event_category: category, event_label: label });
       }
 
-      // Track all WhatsApp CTA clicks
+      // Track all WhatsApp CTA clicks with UTM context
       document.querySelectorAll('a[href*="wa.me"]').forEach(function(a){
         a.addEventListener('click', function(){
           var label = a.dataset.cta || a.closest('section')?.id || 'unknown';
           track('cta_whatsapp', 'conversion', label);
+          // Track as GA4 conversion with UTM-like params
+          if(typeof gtag === 'function') gtag('event', 'generate_lead', {
+            currency: 'ARS',
+            value: 0,
+            utm_source: 'hampi_landing',
+            utm_medium: 'whatsapp',
+            utm_campaign: label,
+          });
+        });
+      });
+
+      // Track plan CTA clicks specifically
+      document.querySelectorAll('[data-cta*="plan-"]').forEach(function(a){
+        a.addEventListener('click', function(){
+          track('plan_click', 'conversion', a.dataset.cta);
         });
       });
 
