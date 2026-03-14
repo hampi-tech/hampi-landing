@@ -8,6 +8,7 @@
   <meta name="keywords" content="atencion al cliente WhatsApp, ventas IA, automatizacion PyMEs, MercadoPago, resenas Google, IA Argentina, chatbot WhatsApp">
   <meta name="author" content="HAMPI">
   <meta name="robots" content="index, follow">
+  <meta name="referrer" content="strict-origin-when-cross-origin">
   <meta name="facebook-domain-verification" content="ja7nkng0j9wahrmzs2x4em6lvalo7e" />
   <link rel="canonical" href="https://hampi.tech/">
 
@@ -35,6 +36,9 @@
   <link rel="apple-touch-icon" sizes="180x180" href="logoxx.png">
   <link rel="manifest" href="manifest.json">
   <meta name="theme-color" content="#4f46e5">
+
+  <!-- Preload critical resources -->
+  <link rel="preload" href="hampilogo.webp" as="image" type="image/webp">
 
   <!-- Fonts (preconnect + display swap) -->
   <link rel="preconnect" href="https://fonts.googleapis.com">
@@ -218,43 +222,42 @@
     "name": "HAMPI",
     "applicationCategory": "BusinessApplication",
     "operatingSystem": "Web",
+    "offers": {
+      "@type": "AggregateOffer",
+      "lowPrice": "80000",
+      "highPrice": "360000",
+      "priceCurrency": "ARS",
+      "offerCount": "3"
+    },
+    "description": "Plataforma de IA para automatizar atencion al cliente, ventas y recordatorios de pago por WhatsApp",
     "url": "https://hampi.tech",
-    "description": "Plataforma SaaS de atencion al cliente y ventas automaticas por WhatsApp con inteligencia artificial para PyMEs argentinas.",
-    "offers": [
-      {
-        "@type": "Offer",
-        "name": "Starter",
-        "price": "80000",
-        "priceCurrency": "ARS",
-        "priceValidUntil": "2026-12-31",
-        "description": "Chatbot 24/7, menu automatico, FAQs, 200 notificaciones/mes"
-      },
-      {
-        "@type": "Offer",
-        "name": "Pro",
-        "price": "187000",
-        "priceCurrency": "ARS",
-        "priceValidUntil": "2026-12-31",
-        "description": "IA contextual, ventas automaticas, post-venta, resenas Google, 750 msgs/mes"
-      },
-      {
-        "@type": "Offer",
-        "name": "Enterprise",
-        "priceCurrency": "ARS",
-        "priceValidUntil": "2026-12-31",
-        "description": "Todo Pro + multi-sucursal, analytics avanzados, API — precio a medida"
-      }
-    ],
-    "provider": {
-      "@type": "Organization",
-      "name": "HAMPI",
-      "url": "https://hampi.tech"
-    }
+    "screenshot": "https://hampi.tech/og-image.jpg",
+    "featureList": "Atencion 24/7, Ventas automaticas, Recordatorios de pago, Resenas Google, Fidelizacion"
+  }
+  </script>
+  <script type="application/ld+json">
+  {
+    "@context": "https://schema.org",
+    "@type": "LocalBusiness",
+    "name": "HAMPI",
+    "address": {
+      "@type": "PostalAddress",
+      "addressLocality": "Cordoba",
+      "addressRegion": "Cordoba",
+      "addressCountry": "AR"
+    },
+    "url": "https://hampi.tech",
+    "telephone": "+5493514084090",
+    "priceRange": "$$"
   }
   </script>
 </head>
 
 <body class="font-sans text-gray-800 bg-white antialiased">
+
+  <a href="#main-content" class="sr-only focus:not-sr-only focus:absolute focus:top-2 focus:left-2 focus:bg-white focus:px-4 focus:py-2 focus:rounded focus:z-50">
+    Ir al contenido principal
+  </a>
 
   <!-- ===== NAV ===== -->
   <nav id="main-nav" class="fixed top-0 w-full bg-white z-40 border-b border-gray-200/60 transition-shadow duration-300" style="box-shadow:none">
@@ -262,7 +265,7 @@
       <a href="#" class="flex items-center gap-2">
         <picture>
           <source srcset="hampilogo.webp" type="image/webp">
-          <img src="hampilogo.png" alt="HAMPI — Sistema de atencion y recordatorios de pago" class="h-8 sm:h-9 w-auto object-contain" width="200" height="61" style="image-rendering:-webkit-optimize-contrast;transform:translateZ(0)">
+          <img src="hampilogo.png" alt="HAMPI — Sistema de atencion y recordatorios de pago" class="h-8 sm:h-9 w-auto object-contain" width="200" height="61" fetchpriority="high" style="image-rendering:-webkit-optimize-contrast;transform:translateZ(0)">
         </picture>
       </a>
       <div class="hidden md:flex items-center gap-8 text-xs font-bold text-gray-700 uppercase" style="letter-spacing:.06em">
@@ -291,7 +294,8 @@
   </nav>
 
   <!-- ===== 1. HERO ===== -->
-  <section id="hero" class="gradient-hero pt-28 pb-20 sm:pt-36 sm:pb-28">
+  <section id="hero" class="gradient-hero pt-28 pb-20 sm:pt-36 sm:pb-28" role="main">
+    <a id="main-content" class="sr-only"></a>
     <div class="max-w-5xl mx-auto px-4 sm:px-6 relative z-10 text-center">
 
       <div class="flex justify-end mb-4 max-w-4xl mx-auto">
@@ -976,7 +980,7 @@
                   <label class="text-xs font-medium text-gray-400">Clientes activos</label>
                   <span id="calc-clientes-val" class="text-xs font-bold text-brand-400">200</span>
                 </div>
-                <input type="range" id="calc-clientes" min="50" max="2000" value="200" step="50" class="w-full">
+                <input type="range" id="calc-clientes" min="50" max="2000" value="200" step="50" class="w-full" aria-label="Cantidad de clientes activos">
                 <div class="flex justify-between text-xs text-gray-600 mt-0.5"><span>50</span><span>2.000</span></div>
               </div>
               <div>
@@ -984,7 +988,7 @@
                   <label class="text-xs font-medium text-gray-400">Ticket promedio mensual (ARS)</label>
                   <span id="calc-ticket-val" class="text-xs font-bold text-brand-400">$15.000</span>
                 </div>
-                <input type="range" id="calc-ticket" min="5000" max="500000" value="15000" step="5000" class="w-full">
+                <input type="range" id="calc-ticket" min="5000" max="500000" value="15000" step="5000" class="w-full" aria-label="Ticket promedio mensual en pesos">
                 <div class="flex justify-between text-xs text-gray-600 mt-0.5"><span>$5.000</span><span>$500.000</span></div>
               </div>
               <div>
@@ -992,7 +996,7 @@
                   <label class="text-xs font-medium text-gray-400">Morosidad (%)</label>
                   <span id="calc-mora-val" class="text-xs font-bold text-red-400">25%</span>
                 </div>
-                <input type="range" id="calc-mora" min="0" max="60" value="25" step="1" class="w-full">
+                <input type="range" id="calc-mora" min="0" max="60" value="25" step="1" class="w-full" aria-label="Porcentaje de morosidad">
                 <div class="flex justify-between text-xs text-gray-600 mt-0.5"><span>0%</span><span>60%</span></div>
               </div>
               <div>
@@ -1000,14 +1004,14 @@
                   <label class="text-xs font-medium text-gray-400">Bajas mensuales (%)</label>
                   <span id="calc-churn-val" class="text-xs font-bold text-amber-400">8%</span>
                 </div>
-                <input type="range" id="calc-churn" min="0" max="40" value="8" step="1" class="w-full">
+                <input type="range" id="calc-churn" min="0" max="40" value="8" step="1" class="w-full" aria-label="Porcentaje de bajas mensuales">
                 <div class="flex justify-between text-xs text-gray-600 mt-0.5"><span>0%</span><span>40%</span></div>
               </div>
             </div>
 
             <div class="border-t border-gray-800 pt-4">
               <div class="mb-3">
-                <div class="bg-red-500/10 rounded-lg p-4 border border-red-500/20 text-center">
+                <div class="bg-red-500/10 rounded-lg p-4 border border-red-500/20 text-center" aria-live="polite" aria-atomic="true">
                   <p class="text-gray-400 text-[10px] mb-1 uppercase tracking-wider">Estimativo de perdida mensual</p>
                   <p id="calc-perdida" class="text-3xl sm:text-4xl font-black text-red-400">$750.000</p>
                 </div>
@@ -1149,6 +1153,25 @@
     </div>
   </section>
 
+  <!-- ===== SEGURIDAD Y CONFIANZA ===== -->
+  <section class="py-8 bg-gray-50 border-t border-gray-200">
+    <div class="max-w-4xl mx-auto px-4 sm:px-6">
+      <div class="flex flex-wrap justify-center gap-6 sm:gap-10">
+        <div class="flex items-center gap-2 text-sm text-gray-500">
+          <svg class="w-5 h-5 text-brand-500 shrink-0" fill="none" stroke="currentColor" viewBox="0 0 24 24"><path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M12 15v2m-6 4h12a2 2 0 002-2v-6a2 2 0 00-2-2H6a2 2 0 00-2 2v6a2 2 0 002 2zm10-10V7a4 4 0 00-8 0v4h8z"/></svg>
+          <span>Datos encriptados</span>
+        </div>
+        <div class="flex items-center gap-2 text-sm text-gray-500">
+          <svg class="w-5 h-5 text-brand-500 shrink-0" fill="none" stroke="currentColor" viewBox="0 0 24 24"><path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M9 12l2 2 4-4m5.618-4.016A11.955 11.955 0 0112 2.944a11.955 11.955 0 01-8.618 3.04A12.02 12.02 0 003 9c0 5.591 3.824 10.29 9 11.622 5.176-1.332 9-6.03 9-11.622 0-1.042-.133-2.052-.382-3.016z"/></svg>
+          <span>Registrado ante AAIP</span>
+        </div>
+        <div class="flex items-center gap-2 text-sm text-gray-500">
+          <svg class="w-5 h-5 text-brand-500 shrink-0" fill="none" stroke="currentColor" viewBox="0 0 24 24"><path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M5 13l4 4L19 7"/></svg>
+          <span>WhatsApp Business API oficial</span>
+        </div>
+      </div>
+    </div>
+  </section>
 
   <!-- ===== FOOTER (compacto) ===== -->
   <footer class="bg-white text-gray-500 py-6 border-t border-gray-200">
@@ -1895,10 +1918,50 @@
     });
 
     // === GA4 Event Tracking ===
+    function trackEvent(eventName, params) {
+      if (typeof gtag === 'function') { gtag('event', eventName, params); }
+    }
+
     (function(){
       function track(action, category, label){
         if(typeof gtag === 'function') gtag('event', action, { event_category: category, event_label: label });
       }
+
+      // Track view_pricing when pricing section is visible
+      var planesSection = document.getElementById('planes');
+      if (planesSection) {
+        var pricingObs = new IntersectionObserver(function(entries){
+          entries.forEach(function(e){
+            if(e.isIntersecting){ trackEvent('view_pricing', { section: 'planes' }); pricingObs.disconnect(); }
+          });
+        }, { threshold: 0.3 });
+        pricingObs.observe(planesSection);
+      }
+
+      // Track phone/WhatsApp contact link clicks
+      document.querySelectorAll('a[href*="wa.me"], a[href*="tel:"]').forEach(function(a){
+        a.addEventListener('click', function(){
+          trackEvent('phone_contact', { method: a.href.includes('wa.me') ? 'whatsapp' : 'phone', section: a.closest('section')?.id || 'unknown' });
+        });
+      });
+
+      // Track engaged visit (30s on page)
+      setTimeout(function(){ trackEvent('engaged_visit', { time: 30 }); }, 30000);
+
+      // Track calculator slider interactions with detail
+      document.querySelectorAll('#calc-clientes, #calc-ticket, #calc-mora, #calc-churn').forEach(function(el){
+        var sliderTracked = false;
+        el.addEventListener('change', function(){
+          if(!sliderTracked){ trackEvent('calculator_interaction', { slider: el.id, value: el.value }); sliderTracked = true; }
+        });
+      });
+
+      // Track CTA button clicks with text and section
+      document.querySelectorAll('a[data-cta], .cta-shimmer, a[href*="wa.me"]').forEach(function(btn){
+        btn.addEventListener('click', function(){
+          trackEvent('cta_click', { button_text: btn.textContent.trim().substring(0, 50), section: btn.closest('section')?.id || 'nav' });
+        });
+      });
 
       // Track all WhatsApp CTA clicks with UTM context
       document.querySelectorAll('a[href*="wa.me"]').forEach(function(a){
