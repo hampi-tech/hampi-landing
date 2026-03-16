@@ -1,0 +1,28 @@
+{
+  "permissions": {
+    "allow": [
+      "Bash(git *)",
+      "Bash(npx *)",
+      "Bash(ls *)",
+      "Bash(cd *)",
+      "Bash(find *)",
+      "Bash(grep *)",
+      "Bash(head *)",
+      "Bash(tail *)",
+      "Bash(cat *)",
+      "Bash(sed *)",
+      "Bash(rm *)",
+      "Bash(mkdir *)",
+      "Bash(cp *)",
+      "Bash(mv *)",
+      "Bash(echo *)",
+      "Bash(curl *)",
+      "Bash(vercel *)",
+      "Bash(powershell *)",
+      "Bash(gh *)",
+      "WebSearch",
+      "WebFetch",
+      "mcp__sequential-thinking__sequentialthinking"
+    ]
+  }
+}
