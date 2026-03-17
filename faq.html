@@ -46,7 +46,11 @@
   <script>
     window.dataLayer = window.dataLayer || [];
     function gtag(){dataLayer.push(arguments);}
+    gtag('consent', 'default', { analytics_storage: 'denied' });
     gtag('js', new Date());
+    if(localStorage.getItem('hampi_cookie_consent') === 'accepted') {
+      gtag('consent', 'update', { analytics_storage: 'granted' });
+    }
     gtag('config', 'G-G7MKH28DM8');
   </script>
 </head>
@@ -391,6 +395,18 @@
       });
     });
   </script>
+
+<!-- Cookie Consent Banner -->
+<div id="cookie-banner" class="fixed bottom-20 right-4 sm:bottom-6 max-w-sm bg-white rounded-xl shadow-2xl border border-gray-200 p-4 z-[60]" style="display:none">
+  <p class="text-sm text-gray-700 mb-3 leading-snug">Usamos cookies de analytics para mejorar tu experiencia. <a href="privacidad.html" class="text-indigo-600 hover:underline font-semibold">Política de privacidad</a></p>
+  <div class="flex gap-2">
+    <button onclick="hampiCookieConsent('accepted')" class="flex-1 bg-indigo-600 hover:bg-indigo-700 text-white text-xs font-bold py-2 rounded-lg transition-colors">Aceptar</button>
+    <button onclick="hampiCookieConsent('rejected')" class="flex-1 bg-gray-100 hover:bg-gray-200 text-gray-700 text-xs font-bold py-2 rounded-lg transition-colors">Rechazar</button>
+  </div>
+</div>
+<script>
+(function(){var b=document.getElementById('cookie-banner');if(!localStorage.getItem('hampi_cookie_consent')){b.style.display='block'}window.hampiCookieConsent=function(v){localStorage.setItem('hampi_cookie_consent',v);b.style.display='none';if(v==='accepted'&&window.gtag){gtag('consent','update',{analytics_storage:'granted'})}};})();
+</script>
 
 </body>
 </html>
