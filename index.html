@@ -45,24 +45,8 @@
   <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
   <link href="https://fonts.googleapis.com/css2?family=Inter:wght@400;500;600;700;800;900&display=swap" rel="stylesheet">
 
-  <!-- Tailwind -->
-  <script src="https://cdn.tailwindcss.com"></script>
-  <script>
-    tailwind.config = {
-      theme: {
-        extend: {
-          fontFamily: { sans: ['Inter', 'system-ui', 'sans-serif'] },
-          colors: {
-            brand: {
-              50: '#eef2ff', 100: '#e0e7ff', 200: '#c7d2fe', 300: '#a5b4fc',
-              400: '#818cf8', 500: '#6366f1', 600: '#4f46e5', 700: '#4338ca',
-              800: '#3730a3', 900: '#312e81', 950: '#1e1b4b'
-            }
-          }
-        }
-      }
-    }
-  </script>
+  <!-- Tailwind (compiled) -->
+  <link rel="stylesheet" href="dist.css">
   <style>
     .reveal{opacity:0;transform:translateY(30px);transition:opacity .7s ease,transform .7s ease}
     .reveal.visible{opacity:1;transform:translateY(0)}
@@ -1046,6 +1030,19 @@
     </div>
   </section>
 
+  <!-- ===== CONFIAN EN HAMPI ===== -->
+  <section class="py-12 bg-white border-t border-gray-100">
+    <div class="max-w-5xl mx-auto px-4 sm:px-6">
+      <p class="text-center text-sm font-semibold text-gray-400 uppercase tracking-wider mb-8 reveal">Confian en HAMPI</p>
+      <div class="flex flex-wrap justify-center items-center gap-10 sm:gap-14 reveal">
+        <img src="EMILOGO.png" alt="EMI" class="h-10 sm:h-12 object-contain grayscale hover:grayscale-0 opacity-60 hover:opacity-100 transition-all duration-300" loading="lazy">
+        <img src="EVOLTISLOGO.jpeg" alt="Evoltis" class="h-10 sm:h-12 object-contain grayscale hover:grayscale-0 opacity-60 hover:opacity-100 transition-all duration-300" loading="lazy">
+        <img src="GENERALCOLLECTLOGO.jpeg" alt="General Collect" class="h-10 sm:h-12 object-contain grayscale hover:grayscale-0 opacity-60 hover:opacity-100 transition-all duration-300" loading="lazy">
+        <img src="RODRIGUEZMURUALOGO.png" alt="Rodriguez Murua" class="h-10 sm:h-12 object-contain grayscale hover:grayscale-0 opacity-60 hover:opacity-100 transition-all duration-300" loading="lazy">
+      </div>
+    </div>
+  </section>
+
   <!-- ===== 4. PLANES ===== -->
   <section id="planes" class="py-14 bg-white">
     <div class="max-w-6xl mx-auto px-4 sm:px-6">
@@ -1154,6 +1151,26 @@
 
         </div>
       </div>
+    </div>
+  </section>
+
+  <!-- ===== SOLICITAR DEMO ===== -->
+  <section id="demo" class="py-14 bg-gray-950 text-white">
+    <div class="max-w-xl mx-auto px-4 sm:px-6 text-center reveal">
+      <h2 class="text-2xl sm:text-3xl font-bold mb-3">¿Queres verlo en accion?</h2>
+      <p class="text-gray-400 text-sm mb-6">Dejanos tu email y te enviamos una demo personalizada de HAMPI para tu rubro. Sin compromiso.</p>
+      <form id="demo-form" class="flex flex-col sm:flex-row gap-3 max-w-md mx-auto" onsubmit="return false;">
+        <input id="demo-name" type="text" placeholder="Tu nombre" required
+          class="flex-1 bg-gray-900 border border-gray-700 text-white text-sm rounded-lg px-4 py-3 focus:border-brand-500 focus:outline-none placeholder-gray-500">
+        <input id="demo-email" type="email" placeholder="tu@email.com" required
+          class="flex-1 bg-gray-900 border border-gray-700 text-white text-sm rounded-lg px-4 py-3 focus:border-brand-500 focus:outline-none placeholder-gray-500">
+        <button id="demo-submit" type="submit"
+          class="bg-brand-600 hover:bg-brand-700 text-white font-semibold px-6 py-3 rounded-lg transition-colors text-sm whitespace-nowrap">
+          Solicitar demo
+        </button>
+      </form>
+      <p id="demo-msg" class="text-sm mt-3 hidden"></p>
+      <p class="text-gray-600 text-xs mt-4">Tambien podes escribirnos directo por <a href="https://wa.me/5493514084090?text=Hola%2C%20quiero%20una%20demo%20de%20HAMPI" target="_blank" rel="noopener" class="text-brand-400 hover:text-brand-300 underline">WhatsApp</a></p>
     </div>
   </section>
 
@@ -2017,6 +2034,31 @@
     })();
 
   </script>
+<!-- Demo Form Handler -->
+<script>
+(function(){
+  var form=document.getElementById('demo-form');
+  if(!form)return;
+  form.addEventListener('submit',function(e){
+    e.preventDefault();
+    var name=document.getElementById('demo-name').value.trim();
+    var email=document.getElementById('demo-email').value.trim();
+    var msg=document.getElementById('demo-msg');
+    var btn=document.getElementById('demo-submit');
+    if(!name||!email)return;
+    btn.disabled=true;btn.textContent='Enviando...';
+    var waText='Hola, soy '+name+' ('+email+'). Quiero una demo de HAMPI.';
+    var waUrl='https://wa.me/5493514084090?text='+encodeURIComponent(waText);
+    msg.classList.remove('hidden');
+    msg.className='text-sm mt-3 text-emerald-400';
+    msg.textContent='Gracias '+name+'! Te contactamos pronto. Tambien podes escribirnos por WhatsApp.';
+    btn.textContent='Enviado';
+    if(window.gtag){gtag('event','demo_request',{method:'email',name:name})}
+    setTimeout(function(){window.open(waUrl,'_blank')},1500);
+  });
+})();
+</script>
+
 <!-- Cookie Consent Banner -->
 <div id="cookie-banner" class="fixed bottom-20 right-4 sm:bottom-6 max-w-sm bg-white rounded-xl shadow-2xl border border-gray-200 p-4 z-[60] transition-all duration-300" style="display:none">
   <p class="text-sm text-gray-700 mb-3 leading-snug">
