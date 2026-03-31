@@ -100,7 +100,7 @@
       <ul class="list-disc pl-6 text-gray-600 space-y-2">
         <li><strong>Fee de implementacion (setup):</strong> pago único al momento de la activacion. Cubre configuración de canales (WhatsApp Business API, MercadoPago), carga de base de contactos, personalizacion de flujos y pruebas previas a produccion. No es reembolsable una vez iniciado el proceso.</li>
         <li><strong>Licencia mensual (MRR):</strong> pago recurrente segun el plan contratado. Incluye acceso a la plataforma, soporte tecnico, mantenimiento, actualizaciones y un volumen de mensajes incluidos.</li>
-        <li><strong>Componente variable:</strong> fee transaccional sobre pagos procesados (seccion 4) y cargos por mensajes excedentes (seccion 5).</li>
+        <li><strong>Componente variable:</strong> cargos por mensajes excedentes (seccion 4).</li>
       </ul>
     </section>
 
@@ -132,21 +132,23 @@
             </tr>
             <tr>
               <td class="px-4 py-2 font-medium">Mensajes incluidos/mes</td>
-              <td class="px-4 py-2 text-center">3.000</td>
-              <td class="px-4 py-2 text-center">8.000</td>
-              <td class="px-4 py-2 text-center">14.000</td>
+              <td class="px-4 py-2 text-center" colspan="3">Incluidos en el plan (ver seccion 4)</td>
             </tr>
             <tr class="bg-gray-50">
               <td class="px-4 py-2 font-medium">Mensaje excedente</td>
-              <td class="px-4 py-2 text-center">$30/msg</td>
-              <td class="px-4 py-2 text-center">$25/msg</td>
-              <td class="px-4 py-2 text-center">$20/msg</td>
+              <td class="px-4 py-2 text-center" colspan="3">Segun tarifa vigente (ver seccion 4)</td>
             </tr>
             <tr>
-              <td class="px-4 py-2 font-medium">Fee transaccional</td>
-              <td class="px-4 py-2 text-center" colspan="3">0,5% sobre pagos cobrados via HAMPI</td>
+              <td class="px-4 py-2 font-medium">Usuarios</td>
+              <td class="px-4 py-2 text-center">1</td>
+              <td class="px-4 py-2 text-center">3</td>
+              <td class="px-4 py-2 text-center">10</td>
             </tr>
             <tr class="bg-gray-50">
+              <td class="px-4 py-2 font-medium">Medios de cobro integrados</td>
+              <td class="px-4 py-2 text-center" colspan="3">MercadoPago + Transferencia bancaria</td>
+            </tr>
+            <tr>
               <td class="px-4 py-2 font-medium">Licencia anual (paga 10, lleva 12)</td>
               <td class="px-4 py-2 text-center">$68.000/mes</td>
               <td class="px-4 py-2 text-center">$155.833/mes</td>
@@ -155,37 +157,27 @@
           </tbody>
         </table>
       </div>
-      <p class="text-xs text-gray-500 mt-3">Todos los precios estan expresados en pesos argentinos (ARS). Cuando el Cliente revista la condicion de Responsable Inscripto, se adicionara el IVA correspondiente. Los precios pueden ajustarse trimestralmente segun lo indicado en la seccion 7.</p>
+      <p class="text-xs text-gray-500 mt-3">Todos los precios estan expresados en pesos argentinos (ARS). Cuando el Cliente revista la condicion de Responsable Inscripto, se adicionara el IVA correspondiente. Los precios pueden ajustarse trimestralmente segun lo indicado en la seccion 6.</p>
     </section>
 
-    <!-- 4. Fee transaccional -->
+    <!-- 4. Mensajes y excedentes -->
     <section class="mb-10 reveal">
-      <h2 class="text-xl font-bold text-gray-900 mb-3">4. Fee transaccional</h2>
-      <p class="text-gray-600 mb-3">HAMPI cobra un fee del <strong>0,5% (cero coma cinco por ciento)</strong> sobre el monto bruto de cada pago efectivamente acreditado a traves de la integración con MercadoPago provista por la plataforma.</p>
+      <h2 class="text-xl font-bold text-gray-900 mb-3">4. Mensajes y excedentes</h2>
+      <p class="text-gray-600 mb-3">Cada plan incluye un volumen mensual de mensajes de WhatsApp Business API. Las conversaciones iniciadas por el cliente final dentro de la ventana de 24 horas no tienen costo adicional. Al superar el volumen de plantillas (templates) incluido en el plan:</p>
       <ul class="list-disc pl-6 text-gray-600 space-y-1">
-        <li>El fee se liquida mensualmente junto con la licencia, en base al reporte de transacciones del periodo.</li>
-        <li>Es independiente y adicional a las comisiones propias de MercadoPago.</li>
-        <li>No aplica a pagos realizados por canales externos a la plataforma HAMPI.</li>
-        <li>El reporte detallado de transacciones procesadas estara disponible en el panel de administracion del Cliente.</li>
-      </ul>
-    </section>
-
-    <!-- 5. Limites de mensajes y excedentes -->
-    <section class="mb-10 reveal">
-      <h2 class="text-xl font-bold text-gray-900 mb-3">5. Limites de mensajes y excedentes</h2>
-      <p class="text-gray-600 mb-3">Cada plan incluye un volumen mensual de mensajes de WhatsApp Business API. Al superar dicho volumen:</p>
-      <ul class="list-disc pl-6 text-gray-600 space-y-1">
-        <li>El servicio <strong>no se interrumpe</strong>. Los mensajes adicionales se facturan segun la tarifa de excedente del plan contratado.</li>
+        <li>El servicio <strong>no se interrumpe</strong>. Los mensajes adicionales se facturan como excedente.</li>
+        <li>El costo por mensaje excedente se calcula en base al <strong>costo vigente de WhatsApp Business API</strong> (tarifa Meta) mas un margen operativo del 30%, convertido a pesos argentinos al tipo de cambio del momento de liquidacion.</li>
         <li>El consumo excedente se liquida al cierre de cada periodo mensual.</li>
-        <li>El Cliente recibe notificaciones automáticas al alcanzar el 80% y el 100% del limite incluido.</li>
-        <li>Se entiende por "mensaje" cada interaccion dentro de una ventana de sesion de WhatsApp Business API (24 horas). Cada plantilla (template) enviada fuera de sesion cuenta como 1 mensaje.</li>
+        <li>El Cliente recibe notificaciones automaticas al alcanzar el 80% y el 100% del limite incluido.</li>
+        <li>Se entiende por "mensaje" cada plantilla (template) enviada fuera de la ventana de sesion de 24 horas de WhatsApp Business API.</li>
         <li>El volumen no consumido en un mes <strong>no es acumulable</strong> para periodos siguientes.</li>
+        <li>Las tarifas actualizadas estan disponibles en el panel de administracion del Cliente.</li>
       </ul>
     </section>
 
-    <!-- 6. Plan anual -->
+    <!-- 5. Plan anual -->
     <section class="mb-10 reveal">
-      <h2 class="text-xl font-bold text-gray-900 mb-3">6. Contratacion anual</h2>
+      <h2 class="text-xl font-bold text-gray-900 mb-3">5. Contratacion anual</h2>
       <p class="text-gray-600 mb-3">La contratacion anual ofrece un descuento equivalente a <strong>2 meses bonificados</strong> (el Cliente abona 10 meses y accede a 12 meses de servicio).</p>
       <ul class="list-disc pl-6 text-gray-600 space-y-1">
         <li>El pago se realiza en un único pago al inicio del periodo contratado.</li>
@@ -197,7 +189,7 @@
 
     <!-- 7. Ajuste de precios -->
     <section class="mb-10 reveal">
-      <h2 class="text-xl font-bold text-gray-900 mb-3">7. Ajuste trimestral de precios</h2>
+      <h2 class="text-xl font-bold text-gray-900 mb-3">6. Ajuste trimestral de precios</h2>
       <p class="text-gray-600 mb-3">Dado que los costos de infraestructura del servicio (WhatsApp Business API, servidores, modelos de IA) se cotizan en dolares estadounidenses, HAMPI se reserva el derecho de ajustar los precios trimestralmente.</p>
       <ul class="list-disc pl-6 text-gray-600 space-y-1">
         <li>Se toma como referencia el tipo de cambio MEP promedio de los ultimos 30 dias previos al ajuste.</li>
@@ -209,7 +201,7 @@
 
     <!-- 8. Implementacion y puesta en marcha -->
     <section class="mb-10 reveal">
-      <h2 class="text-xl font-bold text-gray-900 mb-3">8. Implementacion y puesta en marcha</h2>
+      <h2 class="text-xl font-bold text-gray-900 mb-3">7. Implementacion y puesta en marcha</h2>
       <p class="text-gray-600 mb-3">El proceso de implementacion incluye:</p>
       <ul class="list-disc pl-6 text-gray-600 space-y-1">
         <li>Configuracion de canales (WhatsApp Business API, email, MercadoPago).</li>
@@ -223,7 +215,7 @@
 
     <!-- 9. Obligaciones del cliente -->
     <section class="mb-10 reveal">
-      <h2 class="text-xl font-bold text-gray-900 mb-3">9. Obligaciones del Cliente</h2>
+      <h2 class="text-xl font-bold text-gray-900 mb-3">8. Obligaciones del Cliente</h2>
       <ul class="list-disc pl-6 text-gray-600 space-y-1">
         <li>Proveer información veraz y actualizada para la configuración del servicio.</li>
         <li>Garantizar que cuenta con el consentimiento de sus clientes finales para el envio de comunicaciones por WhatsApp, conforme a las politicas de Meta y la normativa vigente.</li>
@@ -235,7 +227,7 @@
 
     <!-- 10. Uso aceptable -->
     <section class="mb-10 reveal">
-      <h2 class="text-xl font-bold text-gray-900 mb-3">10. Politica de uso aceptable</h2>
+      <h2 class="text-xl font-bold text-gray-900 mb-3">9. Politica de uso aceptable</h2>
       <p class="text-gray-600 mb-3">El Cliente se compromete a utilizar HAMPI unicamente para:</p>
       <ul class="list-disc pl-6 text-gray-600 space-y-1">
         <li>Recordatorios de pago y notificaciones de pagos pendientes.</li>
@@ -247,7 +239,7 @@
 
     <!-- 11. Cancelacion y baja -->
     <section class="mb-10 reveal">
-      <h2 class="text-xl font-bold text-gray-900 mb-3">11. Cancelacion y baja</h2>
+      <h2 class="text-xl font-bold text-gray-900 mb-3">10. Cancelacion y baja</h2>
       <ul class="list-disc pl-6 text-gray-600 space-y-2">
         <li><strong>Plan mensual:</strong> puede cancelarse en cualquier momento. El servicio permanece activo hasta el fin del periodo abonado.</li>
         <li><strong>Plan anual:</strong> la cancelacion anticipada no genera derecho a reembolso. El servicio permanece activo hasta el vencimiento del periodo contratado.</li>
@@ -260,7 +252,7 @@
 
     <!-- 12. Privacidad y proteccion de datos -->
     <section class="mb-10 reveal">
-      <h2 class="text-xl font-bold text-gray-900 mb-3">12. Privacidad y proteccion de datos</h2>
+      <h2 class="text-xl font-bold text-gray-900 mb-3">11. Privacidad y proteccion de datos</h2>
       <ul class="list-disc pl-6 text-gray-600 space-y-1">
         <li>HAMPI actua como <strong>encargado del tratamiento</strong> de los datos personales de los clientes finales del contratante, en los terminos de la Ley 25.326 de Proteccion de Datos Personales y su decreto reglamentario 1558/2001.</li>
         <li>Los datos se almacenan en servidores con encriptacion en transito (TLS 1.2+) y en reposo.</li>
@@ -273,13 +265,13 @@
 
     <!-- 13. Propiedad intelectual -->
     <section class="mb-10 reveal">
-      <h2 class="text-xl font-bold text-gray-900 mb-3">13. Propiedad intelectual</h2>
+      <h2 class="text-xl font-bold text-gray-900 mb-3">12. Propiedad intelectual</h2>
       <p class="text-gray-600">La plataforma HAMPI, incluyendo su codigo fuente, algoritmos, diseno, marca, logotipo y documentacion, es propiedad exclusiva de <strong>VILLAGRA AGUSTIN (CUIT 20-39002520-4)</strong>. La contratacion del servicio no otorga al Cliente ningun derecho de propiedad sobre los mismos, limitandose a una licencia de uso no exclusiva, intransferible y revocable durante la vigencia del contrato.</p>
     </section>
 
     <!-- 14. Limitacion de responsabilidad -->
     <section class="mb-10 reveal">
-      <h2 class="text-xl font-bold text-gray-900 mb-3">14. Limitacion de responsabilidad</h2>
+      <h2 class="text-xl font-bold text-gray-900 mb-3">13. Limitacion de responsabilidad</h2>
       <ul class="list-disc pl-6 text-gray-600 space-y-1">
         <li>HAMPI no garantiza resultados especificos de recupero, retención o conversion, ya que estos dependen de multiples factores ajenos a la plataforma.</li>
         <li>HAMPI no sera responsable por danos indirectos, lucro cesante, perdida de datos o interrupciones causadas por terceros (Meta, MercadoPago, proveedores de infraestructura).</li>
@@ -290,14 +282,14 @@
 
     <!-- 15. Disponibilidad del servicio (SLA) -->
     <section class="mb-10 reveal">
-      <h2 class="text-xl font-bold text-gray-900 mb-3">15. Disponibilidad del servicio (SLA)</h2>
+      <h2 class="text-xl font-bold text-gray-900 mb-3">14. Disponibilidad del servicio (SLA)</h2>
       <p class="text-gray-600 mb-3">HAMPI se compromete a mantener una disponibilidad del <strong>99,5% mensual</strong>, excluyendo ventanas de mantenimiento programado (comunicadas con 24 horas de anticipacion).</p>
       <p class="text-gray-600">En caso de interrupciones no programadas superiores a 4 horas consecutivas, el Cliente tendra derecho a un credito proporcional al tiempo de inactividad, aplicable a la siguiente factura. Dicho credito no podra exceder el 30% de la mensualidad vigente.</p>
     </section>
 
     <!-- 16. Soporte tecnico -->
     <section class="mb-10 reveal">
-      <h2 class="text-xl font-bold text-gray-900 mb-3">16. Soporte tecnico</h2>
+      <h2 class="text-xl font-bold text-gray-900 mb-3">15. Soporte tecnico</h2>
       <ul class="list-disc pl-6 text-gray-600 space-y-1">
         <li><strong>Canales:</strong> WhatsApp y email (legales@hampi.tech).</li>
         <li><strong>Horario:</strong> lunes a viernes de 9:00 a 18:00 (hora de Argentina, GMT-3).</li>
@@ -308,25 +300,25 @@
 
     <!-- 17. Confidencialidad -->
     <section class="mb-10 reveal">
-      <h2 class="text-xl font-bold text-gray-900 mb-3">17. Confidencialidad</h2>
+      <h2 class="text-xl font-bold text-gray-900 mb-3">16. Confidencialidad</h2>
       <p class="text-gray-600">Ambas partes se comprometen a mantener la confidencialidad de toda información tecnica, comercial y operativa intercambiada durante la vigencia del contrato y por un plazo de 2 anos posteriores a su finalizacion, salvo consentimiento expreso de la otra parte o requerimiento legal.</p>
     </section>
 
     <!-- 18. Modificaciones -->
     <section class="mb-10 reveal">
-      <h2 class="text-xl font-bold text-gray-900 mb-3">18. Modificaciones a los T&C</h2>
+      <h2 class="text-xl font-bold text-gray-900 mb-3">17. Modificaciones a los T&C</h2>
       <p class="text-gray-600">HAMPI podra modificar estos T&C en cualquier momento. Las modificaciones se comunicaran con un minimo de 15 dias corridos de anticipacion por email. El uso continuado del servicio luego de dicho plazo implica la aceptacion de los nuevos terminos. Si el Cliente no acepta las modificaciones, podra rescindir el contrato sin penalidad.</p>
     </section>
 
     <!-- 19. Jurisdiccion y ley aplicable -->
     <section class="mb-10 reveal">
-      <h2 class="text-xl font-bold text-gray-900 mb-3">19. Jurisdiccion y ley aplicable</h2>
+      <h2 class="text-xl font-bold text-gray-900 mb-3">18. Jurisdiccion y ley aplicable</h2>
       <p class="text-gray-600">Los presentes T&C se rigen por las leyes de la Republica Argentina. Para cualquier controversia derivada de la interpretacion o ejecucion de estos terminos, las partes se someten a la jurisdiccion de los <strong>Tribunales Ordinarios de la ciudad de Cordoba, Provincia de Cordoba</strong>, renunciando a cualquier otro fuero o jurisdiccion que pudiera corresponderles.</p>
     </section>
 
     <!-- 20. Contacto -->
     <section class="mb-6 reveal">
-      <h2 class="text-xl font-bold text-gray-900 mb-3">20. Contacto</h2>
+      <h2 class="text-xl font-bold text-gray-900 mb-3">19. Contacto</h2>
       <p class="text-gray-600 mb-1"><strong>Prestador:</strong> VILLAGRA AGUSTIN — CUIT 20-39002520-4</p>
       <p class="text-gray-600 mb-1"><strong>Domicilio:</strong> Felix Frias 24, Piso 2, Dpto B, Barrio General Paz, Cordoba, Provincia de Cordoba, Republica Argentina</p>
       <p class="text-gray-600 mb-1"><strong>Email:</strong> <a href="mailto:legales@hampi.tech" class="text-brand-600 hover:underline">legales@hampi.tech</a></p>
