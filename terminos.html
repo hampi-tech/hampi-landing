@@ -412,6 +412,21 @@
     document.querySelectorAll('.reveal').forEach(el => obs.observe(el));
   </script>
 
+<!-- Smart WhatsApp Redirect: mobile → app nativa, desktop → WhatsApp Web -->
+<script>
+(function(){
+  var isMobile = /Android|iPhone|iPad|iPod|Opera Mini|IEMobile/i.test(navigator.userAgent);
+  document.addEventListener('click', function(e){
+    var link = e.target.closest('a[href*="api.whatsapp.com/send"]');
+    if (!link) return;
+    if (isMobile) return;
+    e.preventDefault();
+    var url = link.href.replace('api.whatsapp.com/send', 'web.whatsapp.com/send');
+    window.open(url, '_blank');
+  });
+})();
+</script>
+
 <!-- Cookie Consent Banner -->
 <div id="cookie-banner" class="fixed bottom-20 right-4 sm:bottom-6 max-w-sm bg-white rounded-xl shadow-2xl border border-gray-200 p-4 z-[60]" style="display:none">
   <p class="text-sm text-gray-700 mb-3 leading-snug">Usamos cookies de analytics para mejorar tu experiencia. <a href="privacidad.html" class="text-indigo-600 hover:underline font-semibold">Política de privacidad</a></p>

@@ -1834,7 +1834,7 @@
         'Mi negocio pierde aprox ' + fmt(perdidaTotal) + '/mes (' + clientes + ' clientes, ' + mora + '% pendientes, ' + churn + '% churn).\n' +
         'Quiero saber como recuperar eso.'
       );
-      document.getElementById('calc-wa-btn').href = 'https://api.whatsapp.com/send?phone=5493514084090&app_absent=0&text=' + waMsg;
+      document.getElementById('calc-wa-btn').href = 'https://api.whatsapp.com/send?phone=5493514084090&app_absent=0&text=' + waMsg; // smart redirect handles mobile vs desktop
     }
 
     document.querySelectorAll('#calc-clientes, #calc-ticket, #calc-mora, #calc-churn').forEach(i => i.addEventListener('input', updateCalc));
@@ -2055,6 +2055,21 @@
     btn.textContent='Enviado';
     if(window.gtag){gtag('event','demo_request',{method:'email',name:name})}
     setTimeout(function(){window.open(waUrl,'_blank')},1500);
+  });
+})();
+</script>
+
+<!-- Smart WhatsApp Redirect: mobile → app nativa, desktop → WhatsApp Web -->
+<script>
+(function(){
+  var isMobile = /Android|iPhone|iPad|iPod|Opera Mini|IEMobile/i.test(navigator.userAgent);
+  document.addEventListener('click', function(e){
+    var link = e.target.closest('a[href*="api.whatsapp.com/send"]');
+    if (!link) return;
+    if (isMobile) return; // mobile: deja que api.whatsapp.com abra la app nativa
+    e.preventDefault();
+    var url = link.href.replace('api.whatsapp.com/send', 'web.whatsapp.com/send');
+    window.open(url, '_blank');
   });
 })();
 </script>
