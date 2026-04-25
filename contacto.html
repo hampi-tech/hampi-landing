@@ -1,0 +1,268 @@
+<!DOCTYPE html>
+<html lang="es-AR">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Contacto — HAMPI</title>
+  <meta name="description" content="Contacto y datos legales de HAMPI. VILLAGRA AGUSTIN, CUIT 20-39002520-4, Cordoba, Argentina.">
+  <link rel="canonical" href="https://hampitech.com.ar/contacto.html">
+  <meta property="og:title" content="Contacto — HAMPI">
+  <meta property="og:description" content="Datos de contacto y razon social de HAMPI.">
+  <meta property="og:type" content="website">
+  <meta property="og:url" content="https://hampitech.com.ar/contacto.html">
+  <meta property="og:image" content="https://hampitech.com.ar/og-logo.png">
+  <meta property="og:locale" content="es_AR">
+  <meta name="theme-color" content="#4f46e5">
+  <link rel="icon" type="image/png" sizes="32x32" href="logoxx.png">
+  <link rel="apple-touch-icon" sizes="180x180" href="logoxx.png">
+  <link rel="manifest" href="manifest.json">
+  <link rel="preconnect" href="https://fonts.googleapis.com">
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+  <link href="https://fonts.googleapis.com/css2?family=Inter:wght@400;500;600;700;800;900&display=swap" rel="stylesheet">
+  <link rel="stylesheet" href="dist.css">
+  <style>
+    html{scroll-behavior:smooth}
+    .reveal{opacity:0;transform:translateY(30px);transition:opacity .7s ease,transform .7s ease}
+    .reveal.visible{opacity:1;transform:translateY(0)}
+    .whatsapp-float{position:fixed;bottom:24px;right:24px;z-index:50;background:#25d366;color:#fff;border-radius:9999px;width:76px;height:76px;display:flex;align-items:center;justify-content:center;box-shadow:0 4px 20px rgba(37,211,102,.4);transition:transform .3s ease}
+    .whatsapp-float:hover{transform:scale(1.1)}
+    @keyframes pulse-ring{0%{box-shadow:0 0 0 0 rgba(37,211,102,.4)}70%{box-shadow:0 0 0 15px rgba(37,211,102,0)}100%{box-shadow:0 0 0 0 rgba(37,211,102,0)}}
+    .whatsapp-float{animation:pulse-ring 2s infinite}
+  </style>
+  <script type="application/ld+json">
+  {
+    "@context": "https://schema.org",
+    "@type": "ContactPage",
+    "name": "Contacto HAMPI",
+    "url": "https://hampitech.com.ar/contacto.html",
+    "mainEntity": {
+      "@type": "Organization",
+      "name": "HAMPI",
+      "legalName": "Villagra Agustin",
+      "taxID": "20-39002520-4",
+      "url": "https://hampitech.com.ar",
+      "email": "contacto@hampitech.com.ar",
+      "telephone": "+5493514084090",
+      "address": {
+        "@type": "PostalAddress",
+        "streetAddress": "Felix Frias 24, Piso 2, Dpto B",
+        "addressLocality": "Cordoba",
+        "addressRegion": "Cordoba",
+        "postalCode": "5000",
+        "addressCountry": "AR"
+      }
+    }
+  }
+  </script>
+</head>
+
+<body class="font-sans text-gray-800 bg-white antialiased">
+
+  <!-- ===== NAV ===== -->
+  <nav id="main-nav" class="fixed top-0 w-full bg-white z-40 border-b border-gray-200/60 transition-shadow duration-300" style="box-shadow:none">
+    <div class="max-w-6xl mx-auto px-4 sm:px-6 flex items-center justify-between h-16">
+      <a href="index.html" class="flex items-center gap-2">
+        <picture>
+          <source srcset="hampilogo.webp" type="image/webp">
+          <img src="hampilogo.png" alt="HAMPI" class="h-8 sm:h-9 w-auto object-contain" width="200" height="61" style="image-rendering:-webkit-optimize-contrast;transform:translateZ(0)">
+        </picture>
+      </a>
+      <div class="hidden md:flex items-center gap-8 text-xs font-bold text-gray-700 uppercase" style="letter-spacing:.06em">
+        <a href="index.html#sistema" class="hover:text-brand-600 transition-colors">El sistema</a>
+        <a href="index.html#calculadora" class="hover:text-brand-600 transition-colors">Calculadora</a>
+        <a href="index.html#planes" class="hover:text-brand-600 transition-colors">Planes</a>
+        <a href="historia.html" class="hover:text-brand-600 transition-colors">Historia</a>
+      </div>
+      <div class="flex items-center gap-3">
+        <a href="https://api.whatsapp.com/send?phone=5493514084090&app_absent=0&text=Hola%2C%20quiero%20info%20sobre%20HAMPI" target="_blank" rel="noopener" class="hidden sm:inline-flex items-center bg-brand-600 hover:bg-brand-700 text-white text-xs font-bold uppercase px-3.5 py-1.5 rounded-lg transition-colors" style="letter-spacing:.06em;line-height:1.5">
+          CONTACTANOS
+        </a>
+      </div>
+      <button id="menu-toggle" class="md:hidden ml-2 p-2 text-gray-600 hover:text-brand-600" aria-label="Menu">
+        <svg class="w-6 h-6" fill="none" stroke="currentColor" viewBox="0 0 24 24"><path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M4 6h16M4 12h16M4 18h16"/></svg>
+      </button>
+    </div>
+    <div id="mobile-menu" class="hidden md:hidden border-t border-gray-100 bg-white">
+      <div class="px-4 py-3 space-y-2">
+        <a href="index.html#sistema" class="block py-2 text-xs font-bold text-gray-700 uppercase" style="letter-spacing:.06em">El sistema</a>
+        <a href="index.html#calculadora" class="block py-2 text-xs font-bold text-gray-700 uppercase" style="letter-spacing:.06em">Calculadora</a>
+        <a href="index.html#planes" class="block py-2 text-xs font-bold text-gray-700 uppercase" style="letter-spacing:.06em">Planes</a>
+        <a href="historia.html" class="block py-2 text-xs font-bold text-gray-700 uppercase" style="letter-spacing:.06em">Historia</a>
+      </div>
+    </div>
+  </nav>
+
+  <!-- ===== HERO ===== -->
+  <section class="pt-28 pb-12 sm:pt-32 sm:pb-16" style="background:linear-gradient(135deg,#312e81 0%,#3730a3 25%,#4f46e5 60%,#6366f1 100%)">
+    <div class="max-w-4xl mx-auto px-4 sm:px-6 text-center">
+      <h1 class="text-3xl sm:text-4xl font-black text-white mb-3">Contacto</h1>
+      <p class="text-brand-200 text-sm">Datos legales y canales de contacto de HAMPI</p>
+    </div>
+  </section>
+
+  <!-- ===== CONTENIDO ===== -->
+  <main class="max-w-4xl mx-auto px-4 sm:px-6 py-12 sm:py-16">
+
+    <!-- Datos legales -->
+    <section class="mb-10 reveal">
+      <h2 class="text-xl font-bold text-gray-900 mb-4">Razon social y datos fiscales</h2>
+      <div class="bg-gray-50 border border-gray-200 rounded-xl p-6 space-y-2">
+        <p class="text-gray-700"><strong>Razon social:</strong> VILLAGRA AGUSTIN</p>
+        <p class="text-gray-700"><strong>CUIT:</strong> 20-39002520-4</p>
+        <p class="text-gray-700"><strong>Marca comercial:</strong> HAMPI</p>
+        <p class="text-gray-700"><strong>Regimen tributario:</strong> Monotributo Categoria A</p>
+        <p class="text-gray-700"><strong>Actividad:</strong> F883 - 620900 - Servicios de Informatica N.C.P.</p>
+        <p class="text-gray-700"><strong>Domicilio fiscal:</strong> Felix Frias 24, Piso 2, Dpto B, Barrio General Paz, Cordoba, 5000, Argentina</p>
+        <p class="text-gray-700"><strong>Inscripto AAIP:</strong> Disposicion RL-2026-22644544-APN-DNPDP#AAIP (responsable de base de datos privadas)</p>
+      </div>
+    </section>
+
+    <!-- Canales de contacto -->
+    <section class="mb-10 reveal">
+      <h2 class="text-xl font-bold text-gray-900 mb-4">Canales de contacto</h2>
+      <div class="grid sm:grid-cols-2 gap-4">
+        <div class="bg-white border border-gray-200 rounded-xl p-5">
+          <h3 class="font-bold text-gray-900 mb-2">Comercial</h3>
+          <p class="text-gray-600 text-sm mb-1"><strong>Email:</strong> <a href="mailto:contacto@hampitech.com.ar" class="text-brand-600 hover:underline">contacto@hampitech.com.ar</a></p>
+          <p class="text-gray-600 text-sm mb-1"><strong>WhatsApp:</strong> <a href="https://api.whatsapp.com/send?phone=5493514084090" target="_blank" rel="noopener" class="text-brand-600 hover:underline">+54 9 351 408 4090</a></p>
+        </div>
+        <div class="bg-white border border-gray-200 rounded-xl p-5">
+          <h3 class="font-bold text-gray-900 mb-2">Soporte tecnico</h3>
+          <p class="text-gray-600 text-sm mb-1"><strong>Email:</strong> <a href="mailto:admin@hampitech.com.ar" class="text-brand-600 hover:underline">admin@hampitech.com.ar</a></p>
+          <p class="text-gray-600 text-sm">Respuesta en horario laboral lunes a viernes.</p>
+        </div>
+        <div class="bg-white border border-gray-200 rounded-xl p-5">
+          <h3 class="font-bold text-gray-900 mb-2">Legales y privacidad</h3>
+          <p class="text-gray-600 text-sm mb-1"><strong>Email:</strong> <a href="mailto:legales@hampitech.com.ar" class="text-brand-600 hover:underline">legales@hampitech.com.ar</a></p>
+          <p class="text-gray-600 text-sm">Solicitudes de eliminacion de datos, ejercicio de derechos ARCO, reclamos.</p>
+        </div>
+        <div class="bg-white border border-gray-200 rounded-xl p-5">
+          <h3 class="font-bold text-gray-900 mb-2">Redes</h3>
+          <p class="text-gray-600 text-sm mb-1"><strong>Facebook:</strong> <a href="https://facebook.com/hampi.tech/" target="_blank" rel="noopener" class="text-brand-600 hover:underline">facebook.com/hampi.tech</a></p>
+          <p class="text-gray-600 text-sm"><strong>Web:</strong> <a href="https://hampitech.com.ar" class="text-brand-600 hover:underline">hampitech.com.ar</a></p>
+        </div>
+      </div>
+    </section>
+
+    <!-- Form contacto -->
+    <section class="mb-10 reveal">
+      <h2 class="text-xl font-bold text-gray-900 mb-4">Escribinos</h2>
+      <form id="contact-form" class="bg-white border border-gray-200 rounded-xl p-6 space-y-4">
+        <div>
+          <label class="block text-sm font-medium text-gray-700 mb-1">Nombre y apellido *</label>
+          <input type="text" id="contact-name" required class="w-full border border-gray-300 rounded-lg px-3 py-2 focus:outline-none focus:border-brand-600">
+        </div>
+        <div>
+          <label class="block text-sm font-medium text-gray-700 mb-1">Email *</label>
+          <input type="email" id="contact-email" required class="w-full border border-gray-300 rounded-lg px-3 py-2 focus:outline-none focus:border-brand-600">
+        </div>
+        <div>
+          <label class="block text-sm font-medium text-gray-700 mb-1">Telefono</label>
+          <input type="tel" id="contact-phone" class="w-full border border-gray-300 rounded-lg px-3 py-2 focus:outline-none focus:border-brand-600">
+        </div>
+        <div>
+          <label class="block text-sm font-medium text-gray-700 mb-1">Empresa / Comercio</label>
+          <input type="text" id="contact-company" class="w-full border border-gray-300 rounded-lg px-3 py-2 focus:outline-none focus:border-brand-600">
+        </div>
+        <div>
+          <label class="block text-sm font-medium text-gray-700 mb-1">Mensaje *</label>
+          <textarea id="contact-message" required rows="4" class="w-full border border-gray-300 rounded-lg px-3 py-2 focus:outline-none focus:border-brand-600"></textarea>
+        </div>
+        <button type="submit" id="contact-submit" class="w-full bg-brand-600 hover:bg-brand-700 text-white font-bold py-3 rounded-lg transition-colors">Enviar mensaje</button>
+        <p id="contact-msg" class="text-sm hidden"></p>
+        <p class="text-xs text-gray-500">Al enviar este formulario aceptas nuestra <a href="privacidad.html" class="text-brand-600 hover:underline">Politica de Privacidad</a>. Tus datos se utilizan unicamente para responder tu consulta.</p>
+      </form>
+    </section>
+
+    <!-- Jurisdiccion -->
+    <section class="mb-10 reveal">
+      <h2 class="text-xl font-bold text-gray-900 mb-3">Jurisdiccion</h2>
+      <p class="text-gray-600">Para cualquier controversia, las partes se someten a la jurisdiccion de los <strong>Tribunales Ordinarios de la ciudad de Cordoba, Provincia de Cordoba, Republica Argentina</strong>, renunciando a cualquier otro fuero o jurisdiccion que pudiera corresponderles.</p>
+    </section>
+
+  </main>
+
+  <!-- ===== FOOTER ===== -->
+  <footer class="bg-white text-gray-500 py-6 border-t border-gray-200">
+    <div class="max-w-6xl mx-auto px-4 sm:px-6">
+      <div class="grid sm:grid-cols-2 lg:grid-cols-4 gap-5 mb-5">
+        <div>
+          <div class="mb-2"><picture><source srcset="logoabajo.webp" type="image/webp"><img src="logoabajo.png" alt="HAMPI" class="h-8 w-auto object-contain" width="200" height="111" loading="lazy"></picture></div>
+          <p class="text-[10px] font-semibold text-gray-700 mb-0.5">HAMPI</p>
+          <p class="text-[8px] text-gray-500 mb-1">Felix Frias 24, Piso 2, Dpto B — Cordoba, 5000, Argentina</p>
+          <p class="text-[8px] leading-relaxed text-gray-400">Atención, ventas, post-venta y reseñas Google con IA para PyMEs y profesionales argentinos. <a href="faq.html" class="text-brand-600 hover:underline">FAQ</a></p>
+        </div>
+        <div>
+          <h4 class="text-gray-900 font-semibold mb-2 text-sm">Producto</h4>
+          <ul class="space-y-1 text-xs">
+            <li><a href="index.html#sistema" class="hover:text-gray-900 transition-colors">El sistema</a></li>
+            <li><a href="index.html#calculadora" class="hover:text-gray-900 transition-colors">Calculadora</a></li>
+            <li><a href="index.html#planes" class="hover:text-gray-900 transition-colors">Planes</a></li>
+            <li><a href="historia.html" class="hover:text-gray-900 transition-colors">Historia</a></li>
+            <li><a href="https://dash.hampi.tech/login" target="_blank" rel="noopener" class="hover:text-gray-900 transition-colors">Acceso clientes</a></li>
+          </ul>
+        </div>
+        <div>
+          <h4 class="text-gray-900 font-semibold mb-2 text-sm">Contacto</h4>
+          <ul class="space-y-1 text-xs">
+            <li><a href="https://api.whatsapp.com/send?phone=5493514084090&app_absent=0" target="_blank" rel="noopener" class="hover:text-gray-900 transition-colors">WhatsApp</a></li>
+            <li><a href="mailto:contacto@hampitech.com.ar" class="hover:text-gray-900 transition-colors">contacto@hampitech.com.ar</a></li>
+            <li><a href="https://facebook.com/hampi.tech/" target="_blank" rel="noopener" class="hover:text-gray-900 transition-colors">Facebook</a></li>
+            <li>Cordoba, 5000, Argentina</li>
+          </ul>
+        </div>
+        <div>
+          <h4 class="text-gray-900 font-semibold mb-2 text-sm">Legal</h4>
+          <ul class="space-y-1 text-xs">
+            <li><a href="terminos.html" class="hover:text-gray-900 transition-colors">Terminos y condiciones</a></li>
+            <li><a href="privacidad.html" class="hover:text-gray-900 transition-colors">Politica de privacidad</a></li>
+            <li><a href="contacto.html" class="hover:text-gray-900 transition-colors">Contacto</a></li>
+            <li><a href="eliminacion-datos.html" class="hover:text-gray-900 transition-colors">Eliminacion de datos</a></li>
+          </ul>
+        </div>
+      </div>
+      <div class="border-t border-gray-200 pt-4 text-center">
+        <p class="text-xs text-gray-400">&copy; 2026 Villagra Agustín — HAMPI | CUIT 20-39002520-4</p>
+        <p class="text-[10px] text-gray-400 mt-1"><a href="privacidad.html" class="hover:text-brand-600 transition-colors">Datos protegidos — Ley 25.326 | Inscripto AAIP</a></p>
+      </div>
+    </div>
+  </footer>
+
+  <a href="https://api.whatsapp.com/send?phone=5493514084090&app_absent=0&text=Hola%2C%20quiero%20info%20sobre%20HAMPI" target="_blank" rel="noopener" class="whatsapp-float" aria-label="Contactar por WhatsApp">
+    <svg class="w-9 h-9" fill="currentColor" viewBox="0 0 24 24"><path d="M17.472 14.382c-.297-.149-1.758-.867-2.03-.967-.273-.099-.471-.148-.67.15-.197.297-.767.966-.94 1.164-.173.199-.347.223-.644.075-.297-.15-1.255-.463-2.39-1.475-.883-.788-1.48-1.761-1.653-2.059-.173-.297-.018-.458.13-.606.134-.133.298-.347.446-.52.149-.174.198-.298.298-.497.099-.198.05-.371-.025-.52-.075-.149-.669-1.612-.916-2.207-.242-.579-.487-.5-.669-.51-.173-.008-.371-.01-.57-.01-.198 0-.52.074-.792.372-.272.297-1.04 1.016-1.04 2.479 0 1.462 1.065 2.875 1.213 3.074.149.198 2.096 3.2 5.077 4.487.709.306 1.262.489 1.694.625.712.227 1.36.195 1.871.118.571-.085 1.758-.719 2.006-1.413.248-.694.248-1.289.173-1.413-.074-.124-.272-.198-.57-.347z"/><path d="M12 0C5.373 0 0 5.373 0 12c0 2.625.846 5.059 2.284 7.034L.789 23.492a.75.75 0 00.913.913l4.458-1.495A11.952 11.952 0 0012 24c6.627 0 12-5.373 12-12S18.627 0 12 0zm0 22c-2.347 0-4.518-.804-6.236-2.152l-.436-.35-3.027 1.015 1.015-3.027-.35-.436A9.956 9.956 0 012 12C2 6.486 6.486 2 12 2s10 4.486 10 10-4.486 10-10 10z"/></svg>
+  </a>
+
+  <script>
+    document.getElementById('menu-toggle').addEventListener('click', () => document.getElementById('mobile-menu').classList.toggle('hidden'));
+    const obs = new IntersectionObserver((entries) => {
+      entries.forEach(e => { if (e.isIntersecting) { e.target.classList.add('visible'); obs.unobserve(e.target); } });
+    }, { threshold: 0.1, rootMargin: '0px 0px -50px 0px' });
+    document.querySelectorAll('.reveal').forEach(el => obs.observe(el));
+  </script>
+  <script>
+  (function(){
+    var form=document.getElementById('contact-form');
+    if(!form)return;
+    form.addEventListener('submit',function(e){
+      e.preventDefault();
+      var name=document.getElementById('contact-name').value.trim();
+      var email=document.getElementById('contact-email').value.trim();
+      var phone=document.getElementById('contact-phone').value.trim();
+      var company=document.getElementById('contact-company').value.trim();
+      var message=document.getElementById('contact-message').value.trim();
+      var msg=document.getElementById('contact-msg');
+      var btn=document.getElementById('contact-submit');
+      if(!name||!email||!message)return;
+      btn.disabled=true;btn.textContent='Enviando...';
+      var waText='Hola, soy '+name+' ('+email+(phone?', tel '+phone:'')+(company?', '+company:'')+'). '+message;
+      var waUrl='https://api.whatsapp.com/send?phone=5493514084090&app_absent=0&text='+encodeURIComponent(waText);
+      msg.classList.remove('hidden');
+      msg.className='text-sm mt-3 text-emerald-600';
+      msg.textContent='Gracias '+name+'! Te contactamos pronto. Tambien podes escribirnos por WhatsApp.';
+      btn.textContent='Enviado';
+      setTimeout(function(){window.open(waUrl,'_blank')},1200);
+    });
+  })();
+  </script>
+</body>
+</html>

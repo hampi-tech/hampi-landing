@@ -1,7 +1,7 @@
 User-agent: *
 Allow: /
 
-Sitemap: https://hampi.tech/sitemap.xml
+Sitemap: https://hampitech.com.ar/sitemap.xml
 
 # Bloquear assets internos innecesarios
 Disallow: /kallpaprueba.html

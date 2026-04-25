@@ -1,32 +1,44 @@
 <?xml version="1.0" encoding="UTF-8"?>
 <urlset xmlns="http://www.sitemaps.org/schemas/sitemap/0.9">
   <url>
-    <loc>https://hampi.tech/</loc>
-    <lastmod>2026-02-21</lastmod>
+    <loc>https://hampitech.com.ar/</loc>
+    <lastmod>2026-04-25</lastmod>
     <changefreq>weekly</changefreq>
     <priority>1.0</priority>
   </url>
   <url>
-    <loc>https://hampi.tech/historia.html</loc>
-    <lastmod>2026-02-20</lastmod>
+    <loc>https://hampitech.com.ar/historia.html</loc>
+    <lastmod>2026-04-25</lastmod>
     <changefreq>monthly</changefreq>
     <priority>0.7</priority>
   </url>
   <url>
-    <loc>https://hampi.tech/faq.html</loc>
-    <lastmod>2026-02-20</lastmod>
+    <loc>https://hampitech.com.ar/faq.html</loc>
+    <lastmod>2026-04-25</lastmod>
     <changefreq>monthly</changefreq>
     <priority>0.8</priority>
   </url>
   <url>
-    <loc>https://hampi.tech/privacidad.html</loc>
-    <lastmod>2026-02-20</lastmod>
+    <loc>https://hampitech.com.ar/privacidad.html</loc>
+    <lastmod>2026-04-25</lastmod>
     <changefreq>yearly</changefreq>
     <priority>0.3</priority>
   </url>
   <url>
-    <loc>https://hampi.tech/terminos.html</loc>
-    <lastmod>2026-02-20</lastmod>
+    <loc>https://hampitech.com.ar/terminos.html</loc>
+    <lastmod>2026-04-25</lastmod>
+    <changefreq>yearly</changefreq>
+    <priority>0.3</priority>
+  </url>
+  <url>
+    <loc>https://hampitech.com.ar/contacto.html</loc>
+    <lastmod>2026-04-25</lastmod>
+    <changefreq>monthly</changefreq>
+    <priority>0.6</priority>
+  </url>
+  <url>
+    <loc>https://hampitech.com.ar/eliminacion-datos.html</loc>
+    <lastmod>2026-04-25</lastmod>
     <changefreq>yearly</changefreq>
     <priority>0.3</priority>
   </url>
